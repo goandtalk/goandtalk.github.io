@@ -1957,7 +1957,7 @@
             menu: gtpb.default.SiteMenu,
             params: gtpb.default.SiteParams
           };
-          gtpb.site_app.params.global_section = {
+          gtpb.site_app.params.global_section = gtpb.site_app.params.global_section || {
             default_footer: gtpb.default.SiteFooter,
           };
           for (var k in gtpb.site_app.menu){
