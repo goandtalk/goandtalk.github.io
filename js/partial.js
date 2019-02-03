@@ -4,7 +4,7 @@ window.gtpb = window.gtpb || {};
 gtpb.partials = gtpb.partials || {};
   
   
-    gtpb.partials['goandtalk/cover/default'] = `<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+    gtpb.partials['goandtalk/cover/default'] = `<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="gt-mv-on relative flex flex-column " ><div class="{enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027bg-black-70\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027\u0027 }enc}"
   675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
@@ -12,12 +12,20 @@ gtpb.partials = gtpb.partials || {};
 
 
 
+
+
 <nav class="relative o-90  {tf{? o.edit_mode }tf}[if(page_app.header_class,page_app.header_class,site_app.params.header_class)]{tf{??}tf}{enc{! o.__get(o, \u0027header_class\u0027) || \u0027bg-transparent\u0027 }enc}{tf{?}tf}
  "  675275c791df5c494218febd9c0cde06eea2ae6b property="menu" 35fe3a9616151be1e9a9abc33ece88d44bd47528 >
-  <div class="w-90 mw9 center ph2 pv4 cf flex justify-between tracked" >
+  <div class="w-90 mw9 center ph2 pv4 cf flex flex-wrap justify-between tracked" >
 
-    <span class="fl self-center">
-      <a href="/" class="v-mid " title="Home">
+    <span class="fl dib self-center site-logo
+    {enc{! o.__get(o, \u0027site.params.site_logo_class\u0027) || \u0027\u0027 }enc}
+    "
+    675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fl dib self-center site-logo ' & site_app.params.site_logo_class"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+    >
+      <a href="f871d6b8810c7bde0a1be4bdb14e56bf840fce44" class="v-mid " title="Home"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="href" mv-value="if(site_app.params.site_home_url,site_app.params.site_home_url,'/')"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
         <img data-role="logo" class="h2 v-mid dim" src="6f171f7af664405d6c48d439c7dcf034b904ccf1" />
       </a>
     </span>
@@ -58,9 +66,12 @@ gtpb.partials = gtpb.partials || {};
       
     </ul>
     
-    <ul class="list fr cf ma0 ph3 ph4-l pv1 flex justify-end
+    <ul class="list fr cf ma0 ph3 ph4-l pv1 justify-end
+    {enc{! o.__get(o, \u0027site.params.iconmenu_class\u0027) || \u0027flex\u0027 }enc}
     {enc{! o.__get(it, \u0027appearance.abbr_link_color\u0027) || \u0027\u0027 }enc}
-    " >
+    "
+    675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'list fr cf ma0 ph3 ph4-l pv1 justify-end ' & appearance.abbr_link_color & ' ' & site_app.params.iconmenu_class"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+    >
     
       {tf{? o.__get(o,\u0027site.menu.iconmenu.0\u0027) }tf}
 
@@ -455,7 +466,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
     gtpb.partials['goandtalk/cover/hero-dark-background-with-text-at-center'] = `
 
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="{enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027bg-black-70\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}"
   675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
@@ -477,12 +488,20 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 
+
+
 <nav class="relative o-90  {tf{? o.edit_mode }tf}[if(page_app.header_class,page_app.header_class,site_app.params.header_class)]{tf{??}tf}{enc{! o.__get(o, \u0027header_class\u0027) || \u0027bg-transparent\u0027 }enc}{tf{?}tf}
  "  675275c791df5c494218febd9c0cde06eea2ae6b property="menu" 35fe3a9616151be1e9a9abc33ece88d44bd47528 >
-  <div class="w-90 mw9 center ph2 pv4 cf flex justify-between tracked" >
+  <div class="w-90 mw9 center ph2 pv4 cf flex flex-wrap justify-between tracked" >
 
-    <span class="fl self-center">
-      <a href="/" class="v-mid " title="Home">
+    <span class="fl dib self-center site-logo
+    {enc{! o.__get(o, \u0027site.params.site_logo_class\u0027) || \u0027\u0027 }enc}
+    "
+    675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fl dib self-center site-logo ' & site_app.params.site_logo_class"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+    >
+      <a href="f871d6b8810c7bde0a1be4bdb14e56bf840fce44" class="v-mid " title="Home"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="href" mv-value="if(site_app.params.site_home_url,site_app.params.site_home_url,'/')"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
         <img data-role="logo" class="h2 v-mid dim" src="6f171f7af664405d6c48d439c7dcf034b904ccf1" />
       </a>
     </span>
@@ -523,9 +542,12 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       
     </ul>
     
-    <ul class="list fr cf ma0 ph3 ph4-l pv1 flex justify-end
+    <ul class="list fr cf ma0 ph3 ph4-l pv1 justify-end
+    {enc{! o.__get(o, \u0027site.params.iconmenu_class\u0027) || \u0027flex\u0027 }enc}
     {enc{! o.__get(it, \u0027appearance.abbr_link_color\u0027) || \u0027\u0027 }enc}
-    " >
+    "
+    675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'list fr cf ma0 ph3 ph4-l pv1 justify-end ' & appearance.abbr_link_color & ' ' & site_app.params.iconmenu_class"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+    >
     
       {tf{? o.__get(o,\u0027site.menu.iconmenu.0\u0027) }tf}
 
@@ -1343,7 +1365,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="alternate gt-mv-on relative flex flex-column min-vh-100" ><div class="flex-auto flex flex-column justify-center
   {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027bg-black-70\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
@@ -1371,12 +1393,20 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 
+
+
 <nav class="relative o-90  {tf{? o.edit_mode }tf}[if(page_app.header_class,page_app.header_class,site_app.params.header_class)]{tf{??}tf}{enc{! o.__get(o, \u0027header_class\u0027) || \u0027bg-transparent\u0027 }enc}{tf{?}tf}
  "  675275c791df5c494218febd9c0cde06eea2ae6b property="menu" 35fe3a9616151be1e9a9abc33ece88d44bd47528 >
-  <div class="w-90 mw9 center ph2 pv4 cf flex justify-between tracked" >
+  <div class="w-90 mw9 center ph2 pv4 cf flex flex-wrap justify-between tracked" >
 
-    <span class="fl self-center">
-      <a href="/" class="v-mid " title="Home">
+    <span class="fl dib self-center site-logo
+    {enc{! o.__get(o, \u0027site.params.site_logo_class\u0027) || \u0027\u0027 }enc}
+    "
+    675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fl dib self-center site-logo ' & site_app.params.site_logo_class"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+    >
+      <a href="f871d6b8810c7bde0a1be4bdb14e56bf840fce44" class="v-mid " title="Home"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="href" mv-value="if(site_app.params.site_home_url,site_app.params.site_home_url,'/')"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
         <img data-role="logo" class="h2 v-mid dim" src="6f171f7af664405d6c48d439c7dcf034b904ccf1" />
       </a>
     </span>
@@ -1417,9 +1447,12 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       
     </ul>
     
-    <ul class="list fr cf ma0 ph3 ph4-l pv1 flex justify-end
+    <ul class="list fr cf ma0 ph3 ph4-l pv1 justify-end
+    {enc{! o.__get(o, \u0027site.params.iconmenu_class\u0027) || \u0027flex\u0027 }enc}
     {enc{! o.__get(it, \u0027appearance.abbr_link_color\u0027) || \u0027\u0027 }enc}
-    " >
+    "
+    675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'list fr cf ma0 ph3 ph4-l pv1 justify-end ' & appearance.abbr_link_color & ' ' & site_app.params.iconmenu_class"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+    >
     
       {tf{? o.__get(o,\u0027site.menu.iconmenu.0\u0027) }tf}
 
@@ -1566,12 +1599,13 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           </div>
           
 
-          <div class="pv1 mw7 center relative" 675275c791df5c494218febd9c0cde06eea2ae6b property="cta" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+          <div class="pv1 mw7 center relative flex flex-column" 675275c791df5c494218febd9c0cde06eea2ae6b property="cta" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
             
-            <div class="fadeIn animate-edit-cta center tc ba w-100
+            <div class="fadeIn animate-edit-cta tc ba w-100
             {enc{! o.__get(it, \u0027appearance.trigger_class\u0027) || \u0027\u0027 }enc}
             {enc{! o.__get(it, \u0027cta.background_color\u0027) || \u0027\u0027 }enc}
             {enc{! o.__get(it, \u0027cta_display\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027cta.align\u0027) || \u0027self-center\u0027 }enc}
             {enc{! o.__get(it, \u0027cta.border_color\u0027) || \u0027b--primary-color\u0027 }enc}
             {enc{! o.__get(it, \u0027cta.border_radius\u0027) || \u0027br2\u0027 }enc}
             pv{enc{! o.__get(it, \u0027cta.pv\u0027) || \u00272\u0027 }enc}
@@ -1580,7 +1614,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             w-{enc{! o.__get(it, \u0027cta.block_button_width\u0027) || \u0027100\u0027 }enc}-ns
             "
             675275c791df5c494218febd9c0cde06eea2ae6b
-            mv-attribute="class" mv-value="'fadeIn animate-edit-cta center tc ba w-100  ' & cta.background_color & ' ' & cta_display & ' ' & cta.border_color & ' ' & cta.border_radius & ' pv' & cta.pv & ' ph' & cta.ph & ' mv' & cta.mv & ' w-' & cta.block_button_width &'-ns'"
+            mv-attribute="class" mv-value="'fadeIn animate-edit-cta tc ba w-100  ' & cta.background_color & ' ' & cta_display & ' ' & cta.align & ' ' & cta.border_color & ' ' & cta.border_radius & ' pv' & cta.pv & ' ph' & cta.ph & ' mv' & cta.mv & ' w-' & cta.block_button_width &'-ns'"
             35fe3a9616151be1e9a9abc33ece88d44bd47528
             >
               
@@ -1648,7 +1682,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   <span class="f4 dib ph1 mh1 pv2">
     Button Options
   </span>
-  
+
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
       <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(button_i = 'i','bg-black-40','bg-black-20')]"
@@ -1683,6 +1717,42 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
     </span>
     <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
         Increase font size.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-start-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 left-3" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at line start on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-center-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at center on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-end-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 right-3" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at line end on medium and large screens.
     </span>
   </span>
 </div>
@@ -1929,7 +1999,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
 
-        <div>Button Width 
+        <div>Button Width  [block_button_width]%
         
         
         </div>
@@ -1937,7 +2007,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
-          <input  min="10"  max="100"  step="10" 
+          <input  min="20"  max="100"  step="10" 
            property="block_button_width" 
           type="range" 
           class="flex-auto  
@@ -2216,7 +2286,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Icon Order 
+        <div>Icon Display 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_order, '')">X</span>
@@ -2262,6 +2332,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
        
         <input class="absolute" hidden property="button_font_size" value="4" />
+       
+    
+       
+        <input class="absolute" hidden property="align" value="center" />
        
     
   </div>
@@ -4522,7 +4596,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" mv-autosave="3" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="alternate gt-mv-on relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
   {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
@@ -4622,7 +4696,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             style="opacity:1;"
           35fe3a9616151be1e9a9abc33ece88d44bd47528 
           >
-            <span  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc}</span>
+            <span  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="">{enc{! o.__get(o, \u0027page.title\u0027) || \u0027\u0027 }enc}</span>
           </h1>
           <div class="pa2 {enc{! o.__get(it, \u0027body_background\u0027) || \u0027\u0027 }enc}"
           675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'pa2 ' & body_background " 35fe3a9616151be1e9a9abc33ece88d44bd47528 
@@ -4635,7 +4709,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             </span>
             
             <div class=" markdown lh-copy nested-links {enc{! o.__get(it, \u0027fancy_style\u0027) || \u0027\u0027 }enc}"  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
-               {v{= o.sanitizer.sanitize(o.md.render(o.__get(it, \u0027content\u0027) || \u0027* It just works\u0027 || \u0027\u0027 )) }v}
+               {v{= o.sanitizer.sanitize(o.md.render(o.__get(o, \u0027page.content\u0027) || \u0027## Make a Difference with Innovation \u0027 || \u0027\u0027 )) }v}
 
               
             </div>
@@ -4649,11 +4723,12 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           </div>
           
 
-          <div class="pv4" 675275c791df5c494218febd9c0cde06eea2ae6b property="cta" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+          <div class="pv4 flex flex-column" 675275c791df5c494218febd9c0cde06eea2ae6b property="cta" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
             
             <div class="fadeIn animate-edit-cta center tc ba w-100
             {enc{! o.__get(it, \u0027cta.background_color\u0027) || \u0027bg-light-gray\u0027 }enc}
             {enc{! o.__get(it, \u0027cta_display\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027cta.align\u0027) || \u0027self-center\u0027 }enc}
             {enc{! o.__get(it, \u0027cta.border_color\u0027) || \u0027b--primary-color\u0027 }enc}
             {enc{! o.__get(it, \u0027cta.border_radius\u0027) || \u0027br2\u0027 }enc}
             pv{enc{! o.__get(it, \u0027cta.pv\u0027) || \u00272\u0027 }enc}
@@ -4662,7 +4737,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             w-{enc{! o.__get(it, \u0027cta.block_button_width\u0027) || \u0027100\u0027 }enc}-ns
             "
             675275c791df5c494218febd9c0cde06eea2ae6b
-            mv-attribute="class" mv-value="'fadeIn animate-edit-cta center tc ba w-100  ' & cta.background_color & ' ' & cta_display  & ' ' & cta.border_color & ' ' & cta.border_radius & ' pv' & cta.pv & ' ph' & cta.ph & ' mv' & cta.mv & ' w-' & cta.block_button_width &'-ns'"
+            mv-attribute="class" mv-value="'fadeIn animate-edit-cta center tc ba w-100  ' & cta.background_color & ' ' & cta_display & ' ' & cta.align   & ' ' & cta.border_color & ' ' & cta.border_radius & ' pv' & cta.pv & ' ph' & cta.ph & ' mv' & cta.mv & ' w-' & cta.block_button_width &'-ns'"
             35fe3a9616151be1e9a9abc33ece88d44bd47528
             >
               
@@ -4730,7 +4805,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   <span class="f4 dib ph1 mh1 pv2">
     Button Options
   </span>
-  
+
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
       <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(button_i = 'i','bg-black-40','bg-black-20')]"
@@ -4765,6 +4840,42 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
     </span>
     <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
         Increase font size.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-start-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 left-3" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at line start on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-center-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at center on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-end-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 right-3" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at line end on medium and large screens.
     </span>
   </span>
 </div>
@@ -5010,7 +5121,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
 
-        <div>Button Width 
+        <div>Button Width  [block_button_width]%
         
         
         </div>
@@ -5018,7 +5129,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
-          <input  min="10"  max="100"  step="10" 
+          <input  min="20"  max="100"  step="10" 
            property="block_button_width" 
           type="range" 
           class="flex-auto  
@@ -5297,7 +5408,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Icon Order 
+        <div>Icon Display 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_order, '')">X</span>
@@ -5343,6 +5454,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
        
         <input class="absolute" hidden property="button_font_size" value="4" />
+       
+    
+       
+        <input class="absolute" hidden property="align" value="center" />
        
     
   </div>
@@ -7557,7 +7672,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
   
     gtpb.partials['goandtalk/footer/default_footer'] = `
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="gt-mv-on relative flex flex-column justify-end" ><div class="flex-auto tc bg-black-10 gmws dn">
     <div class="pt5 f-6-l f1-m f2 flex flex-column justify-center">
       <span class="flex-auto"></span>
@@ -8099,7 +8214,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     gtpb.partials['goandtalk/settings/pagesetting-editor-holder'] = `{tf{? o.edit_mode }tf}
 
 
-<section mv-app="page_app" mv-storage="idb_local" class="page-setting-holder z-1 gt-mv-on min-vh-100 w-100 top-0 fixed off-canvas-dashboard [if(base_app_list.current_base_app='page_app','active','')]">
+<section mv-app="page_app" mv-autosave="3" mv-storage="idb_local" class="page-setting-holder z-1 gt-mv-on min-vh-100 w-100 top-0 fixed off-canvas-dashboard [if(base_app_list.current_base_app='page_app','active','')]">
   
   <input hidden type="checkbox" property="manage_toolbar" mv-storage="none" />
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll pb6 pb3-l">
@@ -8156,7 +8271,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
       
       <div class="relative 
-w-100  ph1 fl pt2 pb3
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
           <span class="gt-label mh1 black-60 fr w2 v-mid tc">
@@ -9524,6 +9639,57 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
       
       <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Custom Template 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(js_exp_tpl, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;exportPageHTML&#39;, exp_link_format)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="js_exp_tpl" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',js_exp_tpl)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the name of the custom export template you have created. After clearing the value in this field, please click in the field to use default. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
 w-100  ph1 fl pt2 pb3
  ">
         
@@ -9964,6 +10130,9 @@ w-100  ph1 fl pt2 pb3
       
     </div>
   </div>
+  <link mv-attribute="href" mv-value="if(site_app.params.css_url,site_app.params.css_url,'/css/styles.css')" href="/css/styles.css" rel="stylesheet" />
+  <link mv-attribute="href" mv-value="if(site_app.params.css_url2,site_app.params.css_url2,'/css/styles.css')" href="/css/styles.css" rel="stylesheet" />
+  <link mv-attribute="href" mv-value="if(site_app.params.css_url3,site_app.params.css_url3,'/css/styles.css')" href="/css/styles.css" rel="stylesheet" />
   <style>
     .primary-color-dark {
       color:  hsl([primary_hue or site_app.params.primary_hue],[saturation or site_app.params.saturation]%,[lightness_dark or site_app.params.lightness_dark]%);
@@ -10050,8 +10219,10 @@ w-100  ph1 fl pt2 pb3
     .b--accent-color-light {
       border-color: [accent_color_light or site_app.params.accent_color_light];
     }
+    [site_app.params.custom_css]
 
   </style>
+
 <div onclick="" class="dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
   <button title="edit section" type="button" class="pointer mv-edit dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="pointer mv-save dim br2 pv1 ph2 mh1">Save</button>
@@ -10066,7 +10237,7 @@ w-100  ph1 fl pt2 pb3
 
 {tf{? o.edit_mode }tf}
 
-<section mv-app="site_app" mv-storage="idb_local" class="site-setting-holder z-1 gt-mv-on min-vh-100 w-100 top-0 fixed off-canvas-dashboard [if(base_app_list.current_base_app='site_app','active','')]">
+<section mv-app="site_app" mv-autosave="3" mv-storage="idb_local" class="site-setting-holder z-1 gt-mv-on min-vh-100 w-100 top-0 fixed off-canvas-dashboard [if(base_app_list.current_base_app='site_app','active','')]">
   
   <input hidden type="checkbox" property="manage_toolbar" mv-storage="none" />
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll pb6 pb3-l">
@@ -10101,6 +10272,41 @@ w-100  ph1 fl pt2 pb3
 	<button data-toggle-tab="site_menu" mv-action="set(current_tab,'site_menu')" class="[if(current_tab='site_menu', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-bars"></i><span class="dn di-ns"> Menu </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="site_custom_css" mv-action="set(current_tab,'site_custom_css')" class="[if(current_tab='site_custom_css', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-palette"></i><span class="dn di-ns"> Custom Styles </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="site_new_js_export" mv-action="set(current_tab,'site_new_js_export')" class="[if(current_tab='site_new_js_export', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-file"></i><span class="dn di-ns"> New Export Template </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="site_edit_js_export" mv-action="set(current_tab,'site_edit_js_export')" class="[if(current_tab='site_edit_js_export', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-file-export"></i><span class="dn di-ns"> Edit Export Template </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="site_new_js_partial" mv-action="set(current_tab,'site_new_js_partial')" class="[if(current_tab='site_new_js_partial', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-plus-square"></i><span class="dn di-ns"> New Block </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="site_edit_js_partial" mv-action="set(current_tab,'site_edit_js_partial')" class="[if(current_tab='site_edit_js_partial', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-code" data-fa-mask="fas fa-square" data-fa-transform="shrink-6"></i><span class="dn di-ns"> Edit Block </span>
 		
 	</button>&nbsp;
 
@@ -10616,6 +10822,791 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           </div>
         
       </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Site Logo Class 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(site_logo_class, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="site_logo_class" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="w-100 tc," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',site_logo_class)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The css class applies to the parent element of site logo anchor.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Site Home URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(site_home_url, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="site_home_url" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The page linked to the site logo, default to project root. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Iconmenu Class 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(iconmenu_class, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="iconmenu_class" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="flex,dn," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',iconmenu_class)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The css class applied on icon menu. Choose dn to hide it.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="site_custom_css" class="gt-tab-pane [if(current_tab='site_custom_css', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Custom Styles</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>CSS URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(css_url, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="css_url" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the path to css library.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>CSS URL 2 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(css_url2, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="css_url2" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the path to css library.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>CSS URL 3 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(css_url3, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="css_url3" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the path to css library.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Custom CSS 
+        
+          <span class="copy-data ph1 pointer"
+           data-clipboard-target=".site-custom-css" 
+          ><i class="fas fa-copy gray"></i> </span>
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(custom_css, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h5 site-custom-css b--black-20"
+           property="custom_css" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Define css classes here to apply sitewide.
+          </div>
+        
+      </div>
+       
+    
+      
+        <div class="w-100 pv4 tc download-data-holder dn db-l">
+          <a href="#" download="styles.css"  class="download-site-css w-100 w-50-ns dark-gray bg-light-green ba b--black-10 pv2 no-underline grow dib v-mid" >
+          Download Site CSS
+          </a>
+        </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="site_new_js_export" class="gt-tab-pane [if(current_tab='site_new_js_export', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">New Export Template</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>New Template Name 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(js_exp_new, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="js_exp_new" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',js_exp_new)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The unique name to save this new export template. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Template     <span class="dib ph2"
+    mv-action="invoke('cloneJsExportBase', new_js_exp_tpl)"
+    > <i class="fas fa-code"></i></span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(new_js_exp_tpl, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h5 b--black-20"
+           property="new_js_exp_tpl"  mv-storage="none" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The template to export html code. This is for developers only. You may create a new one by cloning from the default template and customizing it.
+          </div>
+        
+      </div>
+       
+    
+      
+        <div class="w-100 pv4 tc">
+          <button type="button" mv-action="invoke(&#39;createJsExportTpl&#39;, js_exp_new)" class="w-100 w-50-ns dark-gray bg-light-green ba b--black-10 pv2 no-underline grow dib v-mid" > Save New Template </button>
+        </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="site_edit_js_export" class="gt-tab-pane [if(current_tab='site_edit_js_export', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Edit Export Template</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Template Name 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(js_exp_open, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;loadJsExportTpl&#39;, js_exp_open)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="js_exp_open" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',js_exp_open)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The unique name of export template. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Template 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(edit_js_exp_tpl, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h5 b--black-20"
+           property="edit_js_exp_tpl"  mv-storage="none" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The template to export html code. This is for developers only. 
+          </div>
+        
+      </div>
+       
+    
+      
+        <div class="w-100 pv4 tc">
+          <button type="button" mv-action="invoke(&#39;saveJsExportTpl&#39;, edit_js_exp_tpl)" class="w-100 w-50-ns dark-gray bg-light-green ba b--black-10 pv2 no-underline grow dib v-mid" > Save Template </button>
+        </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="site_new_js_partial" class="gt-tab-pane [if(current_tab='site_new_js_partial', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">New Block</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>New Block Name 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(js_partial_new, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="js_partial_new" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',js_partial_new)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The unique name to save this new block. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Block Code 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(new_js_partial_tpl, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h5 b--black-20"
+           property="new_js_partial_tpl"  mv-storage="none" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The block template code. This is for developers only.
+          </div>
+        
+      </div>
+       
+    
+      
+        <div class="w-100 pv4 tc">
+          <button type="button" mv-action="invoke(&#39;createJsPartial&#39;, js_partial_new)" class="w-100 w-50-ns dark-gray bg-light-green ba b--black-10 pv2 no-underline grow dib v-mid" > Save New Block </button>
+        </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="site_edit_js_partial" class="gt-tab-pane [if(current_tab='site_edit_js_partial', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Edit Block</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Block Name 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(js_partial_open, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;loadJsPartial&#39;, js_partial_open)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="js_partial_open" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',js_partial_open)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The unique name of block template. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Block Code 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(edit_js_partial_tpl, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h5 b--black-20"
+           property="edit_js_partial_tpl"  mv-storage="none" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The template code to render this block. This is for developers only. 
+          </div>
+        
+      </div>
+       
+    
+      
+        <div class="w-100 pv4 tc">
+          <button type="button" mv-action="invoke(&#39;saveJsPartial&#39;, edit_js_partial_tpl)" class="w-100 w-50-ns dark-gray bg-light-green ba b--black-10 pv2 no-underline grow dib v-mid" > Save Block </button>
+        </div>
        
     
   </div>
@@ -11252,6 +12243,7 @@ w-100  ph1 fl pt2 pb3
       }
       .bg-accent-color {
         background-color: {v{= o.styles.accent_color }v};
+        color: rgba(255,255,255,.8);
       }
       .b--accent-color {
         border-color: {v{= o.styles.accent_color }v};
@@ -11261,6 +12253,7 @@ w-100  ph1 fl pt2 pb3
       }
       .bg-accent-color-light {
         background-color: {v{= o.styles.accent_color_light }v};
+        color: rgba(255,255,255,.8);
       }
       .b--accent-color-light {
         border-color: {v{= o.styles.accent_color_light }v};
@@ -11361,7 +12354,7 @@ w-100  ph1 fl pt2 pb3
 
   
   
-    gtpb.partials['goandtalk/slides/alternate-text-and-big-icon-layer'] = `<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+    gtpb.partials['goandtalk/slides/alternate-text-and-big-icon-layer'] = `<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
@@ -11869,7 +12862,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
   {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
@@ -11998,11 +12991,12 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           </div>
           
 
-          <div class="pv4" 675275c791df5c494218febd9c0cde06eea2ae6b property="cta" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+          <div class="pv4 flex flex-column" 675275c791df5c494218febd9c0cde06eea2ae6b property="cta" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
             
-            <div class="fadeIn animate-edit-cta center tc ba w-100
+            <div class="fadeIn animate-edit-cta tc ba w-100
             {enc{! o.__get(it, \u0027cta.background_color\u0027) || \u0027bg-light-gray\u0027 }enc}
             {enc{! o.__get(it, \u0027cta_display\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027cta.align\u0027) || \u0027self-center\u0027 }enc}
             {enc{! o.__get(it, \u0027cta.border_color\u0027) || \u0027b--primary-color\u0027 }enc}
             {enc{! o.__get(it, \u0027cta.border_radius\u0027) || \u0027br2\u0027 }enc}
             pv{enc{! o.__get(it, \u0027cta.pv\u0027) || \u00272\u0027 }enc}
@@ -12011,7 +13005,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             w-{enc{! o.__get(it, \u0027cta.block_button_width\u0027) || \u0027100\u0027 }enc}-ns
             "
             675275c791df5c494218febd9c0cde06eea2ae6b
-            mv-attribute="class" mv-value="'fadeIn animate-edit-cta center tc ba w-100  ' & cta.background_color & ' ' & cta_display & ' ' & cta.border_color & ' ' & cta.border_radius & ' pv' & cta.pv & ' ph' & cta.ph & ' mv' & cta.mv & ' w-' & cta.block_button_width &'-ns'"
+            mv-attribute="class" mv-value="'fadeIn animate-edit-cta tc ba w-100  ' & cta.background_color & ' ' & cta_display & ' ' & cta.align & ' ' & cta.border_color & ' ' & cta.border_radius & ' pv' & cta.pv & ' ph' & cta.ph & ' mv' & cta.mv & ' w-' & cta.block_button_width &'-ns'"
             35fe3a9616151be1e9a9abc33ece88d44bd47528
             >
               
@@ -12079,7 +13073,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   <span class="f4 dib ph1 mh1 pv2">
     Button Options
   </span>
-  
+
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
       <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(button_i = 'i','bg-black-40','bg-black-20')]"
@@ -12114,6 +13108,42 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
     </span>
     <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
         Increase font size.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-start-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 left-3" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at line start on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-center-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at center on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-end-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 right-3" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at line end on medium and large screens.
     </span>
   </span>
 </div>
@@ -12360,7 +13390,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
 
-        <div>Button Width 
+        <div>Button Width  [block_button_width]%
         
         
         </div>
@@ -12368,7 +13398,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
-          <input  min="10"  max="100"  step="10" 
+          <input  min="20"  max="100"  step="10" 
            property="block_button_width" 
           type="range" 
           class="flex-auto  
@@ -12647,7 +13677,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Icon Order 
+        <div>Icon Display 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_order, '')">X</span>
@@ -12693,6 +13723,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
        
         <input class="absolute" hidden property="button_font_size" value="4" />
+       
+    
+       
+        <input class="absolute" hidden property="align" value="center" />
        
     
   </div>
@@ -15016,7 +16050,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 `;
   
-    gtpb.partials['goandtalk/slides/big-bold-quote'] = `<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+    gtpb.partials['goandtalk/slides/big-bold-quote'] = `<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
@@ -15482,7 +16516,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
     gtpb.partials['goandtalk/slides/collection-big-icon-circle-mask'] = `
 
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027bg-white-70\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
@@ -17158,7 +18192,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
     gtpb.partials['goandtalk/slides/collection-big-icon-mono'] = `
 
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
@@ -17946,7 +18980,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
@@ -17967,13 +19001,23 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       
         <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
 
-          <div class="relative mb2 tc">
+          <div class="mb2 tc {enc{! o.__get(it, \u0027card_header\u0027) || \u0027\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'mb2 tc ' & card_header" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          >
             <img class="mw-100 {enc{! o.__get(it, \u0027images_class\u0027) || \u0027br0\u0027 }enc}" 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
           </div>
-
-          <h3 675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="tc"> {enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc} </h3>
-          <div class="pt1 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
+          <div class="ph1 {enc{! o.__get(it, \u0027card_body\u0027) || \u0027\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'ph1 ' & card_body" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          >
+            <h3  class="card-title {enc{! o.__get(it, \u0027card_title\u0027) || \u0027tc\u0027 }enc}"
+            675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'card-title ' & card_title"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+            >
+              <span property="title">{enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc}</span>
+            </h3>
+            <p class="card-sub-title" 675275c791df5c494218febd9c0cde06eea2ae6b property="sub_title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >{enc{! o.__get(item, \u0027sub_title\u0027) || \u0027\u0027 }enc}</p>
+            <div class="pt1 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
  </div>
+          </div>
         </div>
       </div>
       {loop{~}loop}
@@ -17984,14 +19028,18 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         <div property="column" mv-multiple
         class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m pa3 flex grow
         {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
-          <div mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
+          <div class="w-100 pa2 [card_background]">
 
-            <div class="relative mb2 tc">
-              <img class="mw-100 {enc{! o.__get(it, \u0027images_class\u0027) || \u0027br0\u0027 }enc}" alt="" property="image_source"  src="" >
+            <div class="mb2 tc [card_header]">
+              <img class="mw-100 mv-empty [images_class]"  alt="" property="image_source"  src="" >
             </div>
-
-            <h3 property="title" class="tc"> Build </h3>
-            <div class="pt1 lh-copy markdown" property="description"></div>
+            <div class="ph1 [card_body]">
+              <h3 class="card-title [if(card_title, card_title, 'tc')]">
+                <span property="title" ></span>
+              </h3>
+              <p property="sub_title" class="card-sub-title"></p>
+              <div class="pt1 lh-copy markdown" property="description"></div>
+            </div>
           </div>
         </div>
         35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -18036,7 +19084,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
 	<button data-toggle-tab="layout_images" mv-action="set(current_tab,'layout_images')" class="[if(current_tab='layout_images', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
-			<i class="fas fa-images"></i><span class="dn di-ns"> Thumbnail </span>
+			<i class="fas fa-images"></i><span class="dn di-ns"> Card and Image </span>
 		
 	</button>&nbsp;
 
@@ -18587,7 +19635,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 		
 
 <div >
-  <h3 class="mt2">Thumbnail</h3>
+  <h3 class="mt2">Card and Image</h3>
   <div class="cf flex flex-wrap ba b--black-05" >
     
       
@@ -18673,6 +19721,111 @@ w-100  ph1 fl pt2 pb3
             circle or oval 
             </label>
           </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Header Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_header, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_header" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Body Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_body, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_body" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Title Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_title, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_title" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
           
         
         </div> 
@@ -18833,7 +19986,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 `;
   
     gtpb.partials['goandtalk/slides/collection-small-icon-at-side'] = `
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
@@ -19438,7 +20591,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 
-<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
@@ -19537,7 +20690,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
 	<button data-toggle-tab="layout_images" mv-action="set(current_tab,'layout_images')" class="[if(current_tab='layout_images', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
-			<i class="fas fa-images"></i><span class="dn di-ns"> Thumbnail </span>
+			<i class="fas fa-images"></i><span class="dn di-ns"> Card and Image </span>
 		
 	</button>&nbsp;
 
@@ -20088,7 +21241,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 		
 
 <div >
-  <h3 class="mt2">Thumbnail</h3>
+  <h3 class="mt2">Card and Image</h3>
   <div class="cf flex flex-wrap ba b--black-05" >
     
       
@@ -20174,6 +21327,111 @@ w-100  ph1 fl pt2 pb3
             circle or oval 
             </label>
           </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Header Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_header, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_header" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Body Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_body, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_body" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Title Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_title, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_title" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
           
         
         </div> 
@@ -20340,7 +21598,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
      
 
 gtpb.default.site_id = "gt";
-gtpb.default.TemplateHash = {"35fe3a9616151be1e9a9abc33ece88d44bd47528":"{tf{?}tf}\n","47a10716ab9cfa2da5ba2cc37e033286ea50785c":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027https://source.unsplash.com/sK1hW5knKkw/1536x864\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027https://source.unsplash.com/sK1hW5knKkw/1536x864\\u0027) }v}{tf{?}tf}","5aff7ad5769b66377c06f3d3195c1ba6c58d9165":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","675275c791df5c494218febd9c0cde06eea2ae6b":"{tf{? o.edit_mode }tf}\n","6aa54d91498069cf3ec3c6d46443b0b765c6cec2":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","6f171f7af664405d6c48d439c7dcf034b904ccf1":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","a41325d3d724b613adde84fb3124bc6dd2d09ac7":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","b1d98aff0d513d54c95f98187a86801cfeb2b837":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","be9210026fcf76504a9221b2aea4c4b61cf84e51":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","dd670833e00d695c78df75d31d05c27606aca294":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","f31242cd7b629eb52f03daf3392c0469f5e560bb":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}"};
+gtpb.default.TemplateHash = {"35fe3a9616151be1e9a9abc33ece88d44bd47528":"{tf{?}tf}\n","47a10716ab9cfa2da5ba2cc37e033286ea50785c":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027https://source.unsplash.com/sK1hW5knKkw/1536x864\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027https://source.unsplash.com/sK1hW5knKkw/1536x864\\u0027) }v}{tf{?}tf}","5aff7ad5769b66377c06f3d3195c1ba6c58d9165":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","675275c791df5c494218febd9c0cde06eea2ae6b":"{tf{? o.edit_mode }tf}\n","6aa54d91498069cf3ec3c6d46443b0b765c6cec2":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","6f171f7af664405d6c48d439c7dcf034b904ccf1":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","a41325d3d724b613adde84fb3124bc6dd2d09ac7":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","b1d98aff0d513d54c95f98187a86801cfeb2b837":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","be9210026fcf76504a9221b2aea4c4b61cf84e51":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","dd670833e00d695c78df75d31d05c27606aca294":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","f31242cd7b629eb52f03daf3392c0469f5e560bb":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","f871d6b8810c7bde0a1be4bdb14e56bf840fce44":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027) }v}{tf{?}tf}"};
 gtpb.default.SiteMenu = {"global":[{"URL":"/tutorial/","Page":null,"Name":"Tutorials","Menu":"global","Identifier":"tutorials","Pre":"","Post":"","Weight":5,"Parent":"","Children":null},{"URL":"/presentation/","Page":null,"Name":"Talks","Menu":"global","Identifier":"talks","Pre":"","Post":"","Weight":10,"Parent":"","Children":null},{"URL":"/about/","Page":null,"Name":"About","Menu":"global","Identifier":"about","Pre":"","Post":"","Weight":15,"Parent":"","Children":null}],"iconmenu":[{"URL":"#","Page":null,"Name":"Go Account","Menu":"iconmenu","Identifier":"","Pre":"Go","Post":"","Weight":0,"Parent":"","Children":null}]};
 gtpb.default.SiteParams = {"accent_color":"hsl(165,35%,45%)","accent_color_light":"hsl(165,35%,65%)","flex_box_interior_classes":"w-100 w-50-m w-33-l ","global_section":{"alternate_text_and_big_icon_layer":{"appearance":{"animation":"fadeIn","icon_color":"primary-color","section_background":"bg-primary-color-light","slide_animation":"fadeIn"},"content":"* go to the previous section with the title \"Global Section\".\n* find the section toolbar at the top edge of the section.\n* click on the toggle button to turn on the app\n* click on Edit button on the toolbar to switch to editing mode.\n* Change the section title to something you can easily recognize.\n* click on the cog icon on the section toolbar to show the section settings window.\n* go to \"Global Section\" tab and tick the checkbox to enable it as global section. \n* Fill in a data storage key you can easily recognize. You can get a list of existing keys by clicking on the dropdown button. Make sure to use a new key to avoid overriding data.\n* click the Save button to save the changes.\n* open another tutorial in another tab of your browser.\n* click on the plus icon on any section toolbar to bring up a window for inserting new section.\n* leave \"Select Section Template \" as blank. Clear this field if it has any value.\n* in the \"Use Data From Global Section\" field, click on the dropdown button, and look for the global section you have created.\n* click on the \"Insert\" button to confirm the operation.\n* you should be able to see the global section inserted to that tutorial page, with data you have saved.","description":"","icons":{"icon_transform":"shrink-6","mini_icon":"globe-asia","mini_icon_color":"white","outer_icon":"square","width":20},"intro":"Exercise","is_global":true,"partial":"goandtalk/slides/alternate-text-and-big-icon-layer","title":"Using a Global Section"},"app_status_on_off":{"appearance":{"card_background":"bg-light-gray","icon_color":"black-10","section_background":"bg-white-70","slide_animation":"fadeIn","text_color":"primary-color-first-letter-h3"},"column":[{"description":"* The Application is currently off.\n* Click this button to turn it on.\n* Not available for apps that are always on.","icon":"toggle-off","title":"Off"},{"description":"* The application is on.\n* Click this button to turn if off.\n* Not available for apps that are always on.","icon":"power-off","title":"On"}],"column_class":"w-25-l","data_fa_mask":"circle","data_fa_transform":"shrink-8","data_key":"app_status_on_off","description":"  ","horizontal_position":"justify-center","intro":"Toggle On Demand","is_global":true,"partial":"goandtalk/slides/collection-big-icon-circle-mask","resize_column":"flex-auto","title":"The State of Section Application"},"buttons_in_edit_mode":{"appearance":{"card_background":"hover-primary-color","slide_animation":"fadeIn"},"column":[{"column_width":20,"description":"* The app is in standby mode. \n* Click on this button to switch to editing mode. \n* The section works like a normal web page.\n* Click on a link will take you to a new resource.","title":"Edit"},{"column_width":20,"description":"* The app is in editing mode.\n* Click on this button to exit editing.\n* Click on text or image to start editing.\n* The section will behave differently.\n* Click on a link will bring up an editor.","title":"Editing"},{"column_width":20,"description":"* Click this button to save the current PAGE.\n* Click on \"Save\" button on any section will save the whole page.\n* This button works in standby and editing mode.","title":"Save"},{"column_width":20,"description":"* Toggles more options of the current section.\n* This button works in standby and editing mode.","title":"Settings"}],"column_class":"w-50-l","data_key":"buttons_in_edit_mode","description":"  ","horizontal_position":"justify-center","images_class":"br0","intro":"Buttons and States","is_global":true,"partial":"goandtalk/slides/collection-text-custom-width","resize_column":"flex-auto","title":"Buttons Available When the Section App is On"},"data_browser_database":{"appearance":{"card_background":"bg-light-gray","section_background":"bg-white-70","slide_animation":"fadeIn","text_color":"primary-color-first-letter-h3"},"column":[{"description":"* IndexedDB by name\n* Storage space is large enough for texts\n* Limited in space for images, especially on mobile devices\n* Online image service recommended","icon":"database","title":"A Database in Your Browser"}],"column_class":"w-50-l","content":"","data_fa_mask":"tablet","data_fa_transform":"shrink-8","data_key":"data_browser_database","description":"  ","horizontal_position":"justify-center","intro":" ","is_global":true,"partial":"goandtalk/slides/collection-big-icon-circle-mask","resize_column":"flex-none","title":"Where are Data and Images Saved"},"default_footer":{"appearance":{"legal_link_color":"link-white-80","nav_link_color":"link-gold","section_background":"bg-black-80"},"is_global":true,"menu":{"footer_legal":[{"name":"Terms of Service","url":"#"},{"name":"Privacy","url":"#"}],"footer_nav":[{"name":"Home","url":"#"},{"name":"About","url":"/about/"}]}},"finding_toolbar":{"appearance":{"animation":"fadeIn","card_background":"hover-primary-color","icon_color":"black-20","slide_animation":"fadeIn","text_color":"primary-color-first-letter-h3"},"column":[{"description":"* At the left side of the screen.\n* Manage global settings. \n* Apply to the current page, or all pages.\n* Hide all section tools.\n* Hide itself.","icon":"grip-vertical","title":"Global Toolbar"},{"description":"* At the top of each section.\n* Manage current section. \n* Apply to current section.\n* Turn app on and off.\n* Toggle edit mode.\n* Toggle global toolbar.","icon":"grip-horizontal","title":"Section Toolbar"},{"description":"* Available in some sections. \n* Toggle button to switch toolbars.\n* Toggle on to edit.\n* Toggle off when done.","icon":"keyboard","title":"Context Toolbar"}],"column_class":"w-25-l","data_key":"finding_toolbar","description":"Hover or tap to show the toolbars.","horizontal_position":"justify-center","intro":"At Top and Left, Out of View Initially","is_global":true,"partial":"goandtalk/slides/collection-big-icon-mono","resize_column":"flex-auto","title":"Finding Toolbars"},"site_and_page_data":{"appearance":{"card_background":"hover-primary-color","icon_color":"black-20","slide_animation":"fadeIn"},"column":[{"description":"* data related to current page only\n* page title and description\n* body text\n* local sections\n* header background, primary colors etc\n\nThere can be multiple pages in one site or project.","icon":"file-alt","title":"Page Data"},{"description":"* data related to the whole site or project\n* site title and description\n* menu items\n* default primary colors\n* global sections\n\nThere can be multiple sites or projects. Each site has its own database.","icon":"globe","title":"Site Data"}],"column_class":"w-25-l","content":"","data_key":"site_and_page_data","description":"  ","horizontal_position":"justify-center","intro":" ","is_global":true,"partial":"goandtalk/slides/collection-big-icon-mono","resize_column":"flex-auto","title":"Page and Site Data"}},"header_class":"bg-primary-color","lightness":45,"lightness_dark":20,"lightness_light":65,"lightness_lighter":80,"logo_url":"/images/logos/icon-on-dark.svg","mainSections":["post"],"main_menu_align":"start","mainsections":["post"],"mobile_menu_button":[{"label":"Menu","menu":"global"},{"label":"Account","menu":"iconmenu"}],"primary_hue":345,"saturation":35,"skip_cover_nav":false};
 gtpb.default.SiteBaseURL = "https://goandtalk.github.io/";

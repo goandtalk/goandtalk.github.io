@@ -25,7 +25,7 @@
   // the list of predefined css classes, solid_background includes overlay_background (with alpha )
   var dropdown_datalist = gtpb.dropdown_datalist = {
     link_color: ["link-yellow","link-gold","link-white","link-white-90","link-white-80","link-white-70","link-white-60","link-white-50","link-black","link-black-05","link-black-10","link-black-20","link-black-30","link-black-40","link-black-50"],
-    partials: Object.keys(gtpb.partials).filter(function(s){return s.indexOf('/settings/') == -1 && s.indexOf('/export/') == -1 }),
+
   	text_color: ["black-90", "black-80", "black-70", "black-60", "black-50", "black-40", "black-30", "black-20", "black-10", "black-05", "white-90", "white-80", "white-70", "white-60", "white-50", "white-40", "white-30", "white-20", "white-10", "black", "near-black", "dark-gray", "mid-gray", "gray", "silver", "light-silver", "moon-gray", "light-gray", "near-white", "white", "dark-red", "red", "light-red", "orange", "gold", "yellow", "light-yellow", "purple", "light-purple", "dark-pink", "hot-pink", "pink", "light-pink", "dark-green", "green", "light-green", "navy", "dark-blue", "blue", "light-blue", "lightest-blue", "washed-blue", "washed-green", "washed-yellow", "washed-red", "primary-color", "primary-color-light", "primary-color-dark"],
   	overlay_background: ["bg-black-90", "bg-black-80", "bg-black-70", "bg-black-60", "bg-black-50", "bg-black-40", "bg-black-30", "bg-black-20", "bg-black-10", "bg-black-05", "bg-white-90", "bg-white-80", "bg-white-70", "bg-white-60", "bg-white-50", "bg-white-40", "bg-white-30", "bg-white-20", "bg-white-10", "bg-primary-color-dark-90"],
   	solid_background: ["bg-black","bg-near-black","bg-dark-gray","bg-mid-gray","bg-gray","bg-silver","bg-light-silver","bg-moon-gray","bg-light-gray","bg-near-white","bg-white","bg-transparent","bg-dark-red","bg-red","bg-light-red","bg-orange","bg-gold","bg-yellow","bg-light-yellow","bg-purple","bg-light-purple","bg-dark-pink","bg-hot-pink","bg-pink","bg-light-pink","bg-dark-green","bg-green","bg-light-green","bg-navy","bg-dark-blue","bg-blue","bg-light-blue","bg-lightest-blue","bg-washed-blue","bg-washed-green","bg-washed-yellow","bg-washed-red", "bg-primary-color", "bg-primary-color-dark", "bg-primary-color-light", "bg-black-90", "bg-black-80", "bg-black-70", "bg-black-60", "bg-black-50", "bg-black-40", "bg-black-30", "bg-black-20", "bg-black-10", "bg-black-05", "bg-white-90", "bg-white-80", "bg-white-70", "bg-white-60", "bg-white-50", "bg-white-40", "bg-white-30", "bg-white-20", "bg-white-10", "bg-primary-color-dark-90", "bg-primary-color-lighter","bg-accent-color","bg-accent-color-light"],
@@ -309,7 +309,12 @@
       if ( 'local' === exp_link_format ) {
           var nesting = __get(Mavo.all, 'page_app.root.children.nesting_level.value') || 0;
           //a link ends in / will list the folder in local browsing mode, so we convert it to /index.html
-          return './' + '../'.repeat(nesting) + str + (/\/$/.test(str)? 'index.html' : '');
+          if(nesting) {
+            return './' + '../'.repeat(nesting) + str.replace(/^\//,'') + (/\/$/.test(str)? 'index.html' : '');
+          } else {
+            // ./index.html is valid link, .index.html will not be found on local file system
+            return './' + str.replace(/^\//,'') + (/\/$/.test(str)? 'index.html' : '');
+          }
       } else {
         try {
           url = new URL(gtpb.site_app.baseurl);
@@ -355,11 +360,13 @@
     var tplname = o.partial || o.data && o.data.partial;
     if (!tplname) return "";
     var tplFn;
+    var partialString = o.partialString ||
+    prepareTemplate(gtpb.default.TemplateHash, gtpb.site_app.params.js_partial[tplname] || gtpb.partials[tplname]);
 
     try {
       tplFn = gtpb.cache[tplname];
       if (!tplFn) {
-        tplFn = gtpb.cache[tplname] = doT.template(prepareTemplate(gtpb.default.TemplateHash, gtpb.partials[tplname]), tplSetting);
+        tplFn = gtpb.cache[tplname] = doT.template(partialString, tplSetting);
       }
 
     } catch(e){
@@ -382,6 +389,7 @@
       edit_mode: p.edit_mode,
       id: o.id || randomlc(6,'s'),
       site: gtpb.site_app,
+      page: gtpb.page_app,
 
       logo_url: gtpb.page_app.logo_url || gtpb.site_app.params.logo_url,
       main_menu_align: gtpb.page_app.main_menu_align || gtpb.site_app.params.main_menu_align,
@@ -423,7 +431,7 @@
     var uid = {};
     var bigstr = '';
     var arrlen = sections.length;
-    var t0 = Date.now();
+    //var t0 = Date.now();
     //make sure first section is a cover to show nav and manage section buttons
     if(!sections[0] ||
       'object' !== typeof sections[0] ||
@@ -449,7 +457,7 @@
     }
 
     article.insertAdjacentHTML('beforeend', bigstr);
-    console.log("time on insertAdjacentHTML concat: ", Date.now() - t0, 'ms');
+    //console.log("time on insertAdjacentHTML concat: ", Date.now() - t0, 'ms');
 
     // transfer nodes to DocumentFragment to insert nodes in one go
     while (article.childNodes[0]) {
@@ -746,7 +754,7 @@
         partialName = partialName || globalSection && globalSection.partial;
       }
 
-      if (!partialName || ! gtpb.partials[partialName]) {
+      if (!partialName || !gtpb.site_app.params.js_partial[partialName] && !gtpb.partials[partialName]) {
         flashFeedback({
           message: 'Template not found. Please select a section template from dropdown list.',
           bg: 'bg-red'
@@ -1036,6 +1044,10 @@
       this.setAttribute("href", "data:application/" + format  + ";charset=UTF-8," + encodeURIComponent(stringifySite(_exp_format_node)));
     });
 
+    elem.querySelector('.download-site-css').addEventListener('mousedown',function(e){
+      this.setAttribute("href", "data:text/css;charset=UTF-8," + encodeURIComponent(gtpb.site_app.params.custom_css));
+    });
+
     function expDelimChangeHandler(e) {
       gtpb.actions.exportPageData.call(Mavo.all.page_app.root.children.exp_data_format);
     };
@@ -1178,6 +1190,9 @@
       edit_mode: true,
     });
     activateApps();
+    flashFeedback({
+      message: "Data has been loaded. "
+    });
   }
 
   function preloadPageList(){
@@ -1330,11 +1345,12 @@
       data: {},
       partial: 'goandtalk/export/nav-mobile-js',
     },opt);
-
+    var tplName = Mavo.all.page_app.root.children.js_exp_tpl.value.trim();
     return renderSection({
       id: 'page_html',
       data: gtpb.page_app,
-      partial: 'goandtalk/export/base-js',
+      partialString: s.js_export[tplName],
+      partial:  tplName || 'goandtalk/export/base-js',
     },opt);
 
   }
@@ -1783,6 +1799,18 @@
       if (globals) {
         combo.list = Object.keys(globals);
       }
+    } else if(this.property.indexOf('js_exp_') > -1) {
+      var jsTpls = gtpb.site_app.params.js_export;
+      if(jsTpls) {
+        combo.list = Object.keys(jsTpls);
+      }
+    } else if(this.property.indexOf('js_partial_') > -1) {
+      var tpls = gtpb.site_app.params.js_partial;
+      if(tpls) {
+        combo.list = Object.keys(tpls);
+      }
+    } else if('partial' === this.property ) {
+      combo.list = Object.keys(gtpb.partials).filter(function(s){return s.indexOf('/settings/') == -1 && s.indexOf('/export/') == -1 }).concat(Object.keys(gtpb.site_app.params.js_partial));
     }
     //tracking, in order to destroy it when necessary.
     combo.mavoId = this.mavo.id;
@@ -1797,6 +1825,117 @@
       combo.close();
     }
   };
+  // this is set to new template textarea
+  gtpb.actions.cloneJsExportBase = function(){
+    this.setValue(gtpb.partials["goandtalk/export/base-js"]);
+  };
+
+  //this is set to new template name
+  gtpb.actions.createJsExportTpl = function(){
+    var editNode = Mavo.all.site_app.root.children.params.children.new_js_exp_tpl;
+    var tpl = editNode.value.trim();
+    var tplName = this.value.trim();
+    if(!tplName || !tpl) {
+      flashFeedback({
+        message: "Please provide code and name for this template",
+        bg: "bg-red",
+      });
+      return;
+    }
+    var sp = gtpb.site_app.params;
+    if(__get(sp.js_export, this.value)) {
+      flashFeedback({
+        message: "Template already exists, please provide a unique template name.",
+        bg: "bg-red",
+      });
+      return;
+    }
+   sp.js_export = sp.js_export || {};
+   sp.js_export[tplName] = tpl;
+
+   Mavo.all.site_app.unsavedChanges = true;
+   Mavo.all.site_app.save().then(()=> {
+     flashFeedback({
+       message: "Created. Please go to edit template tab to edit existing templates."
+     });
+     this.setValue("");
+     editNode.setValue("");
+   });
+  };
+  //this is set to template name node
+  gtpb.actions.loadJsExportTpl = function(){
+    var tplName = this.value.trim();
+    var tpl = __get(gtpb.site_app.params.js_export, tplName);
+    if(!tpl) {
+      return;
+    }
+    Mavo.all.site_app.root.children.params.children.edit_js_exp_tpl.setValue(tpl);
+  };
+  //this is set to edit node
+  gtpb.actions.saveJsExportTpl = function(){
+    var tplName = Mavo.all.site_app.root.children.params.children.js_exp_open.value.trim();
+    gtpb.site_app.params.js_export[tplName] = this.value;
+    Mavo.all.site_app.unsavedChanges = true;
+    Mavo.all.site_app.save().then(function(){
+      flashFeedback({
+        message: "Saved."
+      });
+    });
+  };
+
+  //this is set to new template name
+  gtpb.actions.createJsPartial = function(){
+    var editNode = Mavo.all.site_app.root.children.params.children.new_js_partial_tpl;
+    var tpl = editNode.value.trim();
+    var tplName = this.value.trim();
+    if(!tplName || !tpl) {
+      flashFeedback({
+        message: "Please provide code and name for this template",
+        bg: "bg-red",
+      });
+      return;
+    }
+    var sp = gtpb.site_app.params;
+    if(__get(sp.js_partial, this.value)) {
+      flashFeedback({
+        message: "Template already exists, please provide a unique template name.",
+        bg: "bg-red",
+      });
+      return;
+    }
+   sp.js_partial = sp.js_partial || {};
+   sp.js_partial[tplName] = tpl;
+
+   Mavo.all.site_app.unsavedChanges = true;
+   Mavo.all.site_app.save().then(()=> {
+     flashFeedback({
+       message: "Created. Please go to edit template tab to edit existing templates."
+     });
+     this.setValue("");
+     editNode.setValue("");
+   });
+  };
+  //this is set to template name node
+  gtpb.actions.loadJsPartial = function(){
+    var tplName = this.value.trim();
+    var tpl = __get(gtpb.site_app.params.js_partial, tplName);
+    if(!tpl) {
+      return;
+    }
+    Mavo.all.site_app.root.children.params.children.edit_js_partial_tpl.setValue(tpl);
+  };
+  //this is set to edit node
+  gtpb.actions.saveJsPartial = function(){
+    var tplName = Mavo.all.site_app.root.children.params.children.js_partial_open.value.trim();
+    gtpb.site_app.params.js_partial[tplName] = this.value;
+    Mavo.all.site_app.unsavedChanges = true;
+    Mavo.all.site_app.save().then(function(){
+      flashFeedback({
+        message: "Saved."
+      });
+    });
+  };
+
 
   function toggleBaseToolbar() {
     var isActive = Mavo.all.base_app_list.root.element.classList.toggle('active');
@@ -1960,6 +2099,7 @@
           gtpb.site_app.params.global_section = gtpb.site_app.params.global_section || {
             default_footer: gtpb.default.SiteFooter,
           };
+
           for (var k in gtpb.site_app.menu){
             var menu = gtpb.site_app.menu[k];
             for(var i = 0; i < menu.length; i ++) {
@@ -1967,6 +2107,8 @@
             }
           }
         }
+        gtpb.site_app.params.js_export = gtpb.site_app.params.js_export || {};
+        gtpb.site_app.params.js_partial = gtpb.site_app.params.js_partial || {};
 
         gtpb.page_app = r.rows[2].doc;
         if(!gtpb.page_app){

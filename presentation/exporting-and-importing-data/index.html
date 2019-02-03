@@ -200,11 +200,19 @@
 
 
 
-<nav class="relative o-90 bg-transparent" >
-  <div class="w-90 mw9 center ph2 pv4 cf flex justify-between tracked" >
 
-    <span class="fl self-center">
-      <a href="/" class="v-mid " title="Home">
+
+<nav class="relative o-90 bg-transparent" >
+  <div class="w-90 mw9 center ph2 pv4 cf flex flex-wrap justify-between tracked" >
+
+    <span class="fl dib self-center site-logo
+    
+    "
+    
+    >
+      <a href="/" class="v-mid " title="Home"
+      
+      >
         <img data-role="logo" class="h2 v-mid dim" src="/images/logos/icon-on-dark.svg" />
       </a>
     </span>
@@ -240,9 +248,12 @@
       
     </ul>
     
-    <ul class="list fr cf ma0 ph3 ph4-l pv1 flex justify-end
+    <ul class="list fr cf ma0 ph3 ph4-l pv1 justify-end
+    flex
     
-    " >
+    "
+    
+    >
     
       
         <li class="fl" >
@@ -471,25 +482,30 @@
       
         <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
           <div class="w-100 pa2 hover-primary-color">
-            <div class="relative mb2 tc">
+            <div class="mb2 tc ">
               <img class="mw-100 br0" alt="" src="/" >
             </div>
-            <h3 class="tc"> Backup </h3>
+            <div class="ph1 ">
+            <h3 class="card-title tc"><span> Backup </span> </h3>
+            
             <div class="pt1 lh-copy markdown"><ul>
 <li>IndexedDB is managed by browsers</li>
 <li>data could be accidentally deleted if you clear browsing data.</li>
 <li>back up is a good practice</li>
 </ul>
 </div>
+            </div>
           </div>
         </div>
       
         <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
           <div class="w-100 pa2 hover-primary-color">
-            <div class="relative mb2 tc">
+            <div class="mb2 tc ">
               <img class="mw-100 br0" alt="" src="/" >
             </div>
-            <h3 class="tc"> Integration </h3>
+            <div class="ph1 ">
+            <h3 class="card-title tc"><span> Integration </span> </h3>
+            
             <div class="pt1 lh-copy markdown"><ul>
 <li>work with external app, for example static website generator</li>
 <li>load initial data from external app</li>
@@ -498,21 +514,25 @@
 <li>the tutorials in this section have been written this way.</li>
 </ul>
 </div>
+            </div>
           </div>
         </div>
       
         <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
           <div class="w-100 pa2 hover-primary-color">
-            <div class="relative mb2 tc">
+            <div class="mb2 tc ">
               <img class="mw-100 br0" alt="" src="/" >
             </div>
-            <h3 class="tc"> Batch Operation </h3>
+            <div class="ph1 ">
+            <h3 class="card-title tc"><span> Batch Operation </span> </h3>
+            
             <div class="pt1 lh-copy markdown"><ul>
 <li>process the page data as plain text</li>
 <li>export, search and replace term for example</li>
 <li>import back to generate a fresh page</li>
 </ul>
 </div>
+            </div>
           </div>
         </div>
       
@@ -547,46 +567,55 @@
       
         <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
           <div class="w-100 pa2 hover-primary-color">
-            <div class="relative mb2 tc">
+            <div class="mb2 tc ">
               <img class="mw-100 br0" alt="" src="/" >
             </div>
-            <h3 class="tc"> TOML </h3>
+            <div class="ph1 ">
+            <h3 class="card-title tc"><span> TOML </span> </h3>
+            
             <div class="pt1 lh-copy markdown"><ul>
 <li>user friendly</li>
 <li>flexible about space and indentation</li>
 <li>can include comments</li>
 </ul>
 </div>
+            </div>
           </div>
         </div>
       
         <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
           <div class="w-100 pa2 hover-primary-color">
-            <div class="relative mb2 tc">
+            <div class="mb2 tc ">
               <img class="mw-100 br0" alt="" src="/" >
             </div>
-            <h3 class="tc"> YAML </h3>
+            <div class="ph1 ">
+            <h3 class="card-title tc"><span> YAML </span> </h3>
+            
             <div class="pt1 lh-copy markdown"><ul>
 <li>user friendly</li>
 <li>strict about space and indentation</li>
 <li>can include comments</li>
 </ul>
 </div>
+            </div>
           </div>
         </div>
       
         <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
           <div class="w-100 pa2 hover-primary-color">
-            <div class="relative mb2 tc">
+            <div class="mb2 tc ">
               <img class="mw-100 br0" alt="" src="/" >
             </div>
-            <h3 class="tc"> JSON </h3>
+            <div class="ph1 ">
+            <h3 class="card-title tc"><span> JSON </span> </h3>
+            
             <div class="pt1 lh-copy markdown"><ul>
 <li>intended for machine parsing</li>
 <li>not user friendly. text is difficult to read with escaped quotes</li>
 <li>can not include comments</li>
 </ul>
 </div>
+            </div>
           </div>
         </div>
       
@@ -950,11 +979,12 @@
           </div>
           
 
-          <div class="pv4" >
+          <div class="pv4 flex flex-column" >
             
             <div class="fadeIn animate-edit-cta center tc ba w-100
             bg-primary-color
             
+            self-center
             b--light-gray
             br0
             pv2
