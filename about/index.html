@@ -17,8 +17,52 @@
       
 <link href="/css/webslides.css?v=0.0002" rel="stylesheet" />
 <link href="/css/tachyons.min.css?v=0.0001" rel="stylesheet" />
+<link href="/css/styles.css" rel="stylesheet" />
 
 
+
+
+  <style>
+  
+@keyframes slowRight {
+  0% {
+    transform: translateX(-100vw);
+    opacity: .9;
+  }
+
+  100% {
+    transform: translateX(0vw);
+   opacity: .5;  
+   }
+}
+
+.slowRight {
+  animation: slowRight 10s linear infinite;
+  height: 100%;
+  }
+
+
+@keyframes slowRightFade {
+  0% {
+    transform: translateX(0vw);
+   opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+ }
+  100% {
+   opacity: .0;
+    transform: translateX(50vw);
+  }
+}
+
+.slowRightFade {
+  animation: slowRightFade 20s linear infinite;
+  height: 100%;
+}
+
+  </style>
 
 
     
