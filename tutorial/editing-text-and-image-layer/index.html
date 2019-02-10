@@ -32,6 +32,9 @@
 <style>
 
 
+section[mv-app].active {
+  min-height: 100vh;
+}
  
 .mv-pending-edit {
   min-width: 4em;
@@ -196,22 +199,18 @@
       
 
 <section 
-  class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="bg-primary-color-dark
+  class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="min-vh-100 flex-auto bg-primary-color-dark
   fadeIn"
   >
-
     
 
-
+    
 
 
   
 
 
-
     
-
-
 
 <figure class="ma0">
 	<picture>
@@ -251,6 +250,7 @@
         <img data-role="logo" class="h2 v-mid dim" src="/images/logos/icon-on-dark.svg" />
       </a>
     </span>
+    <span class="flex-auto dn-l"></span>
 
     
     <ul class="list dn fl cf ma0 di-l flex-l pv1 ph4-l justify-start flex-grow-1
@@ -300,8 +300,10 @@
   </div>
 </nav>
 
-<div class="relative tc-l pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " ><div class="flex-auto w-100 white-80 tracked flex flex-column justify-center">
-        <div class="tc-l ph3">
+<div class="fadeIn relative pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " ><div class="flex-auto w-100 white-80 tracked flex flex-column justify-center">
+        <div class="ph3 tc"
+        
+        >
           <p  class="f4 ttu white-60 mv2 mv3-l">
           beside or beneath?
           <a href="#" class="slide-trigger grow ph2 dn di-l " title="View Page as Presentation">
@@ -328,7 +330,7 @@
               with no hassle
             </h2>
           </div>
-          <div >
+          <div class="tc-l">
             <span >
               <span class="slide-trigger"
               

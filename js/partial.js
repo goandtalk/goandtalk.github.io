@@ -29,6 +29,7 @@ gtpb.partials = gtpb.partials || {};
         <img data-role="logo" class="h2 v-mid dim" src="6f171f7af664405d6c48d439c7dcf034b904ccf1" />
       </a>
     </span>
+    <span class="flex-auto dn-l"></span>
 
     
     <ul class="list dn fl cf ma0 di-l flex-l pv1 ph4-l justify-{tf{? o.edit_mode }tf}[if(page_app.main_menu_align,page_app.main_menu_align,site_app.params.main_menu_align)]{tf{??}tf}{enc{! o.__get(o, \u0027main_menu_align\u0027) || \u0027start\u0027 }enc}{tf{?}tf}
@@ -113,9 +114,9 @@ gtpb.partials = gtpb.partials || {};
 ">
   
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
       <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
     </div>
     
     <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
@@ -421,6 +422,49 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;),
+invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.element.parentElement&#39;, &#39;link-&#39;),
+" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -453,7 +497,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
   
   
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
 </div>
@@ -467,34 +511,51 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     gtpb.partials['goandtalk/cover/hero-dark-background-with-text-at-center'] = `
 
 <section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-  class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="{enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027bg-black-70\u0027 }enc}
+  class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="min-vh-100 flex-auto {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027bg-black-70\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}"
-  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="'min-vh-100 flex-auto ' & section_background & ' ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+    
+<div class="tc absolute absolute--fill fa-10x flex flex-column justify-center">
+  <div class="{enc{! o.__get(it, \u0027bg_icon.bg_icon_color\u0027) || \u0027white-10\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_size\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_display\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.animation\u0027) || \u0027\u0027 }enc}
+   "
+   675275c791df5c494218febd9c0cde06eea2ae6bproperty="fallback_icon" mv-storage="none" mv-attribute="class" mv-value="bg_icon.bg_icon_color & ' ' & bg_icon.bg_icon_size & ' ' & bg_icon.bg_icon_display & ' ' & bg_icon.animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+     <i class="fallback-icon fas fa-{enc{! o.__get(it, \u0027bg_icon.inner_icon\u0027) || \u0027\u0027 }enc}"
+     675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fallback-icon fas fa-' & bg_icon.inner_icon" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+     data-fa-transform="{enc{! o.__get(it, \u0027bg_icon.inner_icon_transform\u0027) || \u0027\u0027 }enc}"
+     data-fa-mask="fas fa-{enc{! o.__get(it, \u0027bg_icon.icon_mask\u0027) || \u0027\u0027 }enc}"
+     ></i>
+   </div>
+</div>
+
 
     
 
+{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
 
-
-<img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
+  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
   {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
-
+  35fe3a9616151be1e9a9abc33ece88d44bd47528
 
 
     
-
-
 
 <figure class="ma0">
 	<picture>
     
-    <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
-" src="47a10716ab9cfa2da5ba2cc37e033286ea50785c" >
+    {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+" src="a41325d3d724b613adde84fb3124bc6dd2d09ac7" >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
     
   </picture>
 </figure>
 <span class="absolute absolute--fill
-    {enc{! o.__get(it, \u0027image.overlay_background\u0027) || \u0027bg-black-70\u0027 }enc}"
+    {enc{! o.__get(it, \u0027image.overlay_background\u0027) || \u0027bg-black-05\u0027 }enc}"
     675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="'absolute absolute--fill ' & image.overlay_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528></span>
 
 
@@ -516,6 +577,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         <img data-role="logo" class="h2 v-mid dim" src="6f171f7af664405d6c48d439c7dcf034b904ccf1" />
       </a>
     </span>
+    <span class="flex-auto dn-l"></span>
 
     
     <ul class="list dn fl cf ma0 di-l flex-l pv1 ph4-l justify-{tf{? o.edit_mode }tf}[if(page_app.main_menu_align,page_app.main_menu_align,site_app.params.main_menu_align)]{tf{??}tf}{enc{! o.__get(o, \u0027main_menu_align\u0027) || \u0027start\u0027 }enc}{tf{?}tf}
@@ -591,8 +653,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   </div>
 </nav>
 
-<div class="relative tc-l pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " ><div class="flex-auto w-100 white-80 tracked flex flex-column justify-center">
-        <div class="tc-l ph3">
+<div class="fadeIn relative pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " ><div class="flex-auto w-100 white-80 tracked flex flex-column justify-center">
+        <div class="ph3 {enc{! o.__get(it, \u0027card_text_align\u0027) || \u0027tc-ns\u0027 }enc}"
+        675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'ph3 ' & card_text_align" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
+        >
           <p 675275c791df5c494218febd9c0cde06eea2ae6b  property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="f4 ttu white-60 mv2 mv3-l">
           {enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc}
           <a href="#" class="slide-trigger grow ph2 dn di-l " title="View Page as Presentation">
@@ -615,13 +679,17 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
 <div class="dn show-in-edit relative w-100 overflow-visible">
 
-  <div class="gt-label">
-    <i class="fas fa-heading bg-black-40 gray pv2 ph4 br0 pointer"
-    mv-action="invoke('toggleClass', section_background, '.inline-title-options', 'dn')"
-    ></i>
+  <div class="gt-label tc pointer"
+  mv-action="invoke('toggleClass', section_background, '.inline-title-options', 'dn')"
+  >
+    <i class="fas fa-heading bg-black-40 gray pv2 ph4 br0"></i>
+
+    <span title="toggle center align text" class="dib mh2 bg-black-40 white f6 pv2 ph4 [if(card_text_align!='ts-auto','outline','')]" mv-action="set(card_text_align, if(card_text_align = 'tc-ns','ts-auto','tc-ns'))">
+      <i class="fas fa-align-center"></i>
+    </span>
   </div>
   <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible">
-    Toggle title formatting options
+    Toggle text formatting options
   </div>
 
   <div class="absolute dn inline-title-options left-0 right-0 top-2 pa3 pb5 z-1 bg-light-gray mid-gray">
@@ -630,10 +698,8 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       <div class="relative w-100  w-50-ns  ph1 fl pt2 pb3 ">
         <div>Title Class
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(title_class, '')">x</span>
-          <span title="toggle italic" class="mh2 bg-dark-gray white f7 ph1 br-100 i tracked-mega" mv-action="set(title_i, if(title_i,'','i'))">I</span>
-          <span title="toggle center align text" class="mh2 bg-dark-gray white f7 ph1 br-100" mv-action="set(title_align, if(title_align = 'tc','ts','tc'))">
-            <i class="fas fa-align-center"></i>
-          </span>
+          <span title="toggle italic" class="pointer mh2 bg-dark-gray white f7 ph1 br-100 i tracked-mega" mv-action="set(title_i, if(title_i,'','i'))">I</span>
+
         </div>
         <div class=" flex  flex-nowrap   pt1 cf items-center mid-gray">
           <input property="title_class" type="text" class="flex-auto  dropdown-input  h2 w-100  bg-transparent  br0 b--black-10 fl" data-path="text_color" value="gold" data-minchars="0" >
@@ -653,7 +719,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       </div>
     </div>
     <input hidden property="title_i">
-    <input hidden property="title_align" value="tc">
+    <input hidden property="card_text_align" value="tc-ns">
   </div>
 </div>
 
@@ -665,7 +731,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               {enc{! o.__get(it, \u0027description\u0027) || \u0027\u0027 }enc}
             </h2>
           </div>
-          <div >
+          <div class="tc-l">
             <span 675275c791df5c494218febd9c0cde06eea2ae6b property="cta" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
               <span class="{enc{! o.__get(it, \u0027appearance.trigger_class\u0027) || \u0027\u0027 }enc}"
               675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="trigger_class" 35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -711,9 +777,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 ">
   
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
       <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
     </div>
     
     <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
@@ -740,6 +806,13 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
 		
 	</button>&nbsp;
 
@@ -1033,6 +1106,49 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;),
+invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.element.parentElement&#39;, &#39;link-&#39;),
+" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -1078,7 +1194,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 "
           data-path=""
           
-           value="https://source.unsplash.com/sK1hW5knKkw/1536x864"
+           value=""
           data-minchars="0" 
           />
           
@@ -1371,7 +1487,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 "
           data-path=""
           
-           value="https://source.unsplash.com/sK1hW5knKkw/1536x864"
+           value=""
           data-minchars="0" 
           />
           
@@ -1574,6 +1690,368 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	
 	</div>
 
+	
+	<div data-pane="bg_icon" class="gt-tab-pane [if(current_tab='bg_icon', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="bg_icon" >
+  <h3 class="mt2">Background Icon</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Outer Icon   <span class="fa-3x">
+    <span class="dib ph2">
+      <i class="fas fa-[inner_icon]" data-fa-mask="fas fa-[icon_mask]" data-fa-transform="[inner_icon_transform]"></i>
+    </span>
+  </span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_mask, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.icon_mask, &#39;root.children.fallback_icon&#39;, &#39;data-fa-mask&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_mask" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="square" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_mask)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon, the mask. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon <i class="gray fas fa-[if(inner_icon,inner_icon,'info-circle')]"></i>
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="font" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',inner_icon)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon transform 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon_transform, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.inner_icon_transform, &#39;root.children.fallback_icon&#39;, &#39;data-fa-transform&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon_transform" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value="shrink-6" 
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            keywords: shrink grow rotate up down left right flip-v flip-h
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Background Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Size (x10em) 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_size, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_size" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="fa-xs, fa-sm, fa-lg, fa-2x, fa-3x" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_size)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The size of icon times 10em.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Display 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_display, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_display" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="dn, self-start, self-center, self-end" 
+           value="dn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_display)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            How to position the icon. Choose dn to disable it.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slow_motion"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the slow motion animation of the icon.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
 
 </div>
 
@@ -1600,7 +2078,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
   
   
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
 </div>
@@ -1625,31 +2103,53 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 
+
+
+
 <section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-  class="alternate gt-mv-on relative flex flex-column min-vh-100" ><div class="flex-auto flex flex-column justify-center
+  class="alternate gt-mv-on relative flex flex-column min-vh-100" ><div class="flex-auto flex flex-column justify-center min-vh-100
   {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027bg-black-70\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027white-80\u0027 }enc}
   "
-  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' flex-auto flex flex-column justify-center min-vh-100 ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+    
+<div class="tc absolute absolute--fill fa-10x flex flex-column justify-center">
+  <div class="{enc{! o.__get(it, \u0027bg_icon.bg_icon_color\u0027) || \u0027white-10\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_size\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_display\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.animation\u0027) || \u0027\u0027 }enc}
+   "
+   675275c791df5c494218febd9c0cde06eea2ae6bproperty="fallback_icon" mv-storage="none" mv-attribute="class" mv-value="bg_icon.bg_icon_color & ' ' & bg_icon.bg_icon_size & ' ' & bg_icon.bg_icon_display & ' ' & bg_icon.animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+     <i class="fallback-icon fas fa-{enc{! o.__get(it, \u0027bg_icon.inner_icon\u0027) || \u0027\u0027 }enc}"
+     675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fallback-icon fas fa-' & bg_icon.inner_icon" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+     data-fa-transform="{enc{! o.__get(it, \u0027bg_icon.inner_icon_transform\u0027) || \u0027\u0027 }enc}"
+     data-fa-mask="fas fa-{enc{! o.__get(it, \u0027bg_icon.icon_mask\u0027) || \u0027\u0027 }enc}"
+     ></i>
+   </div>
+</div>
+
+
     
 
+{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
 
-
-<img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
+  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
   {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
+  35fe3a9616151be1e9a9abc33ece88d44bd47528
 
 
     
-
-
 
 <figure class="ma0">
 	<picture>
     
-    <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+    {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="a41325d3d724b613adde84fb3124bc6dd2d09ac7" >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
     
   </picture>
 </figure>
@@ -1678,6 +2178,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         <img data-role="logo" class="h2 v-mid dim" src="6f171f7af664405d6c48d439c7dcf034b904ccf1" />
       </a>
     </span>
+    <span class="flex-auto dn-l"></span>
 
     
     <ul class="list dn fl cf ma0 di-l flex-l pv1 ph4-l justify-{tf{? o.edit_mode }tf}[if(page_app.main_menu_align,page_app.main_menu_align,site_app.params.main_menu_align)]{tf{??}tf}{enc{! o.__get(o, \u0027main_menu_align\u0027) || \u0027start\u0027 }enc}{tf{?}tf}
@@ -1753,11 +2254,13 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   </div>
 </nav>
 
-<div class="cf w-100 relative  center flex flex-wrap {enc{! o.__get(it, \u0027section_max_width\u0027) || \u0027mw8\u0027 }enc}"
+<div class="min-vh-100 cf w-100 relative  center flex flex-wrap {enc{! o.__get(it, \u0027section_max_width\u0027) || \u0027mw8\u0027 }enc}"
     675275c791df5c494218febd9c0cde06eea2ae6b
       mv-attribute="class"
-      mv-value="'cf w-100 relative  center flex flex-wrap ' & if(section_max_width, section_max_width, 'mw8')"
+      mv-value="'min-vh-100 cf w-100 relative  center flex flex-wrap ' & if(section_max_width, section_max_width, 'mw8')"
     35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+      {tf{? o.edit_mode || o.__get(it, \u0027image_column_width\u0027) }tf}
+
       <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class"
       mv-value="'image-column w-100 z-0 flex flex-wrap fl w-' & image_column_width & '-ns ' &  image_order & ' ' & if(image_align_v_flex,image_align_v_flex,'items-center') & ' ' & image_layer & ' ' & image_column_height & ' ' & image_align_h" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
       class="image-column w-100 z-0 flex flex-wrap fl
@@ -1772,7 +2275,25 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         {enc{! o.__get(it, \u0027height_reference\u0027) || \u0027h\u0027 }enc}-{enc{! o.__get(it, \u0027image_height\u0027) || \u0027100\u0027 }enc}"
          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc overflow-hidden relative  w-100 flex flex-column justify-center items-center ' & height_reference & '-' &  image_height " 35fe3a9616151be1e9a9abc33ece88d44bd47528
         > 
+
         
+        {tf{? o.edit_mode || o.__get(it, \u0027embed_source\u0027) }tf}
+
+          <div class="w-100 aspect-ratio
+          aspect-ratio--{enc{! o.__get(it, \u0027embed_aspect_ratio\u0027) || \u0027none\u0027 }enc}
+          {enc{! o.__get(it, \u0027embed_order\u0027) || \u0027\u0027 }enc}
+          "
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 aspect-ratio aspect-ratio--' & embed_aspect_ratio & ' ' & embed_order" 35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+            <iframe frameborder="0" style="border:0"  allow="fullscreen" class="aspect-ratio--object"
+              src="f9646236a2807f0720fd2ecb05896803adf5bb4b"
+            675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="none" property="iframe_view" mv-attribute="src" mv-value="embed_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 ></iframe>
+          </div>
+        35fe3a9616151be1e9a9abc33ece88d44bd47528
+        
+
+        
+        {tf{? o.edit_mode || o.__get(it, \u0027image_source\u0027) }tf}
+
           <img class="mw-100 maxh-100
           o-{enc{! o.__get(it, \u0027image_opacity\u0027) || \u0027100\u0027 }enc}
           {enc{! o.__get(it, \u0027object_fit_class\u0027) || \u0027of-scale-down\u0027 }enc}
@@ -1781,15 +2302,17 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           src="be9210026fcf76504a9221b2aea4c4b61cf84e51"
           alt="{enc{! o.__get(it, \u0027image_alt_text\u0027) || \u0027\u0027 }enc}"
           >
+          35fe3a9616151be1e9a9abc33ece88d44bd47528
         
         </div>
       </div>
-      <div class="text-column z-0 center w-100 mw8 flex flex-auto pa2 ph3-m ph4-l fl
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+      <div class="fadeIn text-column z-0 center w-100 mw8 flex flex-auto pa2 ph3-m ph4-l fl
       {enc{! o.__get(it, \u0027text_column_class\u0027) || \u0027w-30-ns\u0027 }enc}
       {enc{! o.__get(it, \u0027card_align_h\u0027) || \u0027justify-center\u0027 }enc}
       {enc{! o.__get(it, \u0027card_align_v\u0027) || \u0027\u0027 }enc}
       "
-      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'text-column z-0 center w-100 mw8 flex flex-auto pa2 ph3-m ph4-l  fl ' & card_align_h & ' ' & card_align_v & ' ' & if(text_column_class,text_column_class,'w-30-ns') " 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fadeIn text-column z-0 center w-100 mw8 flex flex-auto pa2 ph3-m ph4-l  fl ' & card_align_h & ' ' & card_align_v & ' ' & if(text_column_class,text_column_class,'w-30-ns') " 35fe3a9616151be1e9a9abc33ece88d44bd47528>
         
         <div class="text-card w-100 pa3 relative
         {enc{! o.__get(it, \u0027card_background\u0027) || \u0027\u0027 }enc}
@@ -1851,8 +2374,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             </span>
             
 
-            <div class=" markdown lh-copy nested-links {enc{! o.__get(it, \u0027fancy_style\u0027) || \u0027\u0027 }enc}"  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
-               {v{= o.sanitizer.sanitize(o.md.render(o.__get(it, \u0027content\u0027) || \u0027* It just works\u0027 || \u0027\u0027 )) }v}
+            <div class=" markdown lh-copy
+            {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027fancy_style\u0027) || \u0027\u0027 }enc}"  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
+               {v{= o.sanitizer.sanitize(o.md.render(o.__get(it, \u0027content\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
 
               
             </div>
@@ -2175,11 +2700,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="border_radius"
             
             
-            id="radio-25-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-28-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-25-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-28-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br0 
             </label>
           </div>
@@ -2189,11 +2714,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-25-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-28-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br1"  
             />
-            <label class="flex-auto ph2" for="radio-25-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-28-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br1 
             </label>
           </div>
@@ -2203,11 +2728,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-25-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-28-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br2"  
             />
-            <label class="flex-auto ph2" for="radio-25-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-28-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br2 
             </label>
           </div>
@@ -2217,11 +2742,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-25-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-28-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br3"  
             />
-            <label class="flex-auto ph2" for="radio-25-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-28-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br3 
             </label>
           </div>
@@ -2231,11 +2756,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-25-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-28-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br4"  
             />
-            <label class="flex-auto ph2" for="radio-25-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-28-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br4 
             </label>
           </div>
@@ -2245,11 +2770,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-25-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-28-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br-pill"  
             />
-            <label class="flex-auto ph2" for="radio-25-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-28-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br-pill 
             </label>
           </div>
@@ -2742,7 +3267,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               Align the image to the left if the image is not full width.
           </span>
         </span>
-        <span class="if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
+        <span class="[if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
           <span class="pa1 dim dib pointer gt-label [if(contains(image_align_h,'left--'),'outline','')]"
             mv-action="set(image_align_h,'left--' & ((100-image_column_width)/2) & '-ns'),invoke('changeFadeIn', image_align_h, 'root.children.image_source.element.parentElement.parentElement')"
           >
@@ -2752,7 +3277,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               Align the image to the center if the image is not full width.
           </span>
         </span>
-        <span class="if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
+        <span class="[if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
           <span class="pa1 dim dib pointer gt-label [if(image_align_h ='right-0','outline','')]"
             mv-action="set(image_align_h,'right-0'),invoke('changeFadeIn', image_align_h, 'root.children.image_source.element.parentElement.parentElement')"
           >
@@ -3470,11 +3995,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="title_ph"
             
             
-            id="radio-26-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-26-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-29-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-26-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-29-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             0 
             </label>
           </div>
@@ -3484,11 +4009,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-26-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-26-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-29-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="1"  
             />
-            <label class="flex-auto ph2" for="radio-26-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-29-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             1 
             </label>
           </div>
@@ -3498,11 +4023,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-26-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-26-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-29-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="2"  
             />
-            <label class="flex-auto ph2" for="radio-26-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-29-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             2 
             </label>
           </div>
@@ -3512,11 +4037,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-26-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-26-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-29-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="3"  
             />
-            <label class="flex-auto ph2" for="radio-26-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-29-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             3 
             </label>
           </div>
@@ -3526,11 +4051,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-26-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-26-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-29-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="4"  
             />
-            <label class="flex-auto ph2" for="radio-26-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-29-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             4 
             </label>
           </div>
@@ -3571,11 +4096,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="title_pv"
             
             
-            id="radio-27-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-30-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="0" 
             />
-            <label class="flex-auto ph2" for="radio-27-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-30-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             0 
             </label>
           </div>
@@ -3585,11 +4110,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-27-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-30-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="1" 
             />
-            <label class="flex-auto ph2" for="radio-27-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-30-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             1 
             </label>
           </div>
@@ -3599,11 +4124,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-27-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-30-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="2" 
             />
-            <label class="flex-auto ph2" for="radio-27-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-30-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             2 
             </label>
           </div>
@@ -3613,11 +4138,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-27-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-30-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="3"  checked 
             />
-            <label class="flex-auto ph2" for="radio-27-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-30-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             3 
             </label>
           </div>
@@ -3627,11 +4152,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-27-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-30-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="4" 
             />
-            <label class="flex-auto ph2" for="radio-27-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-30-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             4 
             </label>
           </div>
@@ -3641,11 +4166,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-27-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-30-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="5" 
             />
-            <label class="flex-auto ph2" for="radio-27-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-30-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             5 
             </label>
           </div>
@@ -3655,11 +4180,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-27-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-30-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="6" 
             />
-            <label class="flex-auto ph2" for="radio-27-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-30-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             6 
             </label>
           </div>
@@ -3781,9 +4306,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 ">
   
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
       <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
     </div>
     
     <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
@@ -3824,6 +4349,20 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="iframe" mv-action="set(current_tab,'iframe')" class="[if(current_tab='iframe', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-play-circle"></i><span class="dn di-ns"> Iframe </span>
 		
 	</button>&nbsp;
 
@@ -4117,6 +4656,49 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;),
+invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.element.parentElement&#39;, &#39;link-&#39;),
+" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -4152,11 +4734,11 @@ w-100  ph1 fl pt2 pb3
              property="image_br"
             
             
-            id="radio-28-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-31-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-28-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-31-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             disable 
             </label>
           </div>
@@ -4166,11 +4748,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-28-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-31-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br2"  
             />
-            <label class="flex-auto ph2" for="radio-28-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-31-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br2 
             </label>
           </div>
@@ -4180,11 +4762,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-28-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-31-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br3"  
             />
-            <label class="flex-auto ph2" for="radio-28-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-31-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br3 
             </label>
           </div>
@@ -4194,11 +4776,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-28-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-31-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br4"  
             />
-            <label class="flex-auto ph2" for="radio-28-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-31-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br4 
             </label>
           </div>
@@ -4208,11 +4790,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-28-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-31-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br-100"  
             />
-            <label class="flex-auto ph2" for="radio-28-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-31-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             circle or oval 
             </label>
           </div>
@@ -4248,11 +4830,11 @@ w-100  ph1 fl pt2 pb3
              property="object_fit_class"
             
             
-            id="radio-29-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-32-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-scale-down"   checked 
             />
-            <label class="flex-auto ph2" for="radio-29-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-32-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Scale Down 
             </label>
           </div>
@@ -4262,11 +4844,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-29-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-32-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-contain"  
             />
-            <label class="flex-auto ph2" for="radio-29-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-32-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Contain 
             </label>
           </div>
@@ -4276,11 +4858,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-29-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-32-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-cover"  
             />
-            <label class="flex-auto ph2" for="radio-29-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-32-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Cover 
             </label>
           </div>
@@ -4290,11 +4872,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-29-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-32-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-fill"  
             />
-            <label class="flex-auto ph2" for="radio-29-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-32-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Fill 
             </label>
           </div>
@@ -4304,11 +4886,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-29-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-32-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-none"  
             />
-            <label class="flex-auto ph2" for="radio-29-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-32-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             None 
             </label>
           </div>
@@ -4416,11 +4998,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="height_reference"
             
             
-            id="radio-30-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-33-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="h"   checked 
             />
-            <label class="flex-auto ph2" for="radio-30-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-33-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Container 
             </label>
           </div>
@@ -4430,11 +5012,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-30-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-33-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="vh"  
             />
-            <label class="flex-auto ph2" for="radio-30-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-33-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Viewport 
             </label>
           </div>
@@ -4475,11 +5057,11 @@ w-100  ph1 fl pt2 pb3
              property="image_order"
             
             
-            id="radio-31-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-34-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="even-order-1-ns"   checked 
             />
-            <label class="flex-auto ph2" for="radio-31-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-34-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line end in even sections 
             </label>
           </div>
@@ -4489,11 +5071,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-31-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-34-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="odd-order-1-ns"  
             />
-            <label class="flex-auto ph2" for="radio-31-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-34-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line end in odd sections 
             </label>
           </div>
@@ -4503,11 +5085,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-31-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-34-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="line-start"  
             />
-            <label class="flex-auto ph2" for="radio-31-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-34-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line start 
             </label>
           </div>
@@ -5065,6 +5647,573 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	
 	</div>
 
+	
+	<div data-pane="bg_icon" class="gt-tab-pane [if(current_tab='bg_icon', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="bg_icon" >
+  <h3 class="mt2">Background Icon</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Outer Icon   <span class="fa-3x">
+    <span class="dib ph2">
+      <i class="fas fa-[inner_icon]" data-fa-mask="fas fa-[icon_mask]" data-fa-transform="[inner_icon_transform]"></i>
+    </span>
+  </span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_mask, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.icon_mask, &#39;root.children.fallback_icon&#39;, &#39;data-fa-mask&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_mask" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="square" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_mask)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon, the mask. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon <i class="gray fas fa-[if(inner_icon,inner_icon,'info-circle')]"></i>
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="font" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',inner_icon)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon transform 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon_transform, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.inner_icon_transform, &#39;root.children.fallback_icon&#39;, &#39;data-fa-transform&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon_transform" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value="shrink-6" 
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            keywords: shrink grow rotate up down left right flip-v flip-h
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Background Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Size (x10em) 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_size, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_size" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="fa-xs, fa-sm, fa-lg, fa-2x, fa-3x" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_size)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The size of icon times 10em.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Display 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_display, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_display" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="dn, self-start, self-center, self-end" 
+           value="dn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_display)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            How to position the icon. Choose dn to disable it.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slow_motion"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the slow motion animation of the icon.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="iframe" class="gt-tab-pane [if(current_tab='iframe', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Iframe</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source URL   <span class="mh2"
+  mv-action="invoke('setItemsAttr', embed_source, 'root.children.iframe_view', 'src', 'iframe')"
+  ><i class="fas fa-sync"></i> </span>
+  
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_source, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_source" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the embed page.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Embed Aspect Ratio 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_aspect_ratio, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_aspect_ratio" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="16x9,9x16,4x3,3x4,6x4,4x6,8x5,5x8,7x5,5x7,1x1,none" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',embed_aspect_ratio)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the dimension of the embed window (width x height). Choose none to temporarily hide iframe.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Embed Order 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_order, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_order" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="order-1,order-0" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',embed_order)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Choose order 1 to display iframe below image, if you have both an iframe and image. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Paste Embed Code   <span class="mh2"
+  mv-action="invoke('extractAttr', paste_embed_code, 'root.children.embed_source', 'src', 'iframe')"
+  ><i class="fas fa-link"></i> </span>
+  
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(paste_embed_code, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h3 b--black-10"
+           property="paste_embed_code"  mv-storage="none" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            You may paste the iframe embed code provided by suppliers here, and click the 
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
 
 </div>
 
@@ -5091,7 +6240,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
   
   
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
 </div>
@@ -5107,7 +6256,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
   
   
-    gtpb.partials['goandtalk/content/text-block'] = `
+    gtpb.partials['goandtalk/content/text-block-with-contact-form'] = `
+
+
+
 
 
 
@@ -5120,16 +6272,43 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027\u0027 }enc}
   "
   675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+    
+<div class="tc absolute absolute--fill fa-10x flex flex-column justify-center">
+  <div class="{enc{! o.__get(it, \u0027bg_icon.bg_icon_color\u0027) || \u0027white-10\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_size\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_display\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.animation\u0027) || \u0027\u0027 }enc}
+   "
+   675275c791df5c494218febd9c0cde06eea2ae6bproperty="fallback_icon" mv-storage="none" mv-attribute="class" mv-value="bg_icon.bg_icon_color & ' ' & bg_icon.bg_icon_size & ' ' & bg_icon.bg_icon_display & ' ' & bg_icon.animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+     <i class="fallback-icon fas fa-{enc{! o.__get(it, \u0027bg_icon.inner_icon\u0027) || \u0027\u0027 }enc}"
+     675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fallback-icon fas fa-' & bg_icon.inner_icon" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+     data-fa-transform="{enc{! o.__get(it, \u0027bg_icon.inner_icon_transform\u0027) || \u0027\u0027 }enc}"
+     data-fa-mask="fas fa-{enc{! o.__get(it, \u0027bg_icon.icon_mask\u0027) || \u0027\u0027 }enc}"
+     ></i>
+   </div>
+</div>
+
 
     
 
+{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
 
+  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
+  {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+" src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
+  35fe3a9616151be1e9a9abc33ece88d44bd47528
+
+
+    
 
 <figure class="ma0">
 	<picture>
     
-    <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+    {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="a41325d3d724b613adde84fb3124bc6dd2d09ac7" >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
     
   </picture>
 </figure>
@@ -5140,6 +6319,8 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       mv-attribute="class"
       mv-value="'cf w-100 relative  center flex flex-wrap ' & if(section_max_width, section_max_width, 'mw8')"
     35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+      {tf{? o.edit_mode || o.__get(it, \u0027image_column_width\u0027) }tf}
+
       <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class"
       mv-value="'image-column w-100 z-0 flex flex-wrap fl w-' & image_column_width & '-ns ' &  image_order & ' ' & if(image_align_v_flex,image_align_v_flex,'items-center') & ' ' & image_layer & ' ' & image_column_height & ' ' & image_align_h" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
       class="image-column w-100 z-0 flex flex-wrap fl
@@ -5147,14 +6328,32 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       {enc{! o.__get(it, \u0027image_layer\u0027) || \u0027absolute\u0027 }enc}
       {enc{! o.__get(it, \u0027image_order\u0027) || \u0027even-order-1-ns\u0027 }enc}
       {enc{! o.__get(it, \u0027image_align_h\u0027) || \u0027\u0027 }enc}
-      w-{enc{! o.__get(it, \u0027image_column_width\u0027) || \u0027100\u0027 }enc}-ns
+      w-{enc{! o.__get(it, \u0027image_column_width\u0027) || \u0027\u0027 }enc}-ns
       {enc{! o.__get(it, \u0027image_align_v_flex\u0027) || \u0027items-center\u0027 }enc}">
         <div class="tc overflow-hidden relative  w-100 flex flex-column justify-center items-center
 
         {enc{! o.__get(it, \u0027height_reference\u0027) || \u0027h\u0027 }enc}-{enc{! o.__get(it, \u0027image_height\u0027) || \u0027100\u0027 }enc}"
          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc overflow-hidden relative  w-100 flex flex-column justify-center items-center ' & height_reference & '-' &  image_height " 35fe3a9616151be1e9a9abc33ece88d44bd47528
         > 
+
         
+        {tf{? o.edit_mode || o.__get(it, \u0027embed_source\u0027) }tf}
+ 
+          <div class="w-100 aspect-ratio
+          aspect-ratio--{enc{! o.__get(it, \u0027embed_aspect_ratio\u0027) || \u0027none\u0027 }enc}
+          {enc{! o.__get(it, \u0027embed_order\u0027) || \u0027\u0027 }enc}
+          "
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 aspect-ratio aspect-ratio--' & embed_aspect_ratio & ' ' & embed_order" 35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+            <iframe frameborder="0" style="border:0"  allow="fullscreen" class="aspect-ratio--object"
+              src="f9646236a2807f0720fd2ecb05896803adf5bb4b"
+            675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="none" property="iframe_view" mv-attribute="src" mv-value="embed_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 ></iframe>
+          </div>
+        35fe3a9616151be1e9a9abc33ece88d44bd47528
+        
+
+        
+        {tf{? o.edit_mode || o.__get(it, \u0027image_source\u0027) }tf}
+
           <img class="mw-100 maxh-100
           o-{enc{! o.__get(it, \u0027image_opacity\u0027) || \u0027100\u0027 }enc}
           {enc{! o.__get(it, \u0027object_fit_class\u0027) || \u0027of-scale-down\u0027 }enc}
@@ -5163,9 +6362,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           src="be9210026fcf76504a9221b2aea4c4b61cf84e51"
           alt="{enc{! o.__get(it, \u0027image_alt_text\u0027) || \u0027\u0027 }enc}"
           >
+          35fe3a9616151be1e9a9abc33ece88d44bd47528
         
         </div>
       </div>
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
       <div class="text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl
       {enc{! o.__get(it, \u0027text_column_class\u0027) || \u0027w-30-ns\u0027 }enc}
       {enc{! o.__get(it, \u0027card_align_h\u0027) || \u0027justify-center\u0027 }enc}
@@ -5225,7 +6426,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               <i class="fas fa-quote-left fa-3x fa-pull-left"></i>
             </span>
             
-            <div class=" markdown lh-copy nested-links {enc{! o.__get(it, \u0027fancy_style\u0027) || \u0027\u0027 }enc}"  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
+            <div class=" markdown lh-copy
+            {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027fancy_style\u0027) || \u0027\u0027 }enc}"  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
                {v{= o.sanitizer.sanitize(o.md.render(o.__get(o, \u0027page.content\u0027) || \u0027## Make a Difference with Innovation \u0027 || \u0027\u0027 )) }v}
 
               
@@ -5546,11 +6749,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="border_radius"
             
             
-            id="radio-32-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-35-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-32-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-35-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br0 
             </label>
           </div>
@@ -5560,11 +6763,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-32-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-35-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br1"  
             />
-            <label class="flex-auto ph2" for="radio-32-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-35-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br1 
             </label>
           </div>
@@ -5574,11 +6777,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-32-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-35-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br2"  
             />
-            <label class="flex-auto ph2" for="radio-32-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-35-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br2 
             </label>
           </div>
@@ -5588,11 +6791,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-32-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-35-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br3"  
             />
-            <label class="flex-auto ph2" for="radio-32-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-35-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br3 
             </label>
           </div>
@@ -5602,11 +6805,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-32-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-35-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br4"  
             />
-            <label class="flex-auto ph2" for="radio-32-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-35-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br4 
             </label>
           </div>
@@ -5616,11 +6819,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-32-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-35-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br-pill"  
             />
-            <label class="flex-auto ph2" for="radio-32-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-35-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br-pill 
             </label>
           </div>
@@ -5989,6 +7192,48 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           </div>
           
 
+          
+          <div class="{enc{! o.__get(it, \u0027display_contact_form\u0027) || \u0027\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="display_contact_form"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+          >
+          <form action="%7benc%7b!%20o.__get%28it,%20%5cu0027contact_form_post_url%5cu0027%29%20%7c%7c%20%5cu0027%5cu0027%20%7denc%7d" method="post" class="">
+            <div class="pv2">
+              <label for="name" 675275c791df5c494218febd9c0cde06eea2ae6b property="cf_label_name" 35fe3a9616151be1e9a9abc33ece88d44bd47528>{enc{! o.__get(it, \u0027cf_label_name\u0027) || \u0027Your Name\u0027 }enc}</label>
+              <input type="text" name="name" id="name" class="h2 w-100 b--black-10 ">
+            </div>
+            <div class="pv2">
+              <label for="email" 675275c791df5c494218febd9c0cde06eea2ae6b property="cf_label_email" 35fe3a9616151be1e9a9abc33ece88d44bd47528>{enc{! o.__get(it, \u0027cf_label_email\u0027) || \u0027Your Email Address\u0027 }enc}</label>
+              <input type="email" name="email" id="email" class="h2 w-100 b--black-10 ">
+            </div>
+            <div class="pv2">
+              <label for="phone" 675275c791df5c494218febd9c0cde06eea2ae6b property="cf_label_phone" 35fe3a9616151be1e9a9abc33ece88d44bd47528>{enc{! o.__get(it, \u0027cf_label_phone\u0027) || \u0027Your Phone Number\u0027 }enc} </label>
+              <input type="text" name="phone" id="phone" class="h2 w-100 b--black-10 ">
+            </div>
+            <div class="pv2">
+              <label for="subject" 675275c791df5c494218febd9c0cde06eea2ae6b property="cf_label_subject" 35fe3a9616151be1e9a9abc33ece88d44bd47528>{enc{! o.__get(it, \u0027cf_label_subject\u0027) || \u0027Subject\u0027 }enc} </label>
+              <input type="text" name="subject" id="subject" class="h2 w-100 b--black-10 ">
+            </div>
+            <div class="pv2">
+              <label for="message" 675275c791df5c494218febd9c0cde06eea2ae6b property="cf_label_message" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(it, \u0027cf_label_message\u0027) || \u0027Your Message\u0027 }enc} </label>
+              <textarea name="message" id="message" class="h4 w-100 b--black-10 "></textarea>
+            </div>
+            <input hidden name="cf_page_id" id="cf_page_id" value="{enc{! o.__get(it, \u0027cf_page_id\u0027) || \u0027\u0027 }enc}">
+            <div class="pv3 {enc{! o.__get(it, \u0027cf_button_align\u0027) || \u0027\u0027 }enc}"
+            675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'pv3 ' & cf_button_align" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+            >
+              <button type="submit" class="ph3 pv1 br1 grow pointer ba
+              {enc{! o.__get(it, \u0027cf_button_background\u0027) || \u0027bg-primary-color-light\u0027 }enc}
+              {enc{! o.__get(it, \u0027cf_button_border\u0027) || \u0027b--primary-color-light\u0027 }enc}
+              {enc{! o.__get(it, \u0027cf_button_text_color\u0027) || \u0027\u0027 }enc}
+              "
+              675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'ph3 pv1 br1 grow pointer ba ' & cf_button_background & ' ' & cf_button_border & ' ' & cf_button_text_color" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+              >
+                <span 675275c791df5c494218febd9c0cde06eea2ae6b property="cf_label_submit" 35fe3a9616151be1e9a9abc33ece88d44bd47528>{enc{! o.__get(it, \u0027cf_label_submit\u0027) || \u0027Send\u0027 }enc}</span>
+              </button>
+            </div>
+          </form>
+          </div>
+          
         </div>
 
       </div>
@@ -6113,7 +7358,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               Align the image to the left if the image is not full width.
           </span>
         </span>
-        <span class="if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
+        <span class="[if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
           <span class="pa1 dim dib pointer gt-label [if(contains(image_align_h,'left--'),'outline','')]"
             mv-action="set(image_align_h,'left--' & ((100-image_column_width)/2) & '-ns'),invoke('changeFadeIn', image_align_h, 'root.children.image_source.element.parentElement.parentElement')"
           >
@@ -6123,7 +7368,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               Align the image to the center if the image is not full width.
           </span>
         </span>
-        <span class="if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
+        <span class="[if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
           <span class="pa1 dim dib pointer gt-label [if(image_align_h ='right-0','outline','')]"
             mv-action="set(image_align_h,'right-0'),invoke('changeFadeIn', image_align_h, 'root.children.image_source.element.parentElement.parentElement')"
           >
@@ -6841,11 +8086,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="title_ph"
             
             
-            id="radio-33-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-36-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-33-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-36-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             0 
             </label>
           </div>
@@ -6855,11 +8100,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-33-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-36-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="1"  
             />
-            <label class="flex-auto ph2" for="radio-33-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-36-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             1 
             </label>
           </div>
@@ -6869,11 +8114,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-33-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-36-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="2"  
             />
-            <label class="flex-auto ph2" for="radio-33-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-36-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             2 
             </label>
           </div>
@@ -6883,11 +8128,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-33-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-36-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="3"  
             />
-            <label class="flex-auto ph2" for="radio-33-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-36-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             3 
             </label>
           </div>
@@ -6897,11 +8142,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-33-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-36-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="4"  
             />
-            <label class="flex-auto ph2" for="radio-33-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-36-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             4 
             </label>
           </div>
@@ -6942,11 +8187,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="title_pv"
             
             
-            id="radio-34-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-37-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="0" 
             />
-            <label class="flex-auto ph2" for="radio-34-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-37-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             0 
             </label>
           </div>
@@ -6956,11 +8201,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-34-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-37-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="1" 
             />
-            <label class="flex-auto ph2" for="radio-34-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-37-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             1 
             </label>
           </div>
@@ -6970,11 +8215,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-34-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-37-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="2" 
             />
-            <label class="flex-auto ph2" for="radio-34-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-37-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             2 
             </label>
           </div>
@@ -6984,11 +8229,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-34-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-37-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="3"  checked 
             />
-            <label class="flex-auto ph2" for="radio-34-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-37-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             3 
             </label>
           </div>
@@ -6998,11 +8243,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-34-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-37-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="4" 
             />
-            <label class="flex-auto ph2" for="radio-34-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-37-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             4 
             </label>
           </div>
@@ -7012,11 +8257,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-34-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-37-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="5" 
             />
-            <label class="flex-auto ph2" for="radio-34-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-37-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             5 
             </label>
           </div>
@@ -7026,11 +8271,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-34-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-37-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="6" 
             />
-            <label class="flex-auto ph2" for="radio-34-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-37-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             6 
             </label>
           </div>
@@ -7152,9 +8397,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 ">
   
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
       <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
     </div>
     
     <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
@@ -7188,6 +8433,34 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	<button data-toggle-tab="image" mv-action="set(current_tab,'image')" class="[if(current_tab='image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-image"></i><span class="dn di-ns"> Background Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="iframe" mv-action="set(current_tab,'iframe')" class="[if(current_tab='iframe', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-play-circle"></i><span class="dn di-ns"> Iframe </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="contact_form" mv-action="set(current_tab,'contact_form')" class="[if(current_tab='contact_form', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-phone"></i><span class="dn di-ns"> Contact Form </span>
 		
 	</button>&nbsp;
 
@@ -7353,6 +8626,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
 
         <div>Icon Color 
         
@@ -7385,6 +8663,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
         </div> 
         
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
         
       </div>
        
@@ -7440,6 +8723,57 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
+          </div>
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -7475,11 +8809,11 @@ w-100  ph1 fl pt2 pb3
              property="image_br"
             
             
-            id="radio-35-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-38-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-35-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-38-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             disable 
             </label>
           </div>
@@ -7489,11 +8823,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-35-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-38-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br2"  
             />
-            <label class="flex-auto ph2" for="radio-35-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-38-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br2 
             </label>
           </div>
@@ -7503,11 +8837,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-35-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-38-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br3"  
             />
-            <label class="flex-auto ph2" for="radio-35-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-38-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br3 
             </label>
           </div>
@@ -7517,11 +8851,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-35-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-38-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br4"  
             />
-            <label class="flex-auto ph2" for="radio-35-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-38-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br4 
             </label>
           </div>
@@ -7531,11 +8865,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-35-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-38-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br-100"  
             />
-            <label class="flex-auto ph2" for="radio-35-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-38-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             circle or oval 
             </label>
           </div>
@@ -7571,11 +8905,11 @@ w-100  ph1 fl pt2 pb3
              property="object_fit_class"
             
             
-            id="radio-36-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-39-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-scale-down"   checked 
             />
-            <label class="flex-auto ph2" for="radio-36-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-39-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Scale Down 
             </label>
           </div>
@@ -7585,11 +8919,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-36-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-39-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-contain"  
             />
-            <label class="flex-auto ph2" for="radio-36-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-39-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Contain 
             </label>
           </div>
@@ -7599,11 +8933,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-36-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-39-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-cover"  
             />
-            <label class="flex-auto ph2" for="radio-36-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-39-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Cover 
             </label>
           </div>
@@ -7613,11 +8947,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-36-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-39-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-fill"  
             />
-            <label class="flex-auto ph2" for="radio-36-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-39-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Fill 
             </label>
           </div>
@@ -7627,11 +8961,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-36-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-39-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-none"  
             />
-            <label class="flex-auto ph2" for="radio-36-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-39-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             None 
             </label>
           </div>
@@ -7739,11 +9073,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="height_reference"
             
             
-            id="radio-37-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-40-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-40-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="h"   checked 
             />
-            <label class="flex-auto ph2" for="radio-37-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-40-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Container 
             </label>
           </div>
@@ -7753,11 +9087,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-37-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-40-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-40-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="vh"  
             />
-            <label class="flex-auto ph2" for="radio-37-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-40-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Viewport 
             </label>
           </div>
@@ -7798,11 +9132,11 @@ w-100  ph1 fl pt2 pb3
              property="image_order"
             
             
-            id="radio-38-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-41-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="even-order-1-ns"   checked 
             />
-            <label class="flex-auto ph2" for="radio-38-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-41-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line end in even sections 
             </label>
           </div>
@@ -7812,11 +9146,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-38-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-41-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="odd-order-1-ns"  
             />
-            <label class="flex-auto ph2" for="radio-38-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-41-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line end in odd sections 
             </label>
           </div>
@@ -7826,11 +9160,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-38-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-41-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="line-start"  
             />
-            <label class="flex-auto ph2" for="radio-38-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-41-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line start 
             </label>
           </div>
@@ -8146,6 +9480,1156 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	
 	</div>
 
+	
+	<div data-pane="base_image" class="gt-tab-pane [if(current_tab='base_image', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="base_image" >
+  <h3 class="mt2">Base Image</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the base image. Other images are rendered on top of it.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Image Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slow_motion"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the slow motion animation of the image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Auto Responsive 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="responsive" type="checkbox" 
+          class=""
+          
+          id="chk-base_image-responsive-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk-base_image-responsive-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            If enabled, dynamic images will be requested from Unsplash using the image id provided.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!responsive,&#39;dn&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Unsplash Image ID  <i class="pointer ph2 fas fa-link" mv-action="set(src,'https://source.unsplash.com/' & unsplash_image_id & '/' & if(size, size, '1366x768'))"> </i>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(unsplash_image_id, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="unsplash_image_id" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the image id from Unsplash. Click on the link icon to generate the image link. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!responsive,&#39;dn&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Size in Pixels 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(size, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="size" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The size of image width and height in pixels, default to 1366x768.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="bg_icon" class="gt-tab-pane [if(current_tab='bg_icon', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="bg_icon" >
+  <h3 class="mt2">Background Icon</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Outer Icon   <span class="fa-3x">
+    <span class="dib ph2">
+      <i class="fas fa-[inner_icon]" data-fa-mask="fas fa-[icon_mask]" data-fa-transform="[inner_icon_transform]"></i>
+    </span>
+  </span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_mask, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.icon_mask, &#39;root.children.fallback_icon&#39;, &#39;data-fa-mask&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_mask" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="square" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_mask)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon, the mask. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon <i class="gray fas fa-[if(inner_icon,inner_icon,'info-circle')]"></i>
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="font" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',inner_icon)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon transform 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon_transform, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.inner_icon_transform, &#39;root.children.fallback_icon&#39;, &#39;data-fa-transform&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon_transform" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value="shrink-6" 
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            keywords: shrink grow rotate up down left right flip-v flip-h
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Background Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Size (x10em) 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_size, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_size" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="fa-xs, fa-sm, fa-lg, fa-2x, fa-3x" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_size)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The size of icon times 10em.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Display 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_display, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_display" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="dn, self-start, self-center, self-end" 
+           value="dn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_display)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            How to position the icon. Choose dn to disable it.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slow_motion"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the slow motion animation of the icon.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="iframe" class="gt-tab-pane [if(current_tab='iframe', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Iframe</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source URL   <span class="mh2"
+  mv-action="invoke('setItemsAttr', embed_source, 'root.children.iframe_view', 'src', 'iframe')"
+  ><i class="fas fa-sync"></i> </span>
+  
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_source, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_source" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the embed page.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Embed Aspect Ratio 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_aspect_ratio, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_aspect_ratio" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="16x9,9x16,4x3,3x4,6x4,4x6,8x5,5x8,7x5,5x7,1x1,none" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',embed_aspect_ratio)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the dimension of the embed window (width x height). Choose none to temporarily hide iframe.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Embed Order 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_order, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_order" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="order-1,order-0" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',embed_order)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Choose order 1 to display iframe below image, if you have both an iframe and image. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Paste Embed Code   <span class="mh2"
+  mv-action="invoke('extractAttr', paste_embed_code, 'root.children.embed_source', 'src', 'iframe')"
+  ><i class="fas fa-link"></i> </span>
+  
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(paste_embed_code, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h3 b--black-10"
+           property="paste_embed_code"  mv-storage="none" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            You may paste the iframe embed code provided by suppliers here, and click the 
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="contact_form" class="gt-tab-pane [if(current_tab='contact_form', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Contact Form</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Contact Form Post URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(contact_form_post_url, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="contact_form_post_url" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the URL to receive the form data on the server.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Display Contact Form 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(display_contact_form, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="display_contact_form" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="dn, db" 
+           value="dn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',display_contact_form)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Choose dn to disable contact form.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Button Align 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(cf_button_align, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="cf_button_align" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="tc, tl, tr" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',cf_button_align)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            How to position the button within the text column.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Button Background Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(cf_button_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="cf_button_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value="bg-primary-color-light" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',cf_button_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Button Border Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(cf_button_border, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="cf_button_border" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="border_color"
+          
+           value="b--primary-color-light" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',cf_button_border)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Button Text Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(cf_button_text_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="cf_button_text_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',cf_button_text_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Set color if you are not using primary or accent color as button background.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Contact Form Page ID 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(cf_page_id, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="cf_page_id" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            If you have multiple contact forms, setting a page id will help to track which page the message is sent from.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
 
 </div>
 
@@ -8172,7 +10656,4030 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
   
   
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
+  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
+  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+</div>
+
+{tf{?}tf}
+
+ 
+</section>
+
+
+`;
+  
+    gtpb.partials['goandtalk/content/text-block'] = `
+
+
+
+
+
+
+
+
+<section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" mv-autosave="3" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+  class="alternate gt-mv-on relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
+  {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027\u0027 }enc}
+  "
+  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+    
+<div class="tc absolute absolute--fill fa-10x flex flex-column justify-center">
+  <div class="{enc{! o.__get(it, \u0027bg_icon.bg_icon_color\u0027) || \u0027white-10\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_size\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_display\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.animation\u0027) || \u0027\u0027 }enc}
+   "
+   675275c791df5c494218febd9c0cde06eea2ae6bproperty="fallback_icon" mv-storage="none" mv-attribute="class" mv-value="bg_icon.bg_icon_color & ' ' & bg_icon.bg_icon_size & ' ' & bg_icon.bg_icon_display & ' ' & bg_icon.animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+     <i class="fallback-icon fas fa-{enc{! o.__get(it, \u0027bg_icon.inner_icon\u0027) || \u0027\u0027 }enc}"
+     675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fallback-icon fas fa-' & bg_icon.inner_icon" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+     data-fa-transform="{enc{! o.__get(it, \u0027bg_icon.inner_icon_transform\u0027) || \u0027\u0027 }enc}"
+     data-fa-mask="fas fa-{enc{! o.__get(it, \u0027bg_icon.icon_mask\u0027) || \u0027\u0027 }enc}"
+     ></i>
+   </div>
+</div>
+
+
+    
+
+{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+
+  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
+  {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+" src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
+  35fe3a9616151be1e9a9abc33ece88d44bd47528
+
+
+    
+
+<figure class="ma0">
+	<picture>
+    
+    {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+" src="a41325d3d724b613adde84fb3124bc6dd2d09ac7" >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+  </picture>
+</figure>
+<span class="absolute absolute--fill
+    {enc{! o.__get(it, \u0027image.overlay_background\u0027) || \u0027\u0027 }enc}"
+    675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="'absolute absolute--fill ' & overlay_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528></span><div class="cf w-100 relative  center flex flex-wrap {enc{! o.__get(it, \u0027section_max_width\u0027) || \u0027mw8\u0027 }enc}"
+    675275c791df5c494218febd9c0cde06eea2ae6b
+      mv-attribute="class"
+      mv-value="'cf w-100 relative  center flex flex-wrap ' & if(section_max_width, section_max_width, 'mw8')"
+    35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+      {tf{? o.edit_mode || o.__get(it, \u0027image_column_width\u0027) }tf}
+
+      <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class"
+      mv-value="'image-column w-100 z-0 flex flex-wrap fl w-' & image_column_width & '-ns ' &  image_order & ' ' & if(image_align_v_flex,image_align_v_flex,'items-center') & ' ' & image_layer & ' ' & image_column_height & ' ' & image_align_h" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
+      class="image-column w-100 z-0 flex flex-wrap fl
+      {enc{! o.__get(it, \u0027image_column_height\u0027) || \u0027h-100\u0027 }enc}
+      {enc{! o.__get(it, \u0027image_layer\u0027) || \u0027absolute\u0027 }enc}
+      {enc{! o.__get(it, \u0027image_order\u0027) || \u0027even-order-1-ns\u0027 }enc}
+      {enc{! o.__get(it, \u0027image_align_h\u0027) || \u0027\u0027 }enc}
+      w-{enc{! o.__get(it, \u0027image_column_width\u0027) || \u0027\u0027 }enc}-ns
+      {enc{! o.__get(it, \u0027image_align_v_flex\u0027) || \u0027items-center\u0027 }enc}">
+        <div class="tc overflow-hidden relative  w-100 flex flex-column justify-center items-center
+
+        {enc{! o.__get(it, \u0027height_reference\u0027) || \u0027h\u0027 }enc}-{enc{! o.__get(it, \u0027image_height\u0027) || \u0027100\u0027 }enc}"
+         675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc overflow-hidden relative  w-100 flex flex-column justify-center items-center ' & height_reference & '-' &  image_height " 35fe3a9616151be1e9a9abc33ece88d44bd47528
+        > 
+
+        
+        {tf{? o.edit_mode || o.__get(it, \u0027embed_source\u0027) }tf}
+
+          <div class="w-100 aspect-ratio
+          aspect-ratio--{enc{! o.__get(it, \u0027embed_aspect_ratio\u0027) || \u0027none\u0027 }enc}
+          {enc{! o.__get(it, \u0027embed_order\u0027) || \u0027\u0027 }enc}
+          "
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 aspect-ratio aspect-ratio--' & embed_aspect_ratio & ' ' & embed_order" 35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+            <iframe frameborder="0" style="border:0"  allow="fullscreen" class="aspect-ratio--object"
+              src="f9646236a2807f0720fd2ecb05896803adf5bb4b"
+            675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="none" property="iframe_view" mv-attribute="src" mv-value="embed_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 ></iframe>
+          </div>
+        35fe3a9616151be1e9a9abc33ece88d44bd47528
+        
+
+        
+        {tf{? o.edit_mode || o.__get(it, \u0027image_source\u0027) }tf}
+
+          <img class="mw-100 maxh-100
+          o-{enc{! o.__get(it, \u0027image_opacity\u0027) || \u0027100\u0027 }enc}
+          {enc{! o.__get(it, \u0027object_fit_class\u0027) || \u0027of-scale-down\u0027 }enc}
+          {enc{! o.__get(it, \u0027image_br\u0027) || \u0027br0\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          src="be9210026fcf76504a9221b2aea4c4b61cf84e51"
+          alt="{enc{! o.__get(it, \u0027image_alt_text\u0027) || \u0027\u0027 }enc}"
+          >
+          35fe3a9616151be1e9a9abc33ece88d44bd47528
+        
+        </div>
+      </div>
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+      <div class="text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl
+      {enc{! o.__get(it, \u0027text_column_class\u0027) || \u0027w-30-ns\u0027 }enc}
+      {enc{! o.__get(it, \u0027card_align_h\u0027) || \u0027justify-center\u0027 }enc}
+      {enc{! o.__get(it, \u0027card_align_v\u0027) || \u0027\u0027 }enc}
+      "
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl ' & card_align_h & ' ' & card_align_v & ' ' & if(text_column_class,text_column_class,'w-30-ns') " 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+        
+        <div class="text-card w-100 pa3 relative
+        {enc{! o.__get(it, \u0027card_background\u0027) || \u0027\u0027 }enc}
+        {enc{! o.__get(it, \u0027card_font_family\u0027) || \u0027\u0027 }enc}
+        {enc{! o.__get(it, \u0027card_text_color\u0027) || \u0027\u0027 }enc}
+        {enc{! o.__get(it, \u0027card_text_align\u0027) || \u0027\u0027 }enc}
+        f{enc{! o.__get(it, \u0027card_font_size\u0027) || \u00273\u0027 }enc}-ns
+        fw{enc{! o.__get(it, \u0027card_font_weight\u0027) || \u0027\u0027 }enc}-ns
+        {enc{! o.__get(it, \u0027card_letter_spacing\u0027) || \u0027\u0027 }enc}
+        {enc{! o.__get(it, \u0027card_i\u0027) || \u0027\u0027 }enc}
+        {enc{! o.__get(it, \u0027card_list_style\u0027) || \u0027\u0027 }enc}
+        w-{enc{! o.__get(it, \u0027card_width\u0027) || \u0027\u0027 }enc}-ns
+        "
+        675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'text-card w-100 pa3 relative ' & card_background & ' ' & card_text_color & ' ' & card_font_family & ' ' & card_text_align & ' f' & if(card_font_size,card_font_size,'3') & '-ns ' & ' fw' & card_font_weight & '-ns ' & ' ' & card_letter_spacing & ' ' & card_list_style & ' ' & card_i & ' w-' & if(card_width,card_width,100) & '-ns' " 35fe3a9616151be1e9a9abc33ece88d44bd47528
+        >
+          <span class="z--1 absolute absolute--fill bg-{enc{! o.__get(it, \u0027overlay_base\u0027) || \u0027black\u0027 }enc}-{enc{! o.__get(it, \u0027card_overlay\u0027) || \u0027\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'z--1 absolute absolute--fill bg-' & if(overlay_base,overlay_base,'black') & '-' & card_overlay" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          >
+          </span>
+
+          <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="ma0 pv2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc}</p>
+
+          <h1 class="ma0 pa2
+          pv{enc{! o.__get(it, \u0027title_pv\u0027) || \u00273\u0027 }enc}-ns
+          ph{enc{! o.__get(it, \u0027title_ph\u0027) || \u0027\u0027 }enc}-ns
+          {enc{! o.__get(it, \u0027title_display\u0027) || \u0027\u0027 }enc}
+          {enc{! o.__get(it, \u0027title_background\u0027) || \u0027\u0027 }enc}
+          {enc{! o.__get(it, \u0027title_color\u0027) || \u0027\u0027 }enc}
+          {enc{! o.__get(it, \u0027title_font_family\u0027) || \u0027\u0027 }enc}
+          {enc{! o.__get(it, \u0027title_align\u0027) || \u0027tc\u0027 }enc}
+          f{enc{! o.__get(it, \u0027title_font_size\u0027) || \u00272\u0027 }enc}-ns
+          fw{enc{! o.__get(it, \u0027title_font_weight\u0027) || \u0027\u0027 }enc}-ns
+          {enc{! o.__get(it, \u0027title_letter_spacing\u0027) || \u0027\u0027 }enc}
+          {enc{! o.__get(it, \u0027title_i\u0027) || \u0027\u0027 }enc}
+          {enc{! o.__get(it, \u0027title_transform\u0027) || \u0027\u0027 }enc}
+          "
+           675275c791df5c494218febd9c0cde06eea2ae6b
+            mv-attribute="class" mv-value="'ma0 pa2 pv' & title_pv & '-ns ph' & title_ph & '-ns ' & title_display & ' ' & title_background & ' ' & title_color & ' ' & title_font_family & ' ' & title_i & ' ' & title_align  & ' f' & title_font_size & '-ns ' & ' fw' & title_font_weight & '-ns ' & title_transform & ' ' & title_letter_spacing "
+            style="opacity:1;"
+          35fe3a9616151be1e9a9abc33ece88d44bd47528 
+          >
+            <span  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="">{enc{! o.__get(o, \u0027page.title\u0027) || \u0027\u0027 }enc}</span>
+          </h1>
+          <div class="pa2 {enc{! o.__get(it, \u0027body_background\u0027) || \u0027\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'pa2 ' & body_background " 35fe3a9616151be1e9a9abc33ece88d44bd47528 
+          >
+             
+            <span class="{enc{! o.__get(it, \u0027quote_display\u0027) || \u0027dn\u0027 }enc}"
+              675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="quote_display" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+            >
+              <i class="fas fa-quote-left fa-3x fa-pull-left"></i>
+            </span>
+            
+            <div class=" markdown lh-copy
+            {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027fancy_style\u0027) || \u0027\u0027 }enc}"  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
+               {v{= o.sanitizer.sanitize(o.md.render(o.__get(o, \u0027page.content\u0027) || \u0027## Make a Difference with Innovation \u0027 || \u0027\u0027 )) }v}
+
+              
+            </div>
+            
+              <span class="{enc{! o.__get(it, \u0027quote_display\u0027) || \u0027dn\u0027 }enc}"
+                675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="quote_display" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+              >
+                <i class="fas fa-quote-right fa-3x fa-pull-right"></i>
+              </span>
+            
+          </div>
+          
+
+          <div class="pv4 flex flex-column" 675275c791df5c494218febd9c0cde06eea2ae6b property="cta" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+            
+            <div class="fadeIn animate-edit-cta center tc ba w-100
+            {enc{! o.__get(it, \u0027cta.background_color\u0027) || \u0027bg-light-gray\u0027 }enc}
+            {enc{! o.__get(it, \u0027cta_display\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027cta.align\u0027) || \u0027self-center\u0027 }enc}
+            {enc{! o.__get(it, \u0027cta.border_color\u0027) || \u0027b--primary-color\u0027 }enc}
+            {enc{! o.__get(it, \u0027cta.border_radius\u0027) || \u0027br2\u0027 }enc}
+            pv{enc{! o.__get(it, \u0027cta.pv\u0027) || \u00272\u0027 }enc}
+            ph{enc{! o.__get(it, \u0027cta.ph\u0027) || \u00273\u0027 }enc}
+            mv{enc{! o.__get(it, \u0027cta.mv\u0027) || \u00270\u0027 }enc}
+            w-{enc{! o.__get(it, \u0027cta.block_button_width\u0027) || \u0027100\u0027 }enc}-ns
+            "
+            675275c791df5c494218febd9c0cde06eea2ae6b
+            mv-attribute="class" mv-value="'fadeIn animate-edit-cta center tc ba w-100  ' & cta.background_color & ' ' & cta_display & ' ' & cta.align   & ' ' & cta.border_color & ' ' & cta.border_radius & ' pv' & cta.pv & ' ph' & cta.ph & ' mv' & cta.mv & ' w-' & cta.block_button_width &'-ns'"
+            35fe3a9616151be1e9a9abc33ece88d44bd47528
+            >
+              
+              
+
+              <a class="no-underline w-100 dib"
+              675275c791df5c494218febd9c0cde06eea2ae6b  property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+               href="6aa54d91498069cf3ec3c6d46443b0b765c6cec2" >
+                <div class="flex items-center justify-center {enc{! o.__get(it, \u0027cta.button_text_color\u0027) || \u0027mid-gray\u0027 }enc}
+                  {enc{! o.__get(it, \u0027cta.button_i\u0027) || \u0027\u0027 }enc}
+                  f{enc{! o.__get(it, \u0027cta.button_font_size\u0027) || \u0027\u0027 }enc}-ns
+                "
+                675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'flex items-center justify-center ' & cta.button_text_color & ' ' & cta.button_i & ' f' & cta.button_font_size & '-ns' " 35fe3a9616151be1e9a9abc33ece88d44bd47528
+                >
+                  
+                  <span class="ph2 {enc{! o.__get(it, \u0027cta.icon_order\u0027) || \u0027\u0027 }enc}"
+                  675275c791df5c494218febd9c0cde06eea2ae6b
+                  mv-attribute="class" mv-value="'ph2 ' & icon_order"
+                  35fe3a9616151be1e9a9abc33ece88d44bd47528
+                  >
+                    <i class="cta-icon fas fa-{enc{! o.__get(it, \u0027cta.inner_icon\u0027) || \u0027info\u0027 }enc}"
+                    data-fa-mask="fas fa-{enc{! o.__get(it, \u0027cta.icon_mask\u0027) || \u0027circle\u0027 }enc}"
+                    data-fa-transform="{enc{! o.__get(it, \u0027cta.inner_icon_transform\u0027) || \u0027shrink-4\u0027 }enc}"
+                    675275c791df5c494218febd9c0cde06eea2ae6b
+                    mv-attribute="class" mv-value="'cta-icon fas fa-' & inner_icon"
+                    35fe3a9616151be1e9a9abc33ece88d44bd47528
+                    >
+                    </i>
+                  </span>
+                  
+                  <span 675275c791df5c494218febd9c0cde06eea2ae6b  property="name"  35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+                  {enc{! o.__get(it, \u0027cta.name\u0027) || \u0027Quick Start\u0027 }enc}
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            675275c791df5c494218febd9c0cde06eea2ae6b
+
+            <div class="dn show-in-edit skip-zoom-clone absolute bottom-2 w-100 overflow-visible f7 f6-ns normal fs-normal relaxed">
+              <div class="relative">
+
+                <div class="fadeIn [if(cta_display='dn','dn','flex')] flex-wrap items-center pointer [if(is_cta_form_active,'bg-black-20','')]"
+mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', section_background)"
+>
+  <div class="flex-auto"> 
+    <div class="w-100 gt-label">&nbsp;
+      <span class="pv2 ph3 cta-button-options [if(is_cta_form_active,'dib','dn')]">
+        <i class="fas fa-window-close"></i>
+      </span>
+    </div>
+    <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible">
+      Click to show more options to design button.
+    </div>
+  </div>
+
+  <div class="relative bg-black-10 pv2 ph3">
+    <i class="fas fa-palette  white"></i>
+  </div>
+</div>
+
+
+                <div class="cta-button-options fadeIn absolute z-1 [if(is_cta_form_active,'','dn')] top-2 pa2 ba b--white-80 bg-light-gray mid-gray mt4">
+                  <div class="fadeIn [if(is_cta_form_active,'','dn')]">
+  <span class="f4 dib ph1 mh1 pv2">
+    Button Options
+  </span>
+
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(button_i = 'i','bg-black-40','bg-black-20')]"
+        mv-action="set(button_i, if(button_i, '','i'))"
+      >
+        <i class="fas fa-fw fa-italic" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Toggle italic button text.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2"
+      mv-action="set(button_font_size, if(button_font_size < 7, button_font_size + 1, button_font_size))"
+      >
+        <i class="fas fa-fw fa-font" data-fa-transform="shrink-6" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Decrease font size.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2"
+      mv-action="set(button_font_size, if(button_font_size > 1, button_font_size - 1, button_font_size))"
+      >
+          <i class="fas fa-fw fa-font"  ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Increase font size.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-start-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 left-3" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at line start on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-center-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at center on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(align, 'self-end-ns')"
+      >
+          <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 right-3" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Align the button at line end on medium and large screens.
+    </span>
+  </span>
+</div>
+
+                  
+                  
+
+<div >
+  <h3 class="mt2"></h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Background Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(background_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="background_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value="bg-light-gray" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',background_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Text Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(button_text_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="button_text_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value="mid-gray" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',button_text_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Border Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(border_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="border_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="border_color"
+          
+           value="b--light-gray" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',border_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Border Radius 
+        
+        
+        </div>
+        <div 
+        class=" bg-white 
+         flex  flex-wrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="border_radius"
+            
+            
+            id="radio-42-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br0"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-42-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br0 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-42-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br1"  
+            />
+            <label class="flex-auto ph2" for="radio-42-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br1 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-42-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br2"  
+            />
+            <label class="flex-auto ph2" for="radio-42-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br2 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-42-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br3"  
+            />
+            <label class="flex-auto ph2" for="radio-42-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-42-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br4"  
+            />
+            <label class="flex-auto ph2" for="radio-42-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-42-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br-pill"  
+            />
+            <label class="flex-auto ph2" for="radio-42-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br-pill 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Button Width  [block_button_width]%
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  min="20"  max="100"  step="10" 
+           property="block_button_width" 
+          type="range" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value="50" 
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Horizontal Padding  [if(ph,0.25 * pow(2,(ph-1)),'0')] REM
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  max="4"  step="1" 
+           property="ph" 
+          type="range" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value="3" 
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Vertical Padding  [if(pv,0.25 * pow(2,(pv-1)),'0')] REM 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  max="4"  step="1" 
+           property="pv" 
+          type="range" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value="2" 
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Vertical Margin  [if(mv,0.25 * pow(2,(mv-1)),'0')] REM 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  min="1"  max="5"  step="1" 
+           property="mv" 
+          type="range" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Outer Icon 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_mask, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, icon_mask, &#39;root.children.cta.children.url&#39;, &#39;data-fa-mask&#39;, &#39;i.cta-icon&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_mask" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="circle" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_mask)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Optional. This is the icon on the outside. It is rendered on the button only if an inner icon has been selected.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon  <i class="fas fa-[inner_icon]"></i>
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="info" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',inner_icon)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            If an icon is selected, it is rendered alone, or with a selected mask.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon transform   <button class="f7 pa1 b--black-20 br1 " type="button" mv-action="invoke('setItemsAttr', inner_icon_transform, 'root.children.cta.children.url', 'data-fa-transform', 'i.cta-icon')">
+  ok
+  </button>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon_transform, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon_transform" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value="shrink-4" 
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Use the keywords and a number to resize and position the icon: shrink grow rotate up down left right flip-v flip-h
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Display 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_order, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_order" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="order-1, dn" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_order)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Use order-1 to place icon after the button text, and dn to hide the icon. 
+          </div>
+        
+      </div>
+       
+    
+       
+        <input class="absolute" hidden property="button_i" value="" />
+       
+    
+       
+        <input class="absolute" hidden property="button_font_size" value="4" />
+       
+    
+       
+        <input class="absolute" hidden property="align" value="center" />
+       
+    
+  </div>
+</div> 
+
+
+                </div>
+              </div>
+            </div>
+
+            35fe3a9616151be1e9a9abc33ece88d44bd47528
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </div> 
+    675275c791df5c494218febd9c0cde06eea2ae6b
+
+      
+
+<div class="fadeIn ui-image-position dn [if(toolbar_id = 1, 'show-in-edit','')] absolute top-2 left-2 right-0 center">
+  <div class="relative">
+    <div class="absolute top-0 bg-black-[toolbar_alpha] white ph3 left-0 right-0 center mw8">
+      <div class="mv2 flex flex-wrap items-center">
+
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(image_order ='odd-order-1-ns' or image_order ='even-order-1-ns','outline','')]"
+            mv-action="set(image_order,if(!image_order or image_order='line-start','odd-order-1-ns',if(image_order='even-order-1-ns','line-start','even-order-1-ns'))),
+            invoke('changeFadeIn', image_order, 'root.children.image_source.element.parentElement.parentElement.parentElement')"
+          >
+          <i class="fas f3 f4-l fa-fw fa-address-card fa-flip-horizontal"></i>
+
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Change the order of image to create alternating sections. The value of current setting is [image_order].
+          </span>
+        </span>
+
+        <span class="dib relative ph1 mh1 pv2"><span class="pa1 dim dib pointer gt-label [if(image_under_text,'outline','')]"
+            mv-action="
+            set(image_under_text, !image_under_text ),
+            set(image_layer,if(image_under_text,'absolute','static')),
+            set(image_column_height,if(image_under_text,'h-100','')),
+            set(image_column_width,if(!image_under_text and image_column_width>60,60,image_column_width)),
+            set(text_column_class,if(image_under_text,'w-100-ns', 'w-' & (100-image_column_width) &'-ns' )),
+            invoke('changeFadeIn', image_layer, 'root.children.image_source.element.parentElement.parentElement'),
+            "
+          >
+            <i class="fas f3 f4-l fa-hiking fa-fw " data-fa-mask="fas f3 f4-l fa-align-justify" data-fa-transform="shrink-4"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Whether to always place image under text. If disabled, the image is placed under text when the width is over 60%.
+          </span>
+        </span>
+
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(section_max_width ='mw-100','outline','')]"
+            mv-action="set(section_max_width,if(!section_max_width or section_max_width='mw8', 'mw-100', 'mw8')),
+            invoke('changeFadeIn', section_max_width, 'root.children.image_source.element.parentElement.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw  fa-laptop-code"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Allow the image to expand to the side of the window.
+          </span>
+        </span>
+
+
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(image_align_v_flex ='items-start','outline','')]"
+            mv-action="set(image_align_v_flex,'items-start'),
+            invoke('changeFadeIn', image_align_v_flex, 'root.children.image_source.element.parentElement.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw  fa-user" data-fa-transform="shrink-7 up-4" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the image to the top if the image is not full height.
+          </span>
+        </span>
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(image_align_v_flex ='items-center','outline','')]"
+            mv-action="set(image_align_v_flex,'items-center'),invoke('changeFadeIn', image_align_v_flex, 'root.children.image_source.element.parentElement.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-user" data-fa-transform="shrink-7" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the image to the middle vertically if the image is not full height.
+          </span>
+        </span>
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(image_align_v_flex ='items-end','outline','')]"
+            mv-action="set(image_align_v_flex,'items-end'),invoke('changeFadeIn', image_align_v_flex, 'root.children.image_source.element.parentElement.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-user" data-fa-transform="shrink-7 down-4" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the image to the bottom if the image is not full height.
+          </span>
+        </span>
+        
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(object_fit_class ='of-cover','outline','')]"
+            mv-action="
+            set(object_fit_class,if('of-cover'=object_fit_class,'of-scale-down','of-cover')),
+            invoke('replaceNodeClass',object_fit_class,'mavo.root.children.image_source.element','of-'),
+            invoke('changeFadeIn', object_fit_class, 'root.children.image_source.element.parentElement.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-arrows-alt" data-fa-transform="shrink-4 bottom-4" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Expand image to cover the container
+          </span>
+        </span>
+
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(image_br ='br-100','outline','')]"
+            mv-action="set(image_br,if(image_br='br-100','br0','br-100')),
+            invoke('toggleClass', image_source,'','br-100'),
+            invoke('changeFadeIn', image_br, 'root.children.image_source.element.parentElement.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw  fa-user-circle" ></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Toggle round image
+          </span>
+        </span><span class="[if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2 ">
+          <span class="pa1 dim dib pointer gt-label [if(image_align_h ='left-0','outline','')]"
+            mv-action="set(image_align_h,'left-0'),invoke('changeFadeIn', image_align_h, 'root.children.image_source.element.parentElement.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-users" data-fa-transform="shrink-7 left-4" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the image to the left if the image is not full width.
+          </span>
+        </span>
+        <span class="[if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(contains(image_align_h,'left--'),'outline','')]"
+            mv-action="set(image_align_h,'left--' & ((100-image_column_width)/2) & '-ns'),invoke('changeFadeIn', image_align_h, 'root.children.image_source.element.parentElement.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-users" data-fa-transform="shrink-7" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the image to the center if the image is not full width.
+          </span>
+        </span>
+        <span class="[if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(image_align_h ='right-0','outline','')]"
+            mv-action="set(image_align_h,'right-0'),invoke('changeFadeIn', image_align_h, 'root.children.image_source.element.parentElement.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-users" data-fa-transform="shrink-7 right-4" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the image to the right if the image is not full width.
+          </span>
+        </span>
+
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(card_align_h ='justify-start','outline','')]"
+            mv-action="set(card_align_h,'justify-start'),invoke('changeFadeIn', card_align_h, 'root.children.content.element.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-bars" data-fa-transform="shrink-6 left-4" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the text block to the left if not full width.
+          </span>
+        </span>
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(card_align_h ='justify-center','outline','')]"
+            mv-action="set(card_align_h,'justify-center'),invoke('changeFadeIn', card_align_h, 'root.children.content.element.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-bars" data-fa-transform="shrink-6" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the text block to the center if not full width.
+          </span>
+        </span>
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(card_align_h ='justify-end','outline','')]"
+            mv-action="set(card_align_h,'justify-end'),invoke('changeFadeIn', card_align_h, 'root.children.content.element.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-bars" data-fa-transform="shrink-6 right-4" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the text block to the right if not full width.
+          </span>
+        </span>
+
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(card_align_v ='items-start','outline','')]"
+            mv-action="set(card_align_v,'items-start'),invoke('changeFadeIn', card_align_v, 'root.children.content.element.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-font" data-fa-transform="shrink-6 up-4" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the text block to the top if the image is higher.
+          </span>
+        </span>
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(card_align_v ='items-center','outline','')]"
+            mv-action="set(card_align_v,'items-center'),invoke('changeFadeIn', card_align_v, 'root.children.content.element.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-font" data-fa-transform="shrink-6" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the text block to the middle vertically if the image is higher.
+          </span>
+        </span>
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(card_align_v ='items-end','outline','')]"
+            mv-action="set(card_align_v,'items-end'),invoke('changeFadeIn', card_align_v, 'root.children.content.element.parentElement')"
+          >
+            <i class="fas f3 f4-l fa-fw fa-font" data-fa-transform="shrink-6 down-4" data-fa-mask="fas f3 f4-l fa-square-full"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Align the text block to the bottom if the image is higher.
+          </span>
+        </span>
+
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(cta_display ='dn','','outline')]"
+            mv-action="set(cta_display,if(cta_display='dn','','dn')),
+            invoke('changeFadeIn',cta_display,'root.children.image_source.element.parentElement.parentElement')
+            "
+          >
+            <i class="fas f3 f4-l fa-fw fa-handshake" data-fa-transform="shrink-6" data-fa-mask="fas f3 f4-l fa-square"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Toggle call-to-action button.
+          </span>
+        </span>
+
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(quote_display ='di','outline','')]"
+            mv-action="set(quote_display,if(quote_display='di','dn','di'))"
+          >
+            <i class="fas f3 f4-l fa-fw fa-quote-left" data-fa-transform="shrink-6" data-fa-mask="fas f3 f4-l fa-square"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Toggle big quotation mark around text.
+          </span>
+        </span>
+
+        <span class="dib relative ph1 mh1 pv2">
+          <span class="pa1 dim dib pointer gt-label [if(title_display ='dn','','outline')]"
+            mv-action="set(title_display,if(title_display='dn','','dn') ),
+            invoke('changeFadeIn',title_display, 'root.children.image_source.element.parentElement.parentElement'),
+            invoke('changeFadeIn',title_display, 'root.children.title.element.parentElement.parentElement', true)
+            "
+          >
+            <i class="fas f3 f4-l fa-fw fa-heading" data-fa-transform="shrink-6" data-fa-mask="fas f3 f4-l fa-square"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Toggle display title
+          </span>
+        </span>
+
+      </div>
+
+      <div class="cf flex flex-wrap"> 
+        <div class="flex-auto relative fl ph2 w-100 w-50-m w-30-l pv3 ">
+          <div class="gt-label flex"
+          mv-action="set(text_column_class, if(image_column_width > 60, 'w-100-ns', 'w-' & (100 - image_column_width) & '-ns')),
+          invoke('changeFadeIn', image_column_width, 'root.children.image_source.element.parentElement.parentElement'),
+          set(image_layer, if(image_column_width>60 or image_under_text,'absolute', 'static')),
+          set(image_column_height, if(image_column_width>60 or image_under_text,'h-100', '')),
+          set(image_align_h, if(image_align_h != 'left-0' and image_align_h != 'right-0', 'left--' & ((100-image_column_width)/2 ) & '-ns', image_align_h))
+          "
+          >
+            <div class="absolute f6 top-0 overflow-visible">Image [image_column_width]%, text column [if(image_under_text or image_column_width > 60, 100, 100-image_column_width)]% </div>
+
+            <i class="fas f3 f4-l fa-fw fa-image"></i>
+            <span class="w1"></span>
+            <input list="width_of_container" property="image_column_width" type="range" min="0" max="100" step="10" class="ph1 flex-auto  bg-white  br0 b--black-10 " value="100"  >
+          </div>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              This is the width of the image column. When placing image beside text, this will decide how much space to allocate to image and text.
+          </span>
+        </div>
+        <div class="flex-auto relative fl ph2 w-100 w-50-m w-30-l pv3">
+          <div class="gt-label flex"
+          mv-action="invoke('replaceNodeClass', image_opacity, 'mavo.root.children.image_source.element', 'o-', 'o-')"
+          >
+              <i class="fas f3 f4-l fa-fw fa-wine-glass-alt"></i>
+              <span class="w1"></span>
+            <input list="width_of_container" property="image_opacity" type="range" min="10" max="100" step="10" class="ph1 flex-auto  bg-white  br0 b--black-10 " value="100"  >
+          </div>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Change the opacity of the image, allow background color to partially come thorough, and make text more readable.
+          </span>
+        </div>
+        <div class="flex-auto fl relative ph2 w-100 w-50-m w-20-l pv3">
+          <div class="gt-label flex">
+            <span
+            class="dib pointer grow [if(overlay_base='white','outline','')]"
+            mv-action="set(overlay_base,if(overlay_base='white','black','white'))"
+            >
+              <i class="fas f3 f4-l fa-fw fa-adjust" ></i>
+            </span>
+            <span class="w1"></span>
+            <input list="width_of_container" property="card_overlay" type="range" min="0" max="50" step="10" class="ph1 flex-auto bg-white  br0 b--black-10 " value="0"  >
+          </div>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Apply a semi-transparent layer below text to make it more readable. Click the icon to toggle semi-transparent black or white.
+          </span>
+        </div>
+
+        <div class="flex-auto fl relative ph2 w-100 w-50-m w-20-l pv3 "> 
+          <div class="gt-label flex"
+            mv-action="invoke('changeFadeIn', card_width, 'root.children.image_source.element.parentElement.parentElement.parentElement')"
+          >
+            <div class="absolute f6 top-0 overflow-visible">Text [card_width]% of column.</div>
+            <i class="fas f3 f4-l fa-fw fa-bars" ></i>
+            <span class="w1"></span>
+            <input list="width_of_container" property="card_width" type="range" min="20" max="100" step="10" class="ph1 flex-auto bg-white br0 b--black-10 " value="100"  >
+          </div>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              This is the width of the text block within the text column.
+          </span>
+        </div>
+      </div>
+    </div>
+<div class="w2 absolute left--2" style="top: 8rem;">
+      <div class="relative pv2 ph1 overflow-visible">
+        <div class="gt-label f7">[image_height]%</div>
+        <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+            The height of image in [if(height_reference='vh','viewport','section' )].
+        </span>
+      </div>
+
+      <div class="pv2 ph1">
+        <span class="dib relative ">
+          <span class="pa1 dim dib pointer gt-label [if('vh' = height_reference, 'outline')]"
+            mv-action="set(height_reference,if(height_reference='vh','h','vh'))"
+          >
+            <i class="fas f3 f4-l fa-fw fa-laptop"></i>
+          </span>
+          <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+              Toggle percentage reference to viewport height, or dynamic section height.
+          </span>
+        </span>
+      </div>
+
+      <div class="pv2 ph1 relative">
+        <span class="pa1 dim dib pointer gt-label [if(image_height =100,'outline','')]"
+          mv-action="set(image_height, 100),
+          invoke('changeFadeIn', image_height, 'root.children.image_source.element.parentElement.parentElement')"
+        >
+          <i class="fas f3 f4-l fa-hiking fa-fw" data-fa-mask="fas f3 f4-l fa-square-full"  data-fa-transform="shink-4"></i>
+        </span>
+        <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+          Set image height to 100%
+        </span>
+      </div>
+      <div class="pv2 ph1 relative">
+        <span class="pa1 dim dib pointer gt-label [if(image_height = 75,'outline','')]"
+          mv-action="set(image_height, 75),
+          invoke('changeFadeIn', image_height, 'root.children.image_source.element.parentElement.parentElement')"
+        >
+          <i class="fas f3 f4-l fa-hiking fa-fw" data-fa-mask="fas f3 f4-l fa-square-full"  data-fa-transform="shink-4 down-3"></i>
+        </span>
+        <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+          Set image height to 75%
+        </span>
+      </div>
+      <div class="pv2 ph1 relative">
+        <span class="pa1 dim dib pointer gt-label [if(image_height = 50,'outline','')]"
+          mv-action="set(image_height, 50),
+          invoke('changeFadeIn', image_height, 'root.children.image_source.element.parentElement.parentElement')"
+        >
+          <i class="fas f3 f4-l fa-hiking fa-fw" data-fa-mask="fas f3 f4-l fa-square-full"  data-fa-transform="shink-4 down-6"></i>
+        </span>
+        <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+          Set image height to 50%
+        </span>
+      </div>
+      <div class="pv2 ph1 relative">
+        <span class="pa1 dim dib pointer gt-label [if(image_height = 25,'outline','')]"
+          mv-action="set(image_height, 25),
+          invoke('changeFadeIn', image_height, 'root.children.image_source.element.parentElement.parentElement')"
+        >
+          <i class="fas f3 f4-l fa-hiking fa-fw" data-fa-mask="fas f3 f4-l fa-square-full"  data-fa-transform="shink-4 down-9"></i>
+        </span>
+        <span class="dn pa1 gt-tooltip absolute bg-black white-80 overflow-y-visible w4 top-4 z-1">
+          Set image height to 25%
+        </span>
+      </div>
+
+      <div class="h2">&nbsp;</div>
+
+    </div>
+
+    <input hidden list="height_of_container" property="image_height" type="range" min="25" max="100" step="25" class="w-100  bg-white  br0 b--black-10 " value="100"  >
+    <input hidden property="text_column_class" >
+    <input hidden property="image_layer" value="absolute">
+    <input hidden property="image_under_text" type="checkbox" >
+    <input hidden property="image_column_height">
+    <input hidden property="image_align_h">
+    <input hidden property="image_align_v_flex">
+    <input hidden property="card_align_h">
+    <input hidden property="card_align_v">
+    <input hidden property="overlay_base">
+    <input hidden property="cta_display">
+    <input hidden property="quote_display" value="dn">
+    <input hidden property="title_display">
+  </div>
+</div>
+
+
+      <div class="absolute top-2 center mw8 left-2 right-0 ph2" > 
+        <div class="fadeIn dn [if(toolbar_id = 2, 'show-in-edit','')] relative w-100 overflow-visible">
+          
+          <div class="f7 f6-ns normal fs-normal relaxed ">
+
+            
+<div class="ba b--white-30 w-100 bg-black-[toolbar_alpha] [if(text_toolbar_id > 0,'dn','')]">
+  <div class="mv2 flex flex-wrap items-center">
+    <span class="dib relative ph1 mh1 pv2"
+    mv-action="invoke('toggleClass', section_background, '.title-options', 'dn')"
+    >
+      <span class="gt-label">
+        <i class="fas fa-heading  white pa2 br0"></i>
+      </span>
+      <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          These styles apply to the title only. Click here to show more options.
+      </span>
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2"
+        mv-action="invoke('toggleClass', section_background, '.text-block-toolbar', 'dn')"
+      >
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2" >
+          <i class="fas fa-keyboard"></i>
+        </button>
+      </span>
+      <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Toggle text block toolbar.
+      </span>
+
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2">
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(title_transform = 'ttu','outline','')]" mv-action="set(title_transform, if(title_transform = 'ttu', '', 'ttu')), invoke('changeFadeIn', title_transform, 'root.children.title.element.parentElement')">
+          <i class="fas fa-fw fa-font" ></i>
+        </button>
+      </span>
+      <span class="ttu dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Toggle upper case
+      </span>
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2">
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(title_transform = 'ttc','outline','')]" mv-action="set(title_transform, if(title_transform = 'ttc', '', 'ttc')), invoke('changeFadeIn', title_transform, 'root.children.title.element.parentElement')">
+          <i class="fas fa-fw fa-ad" ></i>
+        </button>
+      </span>
+      <span class="ttc dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Toggle captilize case first letter
+      </span>
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2">
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(title_i = 'i', 'outline','')]" mv-action="set(title_i, if(title_i = 'i', 'fs-normal','i')), invoke('changeFadeIn', title_i, 'root.children.title.element.parentElement')">
+          <i class="fas fa-fw fa-italic" ></i>
+        </button>
+      </span>
+      <span class="i dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Toggle italic style
+      </span>
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2">
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(title_align = 'tc', 'outline','')]" mv-action="set(title_align, if(title_align = 'tc','ts','tc')), invoke('changeFadeIn', title_align, 'root.children.title.element.parentElement')">
+          <i class="fas fa-fw fa-align-center"></i>
+        </button>
+      </span>
+      <span class="tc dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Toggle align center
+      </span>
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2">
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2"
+        mv-action="set(title_font_size, if(title_font_size= -5, 1, if(title_font_size < 4, title_font_size + 1, title_font_size))),
+        invoke('changeFadeIn', title_font_size, 'root.children.title.element.parentElement')">
+          <i class="fas fa-fw fa-sort-alpha-down" ></i>
+        </button>
+      </span>
+      <span class="f7 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Decrease font size for medium and large screens.
+      </span>
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2">
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2"
+        mv-action="set(title_font_size, if(title_font_size = 1, -5, if(title_font_size > -6, title_font_size - 1, title_font_size))),
+        invoke('changeFadeIn', title_font_size, 'root.children.title.element.parentElement')">
+          <i class="fas fa-fw fa-sort-alpha-up" ></i>
+        </button>
+      </span>
+      <span class="f5 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Increase font size for medium and large screens.
+      </span>
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2">
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2" mv-action="set(title_font_weight, if(title_font_weight > 1, title_font_weight - 1, title_font_weight)), invoke('changeFadeIn', title_font_weight, 'root.children.title.element.parentElement')">
+          <i class="fw1 fas fa-fw fa-angle-down" ></i>
+        </button>
+      </span>
+      <span class="fw1 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Decrease font weight for medium and large screens.
+      </span>
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2">
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2" mv-action="set(title_font_weight, if(title_font_weight < 9, title_font_weight + 1, title_font_weight)), invoke('changeFadeIn', title_font_weight, 'root.children.title.element.parentElement')">
+          <i class="fw9-ns fas fa-fw fa-chevron-up" ></i>
+        </button>
+      </span>
+      <span class="fw9-ns dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Increase font weight for medium and large screens.
+      </span>
+    </span>
+
+    <span class="dib relative ph1 mh1 pv2">
+      <span class="gt-label">
+        <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(title_letter_spacing, 'outline')]" mv-action="set(title_letter_spacing, if(title_letter_spacing = 'tracked', 'tracked-mega',if(title_letter_spacing = 'tracked-mega','','tracked')) ), invoke('changeFadeIn', title_letter_spacing, 'root.children.title.element.parentElement')">
+          <i class="fas fa-fw fa-text-width" ></i>
+        </button>
+      </span>
+      <span class="tracked-mega dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Increase letter spacing
+      </span>
+    </span>
+
+  <span class="flex-auto dib relative ph1 mh1 pv2"
+      mv-action="invoke('toggleClass', section_background, '.title-options', 'dn')"
+    >
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2" >
+        <i class="fas fa-cog"></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Show more options of formatting title.
+    </span>
+  </span>
+
+  </div>
+
+  <div class="cf flex flex-wrap items-center">
+  
+    <div class="w4 flex-auto relative mh1 fl mid-gray flex flex-nowrap items-center cf mv2">
+      <input placeholder="heading font" property="title_font_family" data-path="serif_font_family" data-minchars="0"
+      class="white bg-transparent w-100 br0 b--white-20" />
+      <span class="gt-label">
+        <button type="button" mv-action="invoke('toggleDDInput',title_font_family)"
+          class="dropdown-btn grow pointer pa1 f7 bg-black-20 white br0">
+          <i class="fas fa-fw fa-caret-down"></i>
+        </button>
+      </span>
+      <span class="right-0 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Click the dropdown button to select font from list, or type to search.
+      </span>
+    </div>
+
+    <div class="w4 flex-auto relative mh1 fl mid-gray flex flex-nowrap items-center cf mv2">
+      <input placeholder="heading color" property="title_color" data-path="text_color" data-minchars="0"
+      class="white bg-transparent w-100 br0 b--white-20" />
+      <span class="gt-label">
+        <button type="button" mv-action="invoke('toggleDDInput',title_color)"
+        class="dropdown-btn grow pointer pa1 f7 bg-black-20 white br0">
+          <i class="fas fa-fw fa-caret-down"></i>
+        </button>
+      </span>
+      <span class="right-0 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Click the dropdown button to select font color from list, or type to search.
+      </span>
+
+    </div>
+
+    <div class="w4 flex-auto relative mh1 fl mid-gray flex flex-nowrap items-center cf mv2">
+      <input placeholder="heading background" property="title_background" data-path="solid_background" data-minchars="0"
+      class="white bg-transparent w-100 br0 b--white-20" />
+      <span class="gt-label">
+        <button type="button" mv-action="invoke('toggleDDInput',title_background)"
+        class="dropdown-btn grow pointer pa1 f7 bg-black-20 white br0">
+          <i class="fas fa-fw fa-caret-down"></i>
+        </button>
+      </span>
+      <span class="right-0 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Click the dropdown button to select background color from list, or type to search.
+      </span>
+    </div>
+  </div>
+
+
+</div> 
+
+            
+<div class="dn text-block-toolbar fadeIn">
+  <div class=" ba b--white-30 w-100 bg-black-[toolbar_alpha] ">
+
+    <div class="cf flex flex-wrap items-center">
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <i class="fas fa-paragraph  white pa2 br0"></i>
+        </span>
+        <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            These styles apply to the whole text block.
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(card_i = 'i', 'outline','')]" mv-action="set(card_i, if(card_i, '','i')), invoke('changeFadeIn', card_i, 'root.children.content.element')">
+            <i class="fas fa-fw fa-italic" ></i>
+          </button>
+        </span>
+        <span class="i dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Toggle italic style
+        </span>
+      </span>
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(card_text_align = 'tl', 'outline','')]" mv-action="set(card_text_align, 'tl'), invoke('changeFadeIn', card_text_align, 'root.children.content.element')">
+            <i class="fas fa-fw fa-align-left"></i>
+          </button>
+        </span>
+        <span class="tl dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Align text to left
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(card_text_align = 'tc', 'outline','')]" mv-action="set(card_text_align, 'tc'), invoke('changeFadeIn', card_text_align, 'root.children.content.element')">
+            <i class="fas fa-fw fa-align-center"></i>
+          </button>
+        </span>
+        <span class="tc dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Align text to center
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(card_text_align = 'tr', 'outline','')]" mv-action="set(card_text_align, 'tr'), invoke('changeFadeIn', card_text_align, 'root.children.content.element')">
+            <i class="fas fa-fw fa-align-right"></i>
+          </button>
+        </span>
+        <span class="tr dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Align text to right
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(card_text_align = 'tj', 'outline','')]" mv-action="set(card_text_align, 'tj'), invoke('changeFadeIn', card_text_align, 'root.children.content.element')">
+            <i class="fas fa-fw fa-align-justify"></i>
+          </button>
+        </span>
+        <span class="tj dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Justify text both sides
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2" mv-action="set(card_font_size, if(card_font_size < 6, card_font_size + 1, card_font_size)), invoke('changeFadeIn', card_font_size, 'root.children.content.element')">
+            <i class="fas fa-fw fa-sort-alpha-down" ></i>
+          </button>
+        </span>
+        <span class="f7 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Decrease font size for medium and large screens.
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2" mv-action="set(card_font_size, if(card_font_size > 3, card_font_size - 1, card_font_size)), invoke('changeFadeIn', card_font_size, 'root.children.content.element')">
+            <i class="fas fa-fw fa-sort-alpha-up" ></i>
+          </button>
+        </span>
+        <span class="f5 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Increase font size for medium and large screens.
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2" mv-action="set(card_font_weight, if(card_font_weight > 1, card_font_weight - 1, card_font_weight)), invoke('changeFadeIn', card_font_weight, 'root.children.content.element')">
+            <i class="fw1 fas fa-fw fa-angle-down" ></i>
+          </button>
+        </span>
+        <span class="fw1 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Decrease font weight for medium and large screens.
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2" mv-action="set(card_font_weight, if(card_font_weight < 9, card_font_weight + 1, card_font_weight)), invoke('changeFadeIn', card_font_weight, 'root.children.content.element')">
+            <i class="fw9-ns fas fa-fw fa-chevron-up" ></i>
+          </button>
+        </span>
+        <span class="fw9 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Increase font weight for medium and large screens.
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(card_letter_spacing, 'outline')]" mv-action="set(card_letter_spacing, if(card_letter_spacing = 'tracked', 'tracked-mega',if(card_letter_spacing = 'tracked-mega','','tracked')) ), invoke('changeFadeIn', card_letter_spacing, 'root.children.content.element')">
+            <i class="fas fa-fw fa-text-width" ></i>
+          </button>
+        </span>
+        <span class="tracked-mega dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+            Increase letter spacing
+        </span>
+      </span>
+
+      <span class="dib relative ph1 mh1 pv2">
+        <span class="gt-label">
+          <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20 white br2 [if(card_list_style, 'outline')]" mv-action="set(card_list_style, if(card_list_style,'','nested-list-reset') ), invoke('changeFadeIn', card_list_style, 'root.children.content.element')">
+            <i class="fas fa-fw fa-list-ul" ></i>
+          </button>
+        </span>
+        <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Reset list style. When enabled, it keeps the data, but does not display bullet point or number before list item.
+        </span>
+      </span>
+
+    </div>
+
+  <div class="cf flex flex-wrap items-center">
+
+    <div class="w4 flex-auto relative mh1 fl  mid-gray flex flex-nowrap items-center cf mv2">
+      <input placeholder="font" property="card_font_family" data-path="serif_font_family" data-minchars="0"
+      class="white bg-transparent w-100 br0 b--white-20" />
+      <span class="gt-label">
+        <button type="button" mv-action="invoke('toggleDDInput',card_font_family)"
+          class="dropdown-btn grow pointer pa1 f7 bg-black-20 white br0">
+          <i class="fas fa-fw fa-caret-down"></i>
+        </button>
+      </span>
+      <span class="right-0 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Click the dropdown button to select font from list, or type to search. The font applies to the whole text block.
+      </span>
+    </div>
+
+    <div class="w4 flex-auto relative mh1 fl  mid-gray flex flex-nowrap items-center cf mv2">
+      <input placeholder="color" property="card_text_color" data-path="text_color" data-minchars="0"
+      class="white bg-transparent w-100 br0 b--white-20" />
+      <span class="gt-label">
+        <button type="button" mv-action="invoke('toggleDDInput',card_text_color)"
+        class="dropdown-btn grow pointer pa1 f7 bg-black-20 white br0">
+          <i class="fas fa-fw fa-caret-down"></i>
+        </button>
+      </span>
+      <span class="right-0 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Click the dropdown button to select font color from list, or type to search.
+      </span>
+
+    </div>
+
+    <div class="w4 flex-auto relative mh1 fl  mid-gray flex flex-nowrap items-center cf mv2">
+      <input placeholder="background" property="card_background" data-path="solid_background" data-minchars="0"
+      class="white bg-transparent w-100 br0 b--white-20" />
+      <span class="gt-label">
+        <button type="button" mv-action="invoke('toggleDDInput',card_background)"
+        class="dropdown-btn grow pointer pa1 f7 bg-black-20 white br0">
+          <i class="fas fa-fw fa-caret-down"></i>
+        </button>
+      </span>
+      <span class="right-0 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          Click the dropdown button to select background color from list, or type to search.
+      </span>
+    </div>
+    <div class="w4 flex-auto relative mh1 fl  mid-gray flex flex-nowrap items-center cf mv2">
+      <input placeholder="body background" property="body_background" data-path="solid_background" data-minchars="0"
+      class="white bg-transparent w-100 br0 b--white-20" />
+      <span class="gt-label">
+        <button type="button" mv-action="invoke('toggleDDInput',body_background)"
+        class="dropdown-btn grow pointer pa1 f7 bg-black-20 white br0">
+          <i class="fas fa-fw fa-caret-down"></i>
+        </button>
+      </span>
+      <span class="right-0 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+          This background applies to the textbox body only.
+      </span>
+    </div>
+    <div class="w4 flex-auto relative mh1 fl  mid-gray flex flex-nowrap items-center cf mv2"
+    mv-action="invoke(replaceNodeClass,fancy_style,'mavo.root.children.content.element','fancy-')"
+    >
+      <input placeholder="fancy" property="fancy_style" data-list="fancy-dropcap,fancy-dropcap-all" data-minchars="0"
+      class="white bg-transparent w-100 br0 b--white-20" />
+      <span class="gt-label">
+        <button type="button" mv-action="invoke('toggleDDInput',fancy_style)"
+        class="dropdown-btn grow pointer pa1 f7 bg-black-20 white br0">
+          <i class="fas fa-fw fa-caret-down"></i>
+        </button>
+      </span>
+      <span class="right-0 dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Click the dropdown button to select a style, click this cell after deleting a style.
+      </span>
+    </div>
+
+  </div>
+
+  </div> 
+</div>
+
+
+          </div>
+
+          <div class="fadeIn absolute left-0 right-0 center mw7 dn title-options top-2 pa2 z-1 bg-light-gray mid-gray ba b--white-80 f7 f6-ns normal fs-normal relaxed">
+            <div class="tr pointer flex justify-between"
+              mv-action="invoke('toggleClass', section_background, '.title-options', 'dn')"
+            >
+            <span>Heading Styles</span>
+            <span>Close</span>
+            </div>
+            
+            
+
+<div >
+  <h3 class="mt2"></h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Horizontal Padding 
+        
+        
+        </div>
+        <div 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="title_ph"
+            
+            
+            id="radio-43-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="0"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-43-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            0 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-43-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="1"  
+            />
+            <label class="flex-auto ph2" for="radio-43-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            1 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-43-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="2"  
+            />
+            <label class="flex-auto ph2" for="radio-43-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            2 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-43-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="3"  
+            />
+            <label class="flex-auto ph2" for="radio-43-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-43-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="4"  
+            />
+            <label class="flex-auto ph2" for="radio-43-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            4 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Padding left and right for medium and large screen. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Vertical Padding 
+        
+        
+        </div>
+        <div 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="title_pv"
+            
+            
+            id="radio-44-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="0" 
+            />
+            <label class="flex-auto ph2" for="radio-44-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            0 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-44-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="1" 
+            />
+            <label class="flex-auto ph2" for="radio-44-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            1 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-44-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="2" 
+            />
+            <label class="flex-auto ph2" for="radio-44-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            2 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-44-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="3"  checked 
+            />
+            <label class="flex-auto ph2" for="radio-44-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-44-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="4" 
+            />
+            <label class="flex-auto ph2" for="radio-44-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-44-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="5" 
+            />
+            <label class="flex-auto ph2" for="radio-44-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            5 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-44-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="6" 
+            />
+            <label class="flex-auto ph2" for="radio-44-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            6 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Padding above and below for medium and large screen. 
+          </div>
+        
+      </div>
+       
+    
+       
+        <input class="absolute" hidden property="title_i" value="" />
+       
+    
+       
+        <input class="absolute" hidden property="title_font_size" value="2" />
+       
+    
+       
+        <input class="absolute" hidden property="title_align" value="tc" />
+       
+    
+       
+        <input class="absolute" hidden property="title_transform" value="ttc" />
+       
+    
+       
+        <input class="absolute" hidden property="title_font_weight" value="7" />
+       
+    
+       
+        <input class="absolute" hidden property="title_letter_spacing" value="" />
+       
+    
+       
+        <input class="absolute" hidden property="section_max_width" value="" />
+       
+    
+       
+        <input class="absolute" hidden property="card_i" value="" />
+       
+    
+       
+        <input class="absolute" hidden property="card_font_size" value="5" />
+       
+    
+       
+        <input class="absolute" hidden property="card_text_align" value="" />
+       
+    
+       
+        <input class="absolute" hidden property="card_font_weight" value="4" />
+       
+    
+       
+        <input class="absolute" hidden property="card_letter_spacing" value="" />
+       
+    
+       
+        <input class="absolute" hidden property="card_list_style" value="" />
+       
+    
+       
+        <input class="absolute" hidden property="big_quote" value="" />
+       
+    
+  </div>
+</div> 
+
+          </div>
+          
+        </div>
+      </div>
+
+      
+<div class="absolute top-2 w2">
+  <div class="relative pv3 ph1">
+    <span class="gt-label">
+      <button type="button" class="pointer grow baskerville dn show-in-edit pv1 ph2 f4 f5-l bg-black-05 white br2 b--white-90"
+      mv-action="set(toolbar_id,if(toolbar_id = 2, 0, toolbar_id + 1))
+      ">T</button>
+    </span>
+
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Toggle layout control toolbars.
+    </span>
+    <input type="number" hidden mv-storage="none" property="toolbar_id" value="1" />
+    <input type="number" hidden mv-storage="none" property="toolbar_alpha" value="10" />
+    <input type="checkbox" hidden mv-storage="none" property="is_cta_form_active" />
+  </div>
+  <div class="relative pv3 ph1">
+    <span class="gt-label">
+      <button type="button" class="pointer grow baskerville dn [if(toolbar_id,'show-in-edit','')] pv1 ph2 f4 f5-l bg-black-05 white br2 b--white-90"
+      mv-action="set(toolbar_alpha,if(toolbar_alpha >= 70, 10, toolbar_alpha + 20))">O
+
+      </button>
+    </span>
+
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+      Click to adjust toolbar opacity. Current value: [toolbar_alpha]%.
+    </span>
+
+  </div>
+</div>
+
+    35fe3a9616151be1e9a9abc33ece88d44bd47528
+
+  </div> 
+   {tf{? o.edit_mode }tf}
+
+
+<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
+">
+  
+  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
+      <span class="pv2 dib">Section Options</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
+    </div>
+    
+    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
+      
+
+<input hidden property="current_tab" mv-storage="none" value="appearance"/>
+<div class="pt1 flex flex-wrap items-stretch">
+
+  
+	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="layout_highlight_image" mv-action="set(current_tab,'layout_highlight_image')" class="[if(current_tab='layout_highlight_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-file-image"></i><span class="dn di-ns"> Highlight Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="layout_image_container" mv-action="set(current_tab,'layout_image_container')" class="[if(current_tab='layout_image_container', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-square"></i><span class="dn di-ns"> Image Container </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="image" mv-action="set(current_tab,'image')" class="[if(current_tab='image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-image"></i><span class="dn di-ns"> Background Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="iframe" mv-action="set(current_tab,'iframe')" class="[if(current_tab='iframe', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-play-circle"></i><span class="dn di-ns"> Iframe </span>
+		
+	</button>&nbsp;
+
+</div>
+
+<div class="tab-content pt3 ">
+
+	
+	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
+	 
+		
+		
+
+<div  property="appearance" >
+  <h3 class="mt2">Appearance</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Section Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="section_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value="bg-white-60"
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',section_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the fallback background color when image is not available or disabled.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Card Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            this is the background of grid cards.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Text Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="text_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',text_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Slide Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="slide_animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slide_animation"
+          
+           value="fadeIn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The slide animation during presentation, default to fadeIn if not set. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="layout_highlight_image" class="gt-tab-pane [if(current_tab='layout_highlight_image', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Highlight Image</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Image Border Radius 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, image_br,&#39;root.children.image_source&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="image_br"
+            
+            
+            id="radio-45-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br0"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-45-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            disable 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-45-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br2"  
+            />
+            <label class="flex-auto ph2" for="radio-45-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br2 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-45-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br3"  
+            />
+            <label class="flex-auto ph2" for="radio-45-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-45-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br4"  
+            />
+            <label class="flex-auto ph2" for="radio-45-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-45-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br-100"  
+            />
+            <label class="flex-auto ph2" for="radio-45-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            circle or oval 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Image Fit 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, object_fit_class,&#39;root.children.image_source&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="object_fit_class"
+            
+            
+            id="radio-46-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="of-scale-down"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-46-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Scale Down 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-46-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="of-contain"  
+            />
+            <label class="flex-auto ph2" for="radio-46-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Contain 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-46-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="of-cover"  
+            />
+            <label class="flex-auto ph2" for="radio-46-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Cover 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-46-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="of-fill"  
+            />
+            <label class="flex-auto ph2" for="radio-46-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Fill 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-46-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="of-none"  
+            />
+            <label class="flex-auto ph2" for="radio-46-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            None 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Whether to keep aspect ratio when stretching or cropping image.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="layout_image_container" class="gt-tab-pane [if(current_tab='layout_image_container', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Image Container</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Image Vertical Position 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(image_vertical_position, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="image_vertical_position" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="items-center, items-start, items-end, items-stretch" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',image_vertical_position)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This decides how to position the image container vertically. By default the container is centered vertically. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Height Reference 
+        
+        
+        </div>
+        <div 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="height_reference"
+            
+            
+            id="radio-47-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="h"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-47-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Container 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="vh"  
+            />
+            <label class="flex-auto ph2" for="radio-47-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Viewport 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the reference to calculate image height. If set to parent container, the text column will decide the height of the section. If set to viewport, the section has this height at a minimum. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Image Order 
+        
+        
+        </div>
+        <div 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="image_order"
+            
+            
+            id="radio-48-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="even-order-1-ns"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-48-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            line end in even sections 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-48-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="odd-order-1-ns"  
+            />
+            <label class="flex-auto ph2" for="radio-48-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            line end in odd sections 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-48-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="line-start"  
+            />
+            <label class="flex-auto ph2" for="radio-48-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            line start 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Change the order of the image to create alternate section effect on large screens.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="image" class="gt-tab-pane [if(current_tab='image', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="image" >
+  <h3 class="mt2">Background Image</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the background image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Overlay Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(overlay_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="overlay_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="overlay_background"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',overlay_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the overlay over background image to make text readable.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Image Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slow_motion"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the slow motion animation of the image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Auto Responsive 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="responsive" type="checkbox" 
+          class=""
+          
+          id="chk-image-responsive-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk-image-responsive-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            If enabled, dynamic images will be requested from Unsplash using the image id provided.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!responsive,&#39;dn&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Unsplash Image ID  <i class="pointer ph2 fas fa-link" mv-action="set(src,'https://source.unsplash.com/' & unsplash_image_id & '/' & if(size, size, '1366x768'))"> </i>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(unsplash_image_id, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="unsplash_image_id" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the image id from Unsplash. Click on the link icon to generate the image link. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!responsive,&#39;dn&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Size in Pixels 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(size, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="size" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The size of image width and height in pixels, default to 1366x768.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="base_image" class="gt-tab-pane [if(current_tab='base_image', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="base_image" >
+  <h3 class="mt2">Base Image</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the base image. Other images are rendered on top of it.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Image Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slow_motion"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the slow motion animation of the image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Auto Responsive 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="responsive" type="checkbox" 
+          class=""
+          
+          id="chk-base_image-responsive-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk-base_image-responsive-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            If enabled, dynamic images will be requested from Unsplash using the image id provided.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!responsive,&#39;dn&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Unsplash Image ID  <i class="pointer ph2 fas fa-link" mv-action="set(src,'https://source.unsplash.com/' & unsplash_image_id & '/' & if(size, size, '1366x768'))"> </i>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(unsplash_image_id, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="unsplash_image_id" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the image id from Unsplash. Click on the link icon to generate the image link. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!responsive,&#39;dn&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Size in Pixels 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(size, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="size" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The size of image width and height in pixels, default to 1366x768.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="bg_icon" class="gt-tab-pane [if(current_tab='bg_icon', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="bg_icon" >
+  <h3 class="mt2">Background Icon</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Outer Icon   <span class="fa-3x">
+    <span class="dib ph2">
+      <i class="fas fa-[inner_icon]" data-fa-mask="fas fa-[icon_mask]" data-fa-transform="[inner_icon_transform]"></i>
+    </span>
+  </span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_mask, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.icon_mask, &#39;root.children.fallback_icon&#39;, &#39;data-fa-mask&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_mask" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="square" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_mask)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon, the mask. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon <i class="gray fas fa-[if(inner_icon,inner_icon,'info-circle')]"></i>
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="font" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',inner_icon)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon transform 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon_transform, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.inner_icon_transform, &#39;root.children.fallback_icon&#39;, &#39;data-fa-transform&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon_transform" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value="shrink-6" 
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            keywords: shrink grow rotate up down left right flip-v flip-h
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Background Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Size (x10em) 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_size, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_size" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="fa-xs, fa-sm, fa-lg, fa-2x, fa-3x" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_size)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The size of icon times 10em.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Display 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_display, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_display" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="dn, self-start, self-center, self-end" 
+           value="dn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_display)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            How to position the icon. Choose dn to disable it.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slow_motion"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the slow motion animation of the icon.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="iframe" class="gt-tab-pane [if(current_tab='iframe', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Iframe</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source URL   <span class="mh2"
+  mv-action="invoke('setItemsAttr', embed_source, 'root.children.iframe_view', 'src', 'iframe')"
+  ><i class="fas fa-sync"></i> </span>
+  
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_source, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_source" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the embed page.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Embed Aspect Ratio 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_aspect_ratio, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_aspect_ratio" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="16x9,9x16,4x3,3x4,6x4,4x6,8x5,5x8,7x5,5x7,1x1,none" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',embed_aspect_ratio)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the dimension of the embed window (width x height). Choose none to temporarily hide iframe.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Embed Order 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_order, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_order" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="order-1,order-0" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',embed_order)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Choose order 1 to display iframe below image, if you have both an iframe and image. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Paste Embed Code   <span class="mh2"
+  mv-action="invoke('extractAttr', paste_embed_code, 'root.children.embed_source', 'src', 'iframe')"
+  ><i class="fas fa-link"></i> </span>
+  
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(paste_embed_code, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h3 b--black-10"
+           property="paste_embed_code"  mv-storage="none" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            You may paste the iframe embed code provided by suppliers here, and click the 
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+
+</div>
+
+    </div>
+
+  </div>
+</div>
+
+<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
+
+  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
+    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
+  </button>
+
+  <span class="dn di-ns gt-pos-btns"> 
+    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
+    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
+    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
+    
+    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
+  </span>
+
+  
+  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
+  
+  
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
 </div>
@@ -8189,6 +14696,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
   
     gtpb.partials['goandtalk/footer/default_footer'] = `
+
+
+
 <section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="gt-mv-on relative flex flex-column justify-end" ><div class="flex-auto tc bg-black-10 gmws dn">
     <div class="pt5 f-6-l f1-m f2 flex flex-column justify-center">
@@ -8270,7 +14780,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     <div class="tc ph4 pv2 f7" 675275c791df5c494218febd9c0cde06eea2ae6b property="copyright" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
       {enc{! o.__get(it, \u0027copyright\u0027) || \u0027Copyright 2019. All rights reserved.\u0027 }enc}
     </div>
-    <div class="tc pa3 f7 bg-black-80 white-60 pb6 pb3-l">Golden theme by goandmake.app. Powered by goandmake.app</div>
+    <div class="tc pa3 f7 bg-black-80 white-60 pb6 pb3-l">
+      {enc{! o.__get(o, \u0027site.params.gt_theme_name\u0027) || \u0027Golden\u0027 }enc} theme by
+      <a class="white-70 hover-white" href="9c5d1935546b2e94073e7f538301e63094876204">{enc{! o.__get(o, \u0027site.params.gt_author_name\u0027) || \u0027GoandMake.app\u0027 }enc}</a>
+      <a class="white-70 hover-white" href="28cc5fd7f9fa2dc66449de854b9df615c02c3c13">{enc{! o.__get(o, \u0027site.params.gt_license_name\u0027) || \u0027\u0027 }enc}</a>
+      Powered by <a class="white-70 hover-white" href="https://we.goandmake.app">goandmake.app</a></div>
   </div> {tf{? o.edit_mode }tf}
 
 
@@ -8278,9 +14792,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 ">
   
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
       <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
     </div>
     
     <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
@@ -8619,7 +15133,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
   
   
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
 </div>
@@ -8666,33 +15180,55 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     </div>
     
     <div class=" mh2 mh3-ns mt2 br1 b--white-30 ph1 ph2-ns pb4">
-      <div class="pv3"> Select Section Template
-        <i title="reset selection"
-        mv-action="set(partial,'')"
-        class="reset-select-partial light-red pa1 fas fa-eraser"></i>
-      </div>
-      <div class="cf flex flex-nowrap items-center">
 
-        <input property="partial" data-path="partials" class="select-partial h2 w-100 flex-auto bg-white br0 b--black-10" placeholder="type to search"/>
-        <button class="dropdown-btn grow pointer pa2 br0"
-        mv-action="invoke('toggleDDInput',partial)"
-        >
-          <i class="fas fa-caret-down"></i>
-        </button>
+      <div class="relative w-100  ph1  pt2 pb3 ">
+        <div>Section Type </div>
+        <div class=" bg-white     flex  flex-nowrap   pt1 cf items-center ">
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio" property="section_type" id="radio-1-0-insert_dialog" name="radio-1-insert_dialog" value="blank" checked="" >
+            <label class="flex-auto ph2" for="radio-1-0-insert_dialog">blank section without data </label>
+          </div>
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio" id="radio-1-1-insert_dialog" name="radio-1-insert_dialog" value="global">
+            <label class="flex-auto ph2" for="radio-1-1-insert_dialog"> global section shared with other pages</label>
+          </div>
+
+        </div>
       </div>
-      <div class="pv3">Use Data From Global Section
-        <i title="reset selection" class="reset-select-global light-red pa1 fas fa-eraser"
-        mv-action="set(data_key, '')"
-        ></i>
+
+      <div class="[if(section_type='blank', 'db', 'dn')]">
+        <div class="pv3"> Select Blank Template
+          <i title="reset selection"
+          mv-action="set(partial,'')"
+          class="reset-select-partial light-red pa1 fas fa-eraser"></i>
+        </div>
+        <div class="cf flex flex-nowrap items-center">
+
+          <input property="partial" data-path="partials" class="select-partial h2 w-100 flex-auto bg-white br0 b--black-10" placeholder="type to search"/>
+          <button class="dropdown-btn grow pointer pa2 br0"
+          mv-action="invoke('toggleDDInput',partial)"
+          >
+            <i class="fas fa-caret-down"></i>
+          </button>
+        </div>
       </div>
-      <div class="cf flex flex-nowrap items-center">
-        <input property="data_key" class="select-global h2 w-100 bg-white br0 b--black-10" placeholder="type to search"/>
-        <button class="dropdown-btn grow pointer pa2 br0"
-        mv-action="invoke('toggleDDInput',data_key)"
-        >
-          <i class="fas fa-caret-down"></i>
-        </button>
+
+      <div class="[if(section_type='global','db', 'dn')]">
+        <div class="pv3">Select Prebuilt Global Section
+          <i title="reset selection" class="reset-select-global light-red pa1 fas fa-eraser"
+          mv-action="set(data_key, '')"
+          ></i>
+        </div>
+        <div class="cf flex flex-nowrap items-center">
+          <input property="data_key" class="select-global h2 w-100 bg-white br0 b--black-10" placeholder="type to search"/>
+          <button class="dropdown-btn grow pointer pa2 br0"
+          mv-action="invoke('toggleDDInput',data_key)"
+          >
+            <i class="fas fa-caret-down"></i>
+          </button>
+        </div>
       </div>
+
       <div class="pv4 tc flex justify-around">
         <button type="button" class="[if(idify(partial) or idify(data_key), '', 'dn')] pointer pv2 ph3 white-90 bg-green confirm-insert"> <i class="ph1 fas fa-fw fa-plus"></i>Insert</button>
         <button type="button" autofocus data-target="insert-dialog" class="pointer pv2 ph3 white-90 bg-light-blue cancel-insert"><i class="ph1 fas fa-fw fa-window-close"></i> Cancel</button>
@@ -9422,7 +15958,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Inner Icon <i class="gray fas fa-[if(icon_mask,icon_mask,'info-circle')]"></i>
+        <div>Inner Icon <i class="gray fas fa-[if(inner_icon,inner_icon,'info-circle')]"></i>
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon, '')">X</span>
@@ -9555,11 +16091,11 @@ w-100  ph1 fl pt2 pb3
              property="toolbar_overlay"
              mv-storage="none" 
             
-            id="radio-39-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-49-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="bg-black-10"   checked 
             />
-            <label class="flex-auto ph2" for="radio-39-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-49-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             bg-black-10 
             </label>
           </div>
@@ -9569,11 +16105,11 @@ w-100  ph1 fl pt2 pb3
             
              mv-storage="none" 
             
-            id="radio-39-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-49-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="bg-black-40"  
             />
-            <label class="flex-auto ph2" for="radio-39-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-49-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             bg-black-40 
             </label>
           </div>
@@ -9583,11 +16119,11 @@ w-100  ph1 fl pt2 pb3
             
              mv-storage="none" 
             
-            id="radio-39-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-49-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="bg-transparent"  
             />
-            <label class="flex-auto ph2" for="radio-39-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-49-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             bg-transparent 
             </label>
           </div>
@@ -10074,11 +16610,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="exp_link_format"
              mv-storage="none" 
             
-            id="radio-40-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-40-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-50-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="local"   checked 
             />
-            <label class="flex-auto ph2" for="radio-40-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-50-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             local 
             </label>
           </div>
@@ -10088,11 +16624,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
              mv-storage="none" 
             
-            id="radio-40-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-40-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-50-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="web"  
             />
-            <label class="flex-auto ph2" for="radio-40-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-50-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             web 
             </label>
           </div>
@@ -10283,11 +16819,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="exp_data_format"
              mv-storage="none" 
             
-            id="radio-41-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-51-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="toml"   checked 
             />
-            <label class="flex-auto ph2" for="radio-41-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-51-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             toml 
             </label>
           </div>
@@ -10297,11 +16833,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
              mv-storage="none" 
             
-            id="radio-41-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-51-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="yaml"  
             />
-            <label class="flex-auto ph2" for="radio-41-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-51-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             yaml 
             </label>
           </div>
@@ -10311,11 +16847,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
              mv-storage="none" 
             
-            id="radio-41-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-51-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="json"  
             />
-            <label class="flex-auto ph2" for="radio-41-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-51-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             json 
             </label>
           </div>
@@ -10824,6 +17360,13 @@ w-100  ph1 fl pt2 pb3
 	<button data-toggle-tab="site_edit_js_partial" mv-action="set(current_tab,'site_edit_js_partial')" class="[if(current_tab='site_edit_js_partial', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-code" data-fa-mask="fas fa-square" data-fa-transform="shrink-6"></i><span class="dn di-ns"> Edit Block </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="site_theme_author" mv-action="set(current_tab,'site_theme_author')" class="[if(current_tab='site_theme_author', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-paint-roller"></i><span class="dn di-ns"> Theme Author </span>
 		
 	</button>&nbsp;
 
@@ -11369,7 +17912,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  h2 w-100  bg-white  br0 b--black-10 fl
 "
           data-path=""
-           data-list="w-100 tc," 
+           data-list="w-100 tl,w-100 tc, w-100 tr" 
            value=""
           data-minchars="0" 
           />
@@ -12132,6 +18675,197 @@ w-100  ph1 fl pt2 pb3
 	
 	</div>
 
+	
+	<div data-pane="site_theme_author" class="gt-tab-pane [if(current_tab='site_theme_author', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Theme Author</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Theme Name 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(gt_theme_name, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="gt_theme_name" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Author Name 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(gt_author_name, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="gt_author_name" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Author URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(gt_author_url, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="gt_author_url" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>License Name 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(gt_license_name, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="gt_license_name" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>License URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(gt_license_url, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="gt_license_url" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
 
 </div>
 
@@ -12484,11 +19218,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="exp_data_format"
              mv-storage="none" 
             
-            id="radio-42-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-52-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="toml"   checked 
             />
-            <label class="flex-auto ph2" for="radio-42-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-52-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             toml 
             </label>
           </div>
@@ -12498,11 +19232,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
              mv-storage="none" 
             
-            id="radio-42-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-52-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="yaml"  
             />
-            <label class="flex-auto ph2" for="radio-42-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-52-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             yaml 
             </label>
           </div>
@@ -12512,11 +19246,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
              mv-storage="none" 
             
-            id="radio-42-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-52-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="json"  
             />
-            <label class="flex-auto ph2" for="radio-42-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-52-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             json 
             </label>
           </div>
@@ -12692,7 +19426,7 @@ w-100  ph1 fl pt2 pb3
 
     <link href="{v{= o._relurl('/css/webslides.css?v=0.0002') }v}" rel="stylesheet" />
     <link href="{v{= o._relurl('/css/tachyons.min.css?v=0.0001') }v}" rel="stylesheet" />
-
+    <link href="{v{= o._relurl('/css/styles.css') }v}" rel="stylesheet" />
     <style>
       .primary-color-dark {
         color:  {v{= o.styles.primary_color_dark }v};
@@ -12751,7 +19485,7 @@ w-100  ph1 fl pt2 pb3
         background-color: {v{= o.styles.primary_color_lighter }v};
         color: rgba(255,255,255,.9);
       }
-      .b--primary-color-light {
+      .b--primary-color-lighter {
         border-color: {v{= o.styles.primary_color_lighter }v};
       }
 
@@ -12775,7 +19509,7 @@ w-100  ph1 fl pt2 pb3
       .b--accent-color-light {
         border-color: {v{= o.styles.accent_color_light }v};
       }
-
+      {v{= o.site.params.custom_css || '' }v} 
     </style>
 
   </head>
@@ -12930,8 +19664,10 @@ w-100  ph1 fl pt2 pb3
         class="w-100 pa3 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
           <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="f4 pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
           <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-m pa4-l ma0 f2">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2>
-          <div class="pt3 f3 markdown lh-copy nested-links"  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
-             {v{= o.sanitizer.sanitize(o.md.render(o.__get(it, \u0027content\u0027) || \u0027* It just works\u0027 || \u0027\u0027 )) }v}
+          <div class="pt3 f3 markdown lh-copy
+          {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+          "  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
+             {v{= o.sanitizer.sanitize(o.md.render(o.__get(it, \u0027content\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
 
             
           </div>
@@ -12946,9 +19682,9 @@ w-100  ph1 fl pt2 pb3
 ">
   
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
       <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
     </div>
     
     <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
@@ -13133,6 +19869,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
 
         <div>Icon Color 
         
@@ -13165,6 +19906,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
         </div> 
         
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
         
       </div>
        
@@ -13215,6 +19961,57 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             The slide animation during presentation, default to fadeIn if not set. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
           </div>
         
       </div>
@@ -13358,7 +20155,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
   <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
   
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
 </div>
@@ -13379,6 +20176,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 
+
+
+
 <section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
   class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
   {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
@@ -13388,14 +20188,42 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
 
     
+<div class="tc absolute absolute--fill fa-10x flex flex-column justify-center">
+  <div class="{enc{! o.__get(it, \u0027bg_icon.bg_icon_color\u0027) || \u0027white-10\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_size\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.bg_icon_display\u0027) || \u0027\u0027 }enc}
+   {enc{! o.__get(it, \u0027bg_icon.animation\u0027) || \u0027\u0027 }enc}
+   "
+   675275c791df5c494218febd9c0cde06eea2ae6bproperty="fallback_icon" mv-storage="none" mv-attribute="class" mv-value="bg_icon.bg_icon_color & ' ' & bg_icon.bg_icon_size & ' ' & bg_icon.bg_icon_display & ' ' & bg_icon.animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+     <i class="fallback-icon fas fa-{enc{! o.__get(it, \u0027bg_icon.inner_icon\u0027) || \u0027\u0027 }enc}"
+     675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fallback-icon fas fa-' & bg_icon.inner_icon" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+     data-fa-transform="{enc{! o.__get(it, \u0027bg_icon.inner_icon_transform\u0027) || \u0027\u0027 }enc}"
+     data-fa-mask="fas fa-{enc{! o.__get(it, \u0027bg_icon.icon_mask\u0027) || \u0027\u0027 }enc}"
+     ></i>
+   </div>
+</div>
 
 
+    
+
+{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+
+  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
+  {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+" src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
+  35fe3a9616151be1e9a9abc33ece88d44bd47528
+
+
+    
 
 <figure class="ma0">
 	<picture>
     
-    <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+    {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="a41325d3d724b613adde84fb3124bc6dd2d09ac7" >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
     
   </picture>
 </figure>
@@ -13406,6 +20234,8 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       mv-attribute="class"
       mv-value="'cf w-100 relative  center flex flex-wrap ' & if(section_max_width, section_max_width, 'mw8')"
     35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+      {tf{? o.edit_mode || o.__get(it, \u0027image_column_width\u0027) }tf}
+
       <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class"
       mv-value="'image-column w-100 z-0 flex flex-wrap fl w-' & image_column_width & '-ns ' &  image_order & ' ' & if(image_align_v_flex,image_align_v_flex,'items-center') & ' ' & image_layer & ' ' & image_column_height & ' ' & image_align_h" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
       class="image-column w-100 z-0 flex flex-wrap fl
@@ -13420,7 +20250,25 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         {enc{! o.__get(it, \u0027height_reference\u0027) || \u0027h\u0027 }enc}-{enc{! o.__get(it, \u0027image_height\u0027) || \u0027100\u0027 }enc}"
          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc overflow-hidden relative  w-100 flex flex-column justify-center items-center ' & height_reference & '-' &  image_height " 35fe3a9616151be1e9a9abc33ece88d44bd47528
         > 
+
         
+        {tf{? o.edit_mode || o.__get(it, \u0027embed_source\u0027) }tf}
+
+          <div class="w-100 aspect-ratio
+          aspect-ratio--{enc{! o.__get(it, \u0027embed_aspect_ratio\u0027) || \u0027none\u0027 }enc}
+          {enc{! o.__get(it, \u0027embed_order\u0027) || \u0027\u0027 }enc}
+          "
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 aspect-ratio aspect-ratio--' & embed_aspect_ratio & ' ' & embed_order" 35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+            <iframe frameborder="0" style="border:0"  allow="fullscreen" class="aspect-ratio--object"
+              src="f9646236a2807f0720fd2ecb05896803adf5bb4b"
+            675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="none" property="iframe_view" mv-attribute="src" mv-value="embed_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 ></iframe>
+          </div>
+        35fe3a9616151be1e9a9abc33ece88d44bd47528
+        
+
+        
+        {tf{? o.edit_mode || o.__get(it, \u0027image_source\u0027) }tf}
+
           <img class="mw-100 maxh-100
           o-{enc{! o.__get(it, \u0027image_opacity\u0027) || \u0027100\u0027 }enc}
           {enc{! o.__get(it, \u0027object_fit_class\u0027) || \u0027of-scale-down\u0027 }enc}
@@ -13429,9 +20277,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           src="be9210026fcf76504a9221b2aea4c4b61cf84e51"
           alt="{enc{! o.__get(it, \u0027image_alt_text\u0027) || \u0027\u0027 }enc}"
           >
+          35fe3a9616151be1e9a9abc33ece88d44bd47528
         
         </div>
       </div>
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
       <div class="text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl
       {enc{! o.__get(it, \u0027text_column_class\u0027) || \u0027w-30-ns\u0027 }enc}
       {enc{! o.__get(it, \u0027card_align_h\u0027) || \u0027justify-center\u0027 }enc}
@@ -13492,8 +20342,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             </span>
             
 
-            <div class=" markdown lh-copy nested-links {enc{! o.__get(it, \u0027fancy_style\u0027) || \u0027\u0027 }enc}"  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
-               {v{= o.sanitizer.sanitize(o.md.render(o.__get(it, \u0027content\u0027) || \u0027* It just works\u0027 || \u0027\u0027 )) }v}
+            <div class=" markdown lh-copy
+            {enc{! o.__get(it, \u0027fancy_style\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+            "  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
+               {v{= o.sanitizer.sanitize(o.md.render(o.__get(it, \u0027content\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
 
               
             </div>
@@ -13815,11 +20668,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="border_radius"
             
             
-            id="radio-43-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-53-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-43-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-53-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br0 
             </label>
           </div>
@@ -13829,11 +20682,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-43-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-53-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br1"  
             />
-            <label class="flex-auto ph2" for="radio-43-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-53-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br1 
             </label>
           </div>
@@ -13843,11 +20696,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-43-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-53-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br2"  
             />
-            <label class="flex-auto ph2" for="radio-43-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-53-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br2 
             </label>
           </div>
@@ -13857,11 +20710,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-43-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-53-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br3"  
             />
-            <label class="flex-auto ph2" for="radio-43-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-53-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br3 
             </label>
           </div>
@@ -13871,11 +20724,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-43-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-53-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br4"  
             />
-            <label class="flex-auto ph2" for="radio-43-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-53-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br4 
             </label>
           </div>
@@ -13885,11 +20738,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-43-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-53-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br-pill"  
             />
-            <label class="flex-auto ph2" for="radio-43-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-53-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br-pill 
             </label>
           </div>
@@ -14382,7 +21235,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               Align the image to the left if the image is not full width.
           </span>
         </span>
-        <span class="if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
+        <span class="[if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
           <span class="pa1 dim dib pointer gt-label [if(contains(image_align_h,'left--'),'outline','')]"
             mv-action="set(image_align_h,'left--' & ((100-image_column_width)/2) & '-ns'),invoke('changeFadeIn', image_align_h, 'root.children.image_source.element.parentElement.parentElement')"
           >
@@ -14392,7 +21245,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               Align the image to the center if the image is not full width.
           </span>
         </span>
-        <span class="if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
+        <span class="[if(image_layer='absolute','dib','dn')] relative ph1 mh1 pv2">
           <span class="pa1 dim dib pointer gt-label [if(image_align_h ='right-0','outline','')]"
             mv-action="set(image_align_h,'right-0'),invoke('changeFadeIn', image_align_h, 'root.children.image_source.element.parentElement.parentElement')"
           >
@@ -15110,11 +21963,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="title_ph"
             
             
-            id="radio-44-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-44-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             0 
             </label>
           </div>
@@ -15124,11 +21977,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-44-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="1"  
             />
-            <label class="flex-auto ph2" for="radio-44-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             1 
             </label>
           </div>
@@ -15138,11 +21991,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-44-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="2"  
             />
-            <label class="flex-auto ph2" for="radio-44-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             2 
             </label>
           </div>
@@ -15152,11 +22005,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-44-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="3"  
             />
-            <label class="flex-auto ph2" for="radio-44-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             3 
             </label>
           </div>
@@ -15166,11 +22019,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-44-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="4"  
             />
-            <label class="flex-auto ph2" for="radio-44-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             4 
             </label>
           </div>
@@ -15211,11 +22064,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="title_pv"
             
             
-            id="radio-45-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-55-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="0" 
             />
-            <label class="flex-auto ph2" for="radio-45-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-55-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             0 
             </label>
           </div>
@@ -15225,11 +22078,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-45-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-55-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="1" 
             />
-            <label class="flex-auto ph2" for="radio-45-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-55-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             1 
             </label>
           </div>
@@ -15239,11 +22092,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-45-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-55-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="2" 
             />
-            <label class="flex-auto ph2" for="radio-45-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-55-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             2 
             </label>
           </div>
@@ -15253,11 +22106,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-45-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-55-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="3"  checked 
             />
-            <label class="flex-auto ph2" for="radio-45-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-55-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             3 
             </label>
           </div>
@@ -15267,11 +22120,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-45-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-55-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="4" 
             />
-            <label class="flex-auto ph2" for="radio-45-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-55-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             4 
             </label>
           </div>
@@ -15281,11 +22134,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-45-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-55-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="5" 
             />
-            <label class="flex-auto ph2" for="radio-45-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-55-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             5 
             </label>
           </div>
@@ -15295,11 +22148,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-45-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-55-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="6" 
             />
-            <label class="flex-auto ph2" for="radio-45-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-55-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             6 
             </label>
           </div>
@@ -15421,9 +22274,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 ">
   
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
       <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
     </div>
     
     <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
@@ -15457,6 +22310,27 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	<button data-toggle-tab="image" mv-action="set(current_tab,'image')" class="[if(current_tab='image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-image"></i><span class="dn di-ns"> Background Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="iframe" mv-action="set(current_tab,'iframe')" class="[if(current_tab='iframe', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-play-circle"></i><span class="dn di-ns"> Iframe </span>
 		
 	</button>&nbsp;
 
@@ -15629,6 +22503,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
 
         <div>Icon Color 
         
@@ -15661,6 +22540,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
         </div> 
         
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
         
       </div>
        
@@ -15716,6 +22600,57 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
+          </div>
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -15751,11 +22686,11 @@ w-100  ph1 fl pt2 pb3
              property="image_br"
             
             
-            id="radio-46-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-56-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-46-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-56-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             disable 
             </label>
           </div>
@@ -15765,11 +22700,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-46-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-56-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br2"  
             />
-            <label class="flex-auto ph2" for="radio-46-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-56-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br2 
             </label>
           </div>
@@ -15779,11 +22714,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-46-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-56-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br3"  
             />
-            <label class="flex-auto ph2" for="radio-46-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-56-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br3 
             </label>
           </div>
@@ -15793,11 +22728,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-46-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-56-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br4"  
             />
-            <label class="flex-auto ph2" for="radio-46-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-56-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br4 
             </label>
           </div>
@@ -15807,11 +22742,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-46-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-56-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br-100"  
             />
-            <label class="flex-auto ph2" for="radio-46-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-56-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             circle or oval 
             </label>
           </div>
@@ -15847,11 +22782,11 @@ w-100  ph1 fl pt2 pb3
              property="object_fit_class"
             
             
-            id="radio-47-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-57-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-57-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-scale-down"   checked 
             />
-            <label class="flex-auto ph2" for="radio-47-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-57-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Scale Down 
             </label>
           </div>
@@ -15861,11 +22796,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-47-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-57-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-57-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-contain"  
             />
-            <label class="flex-auto ph2" for="radio-47-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-57-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Contain 
             </label>
           </div>
@@ -15875,11 +22810,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-47-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-57-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-57-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-cover"  
             />
-            <label class="flex-auto ph2" for="radio-47-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-57-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Cover 
             </label>
           </div>
@@ -15889,11 +22824,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-47-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-57-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-57-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-fill"  
             />
-            <label class="flex-auto ph2" for="radio-47-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-57-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Fill 
             </label>
           </div>
@@ -15903,11 +22838,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-47-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-57-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-57-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="of-none"  
             />
-            <label class="flex-auto ph2" for="radio-47-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-57-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             None 
             </label>
           </div>
@@ -16015,11 +22950,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="height_reference"
             
             
-            id="radio-48-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-58-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-58-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="h"   checked 
             />
-            <label class="flex-auto ph2" for="radio-48-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-58-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Container 
             </label>
           </div>
@@ -16029,11 +22964,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-48-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-58-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-58-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="vh"  
             />
-            <label class="flex-auto ph2" for="radio-48-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-58-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             Viewport 
             </label>
           </div>
@@ -16074,11 +23009,11 @@ w-100  ph1 fl pt2 pb3
              property="image_order"
             
             
-            id="radio-49-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-59-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-59-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="even-order-1-ns"   checked 
             />
-            <label class="flex-auto ph2" for="radio-49-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-59-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line end in even sections 
             </label>
           </div>
@@ -16088,11 +23023,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-49-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-59-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-59-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="odd-order-1-ns"  
             />
-            <label class="flex-auto ph2" for="radio-49-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-59-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line end in odd sections 
             </label>
           </div>
@@ -16102,11 +23037,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-49-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-59-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-59-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="line-start"  
             />
-            <label class="flex-auto ph2" for="radio-49-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-59-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line start 
             </label>
           </div>
@@ -16423,6 +23358,815 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</div>
 
 	
+	<div data-pane="base_image" class="gt-tab-pane [if(current_tab='base_image', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="base_image" >
+  <h3 class="mt2">Base Image</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the base image. Other images are rendered on top of it.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Image Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slow_motion"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the slow motion animation of the image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Auto Responsive 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="responsive" type="checkbox" 
+          class=""
+          
+          id="chk-base_image-responsive-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk-base_image-responsive-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            If enabled, dynamic images will be requested from Unsplash using the image id provided.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!responsive,&#39;dn&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Unsplash Image ID  <i class="pointer ph2 fas fa-link" mv-action="set(src,'https://source.unsplash.com/' & unsplash_image_id & '/' & if(size, size, '1366x768'))"> </i>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(unsplash_image_id, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="unsplash_image_id" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the image id from Unsplash. Click on the link icon to generate the image link. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!responsive,&#39;dn&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Size in Pixels 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(size, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="size" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The size of image width and height in pixels, default to 1366x768.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="bg_icon" class="gt-tab-pane [if(current_tab='bg_icon', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="bg_icon" >
+  <h3 class="mt2">Background Icon</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Outer Icon   <span class="fa-3x">
+    <span class="dib ph2">
+      <i class="fas fa-[inner_icon]" data-fa-mask="fas fa-[icon_mask]" data-fa-transform="[inner_icon_transform]"></i>
+    </span>
+  </span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_mask, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.icon_mask, &#39;root.children.fallback_icon&#39;, &#39;data-fa-mask&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_mask" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="square" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_mask)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon, the mask. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon <i class="gray fas fa-[if(inner_icon,inner_icon,'info-circle')]"></i>
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="fas_list"
+          
+           value="font" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',inner_icon)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the class of Fontawesome icon.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Inner Icon transform 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(inner_icon_transform, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, bg_icon.inner_icon_transform, &#39;root.children.fallback_icon&#39;, &#39;data-fa-transform&#39;, &#39;i.fallback-icon&#39; )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="inner_icon_transform" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value="shrink-6" 
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            keywords: shrink grow rotate up down left right flip-v flip-h
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Background Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Size (x10em) 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_size, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_size" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="fa-xs, fa-sm, fa-lg, fa-2x, fa-3x" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_size)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The size of icon times 10em.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Background Icon Display 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_icon_display, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="bg_icon_display" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="dn, self-start, self-center, self-end" 
+           value="dn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_icon_display)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            How to position the icon. Choose dn to disable it.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slow_motion"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the slow motion animation of the icon.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="iframe" class="gt-tab-pane [if(current_tab='iframe', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Iframe</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source URL   <span class="mh2"
+  mv-action="invoke('setItemsAttr', embed_source, 'root.children.iframe_view', 'src', 'iframe')"
+  ><i class="fas fa-sync"></i> </span>
+  
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_source, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_source" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the embed page.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Embed Aspect Ratio 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_aspect_ratio, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_aspect_ratio" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="16x9,9x16,4x3,3x4,6x4,4x6,8x5,5x8,7x5,5x7,1x1,none" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',embed_aspect_ratio)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the dimension of the embed window (width x height). Choose none to temporarily hide iframe.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Embed Order 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_order, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_order" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="order-1,order-0" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',embed_order)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Choose order 1 to display iframe below image, if you have both an iframe and image. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Paste Embed Code   <span class="mh2"
+  mv-action="invoke('extractAttr', paste_embed_code, 'root.children.embed_source', 'src', 'iframe')"
+  ><i class="fas fa-link"></i> </span>
+  
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(paste_embed_code, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h3 b--black-10"
+           property="paste_embed_code"  mv-storage="none" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            You may paste the iframe embed code provided by suppliers here, and click the 
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
 	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
 	 
 		
@@ -16554,7 +24298,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
   <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
   
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
 </div>
@@ -16581,8 +24325,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="f4 pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
           <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-m pa4-l ma0 f2">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2>
           <i class="fas fa-quote-left fa-pull-left fa-3x"></i>
-          <div class="pt3 f3 markdown lh-copy nested-links"  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
-             {v{= o.sanitizer.sanitize(o.md.render(o.__get(it, \u0027content\u0027) || \u0027* It just works\u0027 || \u0027\u0027 )) }v}
+          <div class="pt3 f3 markdown lh-copy
+          {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+          "  675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >
+             {v{= o.sanitizer.sanitize(o.md.render(o.__get(it, \u0027content\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
 
             
           </div>
@@ -16606,9 +24352,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 ">
   
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
       <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
     </div>
     
     <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
@@ -16793,6 +24539,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
 
         <div>Icon Color 
         
@@ -16825,6 +24576,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
         </div> 
         
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
         
       </div>
        
@@ -16875,6 +24631,57 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             The slide animation during presentation, default to fadeIn if not set. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
           </div>
         
       </div>
@@ -17018,7 +24825,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
   <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
   
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
 </div>
@@ -17041,9 +24848,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' pv3 flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
     <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
     <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-m pa4-l ma0 f3">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+      {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
       {enc{! o.__get(it, \u0027horizontal_position\u0027) || \u0027justify-center\u0027 }enc}
       {enc{! o.__get(it, \u0027vertical_position\u0027) || \u0027\u0027 }enc}"
-       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap ' & horizontal_position & ' ' & vertical_position" 35fe3a9616151be1e9a9abc33ece88d44bd47528 >
+       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap ' & horizontal_position & ' ' & vertical_position & ' ' & appearance.link_color" 35fe3a9616151be1e9a9abc33ece88d44bd47528 >
     
       {tf{? o.__get(it,\u0027column.0\u0027) }tf}
 
@@ -17092,8 +24900,8 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
                 <button type="button" mv-action="invoke('toggleDDInput',icon)" class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 " title="click to open dropdown list"> <i class="f6 fas fa-arrow-down"></i></button>
               </div>
             </div>
-            <h3 property="title" class="tc f3"> Easy </h3>
-            <div class="pt4 lh-copy markdown" property="description">It just works.</div>
+            <h3 property="title" class="tc f3 mv-empty"></h3>
+            <div class="pt4 lh-copy markdown mv-empty" property="description"></div>
           </div>
         </div>
         35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -17110,9 +24918,9 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 ">
   
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
       <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
     </div>
     
     <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
@@ -17311,6 +25119,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
 
         <div>Icon Color 
         
@@ -17343,6 +25156,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
         </div> 
         
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
         
       </div>
        
@@ -17398,22 +25216,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       </div>
        
     
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="layout_column" class="gt-tab-pane [if(current_tab='layout_column', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Layout</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
       
       <div class="relative 
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
@@ -17425,1444 +25227,29 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Columns Per Row 
+        <div>Link Color 
         
         
-        </div>
-        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, column_class,&#39;root.children.column&#39;)" 
-        class=" bg-white 
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="column_class"
-            
-            
-            id="radio-50-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-50-l"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-50-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            2 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-50-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-33-l"  
-            />
-            <label class="flex-auto ph2" for="radio-50-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            3 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-50-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-25-l"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-50-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            4 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-50-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-20-l"  
-            />
-            <label class="flex-auto ph2" for="radio-50-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            5 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-50-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-10-l"  
-            />
-            <label class="flex-auto ph2" for="radio-50-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            10 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the maximum number of columns in a row before wrapping to the next row.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Resize Column 
-        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
         
         </div>
-        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, resize_column,&#39;root.children.column&#39;)" 
-        class=" bg-white 
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="resize_column"
-            
-            
-            id="radio-51-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="flex-auto"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-51-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            auto 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-51-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="flex-none"  
-            />
-            <label class="flex-auto ph2" for="radio-51-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            none 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            Whether to resize columns if there is extra space in the row. If set to auto, the extra space will be divided equally. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Horizontal Position 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(horizontal_position, '')">X</span>
-        
-        </div>
-        <div 
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
           <input 
-           property="horizontal_position" 
+           property="link_color" 
           type="text" 
           class="flex-auto  dropdown-input  
  h2 w-100  bg-white  br0 b--black-10 fl
 "
-          data-path=""
-           data-list="justify-center, justify-start, justify-end, justify-between, justify-around" 
-           value="justify-center" 
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',horizontal_position)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This decides how to distribute extra space if columns are not resized. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Vertical Position 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(vertical_position, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="vertical_position" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-           data-list="items-center, items-start, items-end, items-stretch" 
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',vertical_position)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This decides how to position items vertically. By default items are stretched to fill the vertical space available. 
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="layout_fa_mask" class="gt-tab-pane [if(current_tab='layout_fa_mask', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Mask</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div> 
-        
-        
-        </div>
-        <div  mv-action="invoke(&#39;setItemsAttr&#39;, data_fa_mask,&#39;root.children.column&#39;, &#39;data-fa-mask&#39;)" 
-        class=" bg-white 
-         flex  flex-wrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="data_fa_mask"
-            
-            
-            id="radio-52-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="circle"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-52-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-circle"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="apple-alt"  
-            />
-            <label class="flex-auto ph2" for="radio-52-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-apple-alt"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="bookmark"  
-            />
-            <label class="flex-auto ph2" for="radio-52-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-bookmark"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="certificate"  
-            />
-            <label class="flex-auto ph2" for="radio-52-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-certificate"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="comment"  
-            />
-            <label class="flex-auto ph2" for="radio-52-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-comment"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="comment-alt"  
-            />
-            <label class="flex-auto ph2" for="radio-52-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-comment-alt"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="square"  
-            />
-            <label class="flex-auto ph2" for="radio-52-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-square"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="tablet"  
-            />
-            <label class="flex-auto ph2" for="radio-52-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-tablet"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="archive"  
-            />
-            <label class="flex-auto ph2" for="radio-52-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-archive"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="bell"  
-            />
-            <label class="flex-auto ph2" for="radio-52-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-bell"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-10-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="calendar"  
-            />
-            <label class="flex-auto ph2" for="radio-52-10-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-calendar"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-11-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="chess-king"  
-            />
-            <label class="flex-auto ph2" for="radio-52-11-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-chess-king"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-12-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="chess-queen"  
-            />
-            <label class="flex-auto ph2" for="radio-52-12-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-chess-queen"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-13-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="clipboard"  
-            />
-            <label class="flex-auto ph2" for="radio-52-13-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-clipboard"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-14-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="cloud"  
-            />
-            <label class="flex-auto ph2" for="radio-52-14-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-cloud"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-15-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="coffee"  
-            />
-            <label class="flex-auto ph2" for="radio-52-15-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-coffee"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-16-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="file"  
-            />
-            <label class="flex-auto ph2" for="radio-52-16-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-file"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-17-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="fish"  
-            />
-            <label class="flex-auto ph2" for="radio-52-17-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-fish"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-18-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="flag"  
-            />
-            <label class="flex-auto ph2" for="radio-52-18-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-flag"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-19-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="folder"  
-            />
-            <label class="flex-auto ph2" for="radio-52-19-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-folder"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-20-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="heart"  
-            />
-            <label class="flex-auto ph2" for="radio-52-20-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-heart"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-21-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="lock"  
-            />
-            <label class="flex-auto ph2" for="radio-52-21-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-lock"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-22-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="map-marker"  
-            />
-            <label class="flex-auto ph2" for="radio-52-22-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-map-marker"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-23-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="microchip"  
-            />
-            <label class="flex-auto ph2" for="radio-52-23-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-microchip"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-24-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="mobile"  
-            />
-            <label class="flex-auto ph2" for="radio-52-24-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-mobile"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="play"  
-            />
-            <label class="flex-auto ph2" for="radio-52-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-play"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-26-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="scroll"  
-            />
-            <label class="flex-auto ph2" for="radio-52-26-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-scroll"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="shopping-bag"  
-            />
-            <label class="flex-auto ph2" for="radio-52-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-shopping-bag"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="shopping-cart"  
-            />
-            <label class="flex-auto ph2" for="radio-52-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-shopping-cart"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="sticky-note"  
-            />
-            <label class="flex-auto ph2" for="radio-52-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-sticky-note"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="tag"  
-            />
-            <label class="flex-auto ph2" for="radio-52-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-tag"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="unlock"  
-            />
-            <label class="flex-auto ph2" for="radio-52-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-unlock"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="weight-hanging"  
-            />
-            <label class="flex-auto ph2" for="radio-52-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-weight-hanging"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="trophy"  
-            />
-            <label class="flex-auto ph2" for="radio-52-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-trophy"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="tshirt"  
-            />
-            <label class="flex-auto ph2" for="radio-52-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-tshirt"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="wine-glass"  
-            />
-            <label class="flex-auto ph2" for="radio-52-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-wine-glass"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="suitcase"  
-            />
-            <label class="flex-auto ph2" for="radio-52-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-suitcase"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="star"  
-            />
-            <label class="flex-auto ph2" for="radio-52-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-star"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="splotch"  
-            />
-            <label class="flex-auto ph2" for="radio-52-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-splotch"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="mortar-pestle"  
-            />
-            <label class="flex-auto ph2" for="radio-52-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-mortar-pestle"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-40-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="truck-moving"  
-            />
-            <label class="flex-auto ph2" for="radio-52-40-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-truck-moving"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="hourglass"  
-            />
-            <label class="flex-auto ph2" for="radio-52-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-hourglass"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="hourglass-start"  
-            />
-            <label class="flex-auto ph2" for="radio-52-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-hourglass-start"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="hourglass-end"  
-            />
-            <label class="flex-auto ph2" for="radio-52-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-hourglass-end"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="couch"  
-            />
-            <label class="flex-auto ph2" for="radio-52-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-couch"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="concierge-bell"  
-            />
-            <label class="flex-auto ph2" for="radio-52-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-concierge-bell"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="brush"  
-            />
-            <label class="flex-auto ph2" for="radio-52-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-brush"></i> 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-52-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="box"  
-            />
-            <label class="flex-auto ph2" for="radio-52-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-             <i class="black-30 fas fa-fw fa-2x fa-box"></i> 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the outer icon, the mask.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Icon Transform 
-        
-        
-        </div>
-        <div  mv-action="invoke(&#39;setItemsAttr&#39;, data_fa_transform,&#39;root.children.column&#39;, &#39;data-fa-transform&#39;)" 
-        class=" bg-white 
-         flex  flex-wrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="data_fa_transform"
-            
-            
-            id="radio-53-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="shrink-8"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-53-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            shrink-8 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-53-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="shrink-10"  
-            />
-            <label class="flex-auto ph2" for="radio-53-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            shrink-10 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-53-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="up-2 shrink-8"  
-            />
-            <label class="flex-auto ph2" for="radio-53-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            up-2 shrink-8 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-53-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="up-2 shrink-10"  
-            />
-            <label class="flex-auto ph2" for="radio-53-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            up-2 shrink-10 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-53-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="up-4 shrink-8"  
-            />
-            <label class="flex-auto ph2" for="radio-53-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            up-4 shrink-8 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-53-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="up-4 shrink-10"  
-            />
-            <label class="flex-auto ph2" for="radio-53-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            up-4 shrink-10 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-53-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="down-2 shrink-8"  
-            />
-            <label class="flex-auto ph2" for="radio-53-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            down-2 shrink-8 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-53-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="down-2 shrink-10"  
-            />
-            <label class="flex-auto ph2" for="radio-53-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            down-2 shrink-10 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-53-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="down-4 shrink-8"  
-            />
-            <label class="flex-auto ph2" for="radio-53-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            down-4 shrink-8 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-53-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="down-4 shrink-10"  
-            />
-            <label class="flex-auto ph2" for="radio-53-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            down-4 shrink-10 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Global Section</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Data Storage Key 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(data_key, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="data_key" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-           data-list="," 
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',data_key)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-
-</div>
-
-    </div>
-
-  </div>
-</div>
-
-<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
-
-  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
-    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
-  </button>
-
-  <span class="dn di-ns gt-pos-btns"> 
-    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
-    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
-    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
-    <button type="button" data-action="clone-section" class="gt-clone-section manage-section pointer dim br2 pv1 ph2 mh1" title="clone section"><i class="fas fa-clone"></i></button>
-    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
-  </span>
-
-  
-  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
-  <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
-  
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
-  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
-  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
-</div>
-
-{tf{?}tf}
-
- 
-
-</section>
-
-`;
-  
-    gtpb.partials['goandtalk/slides/collection-big-icon-mono'] = `
-
-<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
-  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
-  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
-  "
-  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' pv3 flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
-    <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
-    <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-ns ma0 f3">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap {enc{! o.__get(it, \u0027horizontal_position\u0027) || \u0027justify-center\u0027 }enc} {enc{! o.__get(it, \u0027vertical_position\u0027) || \u0027\u0027 }enc}"
-      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap ' & horizontal_position & ' ' & vertical_position" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
-     >
-    
-      {tf{? o.__get(it,\u0027column.0\u0027) }tf}
-
-      {loop{~ it.column :item:idx }loop}
-
-      <div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528
-      class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m  pa3 flex grow
-      {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
-        <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
-          
-          <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc fa-5x ' & icon_color " 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="tc fa-5x {enc{! o.__get(it, \u0027appearance.icon_color\u0027) || \u0027black-20\u0027 }enc}">
-            <i 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fas fa-' & icon "  35fe3a9616151be1e9a9abc33ece88d44bd47528 class="fas fa-{enc{! o.__get(item, \u0027icon\u0027) || \u0027\u0027 }enc}"></i>
-          </div>
-          675275c791df5c494218febd9c0cde06eea2ae6b
-          <div class="dn show-in-edit w-100">
-            <div>Select Icon <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon, '')">x</span></div>
-            <div class="mid-gray flex flex-nowrap pt1 items-center">
-              <input property="icon" type="text" class="flex-auto dropdown-input  h2 w-100  bg-white  br0 b--black-10 " data-path="fas_list" value="" data-minchars="0" >
-              <button type="button" mv-action="invoke('toggleDDInput',icon)" class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 " title="click to open dropdown list"> <i class="f6 fas fa-arrow-down"></i></button>
-            </div>
-          </div>
-          35fe3a9616151be1e9a9abc33ece88d44bd47528
-          <h3 675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="tc"> {enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc} </h3>
-          <div class="pt4 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
- </div>
-        </div>
-      </div>
-      {loop{~}loop}
-
-      {tf{??}tf}
-
-        675275c791df5c494218febd9c0cde06eea2ae6b
-        <div property="column" mv-multiple
-        class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m pa3 flex grow
-        {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
-          <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
-            <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc fa-5x ' & icon_color " 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="tc fa-5x {enc{! o.__get(it, \u0027appearance.icon_color\u0027) || \u0027gray\u0027 }enc}">
-              <i mv-attribute="class" mv-value="'fas fa-' & icon "  class="fas fa-th-large"></i>
-            </div>
-            <div class="dn show-in-edit w-100">
-              <div>Select Icon <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon, '')">x</span></div>
-              <div class="mid-gray flex flex-nowrap pt1 items-center">
-                <input property="icon" type="text" class="flex-auto dropdown-input  h2 w-100  bg-white  br0 b--black-10 " data-path="fas_list" value="th-large" data-minchars="0" >
-                <button type="button" mv-action="invoke('toggleDDInput',icon)" class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 " title="click to open dropdown list"> <i class="f6 fas fa-arrow-down"></i></button>
-              </div>
-            </div>
-            <h3 property="title" class="tc"> Build </h3>
-            <div class="pt4 lh-copy markdown" property="description"></div>
-          </div>
-        </div>
-        35fe3a9616151be1e9a9abc33ece88d44bd47528
-      35fe3a9616151be1e9a9abc33ece88d44bd47528
-      675275c791df5c494218febd9c0cde06eea2ae6b <button type="button" title="add column" class="bg-green self-center v-mid dn br1 mv-add mv-ui mv-add-column">+</button> 35fe3a9616151be1e9a9abc33ece88d44bd47528
-    
-
-    </div>
-    <div class="tc pa2 pa3-ns mb4 f3" 675275c791df5c494218febd9c0cde06eea2ae6b property="description"  35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(it, \u0027description\u0027) || \u0027\u0027 }enc} </div>
-  </div>  {tf{? o.edit_mode }tf}
-
-
-<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
-">
-  
-  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
-      <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
-    </div>
-    
-    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
-      
-
-<input hidden property="current_tab" mv-storage="none" value="appearance"/>
-<div class="pt1 flex flex-wrap items-stretch">
-
-  
-	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="layout_column" mv-action="set(current_tab,'layout_column')" class="[if(current_tab='layout_column', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-th"></i><span class="dn di-ns"> Layout </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="global_section" mv-action="set(current_tab,'global_section'),invoke(&#39;updateGlobalSectionList&#39;, data_key)" class="[if(current_tab='global_section', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-globe"></i><span class="dn di-ns"> Global Section </span>
-		
-	</button>&nbsp;
-
-</div>
-
-<div class="tab-content pt3 ">
-
-	
-	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
-	 
-		
-		
-
-<div  property="appearance" >
-  <h3 class="mt2">Appearance</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Section Background 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="section_background" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="solid_background"
+          data-path="link_color"
           
            value=""
           data-minchars="0" 
           />
           
-<button type="button" mv-action="invoke('toggleDDInput',section_background)"
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
   class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
   title="click to open dropdown list">
   <span class="f6 bg-white-80 ph1 ">v</span>
@@ -18874,2594 +25261,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the fallback background color when image is not available or disabled.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Card Background 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="card_background" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="solid_background"
-          
-           value="hover-primary-color"
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',card_background)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            this is the background of grid cards.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Text Color 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="text_color" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="text_color"
-          
-           value="primary-color-first-letter-h3"
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',text_color)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Icon Color 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="icon_color" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="text_color"
-          
-           value="black-20"
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Slide Animation 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="slide_animation" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="slide_animation"
-          
-           value="fadeIn" 
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            The slide animation during presentation, default to fadeIn if not set. 
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="layout_column" class="gt-tab-pane [if(current_tab='layout_column', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Layout</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Columns Per Row 
-        
-        
-        </div>
-        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, column_class,&#39;root.children.column&#39;)" 
-        class=" bg-white 
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="column_class"
-            
-            
-            id="radio-54-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-50-l"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-54-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            2 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-54-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-33-l"  
-            />
-            <label class="flex-auto ph2" for="radio-54-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            3 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-54-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-25-l"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-54-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            4 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-54-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-20-l"  
-            />
-            <label class="flex-auto ph2" for="radio-54-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            5 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-54-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-10-l"  
-            />
-            <label class="flex-auto ph2" for="radio-54-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            10 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the maximum number of columns in a row before wrapping to the next row.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Resize Column 
-        
-        
-        </div>
-        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, resize_column,&#39;root.children.column&#39;)" 
-        class=" bg-white 
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="resize_column"
-            
-            
-            id="radio-55-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="flex-auto"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-55-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            auto 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-55-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="flex-none"  
-            />
-            <label class="flex-auto ph2" for="radio-55-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            none 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            Whether to resize columns if there is extra space in the row. If set to auto, the extra space will be divided equally. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Horizontal Position 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(horizontal_position, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="horizontal_position" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-           data-list="justify-center, justify-start, justify-end, justify-between, justify-around" 
-           value="justify-center" 
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',horizontal_position)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This decides how to distribute extra space if columns are not resized. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Vertical Position 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(vertical_position, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="vertical_position" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-           data-list="items-center, items-start, items-end, items-stretch" 
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',vertical_position)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This decides how to position items vertically. By default items are stretched to fill the vertical space available. 
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Global Section</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Data Storage Key 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(data_key, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="data_key" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-           data-list="," 
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',data_key)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-
-</div>
-
-    </div>
-
-  </div>
-</div>
-
-<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
-
-  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
-    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
-  </button>
-
-  <span class="dn di-ns gt-pos-btns"> 
-    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
-    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
-    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
-    <button type="button" data-action="clone-section" class="gt-clone-section manage-section pointer dim br2 pv1 ph2 mh1" title="clone section"><i class="fas fa-clone"></i></button>
-    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
-  </span>
-
-  
-  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
-  <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
-  
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
-  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
-  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
-</div>
-
-{tf{?}tf}
-
- 
-
-</section>
-
-`;
-  
-    gtpb.partials['goandtalk/slides/collection-card'] = `
-
-
-
-<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
-  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
-  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
-  "
-  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' pv3 flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
-    <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
-    <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-ns ma0 f3">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap {enc{! o.__get(it, \u0027horizontal_position\u0027) || \u0027justify-center\u0027 }enc} {enc{! o.__get(it, \u0027vertical_position\u0027) || \u0027\u0027 }enc}"
-      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap ' & horizontal_position & ' ' & vertical_position" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
-     >
-    
-      {tf{? o.__get(it,\u0027column.0\u0027) }tf}
-
-      {loop{~ it.column :item:idx }loop}
-
-      <div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528
-      class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m  pa3 flex grow
-      {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
-      
-        <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
-
-          <div class="mb2 tc {enc{! o.__get(it, \u0027card_header\u0027) || \u0027\u0027 }enc}"
-          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'mb2 tc ' & card_header" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-          >
-            <img class="mw-100 {enc{! o.__get(it, \u0027images_class\u0027) || \u0027br0\u0027 }enc}" 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
-          </div>
-          <div class="ph1 {enc{! o.__get(it, \u0027card_body\u0027) || \u0027\u0027 }enc}"
-          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'ph1 ' & card_body" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-          >
-            <h3  class="card-title {enc{! o.__get(it, \u0027card_title\u0027) || \u0027tc\u0027 }enc}"
-            675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'card-title ' & card_title"  35fe3a9616151be1e9a9abc33ece88d44bd47528
-            >
-              <span property="title">{enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc}</span>
-            </h3>
-            <p class="card-sub-title" 675275c791df5c494218febd9c0cde06eea2ae6b property="sub_title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >{enc{! o.__get(item, \u0027sub_title\u0027) || \u0027\u0027 }enc}</p>
-            <div class="pt1 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
- </div>
-          </div>
-        </div>
-      </div>
-      {loop{~}loop}
-
-      {tf{??}tf}
-
-        675275c791df5c494218febd9c0cde06eea2ae6b
-        <div property="column" mv-multiple
-        class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m pa3 flex grow
-        {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
-          <div class="w-100 pa2 [card_background]">
-
-            <div class="mb2 tc [card_header]">
-              <img class="mw-100 mv-empty [images_class]"  alt="" property="image_source"  src="" >
-            </div>
-            <div class="ph1 [card_body]">
-              <h3 class="card-title [if(card_title, card_title, 'tc')]">
-                <span property="title" ></span>
-              </h3>
-              <p property="sub_title" class="card-sub-title"></p>
-              <div class="pt1 lh-copy markdown" property="description"></div>
-            </div>
-          </div>
-        </div>
-        35fe3a9616151be1e9a9abc33ece88d44bd47528
-      35fe3a9616151be1e9a9abc33ece88d44bd47528
-      675275c791df5c494218febd9c0cde06eea2ae6b <button type="button" title="add column" class="bg-green self-center v-mid dn br1 mv-add mv-ui mv-add-column">+</button> 35fe3a9616151be1e9a9abc33ece88d44bd47528
-    
-
-    </div>
-    <div class="tc pa2 pa3-ns mb4 f3" 675275c791df5c494218febd9c0cde06eea2ae6b property="description"  35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(it, \u0027description\u0027) || \u0027\u0027 }enc} </div>
-  </div>  {tf{? o.edit_mode }tf}
-
-
-<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
-">
-  
-  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
-      <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
-    </div>
-    
-    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
-      
-
-<input hidden property="current_tab" mv-storage="none" value="appearance"/>
-<div class="pt1 flex flex-wrap items-stretch">
-
-  
-	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="layout_column" mv-action="set(current_tab,'layout_column')" class="[if(current_tab='layout_column', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-th"></i><span class="dn di-ns"> Layout </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="layout_images" mv-action="set(current_tab,'layout_images')" class="[if(current_tab='layout_images', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-images"></i><span class="dn di-ns"> Card and Image </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="global_section" mv-action="set(current_tab,'global_section'),invoke(&#39;updateGlobalSectionList&#39;, data_key)" class="[if(current_tab='global_section', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-globe"></i><span class="dn di-ns"> Global Section </span>
-		
-	</button>&nbsp;
-
-</div>
-
-<div class="tab-content pt3 ">
-
-	
-	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
-	 
-		
-		
-
-<div  property="appearance" >
-  <h3 class="mt2">Appearance</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Section Background 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="section_background" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="solid_background"
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',section_background)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the fallback background color when image is not available or disabled.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Card Background 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="card_background" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="solid_background"
-          
-           value="hover-primary-color"
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',card_background)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            this is the background of grid cards.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Text Color 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="text_color" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="text_color"
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',text_color)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Icon Color 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="icon_color" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="text_color"
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Slide Animation 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="slide_animation" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="slide_animation"
-          
-           value="fadeIn" 
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            The slide animation during presentation, default to fadeIn if not set. 
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="layout_column" class="gt-tab-pane [if(current_tab='layout_column', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Layout</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Columns Per Row 
-        
-        
-        </div>
-        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, column_class,&#39;root.children.column&#39;)" 
-        class=" bg-white 
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="column_class"
-            
-            
-            id="radio-56-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-50-l"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-56-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            2 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-56-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-33-l"  
-            />
-            <label class="flex-auto ph2" for="radio-56-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            3 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-56-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-25-l"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-56-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            4 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-56-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-20-l"  
-            />
-            <label class="flex-auto ph2" for="radio-56-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            5 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-56-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-56-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-10-l"  
-            />
-            <label class="flex-auto ph2" for="radio-56-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            10 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the maximum number of columns in a row before wrapping to the next row.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Resize Column 
-        
-        
-        </div>
-        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, resize_column,&#39;root.children.column&#39;)" 
-        class=" bg-white 
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="resize_column"
-            
-            
-            id="radio-57-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-57-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="flex-auto"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-57-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            auto 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-57-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-57-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="flex-none"  
-            />
-            <label class="flex-auto ph2" for="radio-57-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            none 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            Whether to resize columns if there is extra space in the row. If set to auto, the extra space will be divided equally. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Horizontal Position 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(horizontal_position, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="horizontal_position" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-           data-list="justify-center, justify-start, justify-end, justify-between, justify-around" 
-           value="justify-center" 
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',horizontal_position)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This decides how to distribute extra space if columns are not resized. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Vertical Position 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(vertical_position, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="vertical_position" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-           data-list="items-center, items-start, items-end, items-stretch" 
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',vertical_position)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This decides how to position items vertically. By default items are stretched to fill the vertical space available. 
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="layout_images" class="gt-tab-pane [if(current_tab='layout_images', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Card and Image</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Images Class 
-        
-        
-        </div>
-        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_class,&#39;root.children.column&#39;, &#39;img&#39;)" 
-        class=" bg-white 
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="images_class"
-            
-            
-            id="radio-58-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-58-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br0"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-58-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            disable 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-58-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-58-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br2"  
-            />
-            <label class="flex-auto ph2" for="radio-58-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            br2 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-58-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-58-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br3"  
-            />
-            <label class="flex-auto ph2" for="radio-58-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            br3 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-58-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-58-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br4"  
-            />
-            <label class="flex-auto ph2" for="radio-58-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            br4 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-58-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-58-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br-100"  
-            />
-            <label class="flex-auto ph2" for="radio-58-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            circle or oval 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Card Header Styles 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_header, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="card_header" 
-          type="text" 
-          class="flex-auto  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Card Body Styles 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_body, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="card_body" 
-          type="text" 
-          class="flex-auto  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Card Title Styles 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_title, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="card_title" 
-          type="text" 
-          class="flex-auto  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Global Section</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Data Storage Key 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(data_key, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="data_key" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-           data-list="," 
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',data_key)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-
-</div>
-
-    </div>
-
-  </div>
-</div>
-
-<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
-
-  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
-    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
-  </button>
-
-  <span class="dn di-ns gt-pos-btns"> 
-    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
-    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
-    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
-    <button type="button" data-action="clone-section" class="gt-clone-section manage-section pointer dim br2 pv1 ph2 mh1" title="clone section"><i class="fas fa-clone"></i></button>
-    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
-  </span>
-
-  
-  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
-  <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
-  
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
-  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
-  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
-</div>
-
-{tf{?}tf}
-
- 
-
-</section>
-
-`;
-  
-    gtpb.partials['goandtalk/slides/collection-small-icon-at-side'] = `
-<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
-  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
-  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
-  "
-  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' pv3 flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
-    <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
-    <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-m pa4-l ma0 f3">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 justify-center flex flex-wrap cf" >
-    
-      {tf{? o.__get(it,\u0027column.0\u0027) }tf}
-
-      {loop{~ it.column :item:idx }loop}
-<div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="fl alternate w-100 w-50-l pa3 flex flex-auto">
-        <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 flex flex-wrap ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-          class="w-100 pa2 flex flex-wrap {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
-          
-          <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc self-center w-100 w-30-l f-headline f1-ns ' & if(icon_color,icon_color,'primary-color-light') & ' ' & layout_class " 35fe3a9616151be1e9a9abc33ece88d44bd47528
-          class="tc self-center w-100 w-30-l f-headline f1-ns {enc{! o.__get(it, \u0027appearance.icon_color\u0027) || \u0027primary-color-light\u0027 }enc}
-          {enc{! o.__get(it, \u0027layout_class\u0027) || \u0027\u0027 }enc}">
-            <i 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fas fa-' & icon "  35fe3a9616151be1e9a9abc33ece88d44bd47528 class="fas fa-{enc{! o.__get(item, \u0027icon\u0027) || \u0027\u0027 }enc}"></i>
-          </div>
-          <div class="w-100 w-70-l ">
-            675275c791df5c494218febd9c0cde06eea2ae6b
-            <div class="dn show-in-edit w-100">
-              <div>Select Icon <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon, '')">-</span></div>
-              <div class="mid-gray flex flex-nowrap pt1 items-center">
-                <input property="icon" type="text" class="flex-auto dropdown-input  h2 w-100  bg-white  br0 b--black-10 " data-path="fas_list" value="" data-minchars="0" >
-                <button type="button" mv-action="invoke('toggleDDInput',icon)" class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 " title="click to open dropdown list"> <i class="f6 fas fa-arrow-down"></i></button>
-              </div>
-            </div>
-            35fe3a9616151be1e9a9abc33ece88d44bd47528
-            <p class="f5" 675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(item, \u0027intro\u0027) || \u0027\u0027 }enc}</p>
-            <h3 675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="f3 tc"> {enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc} </h3>
-            <div class="pt3 markdown lh-copy f4 nested-links" 675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
-              {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027content\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
-
-            </div>
-          </div>
-        </div>
-      </div>
-      {loop{~}loop}
-
-      {tf{??}tf}
-
-        675275c791df5c494218febd9c0cde06eea2ae6b
-        <div property="column" mv-multiple class="fl alternate w-100 w-50-l pa3 flex flex-auto">
-          <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 flex flex-wrap ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 flex flex-wrap {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
-            <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc self-center w-100 w-30-l f-headline f1-ns ' & if(icon_color,icon_color,'primary-color-light') & ' ' & layout_class " 35fe3a9616151be1e9a9abc33ece88d44bd47528
-            class="tc self-center w-100 w-30-l f-headline f1-ns {enc{! o.__get(it, \u0027appearance.icon_color\u0027) || \u0027primary-color-light\u0027 }enc}
-            {enc{! o.__get(it, \u0027layout_class\u0027) || \u0027\u0027 }enc}">
-              <i mv-attribute="class" mv-value="'fas fa-' & icon "  class="fas fa-th-large"></i>
-            </div>
-            <div class="w-100 w-70-l ">
-              <div class="dn show-in-edit w-100">
-                <div>Select Icon <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon, '')">-</span></div>
-                <div class="mid-gray flex flex-nowrap pt1 items-center">
-                  <input property="icon" type="text" class="flex-auto dropdown-input  h2 w-100  bg-white  br0 b--black-10 " data-path="fas_list" value="th-large" data-minchars="0" >
-                  <button type="button" mv-action="invoke('toggleDDInput',icon)" class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 " title="click to open dropdown list"> <i class="f6 fas fa-arrow-down"></i></button>
-                </div>
-              </div>
-              <p class="f5" property="intro"></p>
-              <h3 property="title" class="f3 tc"> Easy </h3>
-              <div class="pt3 markdown f4 lh-copy nested-links" property="content">It just works.</div>
-            </div>
-          </div>
-        </div>
-        35fe3a9616151be1e9a9abc33ece88d44bd47528
-      35fe3a9616151be1e9a9abc33ece88d44bd47528
-      675275c791df5c494218febd9c0cde06eea2ae6b <button type="button" title="add column" class="bg-green self-center v-mid dn br1 mv-add mv-ui mv-add-column">+</button> 35fe3a9616151be1e9a9abc33ece88d44bd47528
-    
-
-    </div>
-    <div class="tc pa2 pa3-ns mb4 f3" 675275c791df5c494218febd9c0cde06eea2ae6b property="description"  35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(it, \u0027description\u0027) || \u0027\u0027 }enc} </div>
-  </div>  {tf{? o.edit_mode }tf}
-
-
-<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
-">
-  
-  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
-      <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
-    </div>
-    
-    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
-      
-
-<input hidden property="current_tab" mv-storage="none" value="appearance"/>
-<div class="pt1 flex flex-wrap items-stretch">
-
-  
-	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="layout_alternate" mv-action="set(current_tab,'layout_alternate')" class="[if(current_tab='layout_alternate', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-th"></i><span class="dn di-ns"> Layout </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="global_section" mv-action="set(current_tab,'global_section'),invoke(&#39;updateGlobalSectionList&#39;, data_key)" class="[if(current_tab='global_section', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-globe"></i><span class="dn di-ns"> Global Section </span>
-		
-	</button>&nbsp;
-
-</div>
-
-<div class="tab-content pt3 ">
-
-	
-	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
-	 
-		
-		
-
-<div  property="appearance" >
-  <h3 class="mt2">Appearance</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Section Background 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="section_background" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="solid_background"
-          
-           value="bg-transparent"
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',section_background)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the fallback background color when image is not available or disabled.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Card Background 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="card_background" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="solid_background"
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',card_background)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            this is the background of grid cards.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Text Color 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="text_color" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="text_color"
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',text_color)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Icon Color 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="icon_color" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="text_color"
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Slide Animation 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="slide_animation" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="slide_animation"
-          
-           value="fadeIn" 
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            The slide animation during presentation, default to fadeIn if not set. 
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="layout_alternate" class="gt-tab-pane [if(current_tab='layout_alternate', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Layout</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Icon Layout Class 
-        
-        
-        </div>
-        <div 
-        class=" bg-white 
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-             property="layout_class"
-            
-            
-            id="radio-59-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-59-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="line-start"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-59-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            line start 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-59-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-59-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="even-order-1-l"  
-            />
-            <label class="flex-auto ph2" for="radio-59-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            outside 
-            </label>
-          </div>
-          
-          <div class=" flex-auto pv1  ph1 flex items-center">
-            <input type="radio"
-            
-            
-            
-            id="radio-59-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-59-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="odd-order-1-l"   checked 
-            />
-            <label class="flex-auto ph2" for="radio-59-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            inside 
-            </label>
-          </div>
-          
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            Change the position of icons or thumbnail images to create special layout on large screen.
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-	
-	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
-	 
-		
-		
-
-<div >
-  <h3 class="mt2">Global Section</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Data Storage Key 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(data_key, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="data_key" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-           data-list="," 
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',data_key)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
-          </div>
-        
-      </div>
-       
-    
-  </div>
-</div> 
-
-	
-	</div>
-
-
-</div>
-
-    </div>
-
-  </div>
-</div>
-
-<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
-
-  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
-    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
-  </button>
-
-  <span class="dn di-ns gt-pos-btns"> 
-    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
-    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
-    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
-    <button type="button" data-action="clone-section" class="gt-clone-section manage-section pointer dim br2 pv1 ph2 mh1" title="clone section"><i class="fas fa-clone"></i></button>
-    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
-  </span>
-
-  
-  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
-  <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
-  
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
-  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
-  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
-</div>
-
-{tf{?}tf}
-
- 
-
-</section>
-
-`;
-  
-    gtpb.partials['goandtalk/slides/collection-text-custom-width'] = `
-
-
-
-<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
-  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
-  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
-  "
-  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' pv3 flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
-    <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
-    <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-ns ma0 f3">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap {enc{! o.__get(it, \u0027horizontal_position\u0027) || \u0027justify-center\u0027 }enc} {enc{! o.__get(it, \u0027vertical_position\u0027) || \u0027\u0027 }enc}"
-      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap ' & horizontal_position & ' ' & vertical_position" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
-     >
-    
-      {tf{? o.__get(it,\u0027column.0\u0027) }tf}
-
-      {loop{~ it.column :item:idx }loop}
-
-      <div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528
-      class="w-{enc{! o.__get(item, \u0027column_width\u0027) || \u002720\u0027 }enc}-ns fl w-100  pa3 flex grow
-      {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
-      
-        <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
-          675275c791df5c494218febd9c0cde06eea2ae6b
-          <div class="dn show-in-edit w-100"
-          mv-action="invoke('replaceNodeClass', column_width, 'element.parentElement.parentElement.parentElement', 'w-', 'w-', '-ns', 'w-100' )"
-          >
-            <div class="f7">[column_width]%</div>
-            <input class=" w-100 pv2" property="column_width" type="range" min="10" max="100" step="10" value="20"  />
-          </div>
-          35fe3a9616151be1e9a9abc33ece88d44bd47528
-          <div class="relative mb2 tc">
-            <img class="mw-100 {enc{! o.__get(it, \u0027images_class\u0027) || \u0027br0\u0027 }enc}" 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
-          </div>
-
-          <h3 675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class=""> {enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc} </h3>
-          <div class="pt1 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
- </div>
-        </div>
-      </div>
-      {loop{~}loop}
-
-      {tf{??}tf}
-
-        675275c791df5c494218febd9c0cde06eea2ae6b
-        <div property="column" mv-multiple
-        class="w-{enc{! o.__get(item, \u0027column_width\u0027) || \u002720\u0027 }enc}-ns w-100 pa3 flex grow
-        {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
-          <div mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
-            <div class="dn show-in-edit">
-              <input class="w-100 pv2" property="column_width" type="range" min="10" max="100" step="10" value="20" />
-            </div>
-            <div class="relative mb2 tc">
-              <img class="mw-100 {enc{! o.__get(it, \u0027images_class\u0027) || \u0027br0\u0027 }enc}" alt="" property="image_source"  src="" >
-            </div>
-
-            <h3 property="title" class=""> Build </h3>
-            <div class="pt1 lh-copy markdown" property="description"></div>
-          </div>
-        </div>
-        35fe3a9616151be1e9a9abc33ece88d44bd47528
-      35fe3a9616151be1e9a9abc33ece88d44bd47528
-      675275c791df5c494218febd9c0cde06eea2ae6b <button type="button" title="add column" class="bg-green self-center v-mid dn br1 mv-add mv-ui mv-add-column">+</button> 35fe3a9616151be1e9a9abc33ece88d44bd47528
-    
-
-    </div>
-    <div class="tc pa2 pa3-ns mb4 f3" 675275c791df5c494218febd9c0cde06eea2ae6b property="description"  35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(it, \u0027description\u0027) || \u0027\u0027 }enc} </div>
-  </div>  {tf{? o.edit_mode }tf}
-
-
-<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
-">
-  
-  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
-    <div class="bg-white-70 mb1 cf v-mid ph3">
-      <span class="pv2 dib">Section Options</span>
-      <span title="close" class="fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')">X</span>
-    </div>
-    
-    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
-      
-
-<input hidden property="current_tab" mv-storage="none" value="appearance"/>
-<div class="pt1 flex flex-wrap items-stretch">
-
-  
-	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="layout_column" mv-action="set(current_tab,'layout_column')" class="[if(current_tab='layout_column', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-th"></i><span class="dn di-ns"> Layout </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="layout_images" mv-action="set(current_tab,'layout_images')" class="[if(current_tab='layout_images', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-images"></i><span class="dn di-ns"> Card and Image </span>
-		
-	</button>&nbsp;
-
-  
-	<button data-toggle-tab="global_section" mv-action="set(current_tab,'global_section'),invoke(&#39;updateGlobalSectionList&#39;, data_key)" class="[if(current_tab='global_section', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
-		
-			<i class="fas fa-globe"></i><span class="dn di-ns"> Global Section </span>
-		
-	</button>&nbsp;
-
-</div>
-
-<div class="tab-content pt3 ">
-
-	
-	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
-	 
-		
-		
-
-<div  property="appearance" >
-  <h3 class="mt2">Appearance</h3>
-  <div class="cf flex flex-wrap ba b--black-05" >
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Section Background 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="section_background" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="solid_background"
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',section_background)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            This is the fallback background color when image is not available or disabled.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Card Background 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="card_background" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="solid_background"
-          
-           value="hover-primary-color"
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',card_background)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            this is the background of grid cards.
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Text Color 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="text_color" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="text_color"
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',text_color)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Icon Color 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="icon_color" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="text_color"
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
-        <div>Slide Animation 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="slide_animation" 
-          type="text" 
-          class="flex-auto  dropdown-input  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path="slide_animation"
-          
-           value="fadeIn" 
-          data-minchars="0" 
-          />
-          
-<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
-  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
-  title="click to open dropdown list">
-  <span class="f6 bg-white-80 ph1 ">v</span>
-</button>
-
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            The slide animation during presentation, default to fadeIn if not set. 
+            Color of links in text blocks.
           </div>
         
       </div>
@@ -21752,13 +25552,13 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</div>
 
 	
-	<div data-pane="layout_images" class="gt-tab-pane [if(current_tab='layout_images', '', 'dn')] ">
+	<div data-pane="layout_fa_mask" class="gt-tab-pane [if(current_tab='layout_fa_mask', '', 'dn')] ">
 	 
 		
 		
 
 <div >
-  <h3 class="mt2">Card and Image</h3>
+  <h3 class="mt2">Mask</h3>
   <div class="cf flex flex-wrap ba b--black-05" >
     
       
@@ -21766,26 +25566,31 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 w-100  ph1 fl pt2 pb3
  ">
         
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
 
-        <div>Images Class 
+        <div> 
         
         
         </div>
-        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_class,&#39;root.children.column&#39;, &#39;img&#39;)" 
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, data_fa_mask,&#39;root.children.column&#39;, &#39;data-fa-mask&#39;)" 
         class=" bg-white 
-         flex  flex-nowrap   pt1 cf items-center ">
+         flex  flex-wrap   pt1 cf items-center ">
         
           <div class=" flex-auto pv1  ph1 flex items-center">
             <input type="radio"
-             property="images_class"
+             property="data_fa_mask"
             
             
             id="radio-62-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br0"   checked 
+            value="circle"   checked 
             />
             <label class="flex-auto ph2" for="radio-62-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            disable 
+             <i class="black-30 fas fa-fw fa-2x fa-circle"></i> 
             </label>
           </div>
           
@@ -21796,10 +25601,10 @@ w-100  ph1 fl pt2 pb3
             
             id="radio-62-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br2"  
+            value="apple-alt"  
             />
             <label class="flex-auto ph2" for="radio-62-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            br2 
+             <i class="black-30 fas fa-fw fa-2x fa-apple-alt"></i> 
             </label>
           </div>
           
@@ -21810,10 +25615,10 @@ w-100  ph1 fl pt2 pb3
             
             id="radio-62-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br3"  
+            value="bookmark"  
             />
             <label class="flex-auto ph2" for="radio-62-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            br3 
+             <i class="black-30 fas fa-fw fa-2x fa-bookmark"></i> 
             </label>
           </div>
           
@@ -21824,10 +25629,10 @@ w-100  ph1 fl pt2 pb3
             
             id="radio-62-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br4"  
+            value="certificate"  
             />
             <label class="flex-auto ph2" for="radio-62-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            br4 
+             <i class="black-30 fas fa-fw fa-2x fa-certificate"></i> 
             </label>
           </div>
           
@@ -21838,10 +25643,612 @@ w-100  ph1 fl pt2 pb3
             
             id="radio-62-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="br-100"  
+            value="comment"  
             />
             <label class="flex-auto ph2" for="radio-62-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            circle or oval 
+             <i class="black-30 fas fa-fw fa-2x fa-comment"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="comment-alt"  
+            />
+            <label class="flex-auto ph2" for="radio-62-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-comment-alt"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="square"  
+            />
+            <label class="flex-auto ph2" for="radio-62-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-square"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="tablet"  
+            />
+            <label class="flex-auto ph2" for="radio-62-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-tablet"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="archive"  
+            />
+            <label class="flex-auto ph2" for="radio-62-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-archive"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="bell"  
+            />
+            <label class="flex-auto ph2" for="radio-62-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-bell"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-10-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="calendar"  
+            />
+            <label class="flex-auto ph2" for="radio-62-10-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-calendar"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-11-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="chess-king"  
+            />
+            <label class="flex-auto ph2" for="radio-62-11-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-chess-king"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-12-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="chess-queen"  
+            />
+            <label class="flex-auto ph2" for="radio-62-12-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-chess-queen"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-13-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="clipboard"  
+            />
+            <label class="flex-auto ph2" for="radio-62-13-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-clipboard"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-14-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="cloud"  
+            />
+            <label class="flex-auto ph2" for="radio-62-14-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-cloud"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-15-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="coffee"  
+            />
+            <label class="flex-auto ph2" for="radio-62-15-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-coffee"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-16-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="file"  
+            />
+            <label class="flex-auto ph2" for="radio-62-16-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-file"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-17-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="fish"  
+            />
+            <label class="flex-auto ph2" for="radio-62-17-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-fish"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-18-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="flag"  
+            />
+            <label class="flex-auto ph2" for="radio-62-18-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-flag"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-19-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="folder"  
+            />
+            <label class="flex-auto ph2" for="radio-62-19-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-folder"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-20-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="heart"  
+            />
+            <label class="flex-auto ph2" for="radio-62-20-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-heart"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-21-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="lock"  
+            />
+            <label class="flex-auto ph2" for="radio-62-21-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-lock"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-22-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="map-marker"  
+            />
+            <label class="flex-auto ph2" for="radio-62-22-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-map-marker"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-23-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="microchip"  
+            />
+            <label class="flex-auto ph2" for="radio-62-23-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-microchip"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-24-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="mobile"  
+            />
+            <label class="flex-auto ph2" for="radio-62-24-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-mobile"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="play"  
+            />
+            <label class="flex-auto ph2" for="radio-62-25-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-play"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-26-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="scroll"  
+            />
+            <label class="flex-auto ph2" for="radio-62-26-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-scroll"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="shopping-bag"  
+            />
+            <label class="flex-auto ph2" for="radio-62-27-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-shopping-bag"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="shopping-cart"  
+            />
+            <label class="flex-auto ph2" for="radio-62-28-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-shopping-cart"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="sticky-note"  
+            />
+            <label class="flex-auto ph2" for="radio-62-29-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-sticky-note"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="tag"  
+            />
+            <label class="flex-auto ph2" for="radio-62-30-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-tag"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="unlock"  
+            />
+            <label class="flex-auto ph2" for="radio-62-31-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-unlock"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="weight-hanging"  
+            />
+            <label class="flex-auto ph2" for="radio-62-32-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-weight-hanging"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="trophy"  
+            />
+            <label class="flex-auto ph2" for="radio-62-33-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-trophy"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="tshirt"  
+            />
+            <label class="flex-auto ph2" for="radio-62-34-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-tshirt"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="wine-glass"  
+            />
+            <label class="flex-auto ph2" for="radio-62-35-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-wine-glass"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="suitcase"  
+            />
+            <label class="flex-auto ph2" for="radio-62-36-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-suitcase"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="star"  
+            />
+            <label class="flex-auto ph2" for="radio-62-37-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-star"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="splotch"  
+            />
+            <label class="flex-auto ph2" for="radio-62-38-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-splotch"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="mortar-pestle"  
+            />
+            <label class="flex-auto ph2" for="radio-62-39-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-mortar-pestle"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-40-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="truck-moving"  
+            />
+            <label class="flex-auto ph2" for="radio-62-40-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-truck-moving"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="hourglass"  
+            />
+            <label class="flex-auto ph2" for="radio-62-41-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-hourglass"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="hourglass-start"  
+            />
+            <label class="flex-auto ph2" for="radio-62-42-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-hourglass-start"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="hourglass-end"  
+            />
+            <label class="flex-auto ph2" for="radio-62-43-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-hourglass-end"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="couch"  
+            />
+            <label class="flex-auto ph2" for="radio-62-44-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-couch"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="concierge-bell"  
+            />
+            <label class="flex-auto ph2" for="radio-62-45-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-concierge-bell"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="brush"  
+            />
+            <label class="flex-auto ph2" for="radio-62-46-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-brush"></i> 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-62-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-62-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="box"  
+            />
+            <label class="flex-auto ph2" for="radio-62-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+             <i class="black-30 fas fa-fw fa-2x fa-box"></i> 
             </label>
           </div>
           
@@ -21849,106 +26256,167 @@ w-100  ph1 fl pt2 pb3
         </div> 
         
         
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Card Header Styles 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_header, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="card_header" 
-          type="text" 
-          class="flex-auto  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
-          
-           value=""
-          data-minchars="0" 
-          />
-          
-        
-        </div> 
-        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the outer icon, the mask.
+          </div>
         
       </div>
        
     
       
       <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+w-100  ph1 fl pt2 pb3
  ">
         
 
-        <div>Card Body Styles 
+        <div>Icon Transform 
         
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_body, '')">X</span>
         
         </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
+        <div  mv-action="invoke(&#39;setItemsAttr&#39;, data_fa_transform,&#39;root.children.column&#39;, &#39;data-fa-transform&#39;)" 
+        class=" bg-white 
+         flex  flex-wrap   pt1 cf items-center ">
         
-          <input 
-           property="card_body" 
-          type="text" 
-          class="flex-auto  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="data_fa_transform"
+            
+            
+            id="radio-63-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="shrink-8"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-63-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            shrink-8 
+            </label>
+          </div>
           
-           value=""
-          data-minchars="0" 
-          />
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-63-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="shrink-10"  
+            />
+            <label class="flex-auto ph2" for="radio-63-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            shrink-10 
+            </label>
+          </div>
           
-        
-        </div> 
-        
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- ">
-        
-
-        <div>Card Title Styles 
-        
-        
-          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_title, '')">X</span>
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input 
-           property="card_title" 
-          type="text" 
-          class="flex-auto  
- h2 w-100  bg-white  br0 b--black-10 fl
-"
-          data-path=""
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-63-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="up-2 shrink-8"  
+            />
+            <label class="flex-auto ph2" for="radio-63-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            up-2 shrink-8 
+            </label>
+          </div>
           
-           value=""
-          data-minchars="0" 
-          />
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-63-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="up-2 shrink-10"  
+            />
+            <label class="flex-auto ph2" for="radio-63-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            up-2 shrink-10 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-63-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="up-4 shrink-8"  
+            />
+            <label class="flex-auto ph2" for="radio-63-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            up-4 shrink-8 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-63-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="up-4 shrink-10"  
+            />
+            <label class="flex-auto ph2" for="radio-63-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            up-4 shrink-10 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-63-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="down-2 shrink-8"  
+            />
+            <label class="flex-auto ph2" for="radio-63-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            down-2 shrink-8 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-63-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="down-2 shrink-10"  
+            />
+            <label class="flex-auto ph2" for="radio-63-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            down-2 shrink-10 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-63-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="down-4 shrink-8"  
+            />
+            <label class="flex-auto ph2" for="radio-63-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            down-4 shrink-8 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-63-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-63-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="down-4 shrink-10"  
+            />
+            <label class="flex-auto ph2" for="radio-63-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            down-4 shrink-10 
+            </label>
+          </div>
           
         
         </div> 
@@ -22095,7 +26563,4858 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
   <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
   
-  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active')"><i class="fas fa-cog"></i></button>
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
+  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
+  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+</div>
+
+{tf{?}tf}
+
+ 
+
+</section>
+
+`;
+  
+    gtpb.partials['goandtalk/slides/collection-big-icon-mono'] = `
+
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
+  "
+  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' pv3 flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+    <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
+    <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-ns ma0 f3">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+    {enc{! o.__get(it, \u0027horizontal_position\u0027) || \u0027justify-center\u0027 }enc}
+    {enc{! o.__get(it, \u0027vertical_position\u0027) || \u0027\u0027 }enc}"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap ' & horizontal_position & ' ' & vertical_position & ' ' & appearance.link_color" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
+     >
+    
+      {tf{? o.__get(it,\u0027column.0\u0027) }tf}
+
+      {loop{~ it.column :item:idx }loop}
+
+      <div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m  pa3 flex grow
+      {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
+        <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
+          
+          <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc fa-5x ' & icon_color " 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="tc fa-5x {enc{! o.__get(it, \u0027appearance.icon_color\u0027) || \u0027black-20\u0027 }enc}">
+            <i 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fas fa-' & icon "  35fe3a9616151be1e9a9abc33ece88d44bd47528 class="fas fa-{enc{! o.__get(item, \u0027icon\u0027) || \u0027\u0027 }enc}"></i>
+          </div>
+          675275c791df5c494218febd9c0cde06eea2ae6b
+          <div class="dn show-in-edit w-100">
+            <div>Select Icon <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon, '')">x</span></div>
+            <div class="mid-gray flex flex-nowrap pt1 items-center">
+              <input property="icon" type="text" class="flex-auto dropdown-input  h2 w-100  bg-white  br0 b--black-10 " data-path="fas_list" value="" data-minchars="0" >
+              <button type="button" mv-action="invoke('toggleDDInput',icon)" class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 " title="click to open dropdown list"> <i class="f6 fas fa-arrow-down"></i></button>
+            </div>
+          </div>
+          35fe3a9616151be1e9a9abc33ece88d44bd47528
+          <h3 675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="tc"> {enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc} </h3>
+          <div class="pt4 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
+ </div>
+        </div>
+      </div>
+      {loop{~}loop}
+
+      {tf{??}tf}
+
+        675275c791df5c494218febd9c0cde06eea2ae6b
+        <div property="column" mv-multiple
+        class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m pa3 flex grow
+        {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
+          <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
+            <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc fa-5x ' & icon_color " 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="tc fa-5x {enc{! o.__get(it, \u0027appearance.icon_color\u0027) || \u0027gray\u0027 }enc}">
+              <i mv-attribute="class" mv-value="'fas fa-' & icon "  class="fas fa-th-large"></i>
+            </div>
+            <div class="dn show-in-edit w-100">
+              <div>Select Icon <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon, '')">x</span></div>
+              <div class="mid-gray flex flex-nowrap pt1 items-center">
+                <input property="icon" type="text" class="flex-auto dropdown-input  h2 w-100  bg-white  br0 b--black-10 " data-path="fas_list" value="th-large" data-minchars="0" >
+                <button type="button" mv-action="invoke('toggleDDInput',icon)" class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 " title="click to open dropdown list"> <i class="f6 fas fa-arrow-down"></i></button>
+              </div>
+            </div>
+            <h3 property="title" class="tc mv-empty"></h3>
+            <div class="pt4 lh-copy markdown mv-empty" property="description"></div>
+          </div>
+        </div>
+        35fe3a9616151be1e9a9abc33ece88d44bd47528
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+      675275c791df5c494218febd9c0cde06eea2ae6b <button type="button" title="add column" class="bg-green self-center v-mid dn br1 mv-add mv-ui mv-add-column">+</button> 35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" 675275c791df5c494218febd9c0cde06eea2ae6b property="description"  35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(it, \u0027description\u0027) || \u0027\u0027 }enc} </div>
+  </div>  {tf{? o.edit_mode }tf}
+
+
+<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
+">
+  
+  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
+      <span class="pv2 dib">Section Options</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
+    </div>
+    
+    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
+      
+
+<input hidden property="current_tab" mv-storage="none" value="appearance"/>
+<div class="pt1 flex flex-wrap items-stretch">
+
+  
+	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="layout_column" mv-action="set(current_tab,'layout_column')" class="[if(current_tab='layout_column', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-th"></i><span class="dn di-ns"> Layout </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="global_section" mv-action="set(current_tab,'global_section'),invoke(&#39;updateGlobalSectionList&#39;, data_key)" class="[if(current_tab='global_section', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-globe"></i><span class="dn di-ns"> Global Section </span>
+		
+	</button>&nbsp;
+
+</div>
+
+<div class="tab-content pt3 ">
+
+	
+	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
+	 
+		
+		
+
+<div  property="appearance" >
+  <h3 class="mt2">Appearance</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Section Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="section_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',section_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the fallback background color when image is not available or disabled.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Card Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value="hover-primary-color"
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            this is the background of grid cards.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Text Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="text_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value="primary-color-first-letter-h3"
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',text_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value="black-20"
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Slide Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="slide_animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slide_animation"
+          
+           value="fadeIn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The slide animation during presentation, default to fadeIn if not set. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="layout_column" class="gt-tab-pane [if(current_tab='layout_column', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Layout</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Columns Per Row 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, column_class,&#39;root.children.column&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="column_class"
+            
+            
+            id="radio-64-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-64-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-50-l"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-64-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            2 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-64-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-64-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-33-l"  
+            />
+            <label class="flex-auto ph2" for="radio-64-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-64-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-64-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-25-l"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-64-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-64-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-64-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-20-l"  
+            />
+            <label class="flex-auto ph2" for="radio-64-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            5 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-64-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-64-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-10-l"  
+            />
+            <label class="flex-auto ph2" for="radio-64-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            10 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the maximum number of columns in a row before wrapping to the next row.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Resize Column 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, resize_column,&#39;root.children.column&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="resize_column"
+            
+            
+            id="radio-65-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-65-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="flex-auto"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-65-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            auto 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-65-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-65-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="flex-none"  
+            />
+            <label class="flex-auto ph2" for="radio-65-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            none 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Whether to resize columns if there is extra space in the row. If set to auto, the extra space will be divided equally. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Horizontal Position 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(horizontal_position, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="horizontal_position" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="justify-center, justify-start, justify-end, justify-between, justify-around" 
+           value="justify-center" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',horizontal_position)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This decides how to distribute extra space if columns are not resized. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Vertical Position 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(vertical_position, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="vertical_position" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="items-center, items-start, items-end, items-stretch" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',vertical_position)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This decides how to position items vertically. By default items are stretched to fill the vertical space available. 
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Global Section</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be available in other pages. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Data Storage Key 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(data_key, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="data_key" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',data_key)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+
+</div>
+
+    </div>
+
+  </div>
+</div>
+
+<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
+
+  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
+    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
+  </button>
+
+  <span class="dn di-ns gt-pos-btns"> 
+    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
+    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
+    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
+    <button type="button" data-action="clone-section" class="gt-clone-section manage-section pointer dim br2 pv1 ph2 mh1" title="clone section"><i class="fas fa-clone"></i></button>
+    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
+  </span>
+
+  
+  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
+  <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
+  
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
+  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
+  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+</div>
+
+{tf{?}tf}
+
+ 
+
+</section>
+
+`;
+  
+    gtpb.partials['goandtalk/slides/collection-card'] = `
+
+
+
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
+  "
+  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' pv3 flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+    <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
+    <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-ns ma0 f3">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+    {enc{! o.__get(it, \u0027horizontal_position\u0027) || \u0027justify-center\u0027 }enc}
+    {enc{! o.__get(it, \u0027vertical_position\u0027) || \u0027\u0027 }enc}"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap ' & horizontal_position & ' ' & vertical_position & ' ' & appearance.link_color" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
+     >
+    
+      {tf{? o.__get(it,\u0027column.0\u0027) }tf}
+
+      {loop{~ it.column :item:idx }loop}
+
+      <div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m  pa3 flex grow
+      {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
+      
+        <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
+
+          <div class="mb2 tc {enc{! o.__get(it, \u0027card_header\u0027) || \u0027\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'mb2 tc ' & card_header" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          >
+          {tf{? o.edit_mode || o.__get(item, \u0027image_source\u0027) }tf}
+
+            <img class="mw-100
+            {enc{! o.__get(it, \u0027images_class\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027images_border\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027images_border_color\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027images_padding\u0027) || \u0027\u0027 }enc}
+            " 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
+            35fe3a9616151be1e9a9abc33ece88d44bd47528
+          </div>
+          <div class="{enc{! o.__get(it, \u0027card_body\u0027) || \u0027\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="card_body" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          >
+            <h3  class="card-title {enc{! o.__get(it, \u0027card_title\u0027) || \u0027tc\u0027 }enc}"
+            675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'card-title ' & card_title"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+            >
+              <span property="title">{enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc}</span>
+            </h3>
+            <p class="card-sub-title" 675275c791df5c494218febd9c0cde06eea2ae6b property="sub_title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >{enc{! o.__get(item, \u0027sub_title\u0027) || \u0027\u0027 }enc}</p>
+            <div class="pt1 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
+ </div>
+          </div>
+        </div>
+      </div>
+      {loop{~}loop}
+
+      {tf{??}tf}
+
+        675275c791df5c494218febd9c0cde06eea2ae6b
+        <div property="column" mv-multiple
+        class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m pa3 flex grow
+        {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
+          <div class="w-100 pa2 [card_background]">
+
+            <div class="mb2 tc [card_header]">
+              <img class="mw-100 mv-empty [images_class] [images_border] [images_border_color] [images_padding] "  alt="" property="image_source"  src="" >
+            </div>
+            <div class="[if(card_body, card_body, 'ph1')]">
+              <h3 class="card-title [if(card_title, card_title, 'tc')]">
+                <span property="title" class="mv-empty"></span>
+              </h3>
+              <p property="sub_title" class="card-sub-title mv-empty"></p>
+              <div class="pt1 lh-copy markdown mv-empty" property="description"></div>
+            </div>
+          </div>
+        </div>
+        35fe3a9616151be1e9a9abc33ece88d44bd47528
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+      675275c791df5c494218febd9c0cde06eea2ae6b <button type="button" title="add column" class="bg-green self-center v-mid dn br1 mv-add mv-ui mv-add-column">+</button> 35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" 675275c791df5c494218febd9c0cde06eea2ae6b property="description"  35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(it, \u0027description\u0027) || \u0027\u0027 }enc} </div>
+  </div>  {tf{? o.edit_mode }tf}
+
+
+<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
+">
+  
+  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
+      <span class="pv2 dib">Section Options</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
+    </div>
+    
+    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
+      
+
+<input hidden property="current_tab" mv-storage="none" value="appearance"/>
+<div class="pt1 flex flex-wrap items-stretch">
+
+  
+	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="layout_column" mv-action="set(current_tab,'layout_column')" class="[if(current_tab='layout_column', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-th"></i><span class="dn di-ns"> Layout </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="layout_images" mv-action="set(current_tab,'layout_images')" class="[if(current_tab='layout_images', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-images"></i><span class="dn di-ns"> Card and Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="global_section" mv-action="set(current_tab,'global_section'),invoke(&#39;updateGlobalSectionList&#39;, data_key)" class="[if(current_tab='global_section', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-globe"></i><span class="dn di-ns"> Global Section </span>
+		
+	</button>&nbsp;
+
+</div>
+
+<div class="tab-content pt3 ">
+
+	
+	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
+	 
+		
+		
+
+<div  property="appearance" >
+  <h3 class="mt2">Appearance</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Section Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="section_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',section_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the fallback background color when image is not available or disabled.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Card Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value="hover-primary-color"
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            this is the background of grid cards.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Text Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="text_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',text_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Slide Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="slide_animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slide_animation"
+          
+           value="fadeIn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The slide animation during presentation, default to fadeIn if not set. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="layout_column" class="gt-tab-pane [if(current_tab='layout_column', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Layout</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Columns Per Row 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, column_class,&#39;root.children.column&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="column_class"
+            
+            
+            id="radio-66-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-66-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-50-l"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-66-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            2 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-66-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-66-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-33-l"  
+            />
+            <label class="flex-auto ph2" for="radio-66-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-66-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-66-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-25-l"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-66-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-66-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-66-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-20-l"  
+            />
+            <label class="flex-auto ph2" for="radio-66-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            5 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-66-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-66-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-10-l"  
+            />
+            <label class="flex-auto ph2" for="radio-66-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            10 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the maximum number of columns in a row before wrapping to the next row.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Resize Column 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, resize_column,&#39;root.children.column&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="resize_column"
+            
+            
+            id="radio-67-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-67-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="flex-auto"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-67-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            auto 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-67-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-67-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="flex-none"  
+            />
+            <label class="flex-auto ph2" for="radio-67-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            none 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Whether to resize columns if there is extra space in the row. If set to auto, the extra space will be divided equally. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Horizontal Position 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(horizontal_position, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="horizontal_position" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="justify-center, justify-start, justify-end, justify-between, justify-around" 
+           value="justify-center" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',horizontal_position)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This decides how to distribute extra space if columns are not resized. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Vertical Position 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(vertical_position, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="vertical_position" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="items-center, items-start, items-end, items-stretch" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',vertical_position)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This decides how to position items vertically. By default items are stretched to fill the vertical space available. 
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="layout_images" class="gt-tab-pane [if(current_tab='layout_images', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Card and Image</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Image Border Radius 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_class,&#39;root.children.column&#39;, &#39;img&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="images_class"
+            
+            
+            id="radio-68-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-68-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br0"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-68-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            disable 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-68-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-68-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br2"  
+            />
+            <label class="flex-auto ph2" for="radio-68-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br2 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-68-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-68-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br3"  
+            />
+            <label class="flex-auto ph2" for="radio-68-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-68-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-68-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br4"  
+            />
+            <label class="flex-auto ph2" for="radio-68-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-68-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-68-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br-100"  
+            />
+            <label class="flex-auto ph2" for="radio-68-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            circle or oval 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Header Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_header, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_header" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Body Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_body, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_body" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Title Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_title, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_title" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Images Border 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_border,&#39;root.children.column&#39;, &#39;img&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="images_border"
+            
+            
+            id="radio-69-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-69-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="bn"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-69-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            disable 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-69-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-69-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="ba"  
+            />
+            <label class="flex-auto ph2" for="radio-69-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            ba 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Images Padding 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_padding,&#39;root.children.column&#39;, &#39;img&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="images_padding"
+            
+            
+            id="radio-70-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-70-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="pa0"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-70-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            disable 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-70-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-70-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="pa1"  
+            />
+            <label class="flex-auto ph2" for="radio-70-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            pa1 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Images Border Color 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_border_color,&#39;root.children.column&#39;, &#39;img&#39;)" 
+        class=" bg-white 
+         flex  flex-wrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="images_border_color"
+            
+            
+            id="radio-71-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-71-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--inherit"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-71-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            inherit 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-71-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-71-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--black-10"  
+            />
+            <label class="flex-auto ph2" for="radio-71-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            black 10 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-71-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-71-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--black-20"  
+            />
+            <label class="flex-auto ph2" for="radio-71-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            black 20 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-71-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-71-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--white"  
+            />
+            <label class="flex-auto ph2" for="radio-71-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            white 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-71-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-71-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--white-90"  
+            />
+            <label class="flex-auto ph2" for="radio-71-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            white 90 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-71-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-71-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--white-80"  
+            />
+            <label class="flex-auto ph2" for="radio-71-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            white 80 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-71-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-71-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--primary-color"  
+            />
+            <label class="flex-auto ph2" for="radio-71-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            primary 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-71-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-71-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--primary-color-light"  
+            />
+            <label class="flex-auto ph2" for="radio-71-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            primary light 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-71-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-71-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--primary-color-lighter"  
+            />
+            <label class="flex-auto ph2" for="radio-71-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            primary lighter 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Global Section</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be available in other pages. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Data Storage Key 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(data_key, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="data_key" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',data_key)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+
+</div>
+
+    </div>
+
+  </div>
+</div>
+
+<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
+
+  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
+    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
+  </button>
+
+  <span class="dn di-ns gt-pos-btns"> 
+    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
+    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
+    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
+    <button type="button" data-action="clone-section" class="gt-clone-section manage-section pointer dim br2 pv1 ph2 mh1" title="clone section"><i class="fas fa-clone"></i></button>
+    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
+  </span>
+
+  
+  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
+  <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
+  
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
+  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
+  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+</div>
+
+{tf{?}tf}
+
+ 
+
+</section>
+
+`;
+  
+    gtpb.partials['goandtalk/slides/collection-small-icon-at-side'] = `
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+  "
+  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' pv3 flex-auto flex flex-column justify-center ' & slide_animation & ' ' & appearance.link_color" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+    <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
+    <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-m pa4-l ma0 f3">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 justify-center flex flex-wrap">
+    
+      {tf{? o.__get(it,\u0027column.0\u0027) }tf}
+
+      {loop{~ it.column :item:idx }loop}
+<div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="fl alternate w-100 w-50-l pa3 flex flex-auto">
+        <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 flex flex-wrap ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          class="w-100 pa2 flex flex-wrap {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
+          
+          <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc self-center w-100 w-30-l f-headline f1-ns ' & if(icon_color,icon_color,'primary-color-light') & ' ' & layout_class " 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          class="tc self-center w-100 w-30-l f-headline f1-ns {enc{! o.__get(it, \u0027appearance.icon_color\u0027) || \u0027primary-color-light\u0027 }enc}
+          {enc{! o.__get(it, \u0027layout_class\u0027) || \u0027\u0027 }enc}">
+            <i 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fas fa-' & icon "  35fe3a9616151be1e9a9abc33ece88d44bd47528 class="fas fa-{enc{! o.__get(item, \u0027icon\u0027) || \u0027\u0027 }enc}"></i>
+          </div>
+          <div class="w-100 w-70-l ">
+            675275c791df5c494218febd9c0cde06eea2ae6b
+            <div class="dn show-in-edit w-100">
+              <div>Select Icon <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon, '')">-</span></div>
+              <div class="mid-gray flex flex-nowrap pt1 items-center">
+                <input property="icon" type="text" class="flex-auto dropdown-input  h2 w-100  bg-white  br0 b--black-10 " data-path="fas_list" value="" data-minchars="0" >
+                <button type="button" mv-action="invoke('toggleDDInput',icon)" class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 " title="click to open dropdown list"> <i class="f6 fas fa-arrow-down"></i></button>
+              </div>
+            </div>
+            35fe3a9616151be1e9a9abc33ece88d44bd47528
+            <p class="f5" 675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(item, \u0027intro\u0027) || \u0027\u0027 }enc}</p>
+            <h3 675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="f3 tc"> {enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc} </h3>
+            <div class="pt3 markdown lh-copy f4 " 675275c791df5c494218febd9c0cde06eea2ae6b property="content" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+              {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027content\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {loop{~}loop}
+
+      {tf{??}tf}
+
+        675275c791df5c494218febd9c0cde06eea2ae6b
+        <div property="column" mv-multiple class="fl alternate w-100 w-50-l pa3 flex flex-auto">
+          <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 flex flex-wrap ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 flex flex-wrap {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
+            <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'tc self-center w-100 w-30-l f-headline f1-ns ' & if(icon_color,icon_color,'primary-color-light') & ' ' & layout_class " 35fe3a9616151be1e9a9abc33ece88d44bd47528
+            class="tc self-center w-100 w-30-l f-headline f1-ns {enc{! o.__get(it, \u0027appearance.icon_color\u0027) || \u0027primary-color-light\u0027 }enc}
+            {enc{! o.__get(it, \u0027layout_class\u0027) || \u0027\u0027 }enc}">
+              <i mv-attribute="class" mv-value="'fas fa-' & icon "  class="fas fa-th-large"></i>
+            </div>
+            <div class="w-100 w-70-l ">
+              <div class="dn show-in-edit w-100">
+                <div>Select Icon <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon, '')">-</span></div>
+                <div class="mid-gray flex flex-nowrap pt1 items-center">
+                  <input property="icon" type="text" class="flex-auto dropdown-input  h2 w-100  bg-white  br0 b--black-10 " data-path="fas_list" value="th-large" data-minchars="0" >
+                  <button type="button" mv-action="invoke('toggleDDInput',icon)" class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 " title="click to open dropdown list"> <i class="f6 fas fa-arrow-down"></i></button>
+                </div>
+              </div>
+              <p class="f5 mv-empty" property="intro"></p>
+              <h3 property="title" class="f3 tc mv-empty"></h3>
+              <div class="pt3 markdown f4 lh-copy mv-empty" property="content"></div>
+            </div>
+          </div>
+        </div>
+        35fe3a9616151be1e9a9abc33ece88d44bd47528
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+      675275c791df5c494218febd9c0cde06eea2ae6b <button type="button" title="add column" class="bg-green self-center v-mid dn br1 mv-add mv-ui mv-add-column">+</button> 35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" 675275c791df5c494218febd9c0cde06eea2ae6b property="description"  35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(it, \u0027description\u0027) || \u0027\u0027 }enc} </div>
+  </div>  {tf{? o.edit_mode }tf}
+
+
+<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
+">
+  
+  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
+      <span class="pv2 dib">Section Options</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
+    </div>
+    
+    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
+      
+
+<input hidden property="current_tab" mv-storage="none" value="appearance"/>
+<div class="pt1 flex flex-wrap items-stretch">
+
+  
+	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="layout_alternate" mv-action="set(current_tab,'layout_alternate')" class="[if(current_tab='layout_alternate', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-th"></i><span class="dn di-ns"> Layout </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="global_section" mv-action="set(current_tab,'global_section'),invoke(&#39;updateGlobalSectionList&#39;, data_key)" class="[if(current_tab='global_section', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-globe"></i><span class="dn di-ns"> Global Section </span>
+		
+	</button>&nbsp;
+
+</div>
+
+<div class="tab-content pt3 ">
+
+	
+	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
+	 
+		
+		
+
+<div  property="appearance" >
+  <h3 class="mt2">Appearance</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Section Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="section_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value="bg-transparent"
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',section_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the fallback background color when image is not available or disabled.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Card Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            this is the background of grid cards.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Text Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="text_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',text_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Slide Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="slide_animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slide_animation"
+          
+           value="fadeIn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The slide animation during presentation, default to fadeIn if not set. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="layout_alternate" class="gt-tab-pane [if(current_tab='layout_alternate', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Layout</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Layout Class 
+        
+        
+        </div>
+        <div 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="layout_class"
+            
+            
+            id="radio-72-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-72-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="line-start"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-72-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            line start 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-72-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-72-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="even-order-1-l"  
+            />
+            <label class="flex-auto ph2" for="radio-72-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            outside 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-72-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-72-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="odd-order-1-l"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-72-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            inside 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Change the position of icons or thumbnail images to create special layout on large screen.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Global Section</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be available in other pages. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Data Storage Key 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(data_key, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="data_key" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',data_key)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+
+</div>
+
+    </div>
+
+  </div>
+</div>
+
+<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
+
+  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
+    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
+  </button>
+
+  <span class="dn di-ns gt-pos-btns"> 
+    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
+    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
+    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
+    <button type="button" data-action="clone-section" class="gt-clone-section manage-section pointer dim br2 pv1 ph2 mh1" title="clone section"><i class="fas fa-clone"></i></button>
+    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
+  </span>
+
+  
+  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
+  <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
+  
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
+  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
+  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+</div>
+
+{tf{?}tf}
+
+ 
+
+</section>
+
+`;
+  
+    gtpb.partials['goandtalk/slides/collection-text-custom-width'] = `
+
+
+
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027dark-gray\u0027 }enc}
+  "
+  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="section_background & ' ' & text_color & ' pv3 flex-auto flex flex-column justify-center ' & slide_animation" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+    <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc} </p>
+    <h2  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="tc pa2 pa3-ns ma0 f3">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc} </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    {enc{! o.__get(it, \u0027appearance.link_color\u0027) || \u0027\u0027 }enc}
+    {enc{! o.__get(it, \u0027horizontal_position\u0027) || \u0027justify-center\u0027 }enc}
+    {enc{! o.__get(it, \u0027vertical_position\u0027) || \u0027\u0027 }enc}"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap ' & horizontal_position & ' ' & vertical_position & ' ' & appearance.link_color" 35fe3a9616151be1e9a9abc33ece88d44bd47528 
+     >
+    
+      {tf{? o.__get(it,\u0027column.0\u0027) }tf}
+
+      {loop{~ it.column :item:idx }loop}
+
+      <div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m  pa3 flex grow
+      {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
+      
+        <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
+          675275c791df5c494218febd9c0cde06eea2ae6b
+          <div class="dn show-in-edit w-100"
+          mv-action="invoke('replaceNodeClass', column_width, 'element.parentElement.parentElement.parentElement', 'w-', 'w-', '-ns', 'w-100' )"
+          >
+            <div class="f7">[column_width]%</div>
+            <input class=" w-100 pv2" property="column_width" type="range" min="10" max="100" step="10" value="20"  />
+          </div>
+          35fe3a9616151be1e9a9abc33ece88d44bd47528
+          <div class="mb2 tc {enc{! o.__get(it, \u0027card_header\u0027) || \u0027\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'mb2 tc ' & card_header" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          >
+          {tf{? o.edit_mode || o.__get(item, \u0027image_source\u0027) }tf}
+
+            <img class="mw-100
+            {enc{! o.__get(it, \u0027images_class\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027images_border\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027images_border_color\u0027) || \u0027\u0027 }enc}
+            {enc{! o.__get(it, \u0027images_padding\u0027) || \u0027\u0027 }enc}
+            " 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
+            35fe3a9616151be1e9a9abc33ece88d44bd47528
+          </div>
+          <div class="{enc{! o.__get(it, \u0027card_body\u0027) || \u0027\u0027 }enc}"
+          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="card_body" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+          >
+            <h3  class="card-title {enc{! o.__get(it, \u0027card_title\u0027) || \u0027tc\u0027 }enc}"
+            675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'card-title ' & card_title"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+            >
+              <span property="title">{enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc}</span>
+            </h3>
+            <p class="card-sub-title" 675275c791df5c494218febd9c0cde06eea2ae6b property="sub_title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >{enc{! o.__get(item, \u0027sub_title\u0027) || \u0027\u0027 }enc}</p>
+            <div class="pt1 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
+ </div>
+          </div>
+        </div>
+      </div>
+      {loop{~}loop}
+
+      {tf{??}tf}
+
+        675275c791df5c494218febd9c0cde06eea2ae6b
+        <div property="column" mv-multiple
+        class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-20-l\u0027 }enc} fl w-100 w-50-m pa3 flex grow
+        {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
+          <div class="w-100 pa2 [card_background]">
+            <div class="dn show-in-edit w-100 ">
+              <input class="w-100 pv2" property="column_width" type="range" min="10" max="100" step="10" value="20" />
+            </div>
+
+            <div class="mb2 tc [card_header]">
+              <img class="mw-100 mv-empty [images_class] [images_border] [images_border_color] [images_padding] "  alt="" property="image_source"  src="" >
+            </div>
+            <div class="[if(card_body, card_body, 'ph1')]">
+              <h3 class="card-title [if(card_title, card_title, 'tc')]">
+                <span property="title" class="mv-empty"></span>
+              </h3>
+              <p property="sub_title" class="card-sub-title mv-empty"></p>
+              <div class="pt1 lh-copy markdown mv-empty" property="description"></div>
+            </div>
+          </div>
+        </div>
+        35fe3a9616151be1e9a9abc33ece88d44bd47528
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+      675275c791df5c494218febd9c0cde06eea2ae6b <button type="button" title="add column" class="bg-green self-center v-mid dn br1 mv-add mv-ui mv-add-column">+</button> 35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" 675275c791df5c494218febd9c0cde06eea2ae6b property="description"  35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(it, \u0027description\u0027) || \u0027\u0027 }enc} </div>
+  </div>  {tf{? o.edit_mode }tf}
+
+
+<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
+">
+  
+  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
+      <span class="pv2 dib">Section Options</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
+    </div>
+    
+    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
+      
+
+<input hidden property="current_tab" mv-storage="none" value="appearance"/>
+<div class="pt1 flex flex-wrap items-stretch">
+
+  
+	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="layout_column" mv-action="set(current_tab,'layout_column')" class="[if(current_tab='layout_column', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-th"></i><span class="dn di-ns"> Layout </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="layout_images" mv-action="set(current_tab,'layout_images')" class="[if(current_tab='layout_images', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-images"></i><span class="dn di-ns"> Card and Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="global_section" mv-action="set(current_tab,'global_section'),invoke(&#39;updateGlobalSectionList&#39;, data_key)" class="[if(current_tab='global_section', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-globe"></i><span class="dn di-ns"> Global Section </span>
+		
+	</button>&nbsp;
+
+</div>
+
+<div class="tab-content pt3 ">
+
+	
+	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
+	 
+		
+		
+
+<div  property="appearance" >
+  <h3 class="mt2">Appearance</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Section Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="section_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',section_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the fallback background color when image is not available or disabled.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Card Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value="hover-primary-color"
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            this is the background of grid cards.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Text Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="text_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',text_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Slide Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="slide_animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slide_animation"
+          
+           value="fadeIn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The slide animation during presentation, default to fadeIn if not set. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="layout_column" class="gt-tab-pane [if(current_tab='layout_column', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Layout</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Columns Per Row 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, column_class,&#39;root.children.column&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="column_class"
+            
+            
+            id="radio-73-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-73-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-50-l"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-73-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            2 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-73-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-73-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-33-l"  
+            />
+            <label class="flex-auto ph2" for="radio-73-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-73-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-73-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-25-l"  
+            />
+            <label class="flex-auto ph2" for="radio-73-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-73-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-73-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-20-l"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-73-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            5 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-73-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-73-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="w-10-l"  
+            />
+            <label class="flex-auto ph2" for="radio-73-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            10 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the maximum number of columns in a row before wrapping to the next row.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Resize Column 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, resize_column,&#39;root.children.column&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="resize_column"
+            
+            
+            id="radio-74-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-74-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="flex-auto"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-74-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            auto 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-74-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-74-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="flex-none"  
+            />
+            <label class="flex-auto ph2" for="radio-74-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            none 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Whether to resize columns if there is extra space in the row. If set to auto, the extra space will be divided equally. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Horizontal Position 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(horizontal_position, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="horizontal_position" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="justify-center, justify-start, justify-end, justify-between, justify-around" 
+           value="justify-center" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',horizontal_position)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This decides how to distribute extra space if columns are not resized. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Vertical Position 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(vertical_position, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="vertical_position" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="items-center, items-start, items-end, items-stretch" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',vertical_position)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This decides how to position items vertically. By default items are stretched to fill the vertical space available. 
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="layout_images" class="gt-tab-pane [if(current_tab='layout_images', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Card and Image</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Image Border Radius 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_class,&#39;root.children.column&#39;, &#39;img&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="images_class"
+            
+            
+            id="radio-75-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-75-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br0"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-75-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            disable 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-75-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-75-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br2"  
+            />
+            <label class="flex-auto ph2" for="radio-75-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br2 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-75-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-75-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br3"  
+            />
+            <label class="flex-auto ph2" for="radio-75-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-75-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-75-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br4"  
+            />
+            <label class="flex-auto ph2" for="radio-75-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            br4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-75-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-75-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="br-100"  
+            />
+            <label class="flex-auto ph2" for="radio-75-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            circle or oval 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Header Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_header, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_header" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Body Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_body, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_body" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Card Title Styles 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_title, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_title" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Images Border 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_border,&#39;root.children.column&#39;, &#39;img&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="images_border"
+            
+            
+            id="radio-76-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-76-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="bn"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-76-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            disable 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-76-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-76-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="ba"  
+            />
+            <label class="flex-auto ph2" for="radio-76-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            ba 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Images Padding 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_padding,&#39;root.children.column&#39;, &#39;img&#39;)" 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="images_padding"
+            
+            
+            id="radio-77-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-77-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="pa0"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-77-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            disable 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-77-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-77-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="pa1"  
+            />
+            <label class="flex-auto ph2" for="radio-77-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            pa1 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Images Border Color 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_border_color,&#39;root.children.column&#39;, &#39;img&#39;)" 
+        class=" bg-white 
+         flex  flex-wrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="images_border_color"
+            
+            
+            id="radio-78-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-78-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--inherit"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-78-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            inherit 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-78-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-78-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--black-10"  
+            />
+            <label class="flex-auto ph2" for="radio-78-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            black 10 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-78-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-78-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--black-20"  
+            />
+            <label class="flex-auto ph2" for="radio-78-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            black 20 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-78-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-78-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--white"  
+            />
+            <label class="flex-auto ph2" for="radio-78-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            white 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-78-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-78-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--white-90"  
+            />
+            <label class="flex-auto ph2" for="radio-78-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            white 90 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-78-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-78-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--white-80"  
+            />
+            <label class="flex-auto ph2" for="radio-78-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            white 80 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-78-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-78-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--primary-color"  
+            />
+            <label class="flex-auto ph2" for="radio-78-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            primary 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-78-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-78-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--primary-color-light"  
+            />
+            <label class="flex-auto ph2" for="radio-78-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            primary light 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-78-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-78-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="b--primary-color-lighter"  
+            />
+            <label class="flex-auto ph2" for="radio-78-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            primary lighter 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Global Section</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be available in other pages. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Data Storage Key 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(data_key, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="data_key" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',data_key)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+
+</div>
+
+    </div>
+
+  </div>
+</div>
+
+<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
+
+  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
+    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
+  </button>
+
+  <span class="dn di-ns gt-pos-btns"> 
+    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
+    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
+    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
+    <button type="button" data-action="clone-section" class="gt-clone-section manage-section pointer dim br2 pv1 ph2 mh1" title="clone section"><i class="fas fa-clone"></i></button>
+    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
+  </span>
+
+  
+  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
+  <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
+  
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
+  <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
+  <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+</div>
+
+{tf{?}tf}
+
+ 
+
+</section>
+
+`;
+  
+    gtpb.partials['goandtalk/slides/iframe-full-width'] = `
+
+
+
+
+
+<section 675275c791df5c494218febd9c0cde06eea2ae6b  mv-autosave="3" mv-storage="idb_array" gt-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="z-0 flex-auto flex flex-column justify-center
+  {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
+  {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027black-40\u0027 }enc}
+  {enc{! o.__get(it, \u0027section_height\u0027) || \u0027vh-50\u0027 }enc}
+  "
+  675275c791df5c494218febd9c0cde06eea2ae6b  mv-attribute="class" mv-value="'z-0 flex-auto flex flex-column justify-center ' & section_background & ' ' & text_color & ' ' & slide_animation & ' ' & section_height" 35fe3a9616151be1e9a9abc33ece88d44bd47528>
+    <iframe frameborder="0" style="border:0"  allow="fullscreen" class="aspect-ratio--object" src="f9646236a2807f0720fd2ecb05896803adf5bb4b"
+    675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="none" property="iframe_view" mv-attribute="src" mv-value="embed_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 ></iframe>
+
+    <div class="dn show-in-edit vh-50">
+      <span hidden property="ui_only" mv-storage="none"></span>
+    </div>
+  </div>
+  <div class="absolute w-100 w-60-ns left--20-ns top-0 bottom-0"></div>
+
+ {tf{? o.edit_mode }tf}
+
+
+<div class="skip-zoom-clone  min-vh-100 w-100 absolute off-canvas-dashboard
+">
+  
+  <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll">
+    <div class="bg-white-70 mb1 cf v-mid ph3 flex">
+      <span class="pv2 dib">Section Options</span>
+      <span title="close" class="flex-auto fr pv2 ph3 w3 tc orange hover-bg-white" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')">X</span>
+    </div>
+    
+    <div class="mb4 mh2 mh3-ns mt2 br1 shadow-4 b--white-30 ph1 ph2-ns pb4">
+      
+
+<input hidden property="current_tab" mv-storage="none" value="appearance"/>
+<div class="pt1 flex flex-wrap items-stretch">
+
+  
+	<button data-toggle-tab="appearance" mv-action="set(current_tab,'appearance')" class="[if(current_tab='appearance', 'bg-white-90 bb-0')] gt-tab-button br1 active pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-font"></i><span class="dn di-ns"> Appearance </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="iframe_full_width" mv-action="set(current_tab,'iframe_full_width')" class="[if(current_tab='iframe_full_width', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-play-circle"></i><span class="dn di-ns"> Iframe </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="global_section" mv-action="set(current_tab,'global_section'),invoke(&#39;updateGlobalSectionList&#39;, data_key)" class="[if(current_tab='global_section', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-globe"></i><span class="dn di-ns"> Global Section </span>
+		
+	</button>&nbsp;
+
+</div>
+
+<div class="tab-content pt3 ">
+
+	
+	<div data-pane="appearance" class="gt-tab-pane [if(current_tab='appearance', '', 'dn')] active">
+	 
+		
+		
+
+<div  property="appearance" >
+  <h3 class="mt2">Appearance</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Section Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(section_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="section_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value="bg-primary-color-dark"
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',section_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the fallback background color when image is not available or disabled.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Card Background 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_background, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="card_background" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="solid_background"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_background)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            this is the background of grid cards.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Text Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(text_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="text_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',text_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Icon Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(icon_color, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="icon_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="text_color"
+          
+           value="gold"
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',icon_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of Icon if used in this section.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Slide Animation 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(slide_animation, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="slide_animation" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="slide_animation"
+          
+           value="fadeIn" 
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',slide_animation)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The slide animation during presentation, default to fadeIn if not set. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Link Color 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(link_color, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.content.element&#39;, &#39;link-&#39;)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="link_color" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="link_color"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',link_color)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Color of links in text blocks.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="iframe_full_width" class="gt-tab-pane [if(current_tab='iframe_full_width', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Iframe</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source URL   <span class="mh2"
+  mv-action="invoke('setItemsAttr', embed_source, 'root.children.iframe_view', 'src', 'iframe')"
+  ><i class="fas fa-sync"></i> </span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(embed_source, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="embed_source" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the embed page.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Section Height 
+        
+        
+        </div>
+        <div 
+        class=" bg-white 
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="section_height"
+            
+            
+            id="radio-79-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-79-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="vh-50"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-79-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            vh-50 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-79-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-79-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="vh-75"  
+            />
+            <label class="flex-auto ph2" for="radio-79-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            vh-75 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Paste Embed Code       <span class="mh2"
+      mv-action="invoke('extractAttr', paste_embed_code, 'root.children.embed_source', 'src', 'iframe')"
+      ><i class="fas fa-link"></i> </span>
+      
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(paste_embed_code, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <textarea class="w-100 h3 b--black-10"
+           property="paste_embed_code"  mv-storage="none" 
+          ></textarea>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            You may paste the iframe embed code provided by suppliers here, and click the 
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Global Section</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be available in other pages. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Data Storage Key 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(data_key, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="data_key" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',data_key)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+
+</div>
+
+    </div>
+
+  </div>
+</div>
+
+<div onclick="" class="skip-zoom-clone dn mv-bar f7 tc w-100 absolute top-0 pv1 ph2 bg-white o-10 hover-o-90 ">
+
+  <button type="button" data-action="toggle-base-toolbar" class="manage-section pointer dim br2 pv1 ph2 mh1" title="toggle global setting toolbar ">
+    <i class="fas fa-ellipsis-v" data-fa-mask="fas fa-square" data-fa-transform="shrink-2 left-4"></i>
+  </button>
+
+  <span class="dn di-ns gt-pos-btns"> 
+    <button type="button" data-action="move-up" class="gt-move-up manage-section pointer dim br2 pv1 ph2 mh1" title="move section up"><i class="fas fa-angle-up"></i></button>
+    <button type="button" data-action="move-down" class="gt-move-down manage-section pointer dim br2 pv1 ph2 mh1" title="move section down"><i class="fas fa-angle-down"></i></button>
+    <button type="button" data-action="insert-section" class="gt-insert-section manage-section pointer dim br2 pv1 ph2 mh1" title="insert section "><i class="fas fa-plus"></i></button>
+    <button type="button" data-action="clone-section" class="gt-clone-section manage-section pointer dim br2 pv1 ph2 mh1" title="clone section"><i class="fas fa-clone"></i></button>
+    <button type="button" data-action="delete-section" class="gt-delete-section manage-section pointer dim br2 pv1 ph2 mh2 white bg-orange" title="delete section"><i class="fas fa-trash"></i></button> 
+  </span>
+
+  
+  <button title="turn editor on" type="button" data-action="toggle-mv-on" class="toggle-mv-on bg-light-green manage-section pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-toggle-off"></i></button>
+  <button title="turn editor off" type="button" data-action="toggle-mv-off" class="toggle-mv-off dn manage-section orange pointer dim br2 pv1 ph2 mh3" ><i class="fas fa-power-off"></i></button>
+  
+  <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
 </div>
@@ -22115,7 +31434,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
      
 
 gtpb.default.site_id = "gt";
-gtpb.default.TemplateHash = {"0a91767dbe0c33eb36411f28dfbb52e7f40c0b93":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027base_image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027base_image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","35fe3a9616151be1e9a9abc33ece88d44bd47528":"{tf{?}tf}\n","47a10716ab9cfa2da5ba2cc37e033286ea50785c":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027https://source.unsplash.com/sK1hW5knKkw/1536x864\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027https://source.unsplash.com/sK1hW5knKkw/1536x864\\u0027) }v}{tf{?}tf}","5aff7ad5769b66377c06f3d3195c1ba6c58d9165":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","624e2f799cf76d241798e9e40bc8c7efa846138a":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027/images/light-rays-by-richard-gatley-529626-unsplash.jpg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027/images/light-rays-by-richard-gatley-529626-unsplash.jpg\\u0027) }v}{tf{?}tf}","675275c791df5c494218febd9c0cde06eea2ae6b":"{tf{? o.edit_mode }tf}\n","6aa54d91498069cf3ec3c6d46443b0b765c6cec2":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","6f171f7af664405d6c48d439c7dcf034b904ccf1":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","a41325d3d724b613adde84fb3124bc6dd2d09ac7":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","b1d98aff0d513d54c95f98187a86801cfeb2b837":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","be9210026fcf76504a9221b2aea4c4b61cf84e51":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","dd670833e00d695c78df75d31d05c27606aca294":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","f31242cd7b629eb52f03daf3392c0469f5e560bb":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","f871d6b8810c7bde0a1be4bdb14e56bf840fce44":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027) }v}{tf{?}tf}"};
+gtpb.default.TemplateHash = {"0a91767dbe0c33eb36411f28dfbb52e7f40c0b93":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027base_image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027base_image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","28cc5fd7f9fa2dc66449de854b9df615c02c3c13":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.gt_license_url\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.gt_license_url\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","35fe3a9616151be1e9a9abc33ece88d44bd47528":"{tf{?}tf}\n","5aff7ad5769b66377c06f3d3195c1ba6c58d9165":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","624e2f799cf76d241798e9e40bc8c7efa846138a":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027/images/light-rays-by-richard-gatley-529626-unsplash.jpg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027/images/light-rays-by-richard-gatley-529626-unsplash.jpg\\u0027) }v}{tf{?}tf}","675275c791df5c494218febd9c0cde06eea2ae6b":"{tf{? o.edit_mode }tf}\n","6aa54d91498069cf3ec3c6d46443b0b765c6cec2":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","6f171f7af664405d6c48d439c7dcf034b904ccf1":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","9c5d1935546b2e94073e7f538301e63094876204":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.gt_author_url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.gt_author_url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","a41325d3d724b613adde84fb3124bc6dd2d09ac7":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","b1d98aff0d513d54c95f98187a86801cfeb2b837":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","be9210026fcf76504a9221b2aea4c4b61cf84e51":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","dd670833e00d695c78df75d31d05c27606aca294":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","f31242cd7b629eb52f03daf3392c0469f5e560bb":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","f871d6b8810c7bde0a1be4bdb14e56bf840fce44":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027) }v}{tf{?}tf}","f9646236a2807f0720fd2ecb05896803adf5bb4b":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027embed_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027embed_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}"};
 gtpb.default.SiteMenu = {"global":[{"URL":"/tutorial/","Page":null,"Name":"Tutorials","Menu":"global","Identifier":"tutorials","Pre":"","Post":"","Weight":5,"Parent":"","Children":null},{"URL":"/presentation/","Page":null,"Name":"Talks","Menu":"global","Identifier":"talks","Pre":"","Post":"","Weight":10,"Parent":"","Children":null},{"URL":"/about/","Page":null,"Name":"About","Menu":"global","Identifier":"about","Pre":"","Post":"","Weight":15,"Parent":"","Children":null}],"iconmenu":[{"URL":"#","Page":null,"Name":"Go Account","Menu":"iconmenu","Identifier":"","Pre":"Go","Post":"","Weight":0,"Parent":"","Children":null}]};
 gtpb.default.SiteParams = {"accent_color":"hsl(165,35%,45%)","accent_color_light":"hsl(165,35%,65%)","custom_css":"\n@keyframes slowRightEntry {\n  0% {\n    transform: translateX(-100vw);\n    opacity: 0.3;\n  }\n50% {\n   opacity: .5;\n}\n\n  90% {\n   transform: translateX(0vw);\n   opacity: .8;  \n   }\n  100% {\n    transform: translateX(0vw);\n   opacity: 0.7;\n}\n}\n\n.slowRightEntry {\n  animation: slowRightEntry 10s linear 10;\n  height: 100%;\n  }\n\n\n@keyframes slowRightExit {\n  0% {\n    transform: translateX(0vw);\n   opacity: 1;\n  }\n\n  50% {\n    opacity: .1;\n }\n  100% {\n   opacity: .0;\n    transform: translateX(50vw);\n  }\n}\n\n.slowRightExit {\n  animation: slowRightExit 20s linear 5;\n  height: 100%;\n}\n","flex_box_interior_classes":"w-100 w-50-m w-33-l ","global_section":{"alternate_text_and_big_icon_layer":{"appearance":{"animation":"fadeIn","icon_color":"primary-color","section_background":"bg-primary-color-light","slide_animation":"fadeIn"},"content":"* go to the previous section with the title \"Global Section\".\n* find the section toolbar at the top edge of the section.\n* click on the toggle button to turn on the app\n* click on Edit button on the toolbar to switch to editing mode.\n* Change the section title to something you can easily recognize.\n* click on the cog icon on the section toolbar to show the section settings window.\n* go to \"Global Section\" tab and tick the checkbox to enable it as global section. \n* Fill in a data storage key you can easily recognize. You can get a list of existing keys by clicking on the dropdown button. Make sure to use a new key to avoid overriding data.\n* click the Save button to save the changes.\n* open another tutorial in another tab of your browser.\n* click on the plus icon on any section toolbar to bring up a window for inserting new section.\n* leave \"Select Section Template \" as blank. Clear this field if it has any value.\n* in the \"Use Data From Global Section\" field, click on the dropdown button, and look for the global section you have created.\n* click on the \"Insert\" button to confirm the operation.\n* you should be able to see the global section inserted to that tutorial page, with data you have saved.","description":"","icons":{"icon_transform":"shrink-6","mini_icon":"globe-asia","mini_icon_color":"white","outer_icon":"square","width":20},"intro":"Exercise","is_global":true,"partial":"goandtalk/slides/alternate-text-and-big-icon-layer","title":"Using a Global Section"},"app_status_on_off":{"appearance":{"card_background":"bg-light-gray","icon_color":"black-10","section_background":"bg-white-70","slide_animation":"fadeIn","text_color":"primary-color-first-letter-h3"},"column":[{"description":"* The Application is currently off.\n* Click this button to turn it on.\n* Not available for apps that are always on.","icon":"toggle-off","title":"Off"},{"description":"* The application is on.\n* Click this button to turn if off.\n* Not available for apps that are always on.","icon":"power-off","title":"On"}],"column_class":"w-25-l","data_fa_mask":"circle","data_fa_transform":"shrink-8","data_key":"app_status_on_off","description":"  ","horizontal_position":"justify-center","intro":"Toggle On Demand","is_global":true,"partial":"goandtalk/slides/collection-big-icon-circle-mask","resize_column":"flex-auto","title":"The State of Section Application"},"buttons_in_edit_mode":{"appearance":{"card_background":"hover-primary-color","slide_animation":"fadeIn"},"column":[{"column_width":20,"description":"* The app is in standby mode. \n* Click on this button to switch to editing mode. \n* The section works like a normal web page.\n* Click on a link will take you to a new resource.","title":"Edit"},{"column_width":20,"description":"* The app is in editing mode.\n* Click on this button to exit editing.\n* Click on text or image to start editing.\n* The section will behave differently.\n* Click on a link will bring up an editor.","title":"Editing"},{"column_width":20,"description":"* Click this button to save the current PAGE.\n* Click on \"Save\" button on any section will save the whole page.\n* This button works in standby and editing mode.","title":"Save"},{"column_width":20,"description":"* Toggles more options of the current section.\n* This button works in standby and editing mode.","title":"Settings"}],"column_class":"w-50-l","data_key":"buttons_in_edit_mode","description":"  ","horizontal_position":"justify-center","images_class":"br0","intro":"Buttons and States","is_global":true,"partial":"goandtalk/slides/collection-text-custom-width","resize_column":"flex-auto","title":"Buttons Available When the Section App is On"},"data_browser_database":{"appearance":{"card_background":"bg-light-gray","section_background":"bg-white-70","slide_animation":"fadeIn","text_color":"primary-color-first-letter-h3"},"column":[{"description":"* IndexedDB by name\n* Storage space is large enough for texts\n* Limited in space for images, especially on mobile devices\n* Online image service recommended","icon":"database","title":"A Database in Your Browser"}],"column_class":"w-50-l","content":"","data_fa_mask":"tablet","data_fa_transform":"shrink-8","data_key":"data_browser_database","description":"  ","horizontal_position":"justify-center","intro":" ","is_global":true,"partial":"goandtalk/slides/collection-big-icon-circle-mask","resize_column":"flex-none","title":"Where are Data and Images Saved"},"default_footer":{"appearance":{"legal_link_color":"link-white-80","nav_link_color":"link-gold","section_background":"bg-black-80"},"is_global":true,"menu":{"footer_legal":[{"name":"Terms of Service","url":"#"},{"name":"Privacy","url":"#"}],"footer_nav":[{"name":"Home","url":"#"},{"name":"About","url":"/about/"}]}},"finding_toolbar":{"appearance":{"animation":"fadeIn","card_background":"hover-primary-color","icon_color":"black-20","slide_animation":"fadeIn","text_color":"primary-color-first-letter-h3"},"column":[{"description":"* At the left side of the screen.\n* Manage global settings. \n* Apply to the current page, or all pages.\n* Hide all section tools.\n* Hide itself.","icon":"grip-vertical","title":"Global Toolbar"},{"description":"* At the top of each section.\n* Manage current section. \n* Apply to current section.\n* Turn app on and off.\n* Toggle edit mode.\n* Toggle global toolbar.","icon":"grip-horizontal","title":"Section Toolbar"},{"description":"* Available in some sections. \n* Toggle button to switch toolbars.\n* Toggle on to edit.\n* Toggle off when done.","icon":"keyboard","title":"Context Toolbar"}],"column_class":"w-25-l","data_key":"finding_toolbar","description":"Hover or tap to show the toolbars.","horizontal_position":"justify-center","intro":"At Top and Left, Out of View Initially","is_global":true,"partial":"goandtalk/slides/collection-big-icon-mono","resize_column":"flex-auto","title":"Finding Toolbars"},"site_and_page_data":{"appearance":{"card_background":"hover-primary-color","icon_color":"black-20","slide_animation":"fadeIn"},"column":[{"description":"* data related to current page only\n* page title and description\n* body text\n* local sections\n* header background, primary colors etc\n\nThere can be multiple pages in one site or project.","icon":"file-alt","title":"Page Data"},{"description":"* data related to the whole site or project\n* site title and description\n* menu items\n* default primary colors\n* global sections\n\nThere can be multiple sites or projects. Each site has its own database.","icon":"globe","title":"Site Data"}],"column_class":"w-25-l","content":"","data_key":"site_and_page_data","description":"  ","horizontal_position":"justify-center","intro":" ","is_global":true,"partial":"goandtalk/slides/collection-big-icon-mono","resize_column":"flex-auto","title":"Page and Site Data"}},"header_class":"bg-primary-color","lightness":45,"lightness_dark":20,"lightness_light":65,"lightness_lighter":80,"logo_url":"/images/logos/icon-on-dark.svg","mainSections":["post"],"main_menu_align":"start","mainsections":["post"],"mobile_menu_button":[{"label":"Menu","menu":"global"},{"label":"Account","menu":"iconmenu"}],"primary_hue":345,"saturation":35,"skip_cover_nav":false};
 gtpb.default.SiteBaseURL = "https://goandtalk.github.io/";

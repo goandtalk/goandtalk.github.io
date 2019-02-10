@@ -26,13 +26,13 @@
   var dropdown_datalist = gtpb.dropdown_datalist = {
     link_color: ["link-yellow","link-gold","link-white","link-white-90","link-white-80","link-white-70","link-white-60","link-white-50","link-black","link-black-05","link-black-10","link-black-20","link-black-30","link-black-40","link-black-50"],
 
-  	text_color: ["black-90", "black-80", "black-70", "black-60", "black-50", "black-40", "black-30", "black-20", "black-10", "black-05", "white-90", "white-80", "white-70", "white-60", "white-50", "white-40", "white-30", "white-20", "white-10", "black", "near-black", "dark-gray", "mid-gray", "gray", "silver", "light-silver", "moon-gray", "light-gray", "near-white", "white", "dark-red", "red", "light-red", "orange", "gold", "yellow", "light-yellow", "purple", "light-purple", "dark-pink", "hot-pink", "pink", "light-pink", "dark-green", "green", "light-green", "navy", "dark-blue", "blue", "light-blue", "lightest-blue", "washed-blue", "washed-green", "washed-yellow", "washed-red", "primary-color", "primary-color-light", "primary-color-dark"],
+  	text_color: ["primary-color-first-letter-h3","black-90", "black-80", "black-70", "black-60", "black-50", "black-40", "black-30", "black-20", "black-10", "black-05", "white-90", "white-80", "white-70", "white-60", "white-50", "white-40", "white-30", "white-20", "white-10", "black", "near-black", "dark-gray", "mid-gray", "gray", "silver", "light-silver", "moon-gray", "light-gray", "near-white", "white", "dark-red", "red", "light-red", "orange", "gold", "yellow", "light-yellow", "purple", "light-purple", "dark-pink", "hot-pink", "pink", "light-pink", "dark-green", "green", "light-green", "navy", "dark-blue", "blue", "light-blue", "lightest-blue", "washed-blue", "washed-green", "washed-yellow", "washed-red", "primary-color", "primary-color-light", "primary-color-dark"],
   	overlay_background: ["bg-black-90", "bg-black-80", "bg-black-70", "bg-black-60", "bg-black-50", "bg-black-40", "bg-black-30", "bg-black-20", "bg-black-10", "bg-black-05", "bg-white-90", "bg-white-80", "bg-white-70", "bg-white-60", "bg-white-50", "bg-white-40", "bg-white-30", "bg-white-20", "bg-white-10", "bg-primary-color-dark-90"],
   	solid_background: ["bg-black","bg-near-black","bg-dark-gray","bg-mid-gray","bg-gray","bg-silver","bg-light-silver","bg-moon-gray","bg-light-gray","bg-near-white","bg-white","bg-transparent","bg-dark-red","bg-red","bg-light-red","bg-orange","bg-gold","bg-yellow","bg-light-yellow","bg-purple","bg-light-purple","bg-dark-pink","bg-hot-pink","bg-pink","bg-light-pink","bg-dark-green","bg-green","bg-light-green","bg-navy","bg-dark-blue","bg-blue","bg-light-blue","bg-lightest-blue","bg-washed-blue","bg-washed-green","bg-washed-yellow","bg-washed-red", "bg-primary-color", "bg-primary-color-dark", "bg-primary-color-light", "bg-black-90", "bg-black-80", "bg-black-70", "bg-black-60", "bg-black-50", "bg-black-40", "bg-black-30", "bg-black-20", "bg-black-10", "bg-black-05", "bg-white-90", "bg-white-80", "bg-white-70", "bg-white-60", "bg-white-50", "bg-white-40", "bg-white-30", "bg-white-20", "bg-white-10", "bg-primary-color-dark-90", "bg-primary-color-lighter","bg-accent-color","bg-accent-color-light"],
     border_color: ["b--black","b--near-black","b--dark-gray","b--mid-gray","b--gray","b--silver","b--light-silver","b--moon-gray","b--light-gray","b--near-white","b--white","b--transparent","b--dark-red","b--red","b--light-red","b--orange","b--gold","b--yellow","b--light-yellow","b--purple","b--light-purple","b--dark-pink","b--hot-pink","b--pink","b--light-pink","b--dark-green","b--green","b--light-green","b--navy","b--dark-blue","b--blue","b--light-blue","b--lightest-blue","b--washed-blue","b--washed-green","b--washed-yellow","b--washed-red", "b--primary-color", "b--primary-color-dark", "b--primary-color-light", "b--black-90", "b--black-80", "b--black-70", "b--black-60", "b--black-50", "b--black-40", "b--black-30", "b--black-20", "b--black-10", "b--black-05", "b--white-90", "b--white-80", "b--white-70", "b--white-60", "b--white-50", "b--white-40", "b--white-30", "b--white-20", "b--white-10", "b--primary-color-dark-90", "b--primary-color-lighter", "b--accent-color", "b--accent-color-light" ],
   	font_weight: ["normal","b","fw1","fw2","fw3","fw4","fw5","fw6","fw7","fw8","fw9"],
   	serif_font_family: ["athelas","georgia","times","bodoni",  "calisto",  "garamond",  "baskerville"],
-    slow_motion: ["slowUp", "slowDown", "slowLeft", "slowRight", "slowZoomIn", "slowZoomOut"],
+    slow_motion: ["none","slowUp", "slowDown", "slowLeft", "slowRight", "slowZoomIn", "slowZoomOut","slowUpInfinite", "slowDownInfinite", "slowLeftInfinite", "slowRightInfinite", "slowZoomInInfinite", "slowZoomOutInfinite"],
     slide_animation: ["fadeIn", "fadeInUp", "zoomIn", "slideInLeft", "slideInRight"],
     fas_list: ["ad", "address-book", "address-card", "adjust", "air-freshener", "align-center", "align-justify", "align-left", "align-right", "allergies", "ambulance", "american-sign-language-interpreting", "anchor", "angle-double-down", "angle-double-left", "angle-double-right", "angle-double-up", "angle-down", "angle-left", "angle-right", "angle-up", "angry", "ankh", "apple-alt", "archive", "archway", "arrow-alt-circle-down", "arrow-alt-circle-left", "arrow-alt-circle-right", "arrow-alt-circle-up", "arrow-circle-down", "arrow-circle-left", "arrow-circle-right", "arrow-circle-up", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "arrows-alt", "arrows-alt-h", "arrows-alt-v", "assistive-listening-systems", "asterisk", "at", "atlas", "atom", "audio-description", "award", "backspace", "backward", "balance-scale", "ban", "band-aid", "barcode", "bars", "baseball-ball", "basketball-ball", "bath", "battery-empty", "battery-full", "battery-half", "battery-quarter", "battery-three-quarters", "bed", "beer", "bell", "bell-slash", "bezier-curve", "bible", "bicycle", "binoculars", "birthday-cake", "blender", "blender-phone", "blind", "bold", "bolt", "bomb", "bone", "bong", "book", "book-dead", "book-open", "book-reader", "bookmark", "bowling-ball", "box", "box-open", "boxes", "braille", "brain", "briefcase", "briefcase-medical", "broadcast-tower", "broom", "brush", "bug", "building", "bullhorn", "bullseye", "burn", "bus", "bus-alt", "business-time", "calculator", "calendar", "calendar-alt", "calendar-check", "calendar-minus", "calendar-plus", "calendar-times", "camera", "camera-retro", "campground", "cannabis", "capsules", "car", "car-alt", "car-battery", "car-crash", "car-side", "caret-down", "caret-left", "caret-right", "caret-square-down", "caret-square-left", "caret-square-right", "caret-square-up", "caret-up", "cart-arrow-down", "cart-plus", "cat", "certificate", "chair", "chalkboard", "chalkboard-teacher", "charging-station", "chart-area", "chart-bar", "chart-line", "chart-pie", "check", "check-circle", "check-double", "check-square", "chess", "chess-bishop", "chess-board", "chess-king", "chess-knight", "chess-pawn", "chess-queen", "chess-rook", "chevron-circle-down", "chevron-circle-left", "chevron-circle-right", "chevron-circle-up", "chevron-down", "chevron-left", "chevron-right", "chevron-up", "child", "church", "circle", "circle-notch", "city", "clipboard", "clipboard-check", "clipboard-list", "clock", "clone", "closed-captioning", "cloud", "cloud-download-alt", "cloud-moon", "cloud-sun", "cloud-upload-alt", "cocktail", "code", "code-branch", "coffee", "cog", "cogs", "coins", "columns", "comment", "comment-alt", "comment-dollar", "comment-dots", "comment-slash", "comments", "comments-dollar", "compact-disc", "compass", "compress", "concierge-bell", "cookie", "cookie-bite", "copy", "copyright", "couch", "credit-card", "crop", "crop-alt", "cross", "crosshairs", "crow", "crown", "cube", "cubes", "cut", "database", "deaf", "desktop", "dharmachakra", "diagnoses", "dice", "dice-d20", "dice-d6", "dice-five", "dice-four", "dice-one", "dice-six", "dice-three", "dice-two", "digital-tachograph", "directions", "divide", "dizzy", "dna", "dog", "dollar-sign", "dolly", "dolly-flatbed", "donate", "door-closed", "door-open", "dot-circle", "dove", "download", "drafting-compass", "dragon", "draw-polygon", "drum", "drum-steelpan", "drumstick-bite", "dumbbell", "dungeon", "edit", "eject", "ellipsis-h", "ellipsis-v", "envelope", "envelope-open", "envelope-open-text", "envelope-square", "equals", "eraser", "euro-sign", "exchange-alt", "exclamation", "exclamation-circle", "exclamation-triangle", "expand", "expand-arrows-alt", "external-link-alt", "external-link-square-alt", "eye", "eye-dropper", "eye-slash", "fast-backward", "fast-forward", "fax", "feather", "feather-alt", "female", "fighter-jet", "file", "file-alt", "file-archive", "file-audio", "file-code", "file-contract", "file-csv", "file-download", "file-excel", "file-export", "file-image", "file-import", "file-invoice", "file-invoice-dollar", "file-medical", "file-medical-alt", "file-pdf", "file-powerpoint", "file-prescription", "file-signature", "file-upload", "file-video", "file-word", "fill", "fill-drip", "film", "filter", "fingerprint", "fire", "fire-extinguisher", "first-aid", "fish", "fist-raised", "flag", "flag-checkered", "flask", "flushed", "folder", "folder-minus", "folder-open", "folder-plus", "font", "font-awesome-logo-full", "football-ball", "forward", "frog", "frown", "frown-open", "funnel-dollar", "futbol", "gamepad", "gas-pump", "gavel", "gem", "genderless", "ghost", "gift", "glass-martini", "glass-martini-alt", "glasses", "globe", "globe-africa", "globe-americas", "globe-asia", "golf-ball", "gopuram", "graduation-cap", "greater-than", "greater-than-equal", "grimace", "grin", "grin-alt", "grin-beam", "grin-beam-sweat", "grin-hearts", "grin-squint", "grin-squint-tears", "grin-stars", "grin-tears", "grin-tongue", "grin-tongue-squint", "grin-tongue-wink", "grin-wink", "grip-horizontal", "grip-vertical", "h-square", "hammer", "hamsa", "hand-holding", "hand-holding-heart", "hand-holding-usd", "hand-lizard", "hand-paper", "hand-peace", "hand-point-down", "hand-point-left", "hand-point-right", "hand-point-up", "hand-pointer", "hand-rock", "hand-scissors", "hand-spock", "hands", "hands-helping", "handshake", "hanukiah", "hashtag", "hat-wizard", "haykal", "hdd", "heading", "headphones", "headphones-alt", "headset", "heart", "heartbeat", "helicopter", "highlighter", "hiking", "hippo", "history", "hockey-puck", "home", "horse", "hospital", "hospital-alt", "hospital-symbol", "hot-tub", "hotel", "hourglass", "hourglass-end", "hourglass-half", "hourglass-start", "house-damage", "hryvnia", "i-cursor", "id-badge", "id-card", "id-card-alt", "image", "images", "inbox", "indent", "industry", "infinity", "info", "info-circle", "italic", "jedi", "joint", "journal-whills", "kaaba", "key", "keyboard", "khanda", "kiss", "kiss-beam", "kiss-wink-heart", "kiwi-bird", "landmark", "language", "laptop", "laptop-code", "laugh", "laugh-beam", "laugh-squint", "laugh-wink", "layer-group", "leaf", "lemon", "less-than", "less-than-equal", "level-down-alt", "level-up-alt", "life-ring", "lightbulb", "link", "lira-sign", "list", "list-alt", "list-ol", "list-ul", "location-arrow", "lock", "lock-open", "long-arrow-alt-down", "long-arrow-alt-left", "long-arrow-alt-right", "long-arrow-alt-up", "low-vision", "luggage-cart", "magic", "magnet", "mail-bulk", "male", "map", "map-marked", "map-marked-alt", "map-marker", "map-marker-alt", "map-pin", "map-signs", "marker", "mars", "mars-double", "mars-stroke", "mars-stroke-h", "mars-stroke-v", "mask", "medal", "medkit", "meh", "meh-blank", "meh-rolling-eyes", "memory", "menorah", "mercury", "microchip", "microphone", "microphone-alt", "microphone-alt-slash", "microphone-slash", "microscope", "minus", "minus-circle", "minus-square", "mobile", "mobile-alt", "money-bill", "money-bill-alt", "money-bill-wave", "money-bill-wave-alt", "money-check", "money-check-alt", "monument", "moon", "mortar-pestle", "mosque", "motorcycle", "mountain", "mouse-pointer", "music", "network-wired", "neuter", "newspaper", "not-equal", "notes-medical", "object-group", "object-ungroup", "oil-can", "om", "otter", "outdent", "paint-brush", "paint-roller", "palette", "pallet", "paper-plane", "paperclip", "parachute-box", "paragraph", "parking", "passport", "pastafarianism", "paste", "pause", "pause-circle", "paw", "peace", "pen", "pen-alt", "pen-fancy", "pen-nib", "pen-square", "pencil-alt", "pencil-ruler", "people-carry", "percent", "percentage", "phone", "phone-slash", "phone-square", "phone-volume", "piggy-bank", "pills", "place-of-worship", "plane", "plane-arrival", "plane-departure", "play", "play-circle", "plug", "plus", "plus-circle", "plus-square", "podcast", "poll", "poll-h", "poo", "poop", "portrait", "pound-sign", "power-off", "pray", "praying-hands", "prescription", "prescription-bottle", "prescription-bottle-alt", "print", "procedures", "project-diagram", "puzzle-piece", "qrcode", "question", "question-circle", "quidditch", "quote-left", "quote-right", "quran", "random", "receipt", "recycle", "redo", "redo-alt", "registered", "reply", "reply-all", "retweet", "ribbon", "ring", "road", "robot", "rocket", "route", "rss", "rss-square", "ruble-sign", "ruler", "ruler-combined", "ruler-horizontal", "ruler-vertical", "running", "rupee-sign", "sad-cry", "sad-tear", "save", "school", "screwdriver", "scroll", "search", "search-dollar", "search-location", "search-minus", "search-plus", "seedling", "server", "shapes", "share", "share-alt", "share-alt-square", "share-square", "shekel-sign", "shield-alt", "ship", "shipping-fast", "shoe-prints", "shopping-bag", "shopping-basket", "shopping-cart", "shower", "shuttle-van", "sign", "sign-in-alt", "sign-language", "sign-out-alt", "signal", "signature", "sitemap", "skull", "skull-crossbones", "slash", "sliders-h", "smile", "smile-beam", "smile-wink", "smoking", "smoking-ban", "snowflake", "socks", "solar-panel", "sort", "sort-alpha-down", "sort-alpha-up", "sort-amount-down", "sort-amount-up", "sort-down", "sort-numeric-down", "sort-numeric-up", "sort-up", "spa", "space-shuttle", "spider", "spinner", "splotch", "spray-can", "square", "square-full", "square-root-alt", "stamp", "star", "star-and-crescent", "star-half", "star-half-alt", "star-of-david", "star-of-life", "step-backward", "step-forward", "stethoscope", "sticky-note", "stop", "stop-circle", "stopwatch", "store", "store-alt", "stream", "street-view", "strikethrough", "stroopwafel", "subscript", "subway", "suitcase", "suitcase-rolling", "sun", "superscript", "surprise", "swatchbook", "swimmer", "swimming-pool", "synagogue", "sync", "sync-alt", "syringe", "table", "table-tennis", "tablet", "tablet-alt", "tablets", "tachometer-alt", "tag", "tags", "tape", "tasks", "taxi", "teeth", "teeth-open", "terminal", "text-height", "text-width", "th", "th-large", "th-list", "theater-masks", "thermometer", "thermometer-empty", "thermometer-full", "thermometer-half", "thermometer-quarter", "thermometer-three-quarters", "thumbs-down", "thumbs-up", "thumbtack", "ticket-alt", "times", "times-circle", "tint", "tint-slash", "tired", "toggle-off", "toggle-on", "toilet-paper", "toolbox", "tooth", "torah", "torii-gate", "tractor", "trademark", "traffic-light", "train", "transgender", "transgender-alt", "trash", "trash-alt", "tree", "trophy", "truck", "truck-loading", "truck-monster", "truck-moving", "truck-pickup", "tshirt", "tty", "tv", "umbrella", "umbrella-beach", "underline", "undo", "undo-alt", "universal-access", "university", "unlink", "unlock", "unlock-alt", "upload", "user", "user-alt", "user-alt-slash", "user-astronaut", "user-check", "user-circle", "user-clock", "user-cog", "user-edit", "user-friends", "user-graduate", "user-injured", "user-lock", "user-md", "user-minus", "user-ninja", "user-plus", "user-secret", "user-shield", "user-slash", "user-tag", "user-tie", "user-times", "users", "users-cog", "utensil-spoon", "utensils", "vector-square", "venus", "venus-double", "venus-mars", "vial", "vials", "video", "video-slash", "vihara", "volleyball-ball", "volume-down", "volume-mute", "volume-off", "volume-up", "walking", "wallet", "warehouse", "weight", "weight-hanging", "wheelchair", "wifi", "wind", "window-close", "window-maximize", "window-minimize", "window-restore", "wine-bottle", "wine-glass", "wine-glass-alt", "won-sign", "wrench", "x-ray", "yen-sign", "yin-yang"],
   };
@@ -748,10 +748,11 @@
     Bliss.bind(btn, 'click', function(e){
       var partialName = Mavo.all.insert_dialog.root.children.partial.value.trim();
       var data_key = Mavo.all.insert_dialog.root.children.data_key.value.trim();
-      var globalSection
-      if(data_key) {
+      var section_type = Mavo.all.insert_dialog.root.children.section_type.value;
+      var globalSection;
+      if(data_key && 'global' === section_type) {
         globalSection = __get(gtpb.site_app.params.global_section, data_key);
-        partialName = partialName || globalSection && globalSection.partial;
+        partialName = globalSection && globalSection.partial;
       }
 
       if (!partialName || !gtpb.site_app.params.js_partial[partialName] && !gtpb.partials[partialName]) {
@@ -1382,6 +1383,7 @@
     gtpb.site_app._id = prevSiteData._id;
     gtpb.site_app._rev = prevSiteData._rev;
     gtpb.site_app.params = gtpb.site_app.params || {};
+    Mavo.all.site_app.render(gtpb.site_app);
     renderPageFromData({data: Mavo.all.page_app.getData()});
   }
 
@@ -1481,9 +1483,16 @@
     if (this && this.mavo) {
       var classV = arguments[3];
       if(arguments[2]){
-        Bliss.$(arguments[2], arguments[4]?document:this.mavo.element).forEach(function(elem){
-          elem.classList.toggle(classV);
-        });
+        if(arguments[2].indexOf('mavo.') > -1) {
+          // access element by mavo path
+          var elem = __get(this, arguments[2]);
+          elem && elem.classList && elem.classList.toggle(classV);
+        } else {
+          // look for element in DOM.
+          Bliss.$(arguments[2], arguments[4]?document:this.mavo.element).forEach(function(elem){
+            elem.classList.toggle(classV);
+          });
+        }
       } else {
         this.element.classList.toggle(classV);
       }
@@ -1497,12 +1506,10 @@
   gtpb.actions.replaceNodeClass = function() {
     if (this && this.mavo ) {
       if (this.value == this.previousValue) {
-        console.log('abort. still updating ui for value', this.previousValue);
         return;
       }
       var elem = __get(this, arguments[2]);
       if (!elem) {
-        console.log('target node element not found. make sure the path to element is correct. ')
         return;
       }
       var namePtn;
@@ -1600,7 +1607,7 @@
   };
 
   // replace target collection item class after clicking radio button
-  // example: invoke('replaceItemsClass', radio_node, 'name_of_collection_node')
+  // example: invoke('replaceItemsClass', radio_node, 'name_of_collection_node', 'selector')
   // this is set to a radio node with previous and new values
   // collection items do not support mv-value together with property
   // this is a workaround to replace old class with new class after clicking radio button
@@ -1625,8 +1632,12 @@
         // clicking on current selected value. abort updating ui.
         return;
       }
-      if (selector && coll.element.parentElement ) {
-        Bliss.$(selector, coll.element.parentElement).forEach(function(elem){
+      if (selector) {
+        // newly created collection element has no parentElement
+        var scope = coll.element.parentElement || __get(coll, 'children.0.element.parentElement')||
+        coll.element;
+
+        Bliss.$(selector, scope).forEach(function(elem){
           elem.classList.remove(oldClass);
           elem.classList.add(newClass);
         });
@@ -1642,14 +1653,49 @@
       }
       if ('Collection' === coll.nodeType )  {
         try {
-          //update template so newly created items will have equal width
-          coll.templateElement.classList.remove(oldClass);
-          coll.templateElement.classList.add(newClass);
+          if(selector) {
+            var t = coll.templateElement.querySelector(selector);
+            t && t.classList.remove(oldClass);
+            t && t.classList.add(newClass);
+          } else {
+            //update template so newly created items will have equal width
+            coll.templateElement.classList.remove(oldClass);
+            coll.templateElement.classList.add(newClass);
+          }
+
         } catch(e){}
       }
 
     });
   }
+
+  // extract iframe source from copied and pasted long embed code
+  // invoke('extractAttr', paste_area, 'root.children.embed_source', 'src', '.optionalSelector')
+  // the event listener can also delegate to dropdown input fields, as it does not require previous value.
+  gtpb.actions.extractAttr = function() {
+    var embedCode = this.value.trim();
+    if (!embedCode) return;
+    try {
+      var holder = document.createElement('div');
+      holder.insertAdjacentHTML('afterbegin', embedCode);
+      var src = holder.querySelector(arguments[4] || 'iframe').getAttribute(arguments[3]|| 'src');
+      //set rel=0 will not disable related video but rather display related video from same channel only.
+      if(src.indexOf('youtube') > -1) {
+        var url = new URL(src);
+        url.searchParams.set('rel', 0);
+        url.searchParams.set('modestbranding', 1);
+        src = url.toString();
+      }
+      __get(this.mavo, arguments[2]).setValue(src);
+    }catch(e){
+      console.log(e);
+      flashFeedback({
+        message: 'Error parsing the code.',
+        bg: 'bg-red'
+      });
+    }
+  };
+
   // set attribute to collection or children of group
   // invoke('setItemsAttr', mask_class, 'root.children.column', 'data-fa-mask', '.optionalSelector')
   // the event listener can also delegate to dropdown input fields, as it does not require previous value.

@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>An Overview of Go and Talk Page Builder</title>
+      <link>https://goandtalk.github.io/presentation/an-overview-of-go-and-talk-and-ui/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://goandtalk.github.io/presentation/an-overview-of-go-and-talk-and-ui/</guid>
+      <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for running on mobile devices such as tablets. The generated web pages are responsive.
+Go and Talk page builder starts to run when you browse a tutorial page. It looks for site id and document id from the navigation address, and uses the default ids if you are browsing a page for the first time.</description>
+    </item>
+    
+    <item>
       <title>Copying and Mixing Readymade Blocks</title>
       <link>https://goandtalk.github.io/presentation/copying-and-mixing-readymade-blocks/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
