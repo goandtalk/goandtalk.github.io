@@ -500,6 +500,7 @@ invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.elem
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -2081,6 +2082,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -6243,6 +6245,7 @@ w-100  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -10659,6 +10662,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -14682,6 +14686,7 @@ w-100  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -15136,6 +15141,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -15267,7 +15273,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     gtpb.partials['goandtalk/settings/pagesetting-editor-holder'] = `{tf{? o.edit_mode }tf}
 
 
-<section mv-app="page_app" mv-autosave="3" mv-storage="idb_local" class="page-setting-holder z-1 gt-mv-on min-vh-100 w-100 top-0 fixed off-canvas-dashboard [if(base_app_list.current_base_app='page_app','active','')]">
+<section mv-source-format="frontmatter" mv-bar="no-login" mv-app="page_app" mv-autosave="3" mv-storage="idb_local" class="page-setting-holder z-1 gt-mv-on min-vh-100 w-100 top-0 fixed off-canvas-dashboard [if(base_app_list.current_base_app='page_app','active','')]">
   
   <input hidden type="checkbox" property="manage_toolbar" mv-storage="none" />
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll pb6 pb3-l">
@@ -17290,7 +17296,7 @@ w-100  ph1 fl pt2 pb3
 
 {tf{? o.edit_mode }tf}
 
-<section mv-app="site_app" mv-autosave="3" mv-storage="idb_local" class="site-setting-holder z-1 gt-mv-on min-vh-100 w-100 top-0 fixed off-canvas-dashboard [if(base_app_list.current_base_app='site_app','active','')]">
+<section mv-source-format="config" mv-bar="no-login" mv-app="site_app" mv-autosave="3" mv-storage="idb_local" class="site-setting-holder z-1 gt-mv-on min-vh-100 w-100 top-0 fixed off-canvas-dashboard [if(base_app_list.current_base_app='site_app','active','')]">
   
   <input hidden type="checkbox" property="manage_toolbar" mv-storage="none" />
   <div class="relative w-100 w-90-ns mw7 mt4 vh-100 bg-near-white overflow-y-scroll pb6 pb3-l">
@@ -20158,6 +20164,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -24301,6 +24308,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -24828,6 +24836,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -26566,6 +26575,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -27416,6 +27426,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -28742,6 +28753,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -29406,6 +29418,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -30742,6 +30755,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}
@@ -31417,6 +31431,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   <button type="button" class="gt-setting-toggle dn pointer dim br2 pv1 ph2 mh1" mv-action="invoke('toggleClass', current_tab, '.off-canvas-dashboard', 'active'),invoke('toggleClass', current_tab, 'mavo.element', 'active')"><i class="fas fa-cog"></i></button>
   <button title="edit section" type="button" class="mv-edit pointer dn dim br2 pv1 ph2 mh1">Edit</button>
   <button title="save section" type="button" class="mv-save pointer dn dim br2 pv1 ph2 mh1">Save</button>
+  <button title="login" type="button" class="mv-login pointer dn dim br2 pv1 ph2 mh1">Login</button>
 </div>
 
 {tf{?}tf}

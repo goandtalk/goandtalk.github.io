@@ -168,6 +168,8 @@
     store: function(data, o){
       var _this = this;
       //changes to _rev is not updated in loaded data, and must be synced here
+      // data loaded from remote source may not have _id
+      data._id = gtpb[_this.mavo.id]._id;
       data._rev = gtpb[_this.mavo.id]._rev;
       gtpb[_this.mavo.id] = data;
       //skip serializing. PouchDB.put accepts object
@@ -344,6 +346,7 @@
   };
   // restore block template from hash table(map) m, and restore single quotes
   function prepareTemplate(m, str){
+    str = str || '';
     for (var h in m) {
       var rex = new RegExp(h, 'g');
       str = str.replace(rex, m[h]);
@@ -359,9 +362,18 @@
   function renderSection(o, p ) {
     var tplname = o.partial || o.data && o.data.partial;
     if (!tplname) return "";
-    var tplFn;
-    var partialString = o.partialString ||
-    prepareTemplate(gtpb.default.TemplateHash, gtpb.site_app.params.js_partial[tplname] || gtpb.partials[tplname]);
+    var tplFn, isDirty;
+    var partialString = o.partialString;
+    if(!partialString) {
+      var customBlock = gtpb.site_app.params.js_partial[tplname];
+      if(customBlock) {
+        isDirty = true;
+        partialString = prepareTemplate(gtpb.default.TemplateHash, customBlock);
+      }
+    }
+    if(!partialString) {
+      partialString = prepareTemplate(gtpb.default.TemplateHash, gtpb.partials[tplname]);
+    }
 
     try {
       tplFn = gtpb.cache[tplname];
@@ -383,7 +395,7 @@
       it = o.data || {};
     }
 
-    return tplFn(it, {
+    var out = tplFn(it, {
       _relurl: _relurl,
       __get: __get,
       edit_mode: p.edit_mode,
@@ -401,6 +413,7 @@
       md: window.MarkdownIt || markdownit({html: true}),
       sanitizer: DOMPurify,
     } );
+    return isDirty? DOMPurify.sanitize(out) : out;
 
   }
   /* @param {Array} sections, array of apps
@@ -1356,6 +1369,33 @@
 
   }
 
+//mainly used to load theme data from remote source
+Mavo.Formats.Config = Bliss.Class({
+	extends: Mavo.Formats.Base,
+	static: {
+		parse: serialized => Promise.resolve(serialized? parseSiteData(serialized) : null),
+		stringify: data => Promise.resolve(tomlify.toToml(data, {space: 2})),
+		extensions: [".toml", ".yaml", ".json"]
+	}
+});
+
+Mavo.Formats.FrontMatter = Bliss.Class({
+	extends: Mavo.Formats.Base,
+	static: {
+		parse: serialized => {
+      var pageData = serialized? parseFrontMatter(serialized) : null;
+      if(pageData) { renderPageFromData(pageData); }
+      return Promise.resolve(pageData);
+    },
+		stringify: data => Promise.resolve(stringifyPage(Mavo.all.page_app.root.children.exp_data_format)),
+		extensions: [".md"]
+	}
+});
+
+
+
+
+
   gtpb.actions = gtpb.actions || {};
 
   function parseSiteData(str) {
@@ -1384,6 +1424,8 @@
     gtpb.site_app._rev = prevSiteData._rev;
     gtpb.site_app.params = gtpb.site_app.params || {};
     Mavo.all.site_app.render(gtpb.site_app);
+    Mavo.all.site_app.unsavedChanges = true;
+    Mavo.all.site_app.bar.save.click();
     renderPageFromData({data: Mavo.all.page_app.getData()});
   }
 
@@ -1733,6 +1775,8 @@
     if(!open_doc_id || open_doc_id === gtpb.current_doc) return;
     var url = new URL(document.location);
     url.searchParams.set('doc', open_doc_id);
+    url.searchParams.delete('site_app-source');
+    url.searchParams.delete('page_app-source');
     window.location.href = url.toString();
   };
 
@@ -1809,6 +1853,8 @@
     var url = new URL(document.location);
     url.searchParams.set('site', open_site_id);
     url.searchParams.delete('doc');
+    url.searchParams.delete('site_app-source');
+    url.searchParams.delete('page_app-source');
     window.location.href = url.toString();
   };
   // arguments: 0: "name of function", 1: "optional name of node", 2: "what to delete"
