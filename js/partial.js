@@ -813,7 +813,7 @@ invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.elem
   
 	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
-			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
+			<i class="fas fa-info" data-fa-mask="fas fa-square" data-fa-transform="shrink-6" ></i><span class="dn di-ns"> Background Icon </span>
 		
 	</button>&nbsp;
 
@@ -1177,7 +1177,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Source URL 
+        <div>Image Source URL 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src, '')">X</span>
@@ -1205,7 +1205,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the background image.
+            This is the full URL of the background image. You may paste the full url here, or select an image from one of the sources below.
           </div>
         
       </div>
@@ -1315,6 +1315,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
       
       <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', bg_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
@@ -1324,7 +1378,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Auto Responsive 
+        <div>Unsplash Auto Responsive 
         
         
         </div>
@@ -1498,7 +1552,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the base image. Other images are rendered on top of it.
+            This is the full URL of the base image. Other images are rendered on top of it. You may paste the URL here, or select from one of the sources below.
           </div>
         
       </div>
@@ -1550,6 +1604,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the slow motion animation of the image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', base_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -4357,7 +4465,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
 	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
-			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
+			<i class="fas fa-info" data-fa-mask="fas fa-square" data-fa-transform="shrink-6" ></i><span class="dn di-ns"> Background Icon </span>
 		
 	</button>&nbsp;
 
@@ -4909,6 +5017,60 @@ w-100  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', hl_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(hl_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image_source, if(contains(hl_image_repo, &#39;http&#39;), hl_image_repo, image_source))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="hl_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',hl_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -5135,7 +5297,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Source URL 
+        <div>Image Source URL 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src, '')">X</span>
@@ -5163,7 +5325,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the background image.
+            This is the full URL of the background image. You may paste the full url here, or select an image from one of the sources below.
           </div>
         
       </div>
@@ -5273,6 +5435,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
       
       <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', bg_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
@@ -5282,7 +5498,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Auto Responsive 
+        <div>Unsplash Auto Responsive 
         
         
         </div>
@@ -5456,7 +5672,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the base image. Other images are rendered on top of it.
+            This is the full URL of the base image. Other images are rendered on top of it. You may paste the URL here, or select from one of the sources below.
           </div>
         
       </div>
@@ -5508,6 +5724,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the slow motion animation of the image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', base_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -8449,7 +8719,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
 	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
-			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
+			<i class="fas fa-info" data-fa-mask="fas fa-square" data-fa-transform="shrink-6" ></i><span class="dn di-ns"> Background Icon </span>
 		
 	</button>&nbsp;
 
@@ -8985,6 +9255,60 @@ w-100  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', hl_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(hl_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image_source, if(contains(hl_image_repo, &#39;http&#39;), hl_image_repo, image_source))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="hl_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',hl_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -9211,7 +9535,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Source URL 
+        <div>Image Source URL 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src, '')">X</span>
@@ -9239,7 +9563,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the background image.
+            This is the full URL of the background image. You may paste the full url here, or select an image from one of the sources below.
           </div>
         
       </div>
@@ -9349,6 +9673,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
       
       <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', bg_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
@@ -9358,7 +9736,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Auto Responsive 
+        <div>Unsplash Auto Responsive 
         
         
         </div>
@@ -9532,7 +9910,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the base image. Other images are rendered on top of it.
+            This is the full URL of the base image. Other images are rendered on top of it. You may paste the URL here, or select from one of the sources below.
           </div>
         
       </div>
@@ -9584,6 +9962,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the slow motion animation of the image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', base_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -10683,7 +11115,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
 <section 675275c791df5c494218febd9c0cde06eea2ae6b mv-storage="idb_array" mv-autosave="3" mv-app="{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}" mv-bar="edit save" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-  class="alternate gt-mv-on relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
+  class="min-vh-100 alternate gt-mv-on relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
   {enc{! o.__get(it, \u0027appearance.section_background\u0027) || \u0027\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.slide_animation\u0027) || \u0027fadeIn\u0027 }enc}
   {enc{! o.__get(it, \u0027appearance.text_color\u0027) || \u0027\u0027 }enc}
@@ -12821,7 +13253,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
 	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
-			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
+			<i class="fas fa-info" data-fa-mask="fas fa-square" data-fa-transform="shrink-6" ></i><span class="dn di-ns"> Background Icon </span>
 		
 	</button>&nbsp;
 
@@ -13350,6 +13782,60 @@ w-100  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', hl_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(hl_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image_source, if(contains(hl_image_repo, &#39;http&#39;), hl_image_repo, image_source))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="hl_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',hl_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -13576,7 +14062,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Source URL 
+        <div>Image Source URL 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src, '')">X</span>
@@ -13604,7 +14090,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the background image.
+            This is the full URL of the background image. You may paste the full url here, or select an image from one of the sources below.
           </div>
         
       </div>
@@ -13714,6 +14200,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
       
       <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', bg_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
@@ -13723,7 +14263,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Auto Responsive 
+        <div>Unsplash Auto Responsive 
         
         
         </div>
@@ -13897,7 +14437,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the base image. Other images are rendered on top of it.
+            This is the full URL of the base image. Other images are rendered on top of it. You may paste the URL here, or select from one of the sources below.
           </div>
         
       </div>
@@ -13949,6 +14489,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the slow motion animation of the image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', base_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -15314,6 +15908,13 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 		
 	</button>&nbsp;
 
+  
+	<button data-toggle-tab="page_time" mv-action="set(current_tab,'page_time')" class="[if(current_tab='page_time', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-clock"></i><span class="dn di-ns"> Time Meta </span>
+		
+	</button>&nbsp;
+
 </div>
 
 <div class="tab-content pt3 ">
@@ -16147,6 +16748,182 @@ w-100  ph1 fl pt2 pb3
 	
 	</div>
 
+	
+	<div data-pane="page_time" class="gt-tab-pane [if(current_tab='page_time', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Time Meta</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Publish Date 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(publishdate, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="publishdate" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+
+        <div>Last Modified 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(lastmod, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="lastmod" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Permanent Link 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(permalink, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="permalink" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is used to generate permanent link meta tag.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Keywords 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(keywords, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="keywords" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is used to generate keywords meta tag.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
 
 </div>
 
@@ -16199,6 +16976,13 @@ w-100  ph1 fl pt2 pb3
 	<button data-toggle-tab="page_import_data" mv-action="set(manage_tab,'page_import_data')" class="[if(manage_tab='page_import_data', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-file-import"></i><span class="dn di-ns"> Import Data </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="page_open_remote" mv-action="set(manage_tab,'page_open_remote')" class="[if(manage_tab='page_open_remote', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-link"></i><span class="dn di-ns"> Remote Page </span>
 		
 	</button>&nbsp;
 
@@ -17183,6 +17967,127 @@ w-100  ph1 fl pt2 pb3
 	
 	</div>
 
+	
+	<div data-pane="page_open_remote" class="gt-tab-pane [if(manage_tab='page_open_remote', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Remote Page</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Article Folder 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(ghdata_article_dir, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="ghdata_article_dir" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the folder of the articles, defaults to content. You can set the data repository in site settings.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Article <span class="pointer dib pv1 ph2 mh2"
+    mv-action="invoke('fetchGithubArticleList', ghdata_article)"
+    ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+    
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(ghdata_article, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="ghdata_article" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_article"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',ghdata_article)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the name of the article. Click on the refresh icon to fetch file list after changing the article folder.
+          </div>
+        
+      </div>
+       
+    
+      
+        <div class="w-100 pv4 tc">
+          <button type="button" mv-action="invoke(&#39;loadRemotePageData&#39;, load_remote_page)" class="w-100 w-50-ns dark-gray bg-light-blue ba b--black-10 pv2 no-underline grow dib v-mid" > Load Remote Page </button>
+        </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
 
 </div>
 
@@ -17373,6 +18278,13 @@ w-100  ph1 fl pt2 pb3
 	<button data-toggle-tab="site_theme_author" mv-action="set(current_tab,'site_theme_author')" class="[if(current_tab='site_theme_author', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-paint-roller"></i><span class="dn di-ns"> Theme Author </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="site_github" mv-action="set(current_tab,'site_github')" class="[if(current_tab='site_github', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-server"></i><span class="dn di-ns"> Github </span>
 		
 	</button>&nbsp;
 
@@ -18872,6 +19784,256 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	
 	</div>
 
+	
+	<div data-pane="site_github" class="gt-tab-pane [if(current_tab='site_github', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Github</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Repo Owner 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(gh_repo_owner, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="gh_repo_owner" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is your user name or organization name on Github.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Website Repo Name 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(gh_repo_name, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="gh_repo_name" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the name of the repository to publish web pages.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Image Folder 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(gh_image_dir, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="gh_image_dir" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the name of the image folder, defaults to images. You may change and fetch image list from that folder. 
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Repo Branch 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(gh_repo_branch, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="gh_repo_branch" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the name of the repo branch, defaults to master.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Select Logo File <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', hl_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(hl_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(logo_url, if(contains(hl_image_repo, &#39;http&#39;), hl_image_repo, logo_url))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="hl_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',hl_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            If you have uploaded your logo, click refresh icon to update image list, and click the dropdown icon to search for your logo.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
 
 </div>
 
@@ -18910,6 +20072,13 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	<button data-toggle-tab="site_import_data" mv-action="set(manage_tab,'site_import_data')" class="[if(manage_tab='site_import_data', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-file-import"></i><span class="dn di-ns"> Import Data </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="site_open_remote" mv-action="set(manage_tab,'site_open_remote')" class="[if(manage_tab='site_open_remote', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-link"></i><span class="dn di-ns"> Remote Setting </span>
 		
 	</button>&nbsp;
 
@@ -19054,7 +20223,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            The base URL where the site will be served.
+            The base URL where the site will be served. The URL forms part of the image URL if you select images uploaded to Github.
           </div>
         
       </div>
@@ -19062,7 +20231,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
       
       <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+w-100  ph1 fl pt2 pb3
  ">
         
           <span class="gt-label mh1 black-60 fr w2 v-mid tc">
@@ -19106,8 +20275,86 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
        
     
       
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Settings Exported 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="check_backup_config" type="checkbox" mv-storage="none" 
+          class=""
+          
+          id="chk--check_backup_config-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--check_backup_config-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            I have backed up site settings.
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Before deleting a site, tick this box to confirm you have backed up site settings.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Pages Exported 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="check_backup_pages" type="checkbox" mv-storage="none" 
+          class=""
+          
+          id="chk--check_backup_pages-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--check_backup_pages-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            I have backed up all pages.
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Before deleting a site, tick this box to confirm you have backed up all pages.
+          </div>
+        
+      </div>
+       
+    
+      
         <div class="w-100 pv4 tc">
-          <button type="button" mv-action="invoke(&#39;confirmDelete&#39;, &#39;&#39;, &#39;site&#39;)" class="w-100 w-50-ns bg-red ba b--black-10 pv2" > Delete Site </button>
+          <button type="button" mv-action="invoke(&#39;confirmDelete&#39;, &#39;&#39;, &#39;site&#39;)" class="w-100 w-50-ns bg-red ba b--black-10 pv2 mv3" > Delete Site </button>
         </div>
        
     
@@ -19172,7 +20419,7 @@ w-100  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            Search and select site to edit.
+            Search and select site to edit, or enter an id to create a new site project. 
           </div>
         
       </div>
@@ -19279,7 +20526,7 @@ w-100  ph1 fl pt2 pb3
  ">
         
 
-        <div>Page Data 
+        <div>Site Data 
         
           <span class="copy-data ph1 pointer"
            data-clipboard-target=".site-export-data" 
@@ -19333,7 +20580,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
 
-        <div>Import Site Config From File 
+        <div>Import From Local File 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(import_site_file, '')">X</span>
@@ -19390,7 +20637,164 @@ w-100  ph1 fl pt2 pb3
     
       
         <div class="w-100 pv4 tc">
-          <button type="button" mv-action="invoke(&#39;importSiteData&#39;, data_input)" class="import-site-data w-100 w-50-ns dark-gray bg-light-blue ba b--black-10 pv2 no-underline grow dib v-mid" > Import Site Config Data </button>
+          <button type="button" mv-action="invoke(&#39;importSiteData&#39;, data_input)" class="import-site-data w-100 w-50-ns dark-gray bg-light-blue ba b--black-10 pv2 no-underline grow dib v-mid" > Import Pasted Data </button>
+        </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="site_open_remote" class="gt-tab-pane [if(manage_tab='site_open_remote', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Remote Setting</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Data Repo Owner 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(ghdata_repo_owner, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="ghdata_repo_owner" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is your user name or organization name on Github.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Data Repo Name 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(ghdata_repo_name, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="ghdata_repo_name" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the name of the repository to publish web pages.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Data Repo Reference 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(ghdata_repo_ref, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="ghdata_repo_ref" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the branch or tag of data repository, defaults to master.
+          </div>
+        
+      </div>
+       
+    
+      
+        <div class="w-100 pv4 tc">
+          <button type="button" mv-action="invoke(&#39;loadRemoteSiteData&#39;, load_remote_config)" class="w-100 w-50-ns dark-gray bg-light-blue ba b--black-10 pv2 no-underline grow dib v-mid" > Load Remote Site Setting </button>
         </div>
        
     
@@ -19430,9 +20834,29 @@ w-100  ph1 fl pt2 pb3
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
 
+    <meta name="description" content="{enc{! it.description || '' }enc}">
+
+    <meta property="og:title" content="{enc{! it.title }enc}" />
+    <meta property="og:description" content="{enc{! it.description }enc}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{enc{! it.permalink }enc}" />
+    <meta property="article:published_time" content="{enc{! it.publishdate }enc}"/>
+    <meta property="article:modified_time" content="{enc{! it.lastmod }enc}"/>
+
+    <meta itemprop="name" content="{enc{! it.title || '' }enc}">
+    <meta itemprop="description" content="{enc{! it.description || ''}enc}">
+    <meta itemprop="datePublished" content="{enc{! it.publishdate }enc}" />
+    <meta itemprop="dateModified" content="{enc{! it.lastmod }enc}" />
+    <meta itemprop="keywords" content="{enc{! it.keywords || '' }enc}" />
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="{enc{! it.title || '' }enc}"/>
+    <meta name="twitter:description" content="{enc{! it.description || '' }enc}"/>
+
     <link href="{v{= o._relurl('/css/webslides.css?v=0.0002') }v}" rel="stylesheet" />
     <link href="{v{= o._relurl('/css/tachyons.min.css?v=0.0001') }v}" rel="stylesheet" />
     <link href="{v{= o._relurl('/css/styles.css') }v}" rel="stylesheet" />
+
     <style>
       .primary-color-dark {
         color:  {v{= o.styles.primary_color_dark }v};
@@ -19546,9 +20970,13 @@ w-100  ph1 fl pt2 pb3
     </footer>
 
     <script src="{v{= o._relurl('/js/webslides.min.js?v=0.0002') }v}"></script>
+    {tf{? o.export_local }tf}
     <script src="{v{= o._relurl('/js/lib/fa/solid.min.js') }v}" data-auto-replace-svg="nest"></script>
     <script src="{v{= o._relurl('/js/lib/fa/fontawesome.min.js') }v}" data-auto-replace-svg="nest"></script>
-
+    {tf{??}tf}
+    <script src="https://use.fontawesome.com/releases/v5.7.1/js/solid.js" integrity="sha384-6FXzJ8R8IC4v/SKPI8oOcRrUkJU8uvFK6YJ4eDY11bJQz4lRw5/wGthflEOX8hjL" crossorigin="anonymous" data-auto-replace-svg="nest"></script>
+    <script src="https://use.fontawesome.com/releases/v5.7.1/js/fontawesome.js" integrity="sha384-Qmms7kHsbqYnKkSwiePYzreT+ufFVSNBhfLOEp0sEEfEVdORDs/aEnGaJy/l4eoy" crossorigin="anonymous" data-auto-replace-svg="nest"></script>
+    {tf{?}tf}
   </body>
 </html>
 `;
@@ -22330,7 +23758,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
 	<button data-toggle-tab="bg_icon" mv-action="set(current_tab,'bg_icon')" class="[if(current_tab='bg_icon', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
-			<i class="fas fa-square"></i><span class="dn di-ns"> Background Icon </span>
+			<i class="fas fa-info" data-fa-mask="fas fa-square" data-fa-transform="shrink-6" ></i><span class="dn di-ns"> Background Icon </span>
 		
 	</button>&nbsp;
 
@@ -22866,6 +24294,60 @@ w-100  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', hl_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(hl_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image_source, if(contains(hl_image_repo, &#39;http&#39;), hl_image_repo, image_source))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="hl_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',hl_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -23092,7 +24574,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Source URL 
+        <div>Image Source URL 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src, '')">X</span>
@@ -23120,7 +24602,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the background image.
+            This is the full URL of the background image. You may paste the full url here, or select an image from one of the sources below.
           </div>
         
       </div>
@@ -23230,6 +24712,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
       
       <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', bg_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
 w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  ">
         
@@ -23239,7 +24775,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Auto Responsive 
+        <div>Unsplash Auto Responsive 
         
         
         </div>
@@ -23413,7 +24949,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            This is the full URL of the base image. Other images are rendered on top of it.
+            This is the full URL of the base image. Other images are rendered on top of it. You may paste the URL here, or select from one of the sources below.
           </div>
         
       </div>
@@ -23465,6 +25001,60 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the slow motion animation of the image.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', base_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -27460,8 +29050,80 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       {loop{~ it.column :item:idx }loop}
 
       <div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528
-      class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m  pa3 flex grow
+      class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m  pa3 flex flex-wrap grow
       {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
+      675275c791df5c494218febd9c0cde06eea2ae6b
+      <div class="dn show-in-edit skip-zoom-clone w-100 ">
+        
+        
+
+<div >
+  <h3 class="mt2">Media Library</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', card_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+      <span title="toggle stay on top" class="dib mh2 pv1 ph2 pointer "
+      mv-action="invoke('promoteSection', card_image_repo)"
+      ><i class="fas fa-window-restore"></i></span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image_source, if(contains(card_image_repo, &#39;http&#39;), card_image_repo, image_source))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="card_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+      </div>
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
       
         <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
 
@@ -27476,6 +29138,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             {enc{! o.__get(it, \u0027images_border_color\u0027) || \u0027\u0027 }enc}
             {enc{! o.__get(it, \u0027images_padding\u0027) || \u0027\u0027 }enc}
             " 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
+
             35fe3a9616151be1e9a9abc33ece88d44bd47528
           </div>
           <div class="{enc{! o.__get(it, \u0027card_body\u0027) || \u0027\u0027 }enc}"
@@ -27498,8 +29161,78 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
         675275c791df5c494218febd9c0cde06eea2ae6b
         <div property="column" mv-multiple
-        class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m pa3 flex grow
+        class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m pa3 flex flex-wrap grow
         {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
+        <div class="dn show-in-edit skip-zoom-clone w-100">
+          
+          
+
+<div >
+  <h3 class="mt2">Media Library</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', card_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+      <span title="toggle stay on top" class="dib mh2 pv1 ph2 pointer "
+      mv-action="invoke('promoteSection', card_image_repo)"
+      ><i class="fas fa-window-restore"></i></span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image_source, if(contains(card_image_repo, &#39;http&#39;), card_image_repo, image_source))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="card_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+        </div>
           <div class="w-100 pa2 [card_background]">
 
             <div class="mb2 tc [card_header]">
@@ -29452,8 +31185,80 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       {loop{~ it.column :item:idx }loop}
 
       <div 675275c791df5c494218febd9c0cde06eea2ae6b property="column" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528
-      class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-25-l\u0027 }enc} fl w-100 w-50-m  pa3 flex grow
+      class="w-{enc{! o.__get(item, \u0027column_width\u0027) || \u002720\u0027 }enc}-ns fl w-100  pa3 flex flex-wrap grow
       {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
+      675275c791df5c494218febd9c0cde06eea2ae6b
+      <div class="dn show-in-edit skip-zoom-clone w-100 ">
+        
+        
+
+<div >
+  <h3 class="mt2">Media Library</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', card_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+      <span title="toggle stay on top" class="dib mh2 pv1 ph2 pointer "
+      mv-action="invoke('promoteSection', card_image_repo)"
+      ><i class="fas fa-window-restore"></i></span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image_source, if(contains(card_image_repo, &#39;http&#39;), card_image_repo, image_source))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="card_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+      </div>
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
       
         <div 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
           675275c791df5c494218febd9c0cde06eea2ae6b
@@ -29464,31 +31269,17 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             <input class=" w-100 pv2" property="column_width" type="range" min="10" max="100" step="10" value="20"  />
           </div>
           35fe3a9616151be1e9a9abc33ece88d44bd47528
-          <div class="mb2 tc {enc{! o.__get(it, \u0027card_header\u0027) || \u0027\u0027 }enc}"
-          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'mb2 tc ' & card_header" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-          >
           {tf{? o.edit_mode || o.__get(item, \u0027image_source\u0027) }tf}
 
-            <img class="mw-100
-            {enc{! o.__get(it, \u0027images_class\u0027) || \u0027\u0027 }enc}
-            {enc{! o.__get(it, \u0027images_border\u0027) || \u0027\u0027 }enc}
-            {enc{! o.__get(it, \u0027images_border_color\u0027) || \u0027\u0027 }enc}
-            {enc{! o.__get(it, \u0027images_padding\u0027) || \u0027\u0027 }enc}
-            " 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
-            35fe3a9616151be1e9a9abc33ece88d44bd47528
+          <div class="relative mb2 tc">
+            <img class="mw-100 {enc{! o.__get(it, \u0027images_class\u0027) || \u0027br0\u0027 }enc}" 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
           </div>
-          <div class="{enc{! o.__get(it, \u0027card_body\u0027) || \u0027\u0027 }enc}"
-          675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="card_body" 35fe3a9616151be1e9a9abc33ece88d44bd47528
-          >
-            <h3  class="card-title {enc{! o.__get(it, \u0027card_title\u0027) || \u0027tc\u0027 }enc}"
-            675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'card-title ' & card_title"  35fe3a9616151be1e9a9abc33ece88d44bd47528
-            >
-              <span property="title">{enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc}</span>
-            </h3>
-            <p class="card-sub-title" 675275c791df5c494218febd9c0cde06eea2ae6b property="sub_title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  >{enc{! o.__get(item, \u0027sub_title\u0027) || \u0027\u0027 }enc}</p>
-            <div class="pt1 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
+          35fe3a9616151be1e9a9abc33ece88d44bd47528
+
+          <h3 675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class=""> {enc{! o.__get(item, \u0027title\u0027) || \u0027\u0027 }enc} </h3>
+          <div class="pt1 lh-copy markdown" 675275c791df5c494218febd9c0cde06eea2ae6b property="description" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {v{= o.sanitizer.sanitize(o.md.render(o.__get(item, \u0027description\u0027) || \u0027\u0027 || \u0027\u0027 )) }v}
  </div>
-          </div>
+
         </div>
       </div>
       {loop{~}loop}
@@ -29497,23 +31288,88 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
         675275c791df5c494218febd9c0cde06eea2ae6b
         <div property="column" mv-multiple
-        class="{enc{! o.__get(it, \u0027column_class\u0027) || \u0027w-20-l\u0027 }enc} fl w-100 w-50-m pa3 flex grow
+        class="w-{enc{! o.__get(item, \u0027column_width\u0027) || \u002720\u0027 }enc}-ns w-100 pa3 flex flex-wrap grow
         {enc{! o.__get(it, \u0027resize_column\u0027) || \u0027flex-auto\u0027 }enc}">
-          <div class="w-100 pa2 [card_background]">
-            <div class="dn show-in-edit w-100 ">
+        <div class="dn show-in-edit skip-zoom-clone w-100 ">
+          
+          
+
+<div >
+  <h3 class="mt2">Media Library</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchGithubImageList', card_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+      <span title="toggle stay on top" class="dib mh2 pv1 ph2 pointer "
+      mv-action="invoke('promoteSection', card_image_repo)"
+      ><i class="fas fa-window-restore"></i></span>
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="set(image_source, if(contains(card_image_repo, &#39;http&#39;), card_image_repo, image_source))" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="card_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',card_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+        </div>
+          <div mv-attribute="class" mv-value="'w-100 pa2 ' & card_background" class="w-100 pa2 {enc{! o.__get(it, \u0027appearance.card_background\u0027) || \u0027\u0027 }enc}">
+            <div class="dn show-in-edit">
               <input class="w-100 pv2" property="column_width" type="range" min="10" max="100" step="10" value="20" />
             </div>
+            <div class="relative mb2 tc">
+              <img class="mw-100 mv-empty {enc{! o.__get(it, \u0027images_class\u0027) || \u0027br0\u0027 }enc}" alt="" property="image_source"  src="" >
+            </div>
 
-            <div class="mb2 tc [card_header]">
-              <img class="mw-100 mv-empty [images_class] [images_border] [images_border_color] [images_padding] "  alt="" property="image_source"  src="" >
-            </div>
-            <div class="[if(card_body, card_body, 'ph1')]">
-              <h3 class="card-title [if(card_title, card_title, 'tc')]">
-                <span property="title" class="mv-empty"></span>
-              </h3>
-              <p property="sub_title" class="card-sub-title mv-empty"></p>
-              <div class="pt1 lh-copy markdown mv-empty" property="description"></div>
-            </div>
+            <h3 property="title" class="mv-empty"></h3>
+            <div class="pt1 lh-copy markdown mv-empty" property="description"></div>
           </div>
         </div>
         35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -29949,7 +31805,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             id="radio-73-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             name="radio-73-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-25-l"  
+            value="w-25-l"   checked 
             />
             <label class="flex-auto ph2" for="radio-73-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             4 
@@ -29963,7 +31819,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             id="radio-73-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             name="radio-73-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            value="w-20-l"   checked 
+            value="w-20-l"  
             />
             <label class="flex-auto ph2" for="radio-73-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             5 

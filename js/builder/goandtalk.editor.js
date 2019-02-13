@@ -1,4 +1,10 @@
-/* editor code for edge 12 and above, no support for ie */
+/* Go and Talk Page Bbuilder
+* (c) 2019 goandmake.app. All rights reserved.
+* this computer program is proprietary.
+* it is free for non-commercial use.
+* commercial use and redistribution are prohibited.
+* editor code for edge 12 and above, no support for ie
+*/
 "use strict";
 
 (function(){
@@ -15,8 +21,9 @@
   function getDocID(){
     if(gtpb.current_doc) return gtpb.current_doc;
     var params = (new URL(window.location)).searchParams;
-    gtpb.current_doc = params.get('doc') || localStorage.getItem(window.location.pathname + "#current_doc") || gtpb.default.filepath_0 || (window.location.pathname.replace(/\//,"") + "_index.md");
-    return gtpb.current_doc.replace(/^_/, '/_'); //PouchDB reserves leading _ for internal use, so we will use /_index.md as id
+    //the filepath is the path relative to content folder.
+    gtpb.current_doc = params.get('doc') || localStorage.getItem(window.location.pathname + "#current_doc") || (window.location.pathname === "/"? "content/_index.md" : ("content" + window.location.pathname.replace(/\/$/,"") + ".md"));
+    return gtpb.current_doc.replace(/^_/, 'content/_'); //PouchDB reserves leading _ for internal use, so we will use /_index.md as id
   }
   //variables available in functions.
   var site_id = getSiteID();
@@ -402,6 +409,7 @@
       id: o.id || randomlc(6,'s'),
       site: gtpb.site_app,
       page: gtpb.page_app,
+      export_local: p.export_local,
 
       logo_url: gtpb.page_app.logo_url || gtpb.site_app.params.logo_url,
       main_menu_align: gtpb.page_app.main_menu_align || gtpb.site_app.params.main_menu_align,
@@ -533,7 +541,36 @@
       "id": "awesomplete_list_" + this.count + "_item_" + item_id
     });
   }
+  function encodeHTML(raw) {
 
+    if ('undefined' === typeof raw) return '';
+
+    var HTML_ENTITIES =  {
+      '<': '&lt;',
+      '>': '&gt;',
+      '&': '&amp;',
+      '"': '&quot;',
+      "'": '&#x27;',
+//      '/': '&#x2f;',
+    };
+
+    return 'string' !== typeof raw ? raw : raw.replace(/[&<>"']/igm, function(k){
+        return HTML_ENTITIES[k];
+    });
+  }
+  // display image from cached list for selection.
+  function previewRepoImage (text, input, item_id) {
+    var html = '<div class="flex"><div class="w4 h4"><img class="of-scale-down" src="' + encodeURI(gtpb.site_app.baseurl + '/'  + text)  + '"> </div> <span class="ph3 flex-auto">' + encodeHTML(text) +'</span></div>';
+    return $.create("li", {
+      innerHTML: html,
+      "aria-selected": "false",
+      "id": "awesomplete_list_" + this.count + "_item_" + item_id
+    });
+  }
+  // replace the dropdown input value with a full image source url
+  function replaceRepoImageLink(text) {
+	   this.input.value = encodeURI(gtpb.site_app.baseurl + '/' + text);
+   }
   /* The dropdown icon must be the immediate next sibling of input element  */
   function initDropdownInput(elem) {
 
@@ -548,12 +585,16 @@
       	});
       }
     }
-    if(data_path && dropdown_datalist[data_path]) {
-      opt.list = dropdown_datalist[data_path];
+    //data_path could be directory listing from github repo
+    var datalist = data_path && (gtpb.site_app.params[data_path] || dropdown_datalist[data_path])||[];
 
-      if("fas_list" == data_path) {
-        opt.item = previewFaIcon;
-      }
+    opt.list = datalist;
+
+    if("fas_list" == data_path) {
+      opt.item = previewFaIcon;
+    } else if ("gh_repo_image" == data_path) {
+      opt.item = previewRepoImage;
+      opt.replace = replaceRepoImageLink;
     }
 
     var combo = new Awesomplete(elem, opt );
@@ -788,7 +829,7 @@
         //somehow the empty string is required for Mavo to render textarea for content.
         // this might be a bug in Mavo.
         newSec.data = {
-          title: "New Section",
+          title: "New",
           content: "",
         };
       }
@@ -856,6 +897,9 @@
     .then(function(){
       var url = new URL(document.location);
       url.searchParams.delete('site');
+      url.searchParams.delete('doc');
+      url.searchParams.delete('site_app-source');
+      url.searchParams.delete('page_app-source');
       var newurl = url.toString();
       if(newurl === document.location.href){
         document.location.reload();
@@ -962,58 +1006,6 @@
 
   //permanent elements and listeners
   function registerGlobalToggle(elem){
-    /*
-    var vbar = elem.querySelector('.gt-vbar');
-    if(!vbar){
-      console.log('unable to find .gt-bar');
-      return;
-    }
-    //delegated listener on vbar (button holder), e.target could be button or i/svg tag
-    vbar.addEventListener('click', function(e){
-      var btn = e.target.closest('button.gt-global-toggle');
-      if(btn){
-        //target is css selector, eg .page-setting-holder
-        var target = btn.getAttribute('data-action');
-        //close active window
-        var openD = gtpb.openSettingDialog;
-        if(openD) {
-          delete gtpb.openSettingDialog;
-          openD.classList.remove('active');
-          if(openD.classList.contains(target.replace(/^\./,''))){
-            return;
-          }
-        }
-        var targetD = elem.querySelector(target);
-        if(!targetD){
-          console.log('unable to find', target);
-          return;
-        }
-        targetD.classList.add('active');
-        gtpb.openSettingDialog =  targetD;
-      }
-    });
-
-    var closeSettingDialog = function(e){
-      gtpb.openSettingDialog && gtpb.openSettingDialog.classList.remove('active');
-      delete gtpb.openSettingDialog;
-    };
-    Bliss.$('.close-setting').forEach(function(btn){
-      btn.addEventListener('click',closeSettingDialog,false);
-    });
-    //cache elements
-    var manageSiteElems = Bliss.$('.manage-site');
-    var toggleElem = function(elem){elem.classList.toggle('dn')};
-    Bliss('.toggle-manage-site').addEventListener('click', function(e){
-      manageSiteElems.forEach(toggleElem);
-      this.classList.toggle('ba');
-    });
-    var managePageElems = Bliss.$('.manage-page');
-    Bliss('.toggle-manage-page').addEventListener('click', function(e){
-      managePageElems.forEach(toggleElem);
-      this.classList.toggle('ba');
-    });
-
-    */
 
     //delete section dialog. mv-app not required.
     Bliss.$('.close-dialog').forEach(function(btn){
@@ -1033,24 +1025,6 @@
         }
       });
     });
-    /*
-    // clear a long string of selected partial to start again.
-    document.querySelector('.reset-select-partial').addEventListener('click', function(e){
-      gtpb.selectPartial = gtpb.selectPartial || document.querySelector('input.select-partial');
-      gtpb.selectPartial.value = "";
-    });
-
-    new Awesomplete(document.querySelector('input.select-partial'), {
-      minChars: 0,
-      list: Object.keys(gtpb.partials).filter(function(s){return s.indexOf('/settings/') == -1 && s.indexOf('/export/') == -1 }),
-      container: function(input) {
-        return Bliss.create("div", {
-      		className: "awesomplete w-100",
-      		around: input
-      	});
-      },
-    });
-    */
 
     elem.querySelector('.download-site-data').addEventListener('mousedown',function(e){
       var _exp_format_node = Mavo.all.site_app.root.children.exp_data_format;
@@ -1359,6 +1333,7 @@
       data: {},
       partial: 'goandtalk/export/nav-mobile-js',
     },opt);
+    opt.export_local = 'local' === Mavo.all.page_app.root.children.exp_link_format.value;
     var tplName = Mavo.all.page_app.root.children.js_exp_tpl.value.trim();
     return renderSection({
       id: 'page_html',
@@ -1384,17 +1359,21 @@ Mavo.Formats.FrontMatter = Bliss.Class({
 	static: {
 		parse: serialized => {
       var pageData = serialized? parseFrontMatter(serialized) : null;
-      if(pageData) { renderPageFromData(pageData); }
-      return Promise.resolve(pageData);
+      var out = null;
+      // the meta data is under data key of the parsed results.
+      if(pageData && (pageData.data || pageData.body)) {
+        pageData.data = pageData.data || {};
+        renderPageFromData(pageData);
+        out = pageData.data;
+        out.content = pageData.body;
+      }
+
+      return Promise.resolve(out);
     },
 		stringify: data => Promise.resolve(stringifyPage(Mavo.all.page_app.root.children.exp_data_format)),
 		extensions: [".md"]
 	}
 });
-
-
-
-
 
   gtpb.actions = gtpb.actions || {};
 
@@ -1865,13 +1844,27 @@ Mavo.Formats.FrontMatter = Bliss.Class({
     if('page' === _todel ){
         q.innerText = 'Are you sure to delete this page? This will restore to the default and reload the page. ';
     } else if('site' === _todel){
+      var sr = Mavo.all.site_app.root.children;
+      if (!sr.check_backup_config.value || !sr.check_backup_pages.value) {
+        flashFeedback({
+          bg: 'bg-red',
+          message: 'Before deleting a site database, please tick the checkboxes to confirm you have backed up data.'
+        });
+        return;
+      }
+
       q.innerText = 'Are you sure to delete this site? This will delete the database and all pages in this site. ';
     }
 
     var closeBtn = gtpb.closeBtn = gtpb.closeBtn || document.querySelector('button.close-dialog');
     closeBtn.focus();
     var btn = gtpb.deleteBtn = gtpb.deleteBtn || document.querySelector('.confirm-delete');
-    btn.addEventListener('click', deletePage, false);
+    if('page' === _todel){
+      btn.addEventListener('click', deletePage, false);
+    } else {
+      btn.addEventListener('click', deleteSite, false);
+    }
+
     var d = gtpb.deleteDialog = gtpb.deleteDialog || document.querySelector('.dialog-holder');
     d.classList.add('active');
   }
@@ -2028,6 +2021,147 @@ Mavo.Formats.FrontMatter = Bliss.Class({
     });
   };
 
+  gtpb.actions.fetchGithubImageList = function(){
+    var sp = gtpb.site_app.params;
+    var elem = this.element;
+    if(sp.gh_repo_owner && sp.gh_repo_name) {
+      Bliss.fetch(encodeURI('https://api.github.com/repos/' + sp.gh_repo_owner + '/' + sp.gh_repo_name + '/contents/' + (sp.gh_image_dir || 'images') + (sp.gh_repo_branch?'?ref=' + sp.gh_repo_branch :'') ), {responseType: "json"} )
+      .then(function(xhr){
+        if (Array.isArray(xhr.response) && xhr.response.length){
+          var ptn = /jpg$|jpeg$|gif$|webp$|png$|svg$/i;
+          var arr = gtpb.site_app.params.gh_repo_image = [];
+           xhr.response.forEach(function(item){
+            if(ptn.test(item.path)) {
+              arr[arr.length] = item.path;
+            }
+          });
+          var combo = Mavo.data(elem, "awesomplete");
+          if(!combo) {
+            combo = initDropdownInput(elem);
+            Mavo.data(elem,  "awesomplete", combo);
+          }
+
+          combo.list = gtpb.site_app.params.gh_repo_image;
+
+          flashFeedback({message: "Image list loaded"});
+        } else {
+          flashFeedback({message: "File not found", bg: "bg-red"});
+        }
+      })
+      .catch(function(error){
+	       console.error(error, "code: " + error.status);
+         flashFeedback({message: "Error fetching file list. Message: " + encodeHTML(error.message), bg: "bg-red"});
+       });
+    } else {
+      flashFeedback({message: "Please provide repo owner and repo name in site settings.", bg: "bg-red"});
+    }
+  };
+
+
+  gtpb.actions.fetchGithubArticleList = function(){
+    var articleDir = Mavo.all.page_app.root.children.ghdata_article_dir.value;
+    var sp = gtpb.site_app;
+    var elem = this.element;
+    if(sp.ghdata_repo_owner && sp.ghdata_repo_name) {
+      Bliss.fetch(encodeURI('https://api.github.com/repos/' + sp.ghdata_repo_owner + '/' + sp.ghdata_repo_name + '/contents/' + (articleDir || 'content') + (sp.ghdata_repo_ref ? '?ref=' + sp.ghdata_repo_ref : '') ), {responseType: "json"} )
+      .then(function(xhr){
+        if (Array.isArray(xhr.response) && xhr.response.length){
+          var ptn = /\.md$/i;
+          var arr = gtpb.site_app.params.gh_repo_article = [];
+           xhr.response.forEach(function(item){
+            if(ptn.test(item.path)) {
+              arr[arr.length] = item.path;
+            }
+          });
+          var combo = Mavo.data(elem, "awesomplete");
+          if(!combo) {
+            combo = initDropdownInput(elem);
+            Mavo.data(elem,  "awesomplete", combo);
+          }
+
+          combo.list = gtpb.site_app.params.gh_repo_article;
+
+          flashFeedback({message: "Article list loaded"});
+        } else {
+          flashFeedback({message: "File not found", bg: "bg-red"});
+        }
+      })
+      .catch(function(error){
+	       console.error(error, "code: " + error.status);
+         flashFeedback({message: "Error fetching file list. Message: " + encodeHTML(error.message), bg: "bg-red"});
+       });
+    } else {
+      flashFeedback({message: "Please provide data repo owner and repo name in site settings.", bg: "bg-red"});
+    }
+  };
+
+  gtpb.actions.loadRemoteSiteData = function(){
+    var sp = Mavo.all.site_app.getData();
+    var owner = (sp.ghdata_repo_owner||'').trim();
+    var repo = (sp.ghdata_repo_name || '').trim();
+    if(!owner || !repo) {
+      flashFeedback({
+        bg: 'bg-red',
+        message: 'Please provide the owner and name of data repository.'
+      });
+      return;
+    }
+    Bliss.fetch(encodeURI('https://raw.githubusercontent.com/' + owner + '/' + repo + '/' + (sp.ghdata_repo_ref || 'master') + '/config.toml'))
+    .then(function(xhr){
+      var siteData = parseSiteData(xhr.response);
+      if (siteData){
+        loadSiteData(siteData);
+      } else {
+        flashFeedback({
+          bg: 'bg-red',
+          message: 'Unable to parse remote setting.'
+        });
+      }
+    })
+    .catch(function(err){
+      flashFeedback({
+        bg: 'bg-red',
+        message: 'Unable to load remote data.'
+      });
+    });
+
+  };
+
+  gtpb.actions.loadRemotePageData = function(){
+    var article = Mavo.all.page_app.root.children.ghdata_article.value.trim();
+    if(!article) {
+      return;
+    }
+    var sp = Mavo.all.site_app.getData();
+    var owner = (sp.ghdata_repo_owner||'').trim();
+    var repo = (sp.ghdata_repo_name || '').trim();
+    if(!owner || !repo) {
+      flashFeedback({
+        bg: 'bg-red',
+        message: 'Please provide the owner and name of data repository.'
+      });
+      return;
+    }
+    Bliss.fetch(encodeURI('https://raw.githubusercontent.com/' + owner + '/' + repo + '/' + (sp.ghdata_repo_ref || 'master') + '/' + article ))
+    .then(function(xhr){
+      var pageData = parseFrontMatter(xhr.response);
+      if (pageData){
+        renderPageFromData(pageData);
+      } else {
+        flashFeedback({
+          bg: 'bg-red',
+          message: 'Unable to parse remote page.'
+        });
+      }
+    })
+    .catch(function(err){
+      flashFeedback({
+        bg: 'bg-red',
+        message: 'Unable to load remote data.'
+      });
+    });
+
+  };
 
   function toggleBaseToolbar() {
     var isActive = Mavo.all.base_app_list.root.element.classList.toggle('active');
