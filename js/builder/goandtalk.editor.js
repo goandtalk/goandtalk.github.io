@@ -1219,6 +1219,7 @@
     }
   };
 
+
   //site data is simply encoded without delimiters.
   function stringifySite(_node) {
     if(!_node) return '';
@@ -1335,13 +1336,16 @@
     },opt);
     opt.export_local = 'local' === Mavo.all.page_app.root.children.exp_link_format.value;
     var tplName = Mavo.all.page_app.root.children.js_exp_tpl.value.trim();
-    return renderSection({
+    // images selected from repo contain baseurl, and may cause issues when changing domain
+    //remove baseurl from image links, just in case domain name will change.
+    var baseurlptn = new RegExp(gtpb.site_app.baseurl + '/images','g');
+    var out = renderSection({
       id: 'page_html',
       data: gtpb.page_app,
       partialString: s.js_export[tplName],
       partial:  tplName || 'goandtalk/export/base-js',
     },opt);
-
+    return opt.export_local ? out : out.replace(baseurlptn,'/images');
   }
 
 //mainly used to load theme data from remote source
@@ -1830,10 +1834,12 @@ Mavo.Formats.FrontMatter = Bliss.Class({
       return;
     }
     var url = new URL(document.location);
+    url.pathname = '/edit/';
     url.searchParams.set('site', open_site_id);
     url.searchParams.delete('doc');
     url.searchParams.delete('site_app-source');
     url.searchParams.delete('page_app-source');
+
     window.location.href = url.toString();
   };
   // arguments: 0: "name of function", 1: "optional name of node", 2: "what to delete"
@@ -2110,6 +2116,8 @@ Mavo.Formats.FrontMatter = Bliss.Class({
     .then(function(xhr){
       var siteData = parseSiteData(xhr.response);
       if (siteData){
+        //site_id is the name of IndexedDB db.
+        siteData.site_id = gtpb.current_site;
         loadSiteData(siteData);
       } else {
         flashFeedback({
@@ -2313,23 +2321,39 @@ Mavo.Formats.FrontMatter = Bliss.Class({
         }
         gtpb.site_app = r.rows[1].doc;
         if(!gtpb.site_app) {
-          gtpb.site_app = {
-            _id: ':config',
-            site_id: site_id,
-            title: gtpb.default.SiteTitle,
-            baseurl: gtpb.default.SiteBaseURL,
-            copyright: gtpb.default.SiteCopyright,
-            menu: gtpb.default.SiteMenu,
-            params: gtpb.default.SiteParams
-          };
-          gtpb.site_app.params.global_section = gtpb.site_app.params.global_section || {
-            default_footer: gtpb.default.SiteFooter,
-          };
+          if(window.location.pathname == '/edit/') {
+            gtpb.site_app = {
+              _id: ':config',
+              site_id: site_id,
+              menu: {
+                global: [],
+                iconmenu: [],
+              },
+              params: {
+                global_section: {},
+              },
+            }
+          } else {
+            gtpb.site_app = {
+              _id: ':config',
+              site_id: site_id,
+              title: gtpb.default.SiteTitle,
+              baseurl: gtpb.default.SiteBaseURL,
+              copyright: gtpb.default.SiteCopyright,
+              menu: gtpb.default.SiteMenu,
+              params: gtpb.default.SiteParams
+            };
+            gtpb.site_app.params.global_section = gtpb.site_app.params.global_section || {
+              default_footer: gtpb.default.SiteFooter,
+            };
+          }
 
           for (var k in gtpb.site_app.menu){
             var menu = gtpb.site_app.menu[k];
             for(var i = 0; i < menu.length; i ++) {
-              menu[i] = go2js(menu[i]);
+              if(menu[i]){
+                 menu[i] = go2js(menu[i]);
+              }
             }
           }
         }
