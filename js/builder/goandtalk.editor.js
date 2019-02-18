@@ -1349,10 +1349,16 @@
   }
 
 //mainly used to load theme data from remote source
+//site config data may contain custom template and custom styles, and must be loaded from https://github.com/themedata/*
 Mavo.Formats.Config = Bliss.Class({
 	extends: Mavo.Formats.Base,
 	static: {
-		parse: serialized => Promise.resolve(serialized? parseSiteData(serialized) : null),
+		parse: serialized => {
+      var url = new URL(document.location);
+      var site = searchParams.get('site_app-source');
+      if(!/^https:\/\/raw.githubusercontent.com\/themedata\//.test(site)) return Promise.resolve(null);
+      return Promise.resolve(serialized? parseSiteData(serialized) : null)
+    },
 		stringify: data => Promise.resolve(tomlify.toToml(data, {space: 2})),
 		extensions: [".toml", ".yaml", ".json"]
 	}

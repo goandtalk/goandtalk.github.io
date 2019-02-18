@@ -23,11 +23,17 @@ gtpb.partials = gtpb.partials || {};
     "
     675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fl dib self-center site-logo ' & site_app.params.site_logo_class"  35fe3a9616151be1e9a9abc33ece88d44bd47528
     >
-      <a href="f871d6b8810c7bde0a1be4bdb14e56bf840fce44" class="v-mid " title="Home"
+      <a href="f871d6b8810c7bde0a1be4bdb14e56bf840fce44" class="v-mid dib" title="Home"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="href" mv-value="if(site_app.params.site_home_url,site_app.params.site_home_url,'/')"  35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
         <img data-role="logo" class="h2 v-mid dim" src="6f171f7af664405d6c48d439c7dcf034b904ccf1" />
       </a>
+      <span class="{enc{! o.__get(o, \u0027site.params.site_title_style\u0027) || \u0027dn\u0027 }enc}"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="if(site_app.params.site_title_style,site_app.params.site_title_style,'dn')"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+       <span 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="none" mv-value="site_app.title"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+       >  {enc{! o.__get(o, \u0027site.title\u0027) || \u0027\u0027 }enc}</span>
+      </span>
     </span>
     <span class="flex-auto dn-l"></span>
 
@@ -572,11 +578,17 @@ invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.elem
     "
     675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fl dib self-center site-logo ' & site_app.params.site_logo_class"  35fe3a9616151be1e9a9abc33ece88d44bd47528
     >
-      <a href="f871d6b8810c7bde0a1be4bdb14e56bf840fce44" class="v-mid " title="Home"
+      <a href="f871d6b8810c7bde0a1be4bdb14e56bf840fce44" class="v-mid dib" title="Home"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="href" mv-value="if(site_app.params.site_home_url,site_app.params.site_home_url,'/')"  35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
         <img data-role="logo" class="h2 v-mid dim" src="6f171f7af664405d6c48d439c7dcf034b904ccf1" />
       </a>
+      <span class="{enc{! o.__get(o, \u0027site.params.site_title_style\u0027) || \u0027dn\u0027 }enc}"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="if(site_app.params.site_title_style,site_app.params.site_title_style,'dn')"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+       <span 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="none" mv-value="site_app.title"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+       >  {enc{! o.__get(o, \u0027site.title\u0027) || \u0027\u0027 }enc}</span>
+      </span>
     </span>
     <span class="flex-auto dn-l"></span>
 
@@ -2282,11 +2294,17 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     "
     675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'fl dib self-center site-logo ' & site_app.params.site_logo_class"  35fe3a9616151be1e9a9abc33ece88d44bd47528
     >
-      <a href="f871d6b8810c7bde0a1be4bdb14e56bf840fce44" class="v-mid " title="Home"
+      <a href="f871d6b8810c7bde0a1be4bdb14e56bf840fce44" class="v-mid dib" title="Home"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="href" mv-value="if(site_app.params.site_home_url,site_app.params.site_home_url,'/')"  35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
         <img data-role="logo" class="h2 v-mid dim" src="6f171f7af664405d6c48d439c7dcf034b904ccf1" />
       </a>
+      <span class="{enc{! o.__get(o, \u0027site.params.site_title_style\u0027) || \u0027dn\u0027 }enc}"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="if(site_app.params.site_title_style,site_app.params.site_title_style,'dn')"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+       <span 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="none" mv-value="site_app.title"  35fe3a9616151be1e9a9abc33ece88d44bd47528
+       >  {enc{! o.__get(o, \u0027site.title\u0027) || \u0027\u0027 }enc}</span>
+      </span>
     </span>
     <span class="flex-auto dn-l"></span>
 
@@ -18848,6 +18866,57 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             The css class applies to the parent element of site logo anchor.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Site Title Style 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(site_title_style, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="site_title_style" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="dn," 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',site_title_style)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Customize site title here. Hidden by default.
           </div>
         
       </div>
