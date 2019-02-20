@@ -3,225 +3,132 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://192.168.0.10:1314/about/</loc>
+    <loc>http://builder.goandmake.app/about/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/an-overview-of-go-and-talk-and-ui/</loc>
+    <loc>http://builder.goandmake.app/tutorial/an-overview-of-go-and-talk-and-ui/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/an-overview-of-go-and-talk-and-ui/</loc>
+    <loc>http://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/building-a-marketing-website-from-a-to-z/</loc>
+    <loc>http://builder.goandmake.app/tutorial/copying-and-mixing-readymade-blocks/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/building-a-marketing-website-from-a-to-z/</loc>
+    <loc>http://builder.goandmake.app/tutorial/customizing-background-image/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/copying-and-mixing-readymade-blocks/</loc>
+    <loc>http://builder.goandmake.app/tutorial/customizing-brand-colors-and-logo/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/copying-and-mixing-readymade-blocks/</loc>
+    <loc>http://builder.goandmake.app/tutorial/customizing-call-to-action-button/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/customizing-background-image/</loc>
+    <loc>http://builder.goandmake.app/tutorial/exporting-and-importing-data/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/customizing-background-image/</loc>
+    <loc>http://builder.goandmake.app/tutorial/designing-a-custom-theme/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/customizing-brand-colors-and-logo/</loc>
+    <loc>http://builder.goandmake.app/tutorial/editing-text-and-image-layer/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/customizing-brand-colors-and-logo/</loc>
+    <loc>http://builder.goandmake.app/tutorial/exporting-finished-page-for-local-viewing/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/customizing-call-to-action-button/</loc>
+    <loc>http://builder.goandmake.app/faq/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/customizing-call-to-action-button/</loc>
+    <loc>http://builder.goandmake.app/edit/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/exporting-and-importing-data/</loc>
+    <loc>http://builder.goandmake.app/tutorial/inserting-a-section-or-column/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/exporting-and-importing-data/</loc>
+    <loc>http://builder.goandmake.app/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/designing-a-custom-theme/</loc>
+    <loc>http://builder.goandmake.app/tutorial/presenting-from-marketing-page/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/designing-a-custom-theme/</loc>
+    <loc>http://builder.goandmake.app/tutorial/starting-a-new-page/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/editing-text-and-image-layer/</loc>
+    <loc>http://builder.goandmake.app/tutorial/starting-a-new-site-project/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/editing-text-and-image-layer/</loc>
+    <loc>http://builder.goandmake.app/tutorial/customizing-block-template/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/exporting-finished-page-for-local-viewing/</loc>
+    <loc>http://builder.goandmake.app/tutorial/customizing-export-template/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/exporting-finished-page-for-local-viewing/</loc>
+    <loc>http://builder.goandmake.app/tutorial/customizing-styles-and-fonts/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/faq/</loc>
+    <loc>http://builder.goandmake.app/tutorial/using-global-data-and-section/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/edit/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/presentation/inserting-a-section-or-column/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/tutorial/inserting-a-section-or-column/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/presentation/presenting-from-marketing-page/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/tutorial/presenting-from-marketing-page/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/presentation/starting-a-new-page/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/tutorial/starting-a-new-page/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/presentation/starting-a-new-site-project/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/tutorial/starting-a-new-site-project/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/presentation/customizing-block-template/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/tutorial/customizing-block-template/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/presentation/customizing-export-template/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/tutorial/customizing-export-template/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/presentation/customizing-styles-and-fonts/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/tutorial/customizing-styles-and-fonts/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/presentation/using-global-data-and-section/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/tutorial/using-global-data-and-section/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://192.168.0.10:1314/categories/</loc>
+    <loc>http://builder.goandmake.app/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/presentation/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+    <loc>http://builder.goandmake.app/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tags/</loc>
-    <priority>0</priority>
+    <loc>http://builder.goandmake.app/theme/</loc>
   </url>
   
   <url>
-    <loc>http://192.168.0.10:1314/tutorial/</loc>
+    <loc>http://builder.goandmake.app/tutorial/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

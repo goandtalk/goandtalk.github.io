@@ -1,0 +1,611 @@
+<!DOCTYPE html><html class="gt-edit-mode"  lang="en-us">
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using Custom Export Template | Go and talk page builder</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+     <meta name="generator" content="Hugo 0.49" />
+
+      
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+      
+
+    <link rel="canonical" type="text/html" href="http://builder.goandmake.app/tutorial/customizing-export-template/">
+    
+      
+<link href="/css/webslides.css?v=0.0002" rel="stylesheet" />
+<link href="/css/tachyons.min.css?v=0.0001" rel="stylesheet" />
+<link href="/css/styles.css" rel="stylesheet" />
+
+
+<link rel="stylesheet" href="/css/prism.css">
+<link rel="stylesheet" href="/css/mavo-1.7beta.css">
+<link rel="stylesheet" href="/css/awesomplete.css">
+
+
+
+
+    
+<style>
+
+
+section[mv-app].active {
+  min-height: 100vh;
+}
+ 
+.mv-pending-edit {
+  min-width: 4em;
+  min-height: 1em;
+}
+
+ 
+.animate-edit-cta {
+  transition: margin 1s ease-in-out, padding 1s ease-in-out;
+}
+
+.move-x-2 {
+  transform: translateX(2rem);
+}
+.move-y-2 {
+  transform: translateY(2rem);
+}
+.move-xy-2 {
+  transform: translate(2rem, 2rem);
+}
+
+@media (min-width: 36em) {
+   
+  .inline-form-ns {
+    width: 52rem;
+    max-width: 96vw;
+  }
+
+   
+  .ff-ns {
+    min-width: 12rem;
+  }
+
+}
+
+   
+  [mv-app][mv-mode="edit"] {
+    min-height: 30em;
+  }
+  img.mv-empty[mv-mode="edit"] {
+    padding: 4rem;
+  }
+  img.mv-empty[mv-mode="edit"]:after {
+    content: " Enter Image URL";
+  }
+  [mv-app][mv-mode="edit"].min-vh-100, [mv-app][mv-mode="edit"].gmws-slide {
+    min-height: 100vh;
+  }
+
+  input:invalid {
+    outline: 2px solid red;
+  }
+
+  section:first-child .gt-move-up,
+  section:last-child .gt-move-down {
+    display: none;
+  }
+
+  button.mv-add.dn {
+    display: none;
+  }
+  [mv-mode="edit"]   button.mv-add.dn, [mv-mode="edit"] .show-in-edit.dn {
+    display: inline-block;
+  }
+
+  section[mv-mode="edit"] nav {
+    padding-top: 2rem;
+  }
+
+
+</style>
+<meta property="og:title" content="Using Custom Export Template" />
+<meta property="og:description" content="Use custom template to export finished web page." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://builder.goandmake.app/tutorial/customizing-export-template/" /><meta property="article:published_time" content="2019-01-09T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-01-09T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Using Custom Export Template">
+<meta itemprop="description" content="Use custom template to export finished web page.">
+
+
+<meta itemprop="datePublished" content="2019-01-09T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-01-09T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="133">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using Custom Export Template"/>
+<meta name="twitter:description" content="Use custom template to export finished web page."/>
+
+      
+    
+
+  </head>
+  <body class="bg-light-gray sans-serif readable ">
+    
+
+
+    
+    <main role="main" class="relative h-100" >
+       
+  
+  <div id="site-page-settings">
+  
+<div onclick="" class="active off-canvas-dashboard gt-vbar z-1 bg-white fixed left-0 top-0 bottom-0 o-0 hover-o-90 mw2 flex flex-column justify-center"
+ mv-storage="none" 
+>
+  <div class="flex-auto"></div>
+  <div> 
+    <div class="relative">
+      <button aria-label="exit slides" type="button" class="pointer gt-label gt-exit-slides bg-orange w-100 pa1 v-mid mb2 dim br2 f5 fw9">&#x21c5;</button>
+      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Exit slides and browse as normal page.</div>
+    </div>
+    
+    <div class="mv-bar dn"></div>
+    <input hidden property="current_base_app" mv-storage="none" />
+    <div class="relative">
+      <button
+      mv-action="invoke('toggleClass', base_app_list, '', 'active'),
+      invoke('addClass', base_app_list, 'html', 'gt-edit-mode', true)
+      "
+      aria-label="hide this vertical toolbar" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">&lt;</button>
+      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Hide this toolbar. </div>
+    </div>
+    <div class="relative">
+      <button
+      mv-action="invoke('toggleClass', base_app_list, 'html', 'gt-edit-mode', true)"
+      aria-label="hide section toolbars" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">
+        <i class="fas fa-th" data-fa-mask="fas fa-square" data-fa-transform="shrink-3 up-9"></i>
+      </button>
+      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Toggle section toolbars. </div>
+    </div>
+
+
+
+    
+
+    <div class="relative">
+      <button type="button"
+      mv-action="set(current_base_app,if(current_base_app = 'page_app','','page_app'))"
+      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-file-alt"></i></button>
+      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage page setting </div>
+    </div>
+    <div class="relative">
+      <button type="button"
+      mv-action="set(current_base_app,if(current_base_app = 'site_app','','site_app'))"
+      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-globe"></i></button>
+      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage site setting </div>
+    </div>
+
+
+
+    
+
+  </div>
+  <div class="flex-auto"></div>
+</div>
+
+  </div>
+  <article id="webslides" class="disabled">
+    
+      
+
+<section 
+  class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="min-vh-100 flex-auto bg-black-90
+  fadeIn"
+  >
+    
+<div class="tc absolute absolute--fill fa-10x flex flex-column justify-center">
+  <div class="white-10
+   fa-3x
+   self-center
+   slowUp
+   "
+   >
+     <i class="fallback-icon fas fa-share"
+     
+     data-fa-transform="shrink-8 "
+     data-fa-mask="fas fa-square"
+     ></i>
+   </div>
+</div>
+
+
+    
+
+
+  
+
+
+    
+
+<figure class="ma0">
+	<picture>
+    
+      
+  		  
+  		  
+    		
+    		
+    		
+      
+    
+    
+      
+    
+  </picture>
+</figure>
+<span class="absolute absolute--fill
+    bg-transparent"
+    ></span>
+
+
+
+
+
+<nav class="relative o-90 bg-transparent" >
+  <div class="w-90 mw9 center ph2 pv4 cf flex flex-wrap justify-between tracked" >
+
+    <span class="fl dib self-center site-logo
+    
+    "
+    
+    >
+      <a href="/" class="v-mid dib" title="Home"
+      
+      >
+        <img data-role="logo" class="h2 v-mid dim" src="/images/logos/icon-on-dark.svg" />
+      </a>
+      <span class="dn"
+      
+      >
+       <span 
+       >  Go and talk page builder</span>
+      </span>
+    </span>
+    <span class="flex-auto dn-l"></span>
+
+    
+    <ul class="list dn fl cf ma0 di-l flex-l pv1 ph4-l justify-start flex-grow-1
+    
+    " >
+      
+      
+      
+        
+          
+          <li class="fl">
+            <a href="/tutorial/"  class="link ph3 white-80">
+              Tutorials
+            </a>
+          </li>
+          
+          <li class="fl">
+            <a href="/faq/"  class="link ph3 white-80">
+              FAQ
+            </a>
+          </li>
+          
+          <li class="fl">
+            <a href="/about/"  class="link ph3 white-80">
+              About
+            </a>
+          </li>
+          
+        
+      
+    </ul>
+    
+    <ul class="list fr cf ma0 ph3 ph4-l pv1 justify-end
+    flex
+    
+    "
+    
+    >
+    
+      
+        <li class="fl" >
+          <a class="link ph3 dim white-80" title="Go Account" href="#">Go</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+<div class="fadeIn relative pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " ><div class="flex-auto w-100 white-80 tracked flex flex-column justify-center">
+        <div class="ph3 tc-ns"
+        
+        >
+          <p  class="f4 ttu white-60 mv2 mv3-l">
+          using Custom
+          <a href="#" class="slide-trigger grow ph2 dn di-l " title="View Page as Presentation">
+            
+            
+            
+            <img class="v-mid w2"  src="/images/logos/icon-on-dark.svg"  />
+          </a>
+          </p>
+          <div class="gold
+          baskerville
+          
+          " >
+            <h1 class="f2 f1-m f-5-l tracked fw4 mb0 lh-title  "
+            >
+            Export Template
+            </h1>
+          </div>
+          
+          <div class="
+          
+          " >
+            <h2 class="fw1 f3 white-80 mt3 mb4 " >
+              to publish webpage
+            </h2>
+          </div>
+          <div class="tc-l">
+            <span >
+              <span class="slide-trigger"
+              
+              >
+                
+                
+
+                <a class="f6 no-underline grow dib v-mid bg-primary-color b--primary-color white ba ph3 pv2 mb3 "
+                
+                 href="/#" >
+                  <span  >
+                  Play Slides -&gt;
+                  </span>
+                </a>
+              </span>
+            </span>
+
+            <span class="ph3"></span>
+
+            
+            
+            
+            <span >
+            <a class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3 "
+            
+            href="/tutorial/" >
+              <span  >
+              Tutorials
+              </span>
+            </a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="vh-25"></div>
+    </div> 
+  </div> 
+
+</section>
+
+
+
+      
+<section class="relative min-vh-100 flex flex-column" >
+
+  
+  <div class="relative tc-l pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " >
+    <div class="flex-auto w-100 black-60 tracked flex flex-column justify-center">
+      <div class="tc-l ph3">
+
+        <div class="" >
+          <h1 class="f2 f1-m f-5-l tracked fw4 mb0 lh-title  ">JavaScript Required</h1>
+        </div>
+        <div class="">
+          <h2 class="fw1 f3 black-80 mt3 mb4 " > The page builder relies on JavaScript to work. If you see this page after page loads, it means JavaScript is not enabled, or not working properly. </h2>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="vh-25"></div>
+  </div>
+
+</section>
+
+
+    
+      
+        
+        
+          
+      
+        
+        
+          
+      
+        
+        
+          
+      
+        
+        
+          
+      
+        
+        
+          
+      
+        
+        
+          
+      
+        
+        
+          
+      
+        
+        
+          
+      
+          
+        
+          
+      
+           
+        
+          
+      
+    
+
+
+    
+     
+
+    
+     
+
+  </article>
+
+    </main>
+    <footer >
+    <div >
+
+
+
+  
+  
+  <div  class="z-1 handheld-menu-0 handheld-menu overflow-scroll fixed top-0 left-0 right-0 bottom-0 pb5 dn bg-primary-color-dark" >
+    <div class="h-100 pv3">
+      <ul class="h-100 pl0 flex flex-column justify-end">
+        
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/tutorial/" class="link  white-80 ">
+                Tutorials
+              </a>
+          </li>
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/faq/" class="link  white-80 ">
+                FAQ
+              </a>
+          </li>
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/about/" class="link  white-80 ">
+                About
+              </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div  class="z-1 handheld-menu-1 handheld-menu overflow-scroll fixed top-0 left-0 right-0 bottom-0 pb5 dn bg-primary-color-dark" >
+    <div class="h-100 pv3">
+      <ul class="h-100 pl0 flex flex-column justify-end">
+        
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="#" class="link  white-80 ">
+                Go Account
+              </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+
+<div class="dn-l fixed left-0 right-0 bottom-0 z-2 flex" >
+  
+    
+    
+      <button class="gt-menu-toggle handheld-toggler dn-l flex-grow-1 bg-white-70 pv3 b--near-white " data-target=".handheld-menu-0">Menu</button>
+    
+      <button class="gt-menu-toggle handheld-toggler dn-l flex-grow-1 bg-white-70 pv3 b--near-white " data-target=".handheld-menu-1">Account</button>
+    
+  
+</div>
+</div>
+</footer>
+ 
+    
+
+    <script data-source="homepage-index">
+      
+      var gtpb = { maxapp: 10, default:  JSON.parse("{\"AllSections\":[{\"data\":{\"appearance\":{\"section_background\":\"bg-black-90\",\"trigger_class\":\"slide-trigger\"},\"base_image\":{\"overlay_background\":\"bg-black-05\",\"responsive\":false},\"bg_icon\":{\"animation\":\"slowUp\",\"bg_icon_color\":\"white-10\",\"bg_icon_display\":\"self-center\",\"bg_icon_size\":\"fa-3x\",\"icon_mask\":\"square\",\"inner_icon\":\"share\",\"inner_icon_transform\":\"shrink-8 \"},\"card_font_size\":3,\"card_font_weight\":1,\"card_letter_spacing\":\"tracked\",\"card_text_align\":\"tc-ns\",\"content\":\"with innovation.\",\"cta\":{\"background_color\":\"bg-black-20\",\"button_text_color\":\"white-90\",\"name\":\"Play Slides -\\u003e\",\"pv\":1,\"title\":\"view page as slides. \",\"url\":\"#\"},\"cta2\":{\"name\":\"Tutorials\",\"url\":\"/tutorial/\"},\"description\":\"to publish webpage\",\"image\":{\"animation\":\"none\",\"flow_end\":true,\"overlay_background\":\"bg-transparent\",\"responsive\":false},\"intro\":\"using Custom\",\"title\":\"Export Template\",\"title_align\":\"tc\",\"title_class\":\"gold\",\"title_color\":\"gold\",\"title_font_family\":\"baskerville\",\"title_font_size\":-5,\"title_font_weight\":4,\"title_letter_spacing\":\"tracked\"},\"data_key\":null,\"id\":\"898b3\",\"is_global\":null,\"partial\":\"goandtalk/cover/hero-dark-background-with-text-at-center\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-transparent\",\"slide_animation\":\"fadeIn\"},\"content\":\"* designers and developers, and advanced users\\n* some knowledge of HTML, CSS and JavaScript\\n* access to developer console on the browser for debugging\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"code\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":30},\"intro\":\" \",\"is_global\":false,\"title\":\"Target Audience of This Tutorial\"},\"data_key\":null,\"id\":\"sc0qh5p8t\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\"},\"content\":\"* remove unwanted libraries included by default\\n* load custom CSS and JavaScript libraries\\n* customize meta tags and footer scripts\\n* integrate with existing websites\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"shapes\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Use Cases of Custom Export Template\"},\"data_key\":null,\"id\":\"sojc50t9h\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-transparent\",\"slide_animation\":\"fadeIn\"},\"content\":\"* [doT template engine documentation and examples](http://olado.github.io/doT/index.html)\\n* custom template delimiters and variable names\\n* variable for context data: it\\n* variable for context options: o\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"qrcode\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":30},\"intro\":\" \",\"is_global\":false,\"title\":\"Template Engine - doT\"},\"data_key\":null,\"id\":\"sb6rec97f\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\"},\"content\":\"* hover on the left edge of the screen to show vertical toolbar\\n* click on globe icon to show site settings window\\n* go to \\\"New Export Template\\\" tab, type a unique name for the new export template, and paste your export template in the text area labelled \\\"Template\\\".\\n* click \\\"Save New Template\\\" button to save it\\n* you can click on the code icon to load the default export template, and use it as a base for customization.\\n* the export template is saved with site settings, and is available for further editing in \\\"Edit Export Template\\\" tab.\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"file-code\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Creating a Custom Export Template\"},\"data_key\":null,\"id\":\"sfkbj1p5w\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-transparent\",\"slide_animation\":\"fadeIn\"},\"content\":\"* hover on the left edge of the screen to show vertical toolbar\\n* click on file icon to show page settings window\\n* click on grid icon to show extra tabs\\n* go to \\\"Export Webpage\\\" tab, and select a custom template before exporting\\n* to export a webpage using the default template, clear the \\\"Custom Template\\\" field and click in the input cell for the changes to take effect. \",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"crosshairs\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":30},\"intro\":\" \",\"is_global\":false,\"title\":\"Using a Custom Export Template\"},\"data_key\":null,\"id\":\"smg7zd2v1\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"icon_color\":\"orange\",\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\"},\"content\":\"* JavaScript included in the custom export template __WILL__ be executed when the exported page is loaded\\n* It is the user's responsibility to use common sense in selecting what to include in the custom export template \",\"icons\":{\"icon_transform\":\"shrink-12 up-4\",\"mini_icon\":\"mask\",\"mini_icon_color\":\"black\",\"outer_icon\":\"exclamation-triangle\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Precaution\"},\"data_key\":null,\"id\":\"sqdubww5f\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"animation\":\"fadeIn\",\"icon_color\":\"gold\",\"section_background\":\"bg-accent-color-light\",\"slide_animation\":\"fadeIn\"},\"content\":\"I know code and web technology. I have used a few page builders and editors. Go and Talk has helped me to create and format content at a speed I could never achieve with other tools, without touching code again. That's why we have built this tool, for designers and content creators. I love it, and I believe you will find it helpful too.\\n\",\"description\":\"\",\"icons\":{\"mini_icon\":\"download\"},\"intro\":\"What People Say About It\",\"is_global\":false,\"reviewer\":\"hopeful2\",\"role\":\"Fullstack developer, lead developer of Go and Talk\",\"title\":\"Love It\"},\"data_key\":null,\"id\":\"cce58\",\"is_global\":null,\"partial\":\"goandtalk/slides/big-bold-quote\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-60\",\"slide_animation\":\"fadeIn\"},\"base_image\":{\"responsive\":false},\"bg_icon\":{\"bg_icon_display\":\"dn\",\"icon_mask\":\"square\",\"inner_icon\":\"font\",\"inner_icon_transform\":\"shrink-6\"},\"card_font_size\":4,\"card_font_weight\":\"4\",\"card_overlay\":0,\"card_width\":100,\"cta\":{\"align\":\"center\",\"background_color\":\"bg-primary-color\",\"block_button_width\":50,\"border_color\":\"b--light-gray\",\"border_radius\":\"br0\",\"button_font_size\":\"4\",\"button_text_color\":\"white-80\",\"icon_mask\":\"circle\",\"inner_icon\":\"info\",\"inner_icon_transform\":\"shrink-4\",\"mv\":3,\"name\":\"Tutorials\",\"ph\":3,\"pv\":2,\"url\":\"/tutorial\"},\"embed_aspect_ratio\":\"16x9\",\"height_reference\":\"h\",\"image\":{\"responsive\":false},\"image_br\":\"br0\",\"image_column_width\":100,\"image_height\":100,\"image_layer\":\"absolute\",\"image_opacity\":100,\"image_order\":\"even-order-1-ns\",\"image_under_text\":false,\"object_fit_class\":\"of-scale-down\",\"quote_display\":\"dn\",\"title_align\":\"tc\",\"title_font_size\":\"2\",\"title_font_weight\":\"7\",\"title_ph\":\"0\",\"title_pv\":\"3\",\"title_transform\":\"ttc\"},\"data_key\":null,\"id\":\"7ea43\",\"is_global\":null,\"partial\":\"goandtalk/content/text-block\"},{\"data\":\"\",\"data_key\":null,\"id\":\"gt_footer\",\"is_global\":true,\"partial\":\"goandtalk/footer/default_footer\"}],\"IsPage\":true,\"Params\":{\"date\":\"2019-01-09T00:00:00Z\",\"description\":\"Use custom template to export finished web page.\",\"draft\":false,\"header_class\":\"bg-transparent\",\"icon_mask\":\"square\",\"inner_icon\":\"file-export\",\"inner_icon_transform\":\"shrink-6\",\"iscjklanguage\":false,\"lastmod\":\"2019-01-09T00:00:00Z\",\"lightness\":0,\"lightness_dark\":0,\"lightness_light\":0,\"lightness_lighter\":0,\"logo_url\":\"/images/logos/icon-on-dark.svg\",\"main_menu_align\":\"start\",\"primary_hue\":351,\"publishdate\":\"2019-01-09T00:00:00Z\",\"saturation\":32,\"skip_cover_nav\":false,\"skip_slide_animation\":false,\"title\":\"Using Custom Export Template\",\"type\":\"presentation\"},\"content\":\"Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.\\n\\nGo and Talk page builder uses a template engine called doT to render sections upon page loading, and to export a webpage when done. Custom delimiters and variables are used for doT to generate a slim web page without the burden of editor.\\n\\nGo and Talk page builder supports custom export template for designers and developers to load libraries selectively, or to customize meta tags and scripts on the exported webpage. This allows designers and developers to customize everything in the final output.\\n\",\"filepath\":\"tutorial/customizing-export-template.md\"}") };
+      
+    </script>
+    
+    
+<script src="/js/webslides.min.js?v=0.0002"></script>
+
+
+<script src="/js/lib/fa/solid.min.js" data-auto-replace-svg="nest"></script>
+<script src="/js/lib/fa/fontawesome.min.js" data-auto-replace-svg="nest"></script>
+
+
+
+
+<script src="/js/lib/markdown-it.min.js" ></script>
+<script src="/js/lib/purify.min.js" ></script>
+<script src="/js/lib/prism.js" ></script>
+
+<script src="/js/lib/mavo/1.7beta-bind/mavo.js?v=0.0002"></script>
+<script src="/js/lib/mavo/1.7beta-bind/mavo-markdownit.js?v=0.0001"></script>
+
+
+<script src="/js/lib/awesomplete.js" ></script>
+<script src="/js/lib/doT.min.js" ></script>
+
+<script src="/js/lib/pouchdb.min.js" ></script>
+<script src="/js/lib/clipboard.min.js" ></script>
+<script src="/js/lib/toml-j0.4.min.js" ></script>
+<script src="/js/lib/js-yaml.min.js" ></script>
+<script src="/js/lib/dragula.min.js" ></script>
+<script src="/js/lib/meta-matter-custom.js" ></script>
+
+
+<script src="/js/config.js" ></script>
+<script src="/js/builder/partial.js" ></script>
+<script src="/js/builder/goandtalk.editor.js?v=0.0006"></script>
+
+
+
+
+    
+    <datalist id="width_of_container">
+      <option value="0">
+      <option value="10">
+      <option value="20">
+      <option value="30">
+      <option value="40">
+      <option value="50">
+      <option value="60">
+      <option value="70">
+      <option value="80">
+      <option value="90">
+      <option value="100">
+    </datalist>
+    <datalist id="height_of_container">
+      <option value="25">
+      <option value="50">
+      <option value="75">
+      <option value="100">
+    </datalist>
+    
+  </body>
+</html>

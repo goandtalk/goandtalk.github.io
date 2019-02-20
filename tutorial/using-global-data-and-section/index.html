@@ -1,8 +1,7 @@
-<!DOCTYPE html><html class="gt-edit-mode"  lang="en-us">
+<!DOCTYPE html><html class=""  lang="en-us">
   <head>
-    <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Using Global Data and Global Section | Go and talk theme</title>
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using Global Data and Global Section | Go and talk page builder</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -11,7 +10,7 @@
      <meta name="generator" content="Hugo 0.49" />
 
       
-        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
       
 
     
@@ -21,95 +20,160 @@
 <link href="/css/styles.css" rel="stylesheet" />
 
 
-<link rel="stylesheet" href="/css/prism.css">
-<link rel="stylesheet" href="/css/mavo-1.7beta.css">
-<link rel="stylesheet" href="/css/awesomplete.css">
 
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria&#43;Hallelujah"> 
+  
+  
+  <style>
+  .handwriting {
+ font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+@keyframes slowRightEntry {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0.3;
+  }
+50% {
+   opacity: .5;
+}
+
+  90% {
+   transform: translateX(0vw);
+   opacity: .8;  
+   }
+  100% {
+    transform: translateX(0vw);
+   opacity: 0.7;
+}
+}
+
+.slowRightEntry {
+  animation: slowRightEntry 10s linear 10;
+  height: 100%;
+  }
+
+
+@keyframes slowRightExit {
+  0% {
+    transform: translateX(0vw);
+   opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+ }
+  100% {
+   opacity: .0;
+    transform: translateX(50vw);
+  }
+}
+
+.slowRightExit {
+  animation: slowRightExit 20s linear 5;
+  height: 100%;
+}
+
+  </style>
 
 
     
 <style>
 
+.primary-color-dark {
+      color:  hsl(303, 40%, 20%);
+    }
+    .bg-primary-color-dark {
+      background-color: hsl(303, 40%, 20%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark {
+      border-color: hsl(303, 40%, 20%);
+    }
+    .bg-primary-color-dark-90 {
+      background-color: hsla(303, 40%, 20%, 90%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark-90 {
+      border-color: hsla(303, 40%, 20%, 90%);
+    }
 
-section[mv-app].active {
-  min-height: 100vh;
-}
- 
-.mv-pending-edit {
-  min-width: 4em;
-  min-height: 1em;
-}
+    .primary-color-first-letter-h3 h3:first-letter {
+      color: hsl(303, 40%, 45%);
+      font-size: 1.2em;
+    }
 
- 
-.animate-edit-cta {
-  transition: margin 1s ease-in-out, padding 1s ease-in-out;
-}
+    .primary-color {
+      color: hsl(303, 40%, 45%);
+    }
+    .b--primary-color {
+      border-color: hsl(303, 40%, 45%);
+    }
+    .hover-primary-color:hover, .hover-primary-color:focus {
+      color: hsl(303, 40%, 45%);
+    }
+    .hover-bg-primary-color:hover, .hover-bg-primary-color:focus {
+      background-color: hsl(303, 40%, 45%);
+      color: rgba(255,255,255,.8);
+    }
 
-.move-x-2 {
-  transform: translateX(2rem);
-}
-.move-y-2 {
-  transform: translateY(2rem);
-}
-.move-xy-2 {
-  transform: translate(2rem, 2rem);
-}
+    .bg-primary-color {
+      background-color: hsl(303, 40%, 45%);
+      color: rgba(255,255,255,.8);
+    }
 
-@media (min-width: 36em) {
-   
-  .inline-form-ns {
-    width: 52rem;
-    max-width: 96vw;
-  }
+    .primary-color-light {
+      color: hsl(303, 40%, 65%);
+    }
+    .bg-primary-color-light {
+      background-color: hsl(303, 40%, 65%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-light {
+      border-color: hsl(303, 40%, 65%);
+    }
+    .primary-color-lighter {
+      color: hsl(303, 40%, 80%);
+    }
+    .bg-primary-color-lighter {
+      background-color: hsl(303, 40%, 80%);
+      color: rgba(255,255,255,.9);
+    }
+    .b--primary-color-lighter {
+      border-color: hsl(303, 40%, 80%);
+    }
 
-   
-  .ff-ns {
-    min-width: 12rem;
-  }
 
-}
+    .accent-color {
+      color: hsl(165,35%,45%);
+    }
+    .bg-accent-color {
+      background-color: hsl(165,35%,45%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color {
+      border-color: hsl(165,35%,45%);
+    }
 
-   
-  [mv-app][mv-mode="edit"] {
-    min-height: 30em;
-  }
-  img.mv-empty[mv-mode="edit"] {
-    padding: 4rem;
-  }
-  img.mv-empty[mv-mode="edit"]:after {
-    content: " Enter Image URL";
-  }
-  [mv-app][mv-mode="edit"].min-vh-100, [mv-app][mv-mode="edit"].gmws-slide {
-    min-height: 100vh;
-  }
-
-  input:invalid {
-    outline: 2px solid red;
-  }
-
-  section:first-child .gt-move-up,
-  section:last-child .gt-move-down {
-    display: none;
-  }
-
-  button.mv-add.dn {
-    display: none;
-  }
-  [mv-mode="edit"]   button.mv-add.dn, [mv-mode="edit"] .show-in-edit.dn {
-    display: inline-block;
-  }
-
-  section[mv-mode="edit"] nav {
-    padding-top: 2rem;
-  }
+    .accent-color-light {
+      color: hsl(165,35%,65%);
+    }
+    .bg-accent-color-light {
+      background-color: hsl(165,35%,65%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color-light {
+      border-color: hsl(165,35%,65%);
+    }
 
 
 </style>
 <meta property="og:title" content="Using Global Data and Global Section" />
 <meta property="og:description" content="Learn how to update global data such as menu items, and use global section" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://192.168.0.10:1314/tutorial/using-global-data-and-section/" /><meta property="article:published_time" content="2019-01-09T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://builder.goandmake.app/tutorial/using-global-data-and-section/" /><meta property="article:published_time" content="2019-01-09T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-01-09T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Using Global Data and Global Section">
@@ -127,6 +191,8 @@ section[mv-app].active {
 <meta name="twitter:title" content="Using Global Data and Global Section"/>
 <meta name="twitter:description" content="Learn how to update global data such as menu items, and use global section"/>
 
+      
+    
 
   </head>
   <body class="bg-light-gray sans-serif readable ">
@@ -140,7 +206,7 @@ section[mv-app].active {
   <div id="site-page-settings">
   
 <div onclick="" class="active off-canvas-dashboard gt-vbar z-1 bg-white fixed left-0 top-0 bottom-0 o-0 hover-o-90 mw2 flex flex-column justify-center"
- mv-storage="none" 
+
 >
   <div class="flex-auto"></div>
   <div> 
@@ -148,45 +214,6 @@ section[mv-app].active {
       <button aria-label="exit slides" type="button" class="pointer gt-label gt-exit-slides bg-orange w-100 pa1 v-mid mb2 dim br2 f5 fw9">&#x21c5;</button>
       <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Exit slides and browse as normal page.</div>
     </div>
-    
-    <div class="mv-bar dn"></div>
-    <input hidden property="current_base_app" mv-storage="none" />
-    <div class="relative">
-      <button
-      mv-action="invoke('toggleClass', base_app_list, '', 'active'),
-      invoke('addClass', base_app_list, 'html', 'gt-edit-mode', true)
-      "
-      aria-label="hide this vertical toolbar" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">&lt;</button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Hide this toolbar. </div>
-    </div>
-    <div class="relative">
-      <button
-      mv-action="invoke('toggleClass', base_app_list, 'html', 'gt-edit-mode', true)"
-      aria-label="hide section toolbars" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">
-        <i class="fas fa-th" data-fa-mask="fas fa-square" data-fa-transform="shrink-3 up-9"></i>
-      </button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Toggle section toolbars. </div>
-    </div>
-
-
-
-    
-
-    <div class="relative">
-      <button type="button"
-      mv-action="set(current_base_app,if(current_base_app = 'page_app','','page_app'))"
-      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-file-alt"></i></button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage page setting </div>
-    </div>
-    <div class="relative">
-      <button type="button"
-      mv-action="set(current_base_app,if(current_base_app = 'site_app','','site_app'))"
-      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-globe"></i></button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage site setting </div>
-    </div>
-
-
-
     
 
   </div>
@@ -196,7 +223,12 @@ section[mv-app].active {
   </div>
   <article id="webslides" class="disabled">
     
+
+    
       
+        
+         
+          
 
 <section 
   class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="min-vh-100 flex-auto bg-primary-color-dark
@@ -253,7 +285,7 @@ section[mv-app].active {
       
       >
        <span 
-       >  Go and talk theme</span>
+       >  Go and talk page builder</span>
       </span>
     </span>
     <span class="flex-auto dn-l"></span>
@@ -270,12 +302,6 @@ section[mv-app].active {
           <li class="fl">
             <a href="/tutorial/"  class="link ph3 white-80">
               Tutorials
-            </a>
-          </li>
-          
-          <li class="fl">
-            <a href="/presentation/"  class="link ph3 white-80">
-              Talks
             </a>
           </li>
           
@@ -387,80 +413,889 @@ section[mv-app].active {
 
 
 
+        
       
-<section class="relative min-vh-100 flex flex-column" >
+        
+         
+          
 
-  
-  <div class="relative tc-l pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " >
-    <div class="flex-auto w-100 black-60 tracked flex flex-column justify-center">
-      <div class="tc-l ph3">
-
-        <div class="" >
-          <h1 class="f2 f1-m f-5-l tracked fw4 mb0 lh-title  ">JavaScript Required</h1>
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">At Top and Left, Out of View Initially </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Finding Toolbars </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-grip-vertical"></i>
+            </div>
+            <h3 class="tc"> Global Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>At the left side of the screen.</li>
+<li>Manage global settings.</li>
+<li>Apply to the current page, or all pages.</li>
+<li>Hide all section tools.</li>
+<li>Hide itself.</li>
+</ul>
+</div>
+          </div>
         </div>
-        <div class="">
-          <h2 class="fw1 f3 black-80 mt3 mb4 " > The page builder relies on JavaScript to work. If you see this page after page loads, it means JavaScript is not enabled, or not working properly. </h2>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-grip-horizontal"></i>
+            </div>
+            <h3 class="tc"> Section Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>At the top of each section.</li>
+<li>Manage current section.</li>
+<li>Apply to current section.</li>
+<li>Turn app on and off.</li>
+<li>Toggle edit mode.</li>
+<li>Toggle global toolbar.</li>
+</ul>
+</div>
+          </div>
         </div>
-
-      </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-keyboard"></i>
+            </div>
+            <h3 class="tc"> Context Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>Available in some sections.</li>
+<li>Toggle button to switch toolbars.</li>
+<li>Toggle on to edit.</li>
+<li>Toggle off when done.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
 
     </div>
-
-    <div class="vh-25"></div>
-  </div>
+    <div class="tc pa2 pa3-ns mb4 f3" > Hover or tap to show the toolbars. </div>
+  </div> 
 
 </section>
 
 
+        
+      
+        
+         
+          
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center bg-white-70
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">Toggle On Demand </p>
+    <h2  class="tc pa2 pa3-m pa4-l ma0 f2">The State of Section Application </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+      
+      justify-center
+      "
+      >
     
       
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 bg-light-gray">
+            <div class="tc black-10 fa-6x">
+              <i data-fa-transform="shrink-8" data-fa-mask="fas fa-circle" class="fas fa-toggle-off"></i> 
+            </div>
+            <h3 class="tc f3"> Off </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>The Application is currently off.</li>
+<li>Click this button to turn it on.</li>
+<li>Not available for apps that are always on.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 bg-light-gray">
+            <div class="tc black-10 fa-6x">
+              <i data-fa-transform="shrink-8" data-fa-mask="fas fa-circle" class="fas fa-power-off"></i> 
+            </div>
+            <h3 class="tc f3"> On </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>The application is on.</li>
+<li>Click this button to turn if off.</li>
+<li>Not available for apps that are always on.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
         
-        
-          
       
         
-        
+         
           
+
+
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  dark-gray
+  "
+  >
+    <p  class="tc pa2">Buttons and States </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Buttons Available When the Section App is On </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-20-ns fl w-100 pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="relative mb2 tc">
+              <img class="mw-100 br0" alt="" src="/" >
+            </div>
+            <h3 class=""> Edit </h3>
+            <div class="pt1 lh-copy markdown"><ul>
+<li>The app is in standby mode.</li>
+<li>Click on this button to switch to editing mode.</li>
+<li>The section works like a normal web page.</li>
+<li>Click on a link will take you to a new resource.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-20-ns fl w-100 pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="relative mb2 tc">
+              <img class="mw-100 br0" alt="" src="/" >
+            </div>
+            <h3 class=""> Editing </h3>
+            <div class="pt1 lh-copy markdown"><ul>
+<li>The app is in editing mode.</li>
+<li>Click on this button to exit editing.</li>
+<li>Click on text or image to start editing.</li>
+<li>The section will behave differently.</li>
+<li>Click on a link will bring up an editor.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-20-ns fl w-100 pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="relative mb2 tc">
+              <img class="mw-100 br0" alt="" src="/" >
+            </div>
+            <h3 class=""> Save </h3>
+            <div class="pt1 lh-copy markdown"><ul>
+<li>Click this button to save the current PAGE.</li>
+<li>Click on &ldquo;Save&rdquo; button on any section will save the whole page.</li>
+<li>This button works in standby and editing mode.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-20-ns fl w-100 pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="relative mb2 tc">
+              <img class="mw-100 br0" alt="" src="/" >
+            </div>
+            <h3 class=""> Settings </h3>
+            <div class="pt1 lh-copy markdown"><ul>
+<li>Toggles more options of the current section.</li>
+<li>This button works in standby and editing mode.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
-        
+         
           
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center bg-white-70
+  fadeIn
+  dark-gray
+  "
+  >
+    <p  class="tc pa2"> </p>
+    <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Global in Scope, not in Location </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+      
+      justify-center
+      "
+      >
+    
+      
+        <div class="w-50-l fl w-100 w-50-m pa3 flex grow flex-none">
+          <div class="w-100 pa2 bg-light-gray">
+            <div class="tc primary-color-lighter fa-6x">
+              <i data-fa-transform="down-4 shrink-10" data-fa-mask="fas fa-lock" class="fas fa-globe-asia"></i> 
+            </div>
+            <h3 class="tc f3"> Global Data On Your Local Disk </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>global data applies to all pages</li>
+<li>typical use case - menu items</li>
+<li>edit on any page</li>
+<li>populate sitewide</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-50-l fl w-100 w-50-m pa3 flex grow flex-none">
+          <div class="w-100 pa2 bg-light-gray">
+            <div class="tc primary-color-lighter fa-6x">
+              <i data-fa-transform="down-4 shrink-10" data-fa-mask="fas fa-lock" class="fas fa-comment-dots"></i> 
+            </div>
+            <h3 class="tc f3"> Global Section on Pages </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>section can be rendered anywhere on the page, optionally</li>
+<li>typical use case - call to action</li>
+<li>position information saved on page</li>
+<li>data saved on site</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
-        
+         
           
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  dark-gray
+  "
+  >
+    <p  class="tc pa2">  </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Page and Site Data </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3 class="tc"> Page Data </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>data related to current page only</li>
+<li>page title and description</li>
+<li>body text</li>
+<li>local sections</li>
+<li>header background, primary colors etc</li>
+</ul>
+
+<p>There can be multiple pages in one site or project.</div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="tc"> Site Data </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>data related to the whole site or project</li>
+<li>site title and description</li>
+<li>menu items</li>
+<li>default primary colors</li>
+<li>global sections</li>
+</ul>
+
+<p>There can be multiple sites or projects. Each site has its own database.</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-primary-color-light
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline gold">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-circle"></i>
+            <i 
+            data-fa-transform="shrink-6" class="alt-mini-icon fas fa-grip-horizontal
+            white
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">Exercise </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Update a Global Menu Item </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>this exercise requires a screen wider than 960px, for example a laptop or desktop computer. The menu item is not visible on small screens.</li>
+<li>go to the top of the page, and find the toolbar of the cover section.</li>
+<li>click on Edit button on the toolbar to switch to editing mode.</li>
+<li>add an item to the menu, provide a name and dummy URL, for example &ldquo;#&rdquo;</li>
+<li>click Save button on the section toolbar.</li>
+<li>open another tutorial in another tab, and look for the menu item you have just added.</li>
+<li>now on this page, click on &ldquo;Editing&rdquo; button to switch off editing mode.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
-        
+         
           
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">Same Look, Different Behaviour </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Global Section </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-plus-square"></i>
+            </div>
+            <h3 class="tc"> Insert </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>insert the name of section template and position of the section to the page data</li>
+<li>global section data is loaded from site</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-clone"></i>
+            </div>
+            <h3 class="tc"> Clone </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>clone the name of the section template only</li>
+<li>the data is loaded from site</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-trash"></i>
+            </div>
+            <h3 class="tc"> Delete </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>delete the section position from the page</li>
+<li>data remains on the site</li>
+<li>global section data can be replaced with a new section by the same key</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-primary-color-light
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-square"></i>
+            <i 
+            data-fa-transform="shrink-6" class="alt-mini-icon fas fa-globe-asia
+            white
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">Exercise </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Using a Global Section </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>go to the previous section with the title &ldquo;Global Section&rdquo;.</li>
+<li>find the section toolbar at the top edge of the section.</li>
+<li>click on the toggle button to turn on the app</li>
+<li>click on Edit button on the toolbar to switch to editing mode.</li>
+<li>Change the section title to something you can easily recognize.</li>
+<li>click on the cog icon on the section toolbar to show the section settings window.</li>
+<li>go to &ldquo;Global Section&rdquo; tab and tick the checkbox to enable it as global section.</li>
+<li>Fill in a data storage key you can easily recognize. You can get a list of existing keys by clicking on the dropdown button. Make sure to use a new key to avoid overriding data.</li>
+<li>click the Save button to save the changes.</li>
+<li>open another tutorial in another tab of your browser.</li>
+<li>click on the plus icon on any section toolbar to bring up a window for inserting new section.</li>
+<li>leave &ldquo;Select Section Template &rdquo; as blank. Clear this field if it has any value.</li>
+<li>in the &ldquo;Use Data From Global Section&rdquo; field, click on the dropdown button, and look for the global section you have created.</li>
+<li>click on the &ldquo;Insert&rdquo; button to confirm the operation.</li>
+<li>you should be able to see the global section inserted to that tutorial page, with data you have saved.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-accent-color-light
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+
+      <div class="w-100 flex-auto pa2 fl">
         
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">What People Say About It </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Simply Amazing! </h2>
+          <i class="fas fa-quote-left fa-pull-left fa-3x"></i>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             I created stunning landing pages with Go and Talk, without writing any code. This is simply amazing!
+            
+          </div>
+          <i class="fas fa-quote-right fa-pull-right fa-3x"></i>
+
+          <div class="pv2" >
+            Tina
+          </div>
+          <div >
+            Web Designer
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
-        
-        
           
+         
+          
+
+
+
+
+
+
+
+
+<section 
+  class="min-vh-100 alternate gt-mv-on relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
+  bg-white-60
+  fadeIn
+  
+  "
+  >
+    
+
+    
+
+
+  
+
+
+    
+
+<figure class="ma0">
+	<picture>
+    
       
-        
-        
-          
+  		  
+  		  
+    		
+    		
+    		
       
-          
+    
+    
+      
+    
+  </picture>
+</figure>
+<span class="absolute absolute--fill
+    "
+    ></span><div class="cf w-100 relative  center flex flex-wrap mw8"
+    >
+      
+      <div 
+      class="image-column w-100 z-0 flex flex-wrap fl
+      h-100
+      absolute
+      even-order-1-ns
+      
+      w-100-ns
+      items-center">
+        <div class="tc overflow-hidden relative  w-100 flex flex-column justify-center items-center
+
+        h-100"
         
+        > 
+
+        
+
+        
+        </div>
+      </div>
+      
+      <div class="text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl
+      w-30-ns
+      justify-center
+      
+      "
+      >
+        
+        <div class="text-card w-100 pa3 relative
+        
+        
+        
+        
+        f4-ns
+        fw4-ns
+        
+        
+        
+        w-100-ns
+        "
+        
+        >
+          <span class="z--1 absolute absolute--fill bg-black-"
           
+          >
+          </span>
+
+          <p  class="ma0 pv2">Make a Difference with Innovation</p>
+
+          <h1 class="ma0 pa2
+          pv3-ns
+          ph0-ns
+          
+          
+          
+          
+          tc
+          f2-ns
+          fw7-ns
+          
+          
+          ttc
+          "
+          
+          >
+            <span  class="">Using Global Data and Global Section</span>
+          </h1>
+          <div class="pa2 "
+          
+          >
+            
+            <div class=" markdown lh-copy
+            
+            "  >
+              
+                <p>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.</p>
+
+<p>Global data is shared by pages of the same project. Each page can have its look and feel, with the same data, such as menu items.</p>
+
+<p>Global section is a section with complete data and settings, such as a site wide call to action section. It can be inserted anywhere on a page, and rendered with the same data. This feature can be used to keep a bunch of commonly used blocks as global, and inserted on demand when you create new pages.  Just be aware it is global. If you update it on one page, the changes will apply to all pages with the same global section.</p>
+
+<p>If you have completed all the exercises in this tutorial, you should have made the following achievements:</p>
+
+<ul>
+<li>know where to find section toolbar and global toolbar.</li>
+<li>understand the global data and global section.</li>
+<li>make use of global sections to create a new page quickly.</li>
+</ul>
+
+<p>Well done. You will acquire new skills and explore new features in other tutorials. Stay tuned.</p>
+
+              
+            </div>
+            
+          </div>
+          
+
+          <div class="pv4 flex flex-column" >
+            
+            <div class="fadeIn animate-edit-cta center tc ba w-100
+            bg-primary-color
+            
+            self-center
+            b--light-gray
+            br0
+            pv2
+            ph3
+            mv3
+            w-50-ns
+            "
+            
+            >
+              
+              
+
+              <a class="no-underline w-100 dib"
+              
+               href="/tutorial/" >
+                <div class="flex items-center justify-center white-80
+                  
+                  f4-ns
+                "
+                
+                >
+                  
+                  <span class="ph2 "
+                  
+                  >
+                    <i class="cta-icon fas fa-info"
+                    data-fa-mask="fas fa-circle"
+                    data-fa-transform="shrink-4"
+                    
+                    >
+                    </i>
+                  </span>
+                  
+                  <span  >
+                  Back to Tutorials
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </div> 
+    
+
+  </div> 
+  
+</section>
+
+
+
+        
       
            
-        
+         
           
+
+
+
+<section 
+  class="gt-mv-on relative flex flex-column justify-end" ><div class="flex-auto tc bg-black-10 gmws dn">
+    <div class="pt5 f-6-l f1-m f2 flex flex-column justify-center">
+      <span class="flex-auto"></span>
+      <i class="fas fa-comments white slide-trigger pointer"></i>
+      <span class="flex-auto"></span>
+    </div>
+  </div>
+  <div class="bg-black-80
+  white-80
+  "
+  >
+    
+<nav class="relative f6"  >
+  <div class="w-90 mw8 center ph2 pv3" >
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-gold " >
+      
+        
+          <li class="pv2 fl">
+            <a href="/#"  class="link ph3 dim ">
+              Home
+            </a>
+          </li>
+        
+          <li class="pv2 fl">
+            <a href="/about/"  class="link ph3 dim ">
+              About
+            </a>
+          </li>
+        
+
+      
+    </ul>
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-white-80" >
+    
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Terms of Service</a>
+        </li>
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Privacy</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+    <div class="tc ph4 pv2 f7" >
+      Copyright 2019. All rights reserved.
+    </div>
+    <div class="tc pa3 f7 bg-black-80 white-60 pb6 pb3-l">
+      Golden theme by
+      <a class="white-70 hover-white" href="">GoandMake.app</a>
+      <a class="white-70 hover-white" href=""></a>
+      Powered by <a class="white-70 hover-white" href="https://we.goandmake.app">goandmake.app</a>
+      
+        <a class="ph3 white-40 hover-white" rel="nofollow" href="index.goandmake.html">Edit</a>
+      
+    </div>
+  </div> 
+
+</section>
+        
       
     
 
@@ -489,12 +1324,6 @@ section[mv-app].active {
           <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
               <a href="/tutorial/" class="link  white-80 ">
                 Tutorials
-              </a>
-          </li>
-        
-          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
-              <a href="/presentation/" class="link  white-80 ">
-                Talks
               </a>
           </li>
         
@@ -543,15 +1372,7 @@ section[mv-app].active {
 </div>
 </div>
 </footer>
- 
-    
 
-    <script data-source="homepage-index">
-      
-      var gtpb = { maxapp: 10, default:  JSON.parse("{\"AllSections\":[{\"data\":{\"appearance\":{\"section_background\":\"bg-primary-color-dark\",\"trigger_class\":\"slide-trigger\"},\"card_font_size\":3,\"card_font_weight\":1,\"card_letter_spacing\":\"tracked\",\"card_text_align\":\"tc\",\"content\":\"with innovation.\",\"cta\":{\"background_color\":\"bg-black-20\",\"button_text_color\":\"white-90\",\"name\":\"Play Slides -\\u003e\",\"pv\":1,\"title\":\"view page as slides. \",\"url\":\"#\"},\"cta2\":{\"name\":\" Learn More \",\"url\":\"/tutorial\"},\"description\":\"and global sections\",\"image\":{\"animation\":\"slowUp\",\"flow_end\":true,\"overlay_background\":\"bg-black-70\",\"responsive\":false,\"src\":\"https://source.unsplash.com/sK1hW5knKkw/1536x864\"},\"intro\":\"update once, populate everywhere\",\"title\":\"Global Data\",\"title_align\":\"tc\",\"title_class\":\"gold\",\"title_color\":\"gold\",\"title_font_family\":\"baskerville\",\"title_font_size\":-5,\"title_font_weight\":4,\"title_letter_spacing\":\"tracked\"},\"data_key\":null,\"id\":\"43714\",\"is_global\":null,\"partial\":\"goandtalk/cover/hero-dark-background-with-text-at-center\"},{\"data\":\"\",\"data_key\":\"finding_toolbar\",\"id\":\"b9412\",\"is_global\":true,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":\"\",\"data_key\":\"app_status_on_off\",\"id\":\"se8dpibtc\",\"is_global\":true,\"partial\":\"goandtalk/slides/collection-big-icon-circle-mask\"},{\"data\":\"\",\"data_key\":\"buttons_in_edit_mode\",\"id\":\"snao9pv29\",\"is_global\":true,\"partial\":\"goandtalk/slides/collection-text-custom-width\"},{\"data\":{\"appearance\":{\"card_background\":\"bg-light-gray\",\"icon_color\":\"primary-color-lighter\",\"section_background\":\"bg-white-70\",\"slide_animation\":\"fadeIn\"},\"column\":[{\"description\":\"* global data applies to all pages\\n* typical use case - menu items\\n* edit on any page\\n* populate sitewide\",\"icon\":\"globe-asia\",\"title\":\"Global Data On Your Local Disk\"},{\"description\":\"* section can be rendered anywhere on the page, optionally\\n* typical use case - call to action\\n* position information saved on page\\n* data saved on site\",\"icon\":\"comment-dots\",\"title\":\"Global Section on Pages\"}],\"column_class\":\"w-50-l\",\"content\":\"\",\"data_fa_mask\":\"lock\",\"data_fa_transform\":\"down-4 shrink-10\",\"description\":\"  \",\"horizontal_position\":\"justify-center\",\"is_global\":false,\"resize_column\":\"flex-none\",\"title\":\"Global in Scope, not in Location\"},\"data_key\":null,\"id\":\"sr8yiehh1\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-big-icon-circle-mask\"},{\"data\":\"\",\"data_key\":\"site_and_page_data\",\"id\":\"snbvwe96k\",\"is_global\":true,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":{\"appearance\":{\"icon_color\":\"gold\",\"section_background\":\"bg-primary-color-light\",\"slide_animation\":\"fadeIn\"},\"content\":\"* this exercise requires a screen wider than 960px, for example a laptop or desktop computer. The menu item is not visible on small screens.\\n* go to the top of the page, and find the toolbar of the cover section.\\n* click on Edit button on the toolbar to switch to editing mode.\\n*  add an item to the menu, provide a name and dummy URL, for example \\\"#\\\" \\n* click Save button on the section toolbar.\\n* open another tutorial in another tab, and look for the menu item you have just added. \\n* now on this page, click on \\\"Editing\\\" button to switch off editing mode. \",\"icons\":{\"icon_transform\":\"shrink-6\",\"mini_icon\":\"grip-horizontal\",\"mini_icon_color\":\"white\",\"outer_icon\":\"circle\",\"width\":20},\"intro\":\"Exercise\",\"is_global\":false,\"title\":\"Update a Global Menu Item\"},\"data_key\":null,\"id\":\"sd5m6kco3\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"card_background\":\"hover-primary-color\",\"icon_color\":\"black-20\",\"slide_animation\":\"fadeIn\",\"text_color\":\"primary-color-first-letter-h3\"},\"column\":[{\"description\":\"* insert the name of section template and position of the section to the page data\\n* global section data is loaded from site\",\"icon\":\"plus-square\",\"title\":\"Insert\"},{\"description\":\"* clone the name of the section template only\\n* the data is loaded from site\",\"icon\":\"clone\",\"title\":\"Clone\"},{\"description\":\"* delete the section position from the page\\n* data remains on the site\\n* global section data can be replaced with a new section by the same key\",\"icon\":\"trash\",\"title\":\"Delete\"}],\"column_class\":\"w-25-l\",\"content\":\"\",\"description\":\"  \",\"horizontal_position\":\"justify-center\",\"intro\":\"Same Look, Different Behaviour\",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"Global Section\"},\"data_key\":null,\"id\":\"s7c9ss9jr\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":\"\",\"data_key\":null,\"id\":\"b94f8\",\"is_global\":true,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"animation\":\"fadeIn\",\"icon_color\":\"gold\",\"section_background\":\"bg-accent-color-light\",\"slide_animation\":\"fadeIn\"},\"content\":\"I created stunning landing pages with Go and Talk, without writing any code. This is simply amazing!\",\"description\":\"\",\"icons\":{\"mini_icon\":\"download\"},\"intro\":\"What People Say About It\",\"is_global\":false,\"reviewer\":\"Tina\",\"role\":\"Web Designer\",\"title\":\"Simply Amazing!\"},\"data_key\":null,\"id\":\"c9206\",\"is_global\":null,\"partial\":\"goandtalk/slides/big-bold-quote\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-60\",\"slide_animation\":\"fadeIn\"},\"card_font_size\":4,\"card_font_weight\":\"4\",\"card_overlay\":0,\"card_width\":100,\"cta\":{\"background_color\":\"bg-primary-color\",\"block_button_width\":50,\"border_color\":\"b--light-gray\",\"border_radius\":\"br0\",\"button_font_size\":\"4\",\"button_text_color\":\"white-80\",\"icon_mask\":\"circle\",\"inner_icon\":\"info\",\"inner_icon_transform\":\"shrink-4\",\"mv\":3,\"name\":\"Back to Tutorials\",\"ph\":3,\"pv\":2,\"url\":\"/tutorial/\"},\"height_reference\":\"h\",\"image\":{\"responsive\":false},\"image_br\":\"br0\",\"image_column_width\":100,\"image_height\":100,\"image_layer\":\"absolute\",\"image_opacity\":100,\"image_order\":\"even-order-1-ns\",\"image_under_text\":false,\"intro\":\"Make a Difference with Innovation\",\"object_fit_class\":\"of-scale-down\",\"quote_display\":\"dn\",\"title_align\":\"tc\",\"title_font_size\":\"2\",\"title_font_weight\":\"7\",\"title_ph\":\"0\",\"title_pv\":\"3\",\"title_transform\":\"ttc\"},\"data_key\":null,\"id\":\"7b698\",\"is_global\":null,\"partial\":\"goandtalk/content/text-block\"},{\"data\":\"\",\"data_key\":null,\"id\":\"gt_footer\",\"is_global\":true,\"partial\":\"goandtalk/footer/default_footer\"}],\"IsPage\":true,\"Params\":{\"date\":\"2019-01-09T00:00:00Z\",\"description\":\"Learn how to update global data such as menu items, and use global section\",\"draft\":false,\"gt_page_builder\":true,\"header_class\":\"bg-transparent\",\"icon_mask\":\"square\",\"inner_icon\":\"globe-asia\",\"inner_icon_transform\":\"shrink-6\",\"iscjklanguage\":false,\"lastmod\":\"2019-01-09T00:00:00Z\",\"lightness\":0,\"lightness_dark\":0,\"lightness_light\":0,\"lightness_lighter\":0,\"logo_url\":\"/images/logos/icon-on-dark.svg\",\"main_menu_align\":\"start\",\"primary_hue\":303,\"publishdate\":\"2019-01-09T00:00:00Z\",\"saturation\":40,\"skip_cover_nav\":false,\"skip_slide_animation\":false,\"title\":\"Using Global Data and Global Section\",\"type\":\"presentation\"},\"content\":\"Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.\\n\\nGlobal data is shared by pages of the same project. Each page can have its look and feel, with the same data, such as menu items.\\n\\nGlobal section is a section with complete data and settings, such as a site wide call to action section. It can be inserted anywhere on a page, and rendered with the same data. This feature can be used to keep a bunch of commonly used blocks as global, and inserted on demand when you create new pages.  Just be aware it is global. If you update it on one page, the changes will apply to all pages with the same global section.\\n\\nIf you have completed all the exercises in this tutorial, you should have made the following achievements:\\n\\n* know where to find section toolbar and global toolbar.\\n* understand the global data and global section.\\n* make use of global sections to create a new page quickly.\\n\\nWell done. You will acquire new skills and explore new features in other tutorials. Stay tuned.\\n\",\"filepath\":\"tutorial/using-global-data-and-section.md\"}") };
-      
-    </script>
-    
     
 <script src="/js/webslides.min.js?v=0.0002"></script>
 
@@ -562,57 +1383,7 @@ section[mv-app].active {
 
 
 
-<script src="/js/lib/markdown-it.min.js" ></script>
-<script src="/js/lib/purify.min.js" ></script>
-<script src="/js/lib/prism.js" ></script>
 
-<script src="/js/lib/mavo/1.7beta-bind/mavo.js?v=0.0002"></script>
-<script src="/js/lib/mavo/1.7beta-bind/mavo-markdownit.js?v=0.0001"></script>
-<script src="/js/partial.js" ></script>
-
-
-<script src="/js/lib/awesomplete.js" ></script>
-<script src="/js/lib/doT.min.js" ></script>
-
-<script src="/js/lib/pouchdb.min.js" ></script>
-<script src="/js/lib/clipboard.min.js" ></script>
-<script src="/js/lib/toml-j0.4.min.js" ></script>
-<script src="/js/lib/js-yaml.min.js" ></script>
-<script src="/js/lib/dragula.min.js" ></script>
-<script src="/js/lib/meta-matter-custom.js" ></script>
-
-
-<script src="/js/builder/goandtalk.editor.js?v=0.0006"></script>
-
-<script>
-
-
-
-</script>
-
-
-
-
-    
-    <datalist id="width_of_container">
-      <option value="0">
-      <option value="10">
-      <option value="20">
-      <option value="30">
-      <option value="40">
-      <option value="50">
-      <option value="60">
-      <option value="70">
-      <option value="80">
-      <option value="90">
-      <option value="100">
-    </datalist>
-    <datalist id="height_of_container">
-      <option value="25">
-      <option value="50">
-      <option value="75">
-      <option value="100">
-    </datalist>
     
   </body>
 </html>

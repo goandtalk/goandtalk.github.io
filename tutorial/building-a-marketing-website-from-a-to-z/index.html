@@ -1,8 +1,7 @@
-<!DOCTYPE html><html class="gt-edit-mode"  lang="en-us">
+<!DOCTYPE html><html class=""  lang="en-us">
   <head>
-    <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Building a Website from A to Z | Go and talk theme</title>
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Building a Website from A to Z | Go and talk page builder</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -11,7 +10,7 @@
      <meta name="generator" content="Hugo 0.49" />
 
       
-        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
       
 
     
@@ -21,95 +20,160 @@
 <link href="/css/styles.css" rel="stylesheet" />
 
 
-<link rel="stylesheet" href="/css/prism.css">
-<link rel="stylesheet" href="/css/mavo-1.7beta.css">
-<link rel="stylesheet" href="/css/awesomplete.css">
 
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria&#43;Hallelujah"> 
+  
+  
+  <style>
+  .handwriting {
+ font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+@keyframes slowRightEntry {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0.3;
+  }
+50% {
+   opacity: .5;
+}
+
+  90% {
+   transform: translateX(0vw);
+   opacity: .8;  
+   }
+  100% {
+    transform: translateX(0vw);
+   opacity: 0.7;
+}
+}
+
+.slowRightEntry {
+  animation: slowRightEntry 10s linear 10;
+  height: 100%;
+  }
+
+
+@keyframes slowRightExit {
+  0% {
+    transform: translateX(0vw);
+   opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+ }
+  100% {
+   opacity: .0;
+    transform: translateX(50vw);
+  }
+}
+
+.slowRightExit {
+  animation: slowRightExit 20s linear 5;
+  height: 100%;
+}
+
+  </style>
 
 
     
 <style>
 
+.primary-color-dark {
+      color:  hsl(351, 32%, 20%);
+    }
+    .bg-primary-color-dark {
+      background-color: hsl(351, 32%, 20%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark {
+      border-color: hsl(351, 32%, 20%);
+    }
+    .bg-primary-color-dark-90 {
+      background-color: hsla(351, 32%, 20%, 90%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark-90 {
+      border-color: hsla(351, 32%, 20%, 90%);
+    }
 
-section[mv-app].active {
-  min-height: 100vh;
-}
- 
-.mv-pending-edit {
-  min-width: 4em;
-  min-height: 1em;
-}
+    .primary-color-first-letter-h3 h3:first-letter {
+      color: hsl(351, 32%, 45%);
+      font-size: 1.2em;
+    }
 
- 
-.animate-edit-cta {
-  transition: margin 1s ease-in-out, padding 1s ease-in-out;
-}
+    .primary-color {
+      color: hsl(351, 32%, 45%);
+    }
+    .b--primary-color {
+      border-color: hsl(351, 32%, 45%);
+    }
+    .hover-primary-color:hover, .hover-primary-color:focus {
+      color: hsl(351, 32%, 45%);
+    }
+    .hover-bg-primary-color:hover, .hover-bg-primary-color:focus {
+      background-color: hsl(351, 32%, 45%);
+      color: rgba(255,255,255,.8);
+    }
 
-.move-x-2 {
-  transform: translateX(2rem);
-}
-.move-y-2 {
-  transform: translateY(2rem);
-}
-.move-xy-2 {
-  transform: translate(2rem, 2rem);
-}
+    .bg-primary-color {
+      background-color: hsl(351, 32%, 45%);
+      color: rgba(255,255,255,.8);
+    }
 
-@media (min-width: 36em) {
-   
-  .inline-form-ns {
-    width: 52rem;
-    max-width: 96vw;
-  }
+    .primary-color-light {
+      color: hsl(351, 32%, 65%);
+    }
+    .bg-primary-color-light {
+      background-color: hsl(351, 32%, 65%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-light {
+      border-color: hsl(351, 32%, 65%);
+    }
+    .primary-color-lighter {
+      color: hsl(351, 32%, 80%);
+    }
+    .bg-primary-color-lighter {
+      background-color: hsl(351, 32%, 80%);
+      color: rgba(255,255,255,.9);
+    }
+    .b--primary-color-lighter {
+      border-color: hsl(351, 32%, 80%);
+    }
 
-   
-  .ff-ns {
-    min-width: 12rem;
-  }
 
-}
+    .accent-color {
+      color: hsl(165,35%,45%);
+    }
+    .bg-accent-color {
+      background-color: hsl(165,35%,45%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color {
+      border-color: hsl(165,35%,45%);
+    }
 
-   
-  [mv-app][mv-mode="edit"] {
-    min-height: 30em;
-  }
-  img.mv-empty[mv-mode="edit"] {
-    padding: 4rem;
-  }
-  img.mv-empty[mv-mode="edit"]:after {
-    content: " Enter Image URL";
-  }
-  [mv-app][mv-mode="edit"].min-vh-100, [mv-app][mv-mode="edit"].gmws-slide {
-    min-height: 100vh;
-  }
-
-  input:invalid {
-    outline: 2px solid red;
-  }
-
-  section:first-child .gt-move-up,
-  section:last-child .gt-move-down {
-    display: none;
-  }
-
-  button.mv-add.dn {
-    display: none;
-  }
-  [mv-mode="edit"]   button.mv-add.dn, [mv-mode="edit"] .show-in-edit.dn {
-    display: inline-block;
-  }
-
-  section[mv-mode="edit"] nav {
-    padding-top: 2rem;
-  }
+    .accent-color-light {
+      color: hsl(165,35%,65%);
+    }
+    .bg-accent-color-light {
+      background-color: hsl(165,35%,65%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color-light {
+      border-color: hsl(165,35%,65%);
+    }
 
 
 </style>
 <meta property="og:title" content="Building a Website from A to Z" />
 <meta property="og:description" content="A step to step guide on building a marketing website quickly." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://192.168.0.10:1314/tutorial/building-a-marketing-website-from-a-to-z/" /><meta property="article:published_time" content="2019-01-09T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/" /><meta property="article:published_time" content="2019-01-09T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-01-09T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Building a Website from A to Z">
@@ -127,6 +191,8 @@ section[mv-app].active {
 <meta name="twitter:title" content="Building a Website from A to Z"/>
 <meta name="twitter:description" content="A step to step guide on building a marketing website quickly."/>
 
+      
+    
 
   </head>
   <body class="bg-light-gray sans-serif readable ">
@@ -140,7 +206,7 @@ section[mv-app].active {
   <div id="site-page-settings">
   
 <div onclick="" class="active off-canvas-dashboard gt-vbar z-1 bg-white fixed left-0 top-0 bottom-0 o-0 hover-o-90 mw2 flex flex-column justify-center"
- mv-storage="none" 
+
 >
   <div class="flex-auto"></div>
   <div> 
@@ -148,45 +214,6 @@ section[mv-app].active {
       <button aria-label="exit slides" type="button" class="pointer gt-label gt-exit-slides bg-orange w-100 pa1 v-mid mb2 dim br2 f5 fw9">&#x21c5;</button>
       <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Exit slides and browse as normal page.</div>
     </div>
-    
-    <div class="mv-bar dn"></div>
-    <input hidden property="current_base_app" mv-storage="none" />
-    <div class="relative">
-      <button
-      mv-action="invoke('toggleClass', base_app_list, '', 'active'),
-      invoke('addClass', base_app_list, 'html', 'gt-edit-mode', true)
-      "
-      aria-label="hide this vertical toolbar" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">&lt;</button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Hide this toolbar. </div>
-    </div>
-    <div class="relative">
-      <button
-      mv-action="invoke('toggleClass', base_app_list, 'html', 'gt-edit-mode', true)"
-      aria-label="hide section toolbars" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">
-        <i class="fas fa-th" data-fa-mask="fas fa-square" data-fa-transform="shrink-3 up-9"></i>
-      </button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Toggle section toolbars. </div>
-    </div>
-
-
-
-    
-
-    <div class="relative">
-      <button type="button"
-      mv-action="set(current_base_app,if(current_base_app = 'page_app','','page_app'))"
-      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-file-alt"></i></button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage page setting </div>
-    </div>
-    <div class="relative">
-      <button type="button"
-      mv-action="set(current_base_app,if(current_base_app = 'site_app','','site_app'))"
-      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-globe"></i></button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage site setting </div>
-    </div>
-
-
-
     
 
   </div>
@@ -196,7 +223,12 @@ section[mv-app].active {
   </div>
   <article id="webslides" class="disabled">
     
+
+    
       
+        
+         
+          
 
 <section 
   class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="min-vh-100 flex-auto bg-black-90
@@ -268,7 +300,7 @@ section[mv-app].active {
       
       >
        <span 
-       >  Go and talk theme</span>
+       >  Go and talk page builder</span>
       </span>
     </span>
     <span class="flex-auto dn-l"></span>
@@ -285,12 +317,6 @@ section[mv-app].active {
           <li class="fl">
             <a href="/tutorial/"  class="link ph3 white-80">
               Tutorials
-            </a>
-          </li>
-          
-          <li class="fl">
-            <a href="/presentation/"  class="link ph3 white-80">
-              Talks
             </a>
           </li>
           
@@ -402,104 +428,1158 @@ section[mv-app].active {
 
 
 
+        
       
-<section class="relative min-vh-100 flex flex-column" >
+        
+         
+          
 
-  
-  <div class="relative tc-l pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " >
-    <div class="flex-auto w-100 black-60 tracked flex flex-column justify-center">
-      <div class="tc-l ph3">
-
-        <div class="" >
-          <h1 class="f2 f1-m f-5-l tracked fw4 mb0 lh-title  ">JavaScript Required</h1>
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center bg-white-90
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">  </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Overview of This Tutorial </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    link-gold
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 hover-primary-color fa-5x">
+              <i class="fas fa-paint-roller"></i>
+            </div>
+            <h3 class="tc"> Hands On </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>get familiar with the page builder.</li>
+<li>create a website for an imaginary shop called Toffee &amp; Coffee</li>
+<li>load setting and sample pages from remote storage on Github</li>
+<li>upload images to Github and select these images in media library.</li>
+</ul>
+</div>
+          </div>
         </div>
-        <div class="">
-          <h2 class="fw1 f3 black-80 mt3 mb4 " > The page builder relies on JavaScript to work. If you see this page after page loads, it means JavaScript is not enabled, or not working properly. </h2>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 hover-primary-color fa-5x">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3 class="tc"> Customize </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>try different layout</li>
+<li>change images and content</li>
+<li>embed a map</li>
+<li>embed a video</li>
+<li>enable a contact form</li>
+</ul>
+</div>
+          </div>
         </div>
-
-      </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 hover-primary-color fa-5x">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="tc"> Publish Online </h3>
+            <div class="pt4 lh-copy markdown">Publish the page online for others to see.</div>
+          </div>
+        </div>
+      
+    
 
     </div>
-
-    <div class="vh-25"></div>
-  </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
 
 </section>
 
 
+        
+      
+        
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-transparent
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-30-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-th
+            white
+            "></i>
+
+          </span>
+
+        </div>
+        
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Preparation </h2>
+          <div class="pt3 f3 markdown lh-copy
+          
+          "  >
+             <ul>
+<li>a computer with internet connection.</li>
+<li>a free Github account. This is optional if you already have a web hosting account and your domain name.</li>
+<li>images you want to use on the website.</li>
+<li>text and the story you want to tell.</li>
+<li>go through the <a href="/tutorial/an-overview-of-go-and-talk-and-ui/">page builder overview</a> to get familiar with the toolbars.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
+      
+        
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-white-90
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-briefcase
+            white
+            "></i>
+
+          </span>
+
+        </div>
+        
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Creating an Organization on Github.com </h2>
+          <div class="pt3 f3 markdown lh-copy
+          
+          "  >
+             <ul>
+<li>create a new organization in your Github account. The organization name must be unique, but not necessarily a registered business name. This tutorial uses the organization name &ldquo;toffee-and-coffee&rdquo;. You will need to pick a different name.</li>
+<li>your organization name is referred as [orgname] below. Please replace it with the actual name.</li>
+<li>go to <a href="https://github.com/toffee-and-coffee/toffee-and-coffee.github.io">https://github.com/toffee-and-coffee/toffee-and-coffee.github.io</a>, and click on the fork button at the top right corner.  Then follow the prompt and select the organization account to fork this repository.</li>
+<li>click on the settings tab below the repository name, and rename this newly forked repository following the pattern [orgname].github.io.<br /></li>
+<li>you need to click on the rename button to confirm the name change. Github will enable site hosting for this repository automatically after the renaming.</li>
+<li>check and verify you can visit the demo page by entering the address [orgname].github.io.</li>
+<li>if you can&rsquo;t visit the page yet, try again after a little while. It may take a few seconds for the page to work, but occasionally it takes longer.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
+      
+        
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-transparent
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-30-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-images
+            white
+            "></i>
+
+          </span>
+
+        </div>
+        
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Uploading Images to Github.com </h2>
+          <div class="pt3 f3 markdown lh-copy
+          
+          "  >
+             <ul>
+<li>Upload your images to the &ldquo;images&rdquo; folder of the repository  you have forked and renamed, if the images are on your computer.</li>
+<li>Your images will be available under the link [orgname].github.io/images/[image-name].</li>
+<li>Supported image suffix: jpg, jpeg, png, gif, webp, svg. You may give a meaningful name to the images in order to search by name later.</li>
+<li>Big images are slow to upload and download. You may  resize them before uploading.</li>
+<li>You can also link to your images online, or search for free images and link directly to custom resized images from <a href="https://unsplash.com">unsplash</a>.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
+      
+        
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-white-90
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-globe-asia
+            white
+            "></i>
+
+          </span>
+
+        </div>
+        
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Loading Theme Setting with Go and Talk Page Builder </h2>
+          <div class="pt3 f3 markdown lh-copy
+          
+          "  >
+             <ul>
+<li>you can open another tab and click this link to <a href="/edit/?site=toffee_and_coffee">create a new site project</a>. You will see a placeholder page without navigation menu links.</li>
+<li>a database by the name toffee_and_coffee will be created automatically in your browser.</li>
+<li>hover on the left edge of the screen to show the vertical toolbar, click on the globe icon to show site setting window, click on the grid icon(<i class="fas fa-th-large"></i>) to show extra tabs.</li>
+<li>go to tab &ldquo;Remote Setting&rdquo;, enter &ldquo;themedata&rdquo; as data repo owner and &ldquo;toffee-and-coffee&rdquo; as data repo name, then click on the button &ldquo;Load Remote Site Setting&rdquo;. This will load the theme&rsquo;s default settings, and the navigation menu links.</li>
+<li>go to tab &ldquo;Current&rdquo;, and update your website information and copyright statement there. The base url must be updated to your new website address, so that the media library knows where to find your uploaded images.</li>
+<li>hover on the top edge of the screen to show the horizontal app toolbar, and click on &ldquo;Save&rdquo; button to save the changes.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
+      
+        
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-transparent
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-home
+            white
+            "></i>
+
+          </span>
+
+        </div>
+        
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Loading Home Page of Theme </h2>
+          <div class="pt3 f3 markdown lh-copy
+          
+          "  >
+             <ul>
+<li>hover on the left edge of the screen to show the vertical toolbar, click on the file icon(<i class="fas fa-file-alt"></i>) to show page setting window, click on the grid icon(<i class="fas fa-th-large"></i>) to show extra tabs.</li>
+<li>go to tab &ldquo;Remote Page&rdquo;, click on the &ldquo;Fetch List&rdquo; button to refresh article list, then click on the dropdown icon to select &ldquo;content/_index.md&rdquo;. This is the data for the home page.</li>
+<li>click on the &ldquo;Load Remote Page&rdquo; button to load the home page of this theme.</li>
+<li>if you can&rsquo;t see the article list, double check the Remote Setting tab of site setting, and make sure the data repo owner and name are properly filled in.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
+      
+        
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-white-90
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-search-plus
+            white
+            "></i>
+
+          </span>
+
+        </div>
+        
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Selecting Uploaded Logo </h2>
+          <div class="pt3 f3 markdown lh-copy
+          
+          "  >
+             <ul>
+<li>hover on the left edge of the screen to show the vertical toolbar, click on the globe icon to show site setting window.</li>
+<li>go to tab &ldquo;Github&rdquo;, and fill in the name of your Github organization and repository.</li>
+<li>Click on the &ldquo;Fetch List&rdquo; button to refresh image list, then click on the dropdown icon to select your logo.</li>
+<li>by default the images are fetched from the folder &ldquo;images&rdquo;. If you have uploaded your logo to a subfolder, you can fill in the full path of the subfolder, for example &ldquo;images/logos&rdquo; to list images from the subfolder. When you have selected a logo, you can reset the image folder to &ldquo;images&rdquo;, so as to select images from that folder while you edit a page.</li>
+<li>if you can&rsquo;t see the file list, verify that repo owner and name are properly filled in above.</li>
+<li>if you can see the file name but can&rsquo;t see images in the dropdown list, verify that your website address is properly filled in the &ldquo;Current&rdquo; tab of site setting.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
+      
+        
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-transparent
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-home
+            white
+            "></i>
+
+          </span>
+
+        </div>
+        
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Selecting Uploaded Image in Page Builder </h2>
+          <div class="pt3 f3 markdown lh-copy
+          
+          "  >
+             <ul>
+<li>images are available in some sections.</li>
+<li>you can click the cog icon (<i class="fas fa-cog"></i>) on the horizontal toolbar to show the section option window, and select images in the following tabs: highlight image, background image, and  base image.</li>
+<li>images are rendered in layers on screen. The highlight image is closer to you, and the base image is away from you.</li>
+<li>the image location is set in &ldquo;Github&rdquo; tab of site settings. you can click on the Fetch List button to update image list after changing image directory.</li>
+<li>if you know the full address of the image, you can click on any image in edit mode, and paste the image url in the small popup window.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
+      
+        
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-white-90
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-edit
+            white
+            "></i>
+
+          </span>
+
+        </div>
+        
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Editing Page </h2>
+          <div class="pt3 f3 markdown lh-copy
+          
+          "  >
+             <ul>
+<li>click around and make changes as you wish. Your changes are saved in the browser database automatically.</li>
+<li>select different images. If you can&rsquo;t find any image, check the site settings and make sure the names of your organization and repository are correct.</li>
+<li>edit menu links and sections. You can specify different source for the embed map and video by toggling on the app, and click on the cog icon (<i class="fas fa-cog"></i>) to open the options window. Go to Iframe tab and embed a new resource, for example a calendar.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
+      
+        
+         
+          
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">At Top and Left, Out of View Initially </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Finding Toolbars </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
     
       
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-grip-vertical"></i>
+            </div>
+            <h3 class="tc"> Global Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>At the left side of the screen.</li>
+<li>Manage global settings.</li>
+<li>Apply to the current page, or all pages.</li>
+<li>Hide all section tools.</li>
+<li>Hide itself.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-grip-horizontal"></i>
+            </div>
+            <h3 class="tc"> Section Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>At the top of each section.</li>
+<li>Manage current section.</li>
+<li>Apply to current section.</li>
+<li>Turn app on and off.</li>
+<li>Toggle edit mode.</li>
+<li>Toggle global toolbar.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-keyboard"></i>
+            </div>
+            <h3 class="tc"> Context Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>Available in some sections.</li>
+<li>Toggle button to switch toolbars.</li>
+<li>Toggle on to edit.</li>
+<li>Toggle off when done.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" > Hover or tap to show the toolbars. </div>
+  </div> 
+
+</section>
+
+
         
-        
-          
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-white-90
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-globe-asia
+            white
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Loading About Page </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>hover on the left edge of the screen to show the vertical toolbar, click on the file icon(<i class="fas fa-file-alt"></i>) to show page setting window, click on the grid icon(<i class="fas fa-th-large"></i>) to show extra tabs.</li>
+<li>go to tab &ldquo;Remote Page&rdquo;, click on the dropdown icon to select &ldquo;content/about.md&rdquo;. This is the data for the about page.</li>
+<li>click on the &ldquo;Load Remote Page&rdquo; button to load the about page of this theme.</li>
+<li>edit this page as you wish.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-transparent
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-30-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-file-export
+            white
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Exporting a Web Page for Hosting with Github Pages </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>hover on the left edge of the screen to show the toolbar</li>
+<li>click on file icon (<i class="fas fa-file-alt"></i>) to show the page setting options</li>
+<li>click on the grid icon (<i class="fas fa-th-large"></i>) to show extra tabs.</li>
+<li>click on tab &ldquo;Export Webpage&rdquo;, and select &ldquo;web&rdquo; for Webpage Link Format.</li>
+<li>copy the content of the web page, and paste it to the file index.html under the github repository you have just created.</li>
+<li>alternatively you may click on the download button at the bottom of the form, save the web page as index.html to your computer, then upload the file and replace the file in your Github repository.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-white-90
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-30-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-file-export
+            white
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Exporting About Page for Hosting with Github Pages </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>hover on the left edge of the screen to show the toolbar</li>
+<li>click on file icon (<i class="fas fa-file-alt"></i>) to show the page setting options</li>
+<li>click on the grid icon (<i class="fas fa-th-large"></i>) to show extra tabs.</li>
+<li>click on tab &ldquo;Export Webpage&rdquo;, and select &ldquo;web&rdquo; for Webpage Link Format.</li>
+<li>copy the content of the web page, and paste it to the file index.html under the <strong>&ldquo;about&rdquo;</strong> folder in the Github repository you have just created.</li>
+<li>alternatively you may click on the download button at the bottom of the form, save the web page as index.html to your computer, then upload the file and replace the file in &ldquo;about&rdquo; folder.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-transparent
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-30-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-laptop
+            white
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Visiting Your Website </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>Wait a few seconds and visit your website at [orgname].github.io. Please replace [orgname] with the actual name of the organization you have created.</li>
+<li>You should be able to see the changes you have made to the home page.</li>
+<li>Github Pages support custom domain name. If you have your a domain name, you may update the DNS record to point to the [orgname].github.io address. For details please refer to Github Pages documentation.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-accent-color-light
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+
+      <div class="w-100 flex-auto pa2 fl">
         
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">What People Say About It </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Love It </h2>
+          <i class="fas fa-quote-left fa-pull-left fa-3x"></i>
+          <div class="pt3 f3 markdown lh-copy
           
-      
+          "  >
+             I know code and web technology. I have used a few page builders and editors. Go and Talk has helped me to create and format content at a speed I could never achieve with other tools, without touching code again. That&rsquo;s why we have built this tool, for designers and content creators. I love it, and I believe you will find it helpful too.
+            
+          </div>
+          <i class="fas fa-quote-right fa-pull-right fa-3x"></i>
+
+          <div class="pv2" >
+            hopeful2
+          </div>
+          <div >
+            Fullstack developer, lead developer of Go and Talk
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
         
-        
-          
-      
-        
-        
-          
-      
-        
-        
-          
-      
-        
-        
-          
-      
-        
-        
-          
-      
-        
-        
-          
-      
-        
-        
-          
-      
-        
-        
-          
-      
-        
-        
-          
-      
-        
-        
-          
       
           
-        
+         
           
+
+
+
+
+
+
+
+
+<section 
+  class="min-vh-100 alternate gt-mv-on relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
+  bg-white-60
+  fadeIn
+  
+  "
+  >
+    
+<div class="tc absolute absolute--fill fa-10x flex flex-column justify-center">
+  <div class="white-10
+   
+   dn
+   
+   "
+   >
+     <i class="fallback-icon fas fa-font"
+     
+     data-fa-transform="shrink-6"
+     data-fa-mask="fas fa-square"
+     ></i>
+   </div>
+</div>
+
+
+    
+
+
+  
+
+
+    
+
+<figure class="ma0">
+	<picture>
+    
+      
+  		  
+  		  
+    		
+    		
+    		
+      
+    
+    
+      
+    
+  </picture>
+</figure>
+<span class="absolute absolute--fill
+    "
+    ></span><div class="cf w-100 relative  center flex flex-wrap mw8"
+    >
+      
+      <div 
+      class="image-column w-100 z-0 flex flex-wrap fl
+      h-100
+      absolute
+      even-order-1-ns
+      
+      w-100-ns
+      items-center">
+        <div class="tc overflow-hidden relative  w-100 flex flex-column justify-center items-center
+
+        h-100"
+        
+        > 
+
+        
+
+        
+        </div>
+      </div>
+      
+      <div class="text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl
+      w-30-ns
+      justify-center
+      
+      "
+      >
+        
+        <div class="text-card w-100 pa3 relative
+        
+        
+        
+        
+        f4-ns
+        fw4-ns
+        
+        
+        
+        w-100-ns
+        "
+        
+        >
+          <span class="z--1 absolute absolute--fill bg-black-"
+          
+          >
+          </span>
+
+          <p  class="ma0 pv2"></p>
+
+          <h1 class="ma0 pa2
+          pv3-ns
+          ph0-ns
+          
+          
+          
+          
+          tc
+          f2-ns
+          fw7-ns
+          
+          
+          ttc
+          "
+          
+          >
+            <span  class="">Building a Website from A to Z</span>
+          </h1>
+          <div class="pa2 "
+          
+          >
+            
+            <div class=" markdown lh-copy
+            
+            "  >
+              
+                <p>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.</p>
+
+<p>Go and Talk page builder can load theme setting and data files from remote storage, and fetch image list from your website repository. You can back up work in progress data to a data repository, continue editing from another computer, export and publish to the website repository when done.</p>
+
+<p>When your website has grown in size, Go and Talk premium theme for Hugo ( a site generator) can batch process your data files and turn these files into web pages.</p>
+
+<p>This tutorial gives a step to step guide to build and host your first website. You can add unique marketing pages one by one. You can save the homepage as a new page, add and remove sections as required, and create a new page quickly.</p>
+
+<p>If you already have a hosting space and domain name, you can save the web pages to your hosting space.</p>
+
+<p>Please visit other tutorials and find more information on the topic of interest.</p>
+
+              
+            </div>
+            
+          </div>
+          
+
+          <div class="pv4 flex flex-column" >
+            
+            <div class="fadeIn animate-edit-cta center tc ba w-100
+            bg-primary-color
+            
+            center
+            b--light-gray
+            br0
+            pv2
+            ph3
+            mv3
+            w-50-ns
+            "
+            
+            >
+              
+              
+
+              <a class="no-underline w-100 dib"
+              
+               href="/tutorial" >
+                <div class="flex items-center justify-center white-80
+                  
+                  f4-ns
+                "
+                
+                >
+                  
+                  <span class="ph2 "
+                  
+                  >
+                    <i class="cta-icon fas fa-info"
+                    data-fa-mask="fas fa-circle"
+                    data-fa-transform="shrink-4"
+                    
+                    >
+                    </i>
+                  </span>
+                  
+                  <span  >
+                  Tutorials
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </div> 
+    
+
+  </div> 
+  
+</section>
+
+
+
+        
       
            
-        
+         
           
+
+
+
+<section 
+  class="gt-mv-on relative flex flex-column justify-end" ><div class="flex-auto tc bg-black-10 gmws dn">
+    <div class="pt5 f-6-l f1-m f2 flex flex-column justify-center">
+      <span class="flex-auto"></span>
+      <i class="fas fa-comments white slide-trigger pointer"></i>
+      <span class="flex-auto"></span>
+    </div>
+  </div>
+  <div class="bg-black-80
+  white-80
+  "
+  >
+    
+<nav class="relative f6"  >
+  <div class="w-90 mw8 center ph2 pv3" >
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-gold " >
+      
+        
+          <li class="pv2 fl">
+            <a href="/#"  class="link ph3 dim ">
+              Home
+            </a>
+          </li>
+        
+          <li class="pv2 fl">
+            <a href="/about/"  class="link ph3 dim ">
+              About
+            </a>
+          </li>
+        
+
+      
+    </ul>
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-white-80" >
+    
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Terms of Service</a>
+        </li>
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Privacy</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+    <div class="tc ph4 pv2 f7" >
+      Copyright 2019. All rights reserved.
+    </div>
+    <div class="tc pa3 f7 bg-black-80 white-60 pb6 pb3-l">
+      Golden theme by
+      <a class="white-70 hover-white" href="">GoandMake.app</a>
+      <a class="white-70 hover-white" href=""></a>
+      Powered by <a class="white-70 hover-white" href="https://we.goandmake.app">goandmake.app</a>
+      
+        <a class="ph3 white-40 hover-white" rel="nofollow" href="index.goandmake.html">Edit</a>
+      
+    </div>
+  </div> 
+
+</section>
+        
       
     
 
@@ -528,12 +1608,6 @@ section[mv-app].active {
           <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
               <a href="/tutorial/" class="link  white-80 ">
                 Tutorials
-              </a>
-          </li>
-        
-          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
-              <a href="/presentation/" class="link  white-80 ">
-                Talks
               </a>
           </li>
         
@@ -582,15 +1656,7 @@ section[mv-app].active {
 </div>
 </div>
 </footer>
- 
-    
 
-    <script data-source="homepage-index">
-      
-      var gtpb = { maxapp: 10, default:  JSON.parse("{\"AllSections\":[{\"data\":{\"appearance\":{\"section_background\":\"bg-black-90\",\"trigger_class\":\"slide-trigger\"},\"base_image\":{\"overlay_background\":\"bg-black-05\",\"responsive\":false},\"bg_icon\":{\"animation\":\"slowUp\",\"bg_icon_color\":\"white-10\",\"bg_icon_display\":\"self-center\",\"bg_icon_size\":\"fa-3x\",\"icon_mask\":\"coffee\",\"inner_icon\":\"gift\",\"inner_icon_transform\":\"shrink-10 up-2 left-1\"},\"card_font_size\":3,\"card_font_weight\":1,\"card_letter_spacing\":\"tracked\",\"card_text_align\":\"tc-ns\",\"content\":\"with innovation.\",\"cta\":{\"background_color\":\"bg-black-20\",\"button_text_color\":\"white-90\",\"name\":\"Play Slides -\\u003e\",\"pv\":1,\"title\":\"view page as slides. \",\"url\":\"#\"},\"cta2\":{\"name\":\"Tutorials\",\"url\":\"/tutorial/\"},\"description\":\"a marketing website from a to z\",\"image\":{\"animation\":\"none\",\"flow_end\":true,\"overlay_background\":\"bg-transparent\",\"responsive\":false},\"intro\":\"Go and Talk \",\"menu\":{\"global\":[{\"identifier\":\"tutorials\",\"menu\":\"global\",\"name\":\"Tutorials\",\"parent\":\"\",\"post\":\"\",\"pre\":\"\",\"url\":\"/tutorial/\",\"weight\":5},{\"identifier\":\"talks\",\"menu\":\"global\",\"name\":\"Talks\",\"parent\":\"\",\"post\":\"\",\"pre\":\"\",\"url\":\"/presentation/\",\"weight\":10},{\"identifier\":\"about\",\"menu\":\"global\",\"name\":\"About\",\"parent\":\"\",\"post\":\"\",\"pre\":\"\",\"url\":\"/about/\",\"weight\":15}],\"iconmenu\":[{\"identifier\":\"\",\"menu\":\"iconmenu\",\"name\":\"Go Account\",\"parent\":\"\",\"post\":\"\",\"pre\":\"Go\",\"url\":\"#\",\"weight\":0}]},\"title\":\"Building\",\"title_align\":\"tc\",\"title_class\":\"gold\",\"title_color\":\"gold\",\"title_font_family\":\"baskerville\",\"title_font_size\":-5,\"title_font_weight\":4,\"title_letter_spacing\":\"tracked\"},\"data_key\":null,\"id\":\"898b3\",\"is_global\":null,\"partial\":\"goandtalk/cover/hero-dark-background-with-text-at-center\"},{\"data\":{\"appearance\":{\"animation\":\"fadeIn\",\"card_background\":\"hover-primary-color\",\"icon_color\":\"black-20 hover-primary-color\",\"link_color\":\"link-gold\",\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\",\"text_color\":\"primary-color-first-letter-h3\"},\"column\":[{\"description\":\"* get familiar with the page builder.\\n* create a website for an imaginary shop called Toffee \\u0026 Coffee\\n* load setting and sample pages from remote storage on Github\\n* upload images to Github and select these images in media library.\",\"icon\":\"paint-roller\",\"title\":\"Hands On\"},{\"description\":\"* try different layout\\n* change images and content\\n* embed a map\\n* embed a video\\n* enable a contact form\",\"icon\":\"palette\",\"title\":\"Customize\"},{\"description\":\"Publish the page online for others to see.\",\"icon\":\"globe\",\"title\":\"Publish Online\"}],\"column_class\":\"w-25-l\",\"description\":\"  \",\"horizontal_position\":\"justify-center\",\"intro\":\" \",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"Overview of This Tutorial\"},\"data_key\":null,\"id\":\"abedb\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-transparent\",\"slide_animation\":\"fadeIn\"},\"content\":\"* a computer with internet connection. \\n* a free Github account. This is optional if you already have a web hosting account and your domain name.\\n* images you want to use on the website. \\n* text and the story you want to tell.\\n* go through the [page builder overview](/tutorial/an-overview-of-go-and-talk-and-ui/) to get familiar with the toolbars.\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"th\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":30},\"intro\":\" \",\"is_global\":false,\"title\":\"Preparation\"},\"data_key\":null,\"id\":\"sc0qh5p8t\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\"},\"content\":\"* create a new organization in your Github account. The organization name must be unique, but not necessarily a registered business name. This tutorial uses the organization name \\\"toffee-and-coffee\\\". You will need to pick a different name.\\n* your organization name is referred as [orgname] below. Please replace it with the actual name.\\n* go to [https://github.com/toffee-and-coffee/toffee-and-coffee.github.io](https://github.com/toffee-and-coffee/toffee-and-coffee.github.io), and click on the fork button at the top right corner.  Then follow the prompt and select the organization account to fork this repository.\\n* click on the settings tab below the repository name, and rename this newly forked repository following the pattern [orgname].github.io.  \\n* you need to click on the rename button to confirm the name change. Github will enable site hosting for this repository automatically after the renaming. \\n* check and verify you can visit the demo page by entering the address [orgname].github.io. \\n* if you can't visit the page yet, try again after a little while. It may take a few seconds for the page to work, but occasionally it takes longer.\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"briefcase\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Creating an Organization on Github.com\"},\"data_key\":null,\"id\":\"sojc50t9h\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-transparent\",\"slide_animation\":\"fadeIn\"},\"content\":\"* Upload your images to the \\\"images\\\" folder of the repository  you have forked and renamed, if the images are on your computer.\\n* Your images will be available under the link [orgname].github.io/images/[image-name]. \\n* Supported image suffix: jpg, jpeg, png, gif, webp, svg. You may give a meaningful name to the images in order to search by name later. \\n* Big images are slow to upload and download. You may  resize them before uploading. \\n* You can also link to your images online, or search for free images and link directly to custom resized images from [unsplash](https://unsplash.com). \",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"images\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":30},\"intro\":\" \",\"is_global\":false,\"title\":\"Uploading Images to Github.com\"},\"data_key\":null,\"id\":\"smg7zd2v1\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\"},\"content\":\"* you can open another tab and click this link to [create a new site project](/edit/?site=toffee_and_coffee). You will see a placeholder page without navigation menu links.\\n* a database by the name toffee_and_coffee will be created automatically in your browser. \\n* hover on the left edge of the screen to show the vertical toolbar, click on the globe icon to show site setting window, click on the grid icon(\\u003ci class=\\\"fas fa-th-large\\\"\\u003e\\u003c/i\\u003e) to show extra tabs.\\n* go to tab \\\"Remote Setting\\\", enter \\\"themedata\\\" as data repo owner and \\\"toffee-and-coffee\\\" as data repo name, then click on the button \\\"Load Remote Site Setting\\\". This will load the theme's default settings, and the navigation menu links.\\n* go to tab \\\"Current\\\", and update your website information and copyright statement there. The base url must be updated to your new website address, so that the media library knows where to find your uploaded images.\\n* hover on the top edge of the screen to show the horizontal app toolbar, and click on \\\"Save\\\" button to save the changes.\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"globe-asia\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Loading Theme Setting with Go and Talk Page Builder\"},\"data_key\":null,\"id\":\"sqdubww5f\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-transparent\",\"slide_animation\":\"fadeIn\"},\"content\":\"* hover on the left edge of the screen to show the vertical toolbar, click on the file icon(\\u003ci class=\\\"fas fa-file-alt\\\"\\u003e\\u003c/i\\u003e) to show page setting window, click on the grid icon(\\u003ci class=\\\"fas fa-th-large\\\"\\u003e\\u003c/i\\u003e) to show extra tabs.\\n* go to tab \\\"Remote Page\\\", click on the \\\"Fetch List\\\" button to refresh article list, then click on the dropdown icon to select \\\"content/_index.md\\\". This is the data for the home page.\\n* click on the \\\"Load Remote Page\\\" button to load the home page of this theme.\\n* if you can't see the article list, double check the Remote Setting tab of site setting, and make sure the data repo owner and name are properly filled in. \",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"home\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Loading Home Page of Theme\"},\"data_key\":null,\"id\":\"sxva4e7bg\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\"},\"content\":\"* hover on the left edge of the screen to show the vertical toolbar, click on the globe icon to show site setting window.\\n* go to tab \\\"Github\\\", and fill in the name of your Github organization and repository. \\n* Click on the \\\"Fetch List\\\" button to refresh image list, then click on the dropdown icon to select your logo.\\n* by default the images are fetched from the folder \\\"images\\\". If you have uploaded your logo to a subfolder, you can fill in the full path of the subfolder, for example \\\"images/logos\\\" to list images from the subfolder. When you have selected a logo, you can reset the image folder to \\\"images\\\", so as to select images from that folder while you edit a page.\\n* if you can't see the file list, verify that repo owner and name are properly filled in above. \\n* if you can see the file name but can't see images in the dropdown list, verify that your website address is properly filled in the \\\"Current\\\" tab of site setting.\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"search-plus\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Selecting Uploaded Logo\"},\"data_key\":null,\"id\":\"sgnzms1dc\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-transparent\",\"slide_animation\":\"fadeIn\"},\"content\":\"* images are available in some sections. \\n* you can click the cog icon (\\u003ci class=\\\"fas fa-cog\\\"\\u003e\\u003c/i\\u003e) on the horizontal toolbar to show the section option window, and select images in the following tabs: highlight image, background image, and  base image. \\n* images are rendered in layers on screen. The highlight image is closer to you, and the base image is away from you.\\n* the image location is set in \\\"Github\\\" tab of site settings. you can click on the Fetch List button to update image list after changing image directory.\\n* if you know the full address of the image, you can click on any image in edit mode, and paste the image url in the small popup window. \",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"home\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Selecting Uploaded Image in Page Builder\"},\"data_key\":null,\"id\":\"srizhnebv\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\"},\"content\":\"* click around and make changes as you wish. Your changes are saved in the browser database automatically.\\n* select different images. If you can't find any image, check the site settings and make sure the names of your organization and repository are correct.\\n* edit menu links and sections. You can specify different source for the embed map and video by toggling on the app, and click on the cog icon (\\u003ci class=\\\"fas fa-cog\\\"\\u003e\\u003c/i\\u003e) to open the options window. Go to Iframe tab and embed a new resource, for example a calendar.\\n\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"edit\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Editing Page\"},\"data_key\":null,\"id\":\"svow4nan6\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":\"\",\"data_key\":\"finding_toolbar\",\"id\":\"sagadno57\",\"is_global\":true,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\"},\"content\":\"* hover on the left edge of the screen to show the vertical toolbar, click on the file icon(\\u003ci class=\\\"fas fa-file-alt\\\"\\u003e\\u003c/i\\u003e) to show page setting window, click on the grid icon(\\u003ci class=\\\"fas fa-th-large\\\"\\u003e\\u003c/i\\u003e) to show extra tabs.\\n* go to tab \\\"Remote Page\\\", click on the dropdown icon to select \\\"content/about.md\\\". This is the data for the about page.\\n* click on the \\\"Load Remote Page\\\" button to load the about page of this theme.\\n* edit this page as you wish. \",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"globe-asia\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Loading About Page\"},\"data_key\":null,\"id\":\"s7qpd0kyh\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-transparent\",\"slide_animation\":\"fadeIn\"},\"content\":\"* hover on the left edge of the screen to show the toolbar\\n* click on file icon (\\u003ci class=\\\"fas fa-file-alt\\\"\\u003e\\u003c/i\\u003e) to show the page setting options\\n* click on the grid icon (\\u003ci class=\\\"fas fa-th-large\\\"\\u003e\\u003c/i\\u003e) to show extra tabs. \\n* click on tab \\\"Export Webpage\\\", and select \\\"web\\\" for Webpage Link Format.\\n* copy the content of the web page, and paste it to the file index.html under the github repository you have just created. \\n* alternatively you may click on the download button at the bottom of the form, save the web page as index.html to your computer, then upload the file and replace the file in your Github repository.\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"file-export\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":30},\"intro\":\" \",\"is_global\":false,\"title\":\"Exporting a Web Page for Hosting with Github Pages\"},\"data_key\":null,\"id\":\"samy7zwd4\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-90\",\"slide_animation\":\"fadeIn\"},\"content\":\"* hover on the left edge of the screen to show the toolbar\\n* click on file icon (\\u003ci class=\\\"fas fa-file-alt\\\"\\u003e\\u003c/i\\u003e) to show the page setting options\\n* click on the grid icon (\\u003ci class=\\\"fas fa-th-large\\\"\\u003e\\u003c/i\\u003e) to show extra tabs. \\n* click on tab \\\"Export Webpage\\\", and select \\\"web\\\" for Webpage Link Format.\\n* copy the content of the web page, and paste it to the file index.html under the __\\\"about\\\"__ folder in the Github repository you have just created. \\n* alternatively you may click on the download button at the bottom of the form, save the web page as index.html to your computer, then upload the file and replace the file in \\\"about\\\" folder.\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"file-export\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":30},\"intro\":\" \",\"is_global\":false,\"title\":\"Exporting About Page for Hosting with Github Pages\"},\"data_key\":null,\"id\":\"scby7eq2i\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-transparent\",\"slide_animation\":\"fadeIn\"},\"content\":\"* Wait a few seconds and visit your website at [orgname].github.io. Please replace [orgname] with the actual name of the organization you have created.\\n* You should be able to see the changes you have made to the home page.\\n* Github Pages support custom domain name. If you have your a domain name, you may update the DNS record to point to the [orgname].github.io address. For details please refer to Github Pages documentation.\",\"icons\":{\"icon_transform\":\"shrink-10 up-2 left-1\",\"mini_icon\":\"laptop\",\"mini_icon_color\":\"white\",\"outer_icon\":\"coffee\",\"width\":30},\"intro\":\" \",\"is_global\":false,\"title\":\"Visiting Your Website\"},\"data_key\":null,\"id\":\"sx97qa9b6\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"animation\":\"fadeIn\",\"icon_color\":\"gold\",\"section_background\":\"bg-accent-color-light\",\"slide_animation\":\"fadeIn\"},\"content\":\"I know code and web technology. I have used a few page builders and editors. Go and Talk has helped me to create and format content at a speed I could never achieve with other tools, without touching code again. That's why we have built this tool, for designers and content creators. I love it, and I believe you will find it helpful too.\\n\",\"description\":\"\",\"icons\":{\"mini_icon\":\"download\"},\"intro\":\"What People Say About It\",\"is_global\":false,\"reviewer\":\"hopeful2\",\"role\":\"Fullstack developer, lead developer of Go and Talk\",\"title\":\"Love It\"},\"data_key\":null,\"id\":\"cce58\",\"is_global\":null,\"partial\":\"goandtalk/slides/big-bold-quote\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-60\",\"slide_animation\":\"fadeIn\"},\"base_image\":{\"responsive\":false},\"bg_icon\":{\"bg_icon_display\":\"dn\",\"icon_mask\":\"square\",\"inner_icon\":\"font\",\"inner_icon_transform\":\"shrink-6\"},\"card_font_size\":4,\"card_font_weight\":\"4\",\"card_overlay\":0,\"card_width\":100,\"content\":\"Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.\\n\\nGo and Talk page builder can load theme setting and data files from remote storage, and fetch image list from your website repository. You can back up work in progress data to a data repository, continue editing from another computer, export and publish to the website repository when done.\\n\\nWhen your website has grown in size, Go and Talk premium theme for Hugo ( a site generator) can batch process your data files and turn these files into web pages.\\n\\nThis tutorial gives a step to step guide to build and host your first website. You can add unique marketing pages one by one. You can save the homepage as a new page, add and remove sections as required, and create a new page quickly.\\n\\nIf you already have a hosting space and domain name, you can save the web pages to your hosting space.\\n\\nPlease visit other tutorials and find more information on the topic of interest.\\n\",\"cta\":{\"align\":\"center\",\"background_color\":\"bg-primary-color\",\"block_button_width\":50,\"border_color\":\"b--light-gray\",\"border_radius\":\"br0\",\"button_font_size\":\"4\",\"button_text_color\":\"white-80\",\"icon_mask\":\"circle\",\"inner_icon\":\"info\",\"inner_icon_transform\":\"shrink-4\",\"mv\":3,\"name\":\"Tutorials\",\"ph\":3,\"pv\":2,\"url\":\"/tutorial\"},\"embed_aspect_ratio\":\"16x9\",\"height_reference\":\"h\",\"image\":{\"responsive\":false},\"image_br\":\"br0\",\"image_column_width\":100,\"image_height\":100,\"image_layer\":\"absolute\",\"image_opacity\":100,\"image_order\":\"even-order-1-ns\",\"image_under_text\":false,\"intro\":\"From A to Z\",\"object_fit_class\":\"of-scale-down\",\"quote_display\":\"dn\",\"title\":\"Building a Marketing Website\",\"title_align\":\"tc\",\"title_font_size\":\"2\",\"title_font_weight\":\"7\",\"title_ph\":\"0\",\"title_pv\":\"3\",\"title_transform\":\"ttc\"},\"data_key\":null,\"id\":\"7ea43\",\"is_global\":null,\"partial\":\"goandtalk/content/text-block\"},{\"data\":\"\",\"data_key\":null,\"id\":\"gt_footer\",\"is_global\":true,\"partial\":\"goandtalk/footer/default_footer\"}],\"IsPage\":true,\"Params\":{\"date\":\"2019-01-09T00:00:00Z\",\"description\":\"A step to step guide on building a marketing website quickly.\",\"draft\":false,\"gt_page_builder\":true,\"header_class\":\"bg-transparent\",\"icon_mask\":\"square\",\"inner_icon\":\"th\",\"inner_icon_transform\":\"shrink-6\",\"iscjklanguage\":false,\"lastmod\":\"2019-01-09T00:00:00Z\",\"lightness\":0,\"lightness_dark\":0,\"lightness_light\":0,\"lightness_lighter\":0,\"logo_url\":\"/images/logos/icon-on-dark.svg\",\"main_menu_align\":\"start\",\"primary_hue\":351,\"publishdate\":\"2019-01-09T00:00:00Z\",\"saturation\":32,\"skip_cover_nav\":false,\"skip_slide_animation\":false,\"title\":\"Building a Website from A to Z\",\"type\":\"presentation\"},\"content\":\"Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.\\n\\nGo and Talk page builder can load theme setting and data files from remote storage, and fetch image list from your website repository. You can back up work in progress data to a data repository, continue editing from another computer, export and publish to the website repository when done.\\n\\nWhen your website has grown in size, Go and Talk premium theme for Hugo ( a site generator) can batch process your data files and turn these files into web pages.\\n\\nThis tutorial gives a step to step guide to build and host your first website. You can add unique marketing pages one by one. You can save the homepage as a new page, add and remove sections as required, and create a new page quickly.\\n\\nIf you already have a hosting space and domain name, you can save the web pages to your hosting space.\\n\\nPlease visit other tutorials and find more information on the topic of interest.\\n\",\"filepath\":\"tutorial/building-a-marketing-website-from-a-to-z.md\"}") };
-      
-    </script>
-    
     
 <script src="/js/webslides.min.js?v=0.0002"></script>
 
@@ -601,57 +1667,7 @@ section[mv-app].active {
 
 
 
-<script src="/js/lib/markdown-it.min.js" ></script>
-<script src="/js/lib/purify.min.js" ></script>
-<script src="/js/lib/prism.js" ></script>
 
-<script src="/js/lib/mavo/1.7beta-bind/mavo.js?v=0.0002"></script>
-<script src="/js/lib/mavo/1.7beta-bind/mavo-markdownit.js?v=0.0001"></script>
-<script src="/js/partial.js" ></script>
-
-
-<script src="/js/lib/awesomplete.js" ></script>
-<script src="/js/lib/doT.min.js" ></script>
-
-<script src="/js/lib/pouchdb.min.js" ></script>
-<script src="/js/lib/clipboard.min.js" ></script>
-<script src="/js/lib/toml-j0.4.min.js" ></script>
-<script src="/js/lib/js-yaml.min.js" ></script>
-<script src="/js/lib/dragula.min.js" ></script>
-<script src="/js/lib/meta-matter-custom.js" ></script>
-
-
-<script src="/js/builder/goandtalk.editor.js?v=0.0006"></script>
-
-<script>
-
-
-
-</script>
-
-
-
-
-    
-    <datalist id="width_of_container">
-      <option value="0">
-      <option value="10">
-      <option value="20">
-      <option value="30">
-      <option value="40">
-      <option value="50">
-      <option value="60">
-      <option value="70">
-      <option value="80">
-      <option value="90">
-      <option value="100">
-    </datalist>
-    <datalist id="height_of_container">
-      <option value="25">
-      <option value="50">
-      <option value="75">
-      <option value="100">
-    </datalist>
     
   </body>
 </html>

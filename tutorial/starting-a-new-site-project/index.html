@@ -1,8 +1,7 @@
-<!DOCTYPE html><html class="gt-edit-mode"  lang="en-us">
+<!DOCTYPE html><html class=""  lang="en-us">
   <head>
-    <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Starting a New Site | Go and talk theme</title>
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Starting a New Site | Go and talk page builder</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -11,7 +10,7 @@
      <meta name="generator" content="Hugo 0.49" />
 
       
-        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
       
 
     
@@ -21,95 +20,160 @@
 <link href="/css/styles.css" rel="stylesheet" />
 
 
-<link rel="stylesheet" href="/css/prism.css">
-<link rel="stylesheet" href="/css/mavo-1.7beta.css">
-<link rel="stylesheet" href="/css/awesomplete.css">
 
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria&#43;Hallelujah"> 
+  
+  
+  <style>
+  .handwriting {
+ font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+@keyframes slowRightEntry {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0.3;
+  }
+50% {
+   opacity: .5;
+}
+
+  90% {
+   transform: translateX(0vw);
+   opacity: .8;  
+   }
+  100% {
+    transform: translateX(0vw);
+   opacity: 0.7;
+}
+}
+
+.slowRightEntry {
+  animation: slowRightEntry 10s linear 10;
+  height: 100%;
+  }
+
+
+@keyframes slowRightExit {
+  0% {
+    transform: translateX(0vw);
+   opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+ }
+  100% {
+   opacity: .0;
+    transform: translateX(50vw);
+  }
+}
+
+.slowRightExit {
+  animation: slowRightExit 20s linear 5;
+  height: 100%;
+}
+
+  </style>
 
 
     
 <style>
 
+.primary-color-dark {
+      color:  hsl(85, 40%, 20%);
+    }
+    .bg-primary-color-dark {
+      background-color: hsl(85, 40%, 20%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark {
+      border-color: hsl(85, 40%, 20%);
+    }
+    .bg-primary-color-dark-90 {
+      background-color: hsla(85, 40%, 20%, 90%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark-90 {
+      border-color: hsla(85, 40%, 20%, 90%);
+    }
 
-section[mv-app].active {
-  min-height: 100vh;
-}
- 
-.mv-pending-edit {
-  min-width: 4em;
-  min-height: 1em;
-}
+    .primary-color-first-letter-h3 h3:first-letter {
+      color: hsl(85, 40%, 45%);
+      font-size: 1.2em;
+    }
 
- 
-.animate-edit-cta {
-  transition: margin 1s ease-in-out, padding 1s ease-in-out;
-}
+    .primary-color {
+      color: hsl(85, 40%, 45%);
+    }
+    .b--primary-color {
+      border-color: hsl(85, 40%, 45%);
+    }
+    .hover-primary-color:hover, .hover-primary-color:focus {
+      color: hsl(85, 40%, 45%);
+    }
+    .hover-bg-primary-color:hover, .hover-bg-primary-color:focus {
+      background-color: hsl(85, 40%, 45%);
+      color: rgba(255,255,255,.8);
+    }
 
-.move-x-2 {
-  transform: translateX(2rem);
-}
-.move-y-2 {
-  transform: translateY(2rem);
-}
-.move-xy-2 {
-  transform: translate(2rem, 2rem);
-}
+    .bg-primary-color {
+      background-color: hsl(85, 40%, 45%);
+      color: rgba(255,255,255,.8);
+    }
 
-@media (min-width: 36em) {
-   
-  .inline-form-ns {
-    width: 52rem;
-    max-width: 96vw;
-  }
+    .primary-color-light {
+      color: hsl(85, 40%, 65%);
+    }
+    .bg-primary-color-light {
+      background-color: hsl(85, 40%, 65%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-light {
+      border-color: hsl(85, 40%, 65%);
+    }
+    .primary-color-lighter {
+      color: hsl(85, 40%, 80%);
+    }
+    .bg-primary-color-lighter {
+      background-color: hsl(85, 40%, 80%);
+      color: rgba(255,255,255,.9);
+    }
+    .b--primary-color-lighter {
+      border-color: hsl(85, 40%, 80%);
+    }
 
-   
-  .ff-ns {
-    min-width: 12rem;
-  }
 
-}
+    .accent-color {
+      color: hsl(350,35%,45%);
+    }
+    .bg-accent-color {
+      background-color: hsl(350,35%,45%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color {
+      border-color: hsl(350,35%,45%);
+    }
 
-   
-  [mv-app][mv-mode="edit"] {
-    min-height: 30em;
-  }
-  img.mv-empty[mv-mode="edit"] {
-    padding: 4rem;
-  }
-  img.mv-empty[mv-mode="edit"]:after {
-    content: " Enter Image URL";
-  }
-  [mv-app][mv-mode="edit"].min-vh-100, [mv-app][mv-mode="edit"].gmws-slide {
-    min-height: 100vh;
-  }
-
-  input:invalid {
-    outline: 2px solid red;
-  }
-
-  section:first-child .gt-move-up,
-  section:last-child .gt-move-down {
-    display: none;
-  }
-
-  button.mv-add.dn {
-    display: none;
-  }
-  [mv-mode="edit"]   button.mv-add.dn, [mv-mode="edit"] .show-in-edit.dn {
-    display: inline-block;
-  }
-
-  section[mv-mode="edit"] nav {
-    padding-top: 2rem;
-  }
+    .accent-color-light {
+      color: hsl(350,35%,55%);
+    }
+    .bg-accent-color-light {
+      background-color: hsl(350,35%,55%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color-light {
+      border-color: hsl(350,35%,55%);
+    }
 
 
 </style>
 <meta property="og:title" content="Starting a New Site" />
 <meta property="og:description" content="Learn how to manage multiple sites or projects with Go and Talk page builder." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://192.168.0.10:1314/tutorial/starting-a-new-site-project/" /><meta property="article:published_time" content="2019-01-09T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://builder.goandmake.app/tutorial/starting-a-new-site-project/" /><meta property="article:published_time" content="2019-01-09T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-01-09T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Starting a New Site">
@@ -127,6 +191,8 @@ section[mv-app].active {
 <meta name="twitter:title" content="Starting a New Site"/>
 <meta name="twitter:description" content="Learn how to manage multiple sites or projects with Go and Talk page builder."/>
 
+      
+    
 
   </head>
   <body class="bg-light-gray sans-serif readable ">
@@ -140,7 +206,7 @@ section[mv-app].active {
   <div id="site-page-settings">
   
 <div onclick="" class="active off-canvas-dashboard gt-vbar z-1 bg-white fixed left-0 top-0 bottom-0 o-0 hover-o-90 mw2 flex flex-column justify-center"
- mv-storage="none" 
+
 >
   <div class="flex-auto"></div>
   <div> 
@@ -148,45 +214,6 @@ section[mv-app].active {
       <button aria-label="exit slides" type="button" class="pointer gt-label gt-exit-slides bg-orange w-100 pa1 v-mid mb2 dim br2 f5 fw9">&#x21c5;</button>
       <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Exit slides and browse as normal page.</div>
     </div>
-    
-    <div class="mv-bar dn"></div>
-    <input hidden property="current_base_app" mv-storage="none" />
-    <div class="relative">
-      <button
-      mv-action="invoke('toggleClass', base_app_list, '', 'active'),
-      invoke('addClass', base_app_list, 'html', 'gt-edit-mode', true)
-      "
-      aria-label="hide this vertical toolbar" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">&lt;</button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Hide this toolbar. </div>
-    </div>
-    <div class="relative">
-      <button
-      mv-action="invoke('toggleClass', base_app_list, 'html', 'gt-edit-mode', true)"
-      aria-label="hide section toolbars" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">
-        <i class="fas fa-th" data-fa-mask="fas fa-square" data-fa-transform="shrink-3 up-9"></i>
-      </button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Toggle section toolbars. </div>
-    </div>
-
-
-
-    
-
-    <div class="relative">
-      <button type="button"
-      mv-action="set(current_base_app,if(current_base_app = 'page_app','','page_app'))"
-      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-file-alt"></i></button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage page setting </div>
-    </div>
-    <div class="relative">
-      <button type="button"
-      mv-action="set(current_base_app,if(current_base_app = 'site_app','','site_app'))"
-      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-globe"></i></button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage site setting </div>
-    </div>
-
-
-
     
 
   </div>
@@ -196,7 +223,12 @@ section[mv-app].active {
   </div>
   <article id="webslides" class="disabled">
     
+
+    
       
+        
+         
+          
 
 <section 
   class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="min-vh-100 flex-auto bg-primary-color-dark
@@ -253,7 +285,7 @@ section[mv-app].active {
       
       >
        <span 
-       >  Go and talk theme</span>
+       >  Go and talk page builder</span>
       </span>
     </span>
     <span class="flex-auto dn-l"></span>
@@ -270,12 +302,6 @@ section[mv-app].active {
           <li class="fl">
             <a href="/tutorial/"  class="link ph3 white-80">
               Tutorials
-            </a>
-          </li>
-          
-          <li class="fl">
-            <a href="/presentation/"  class="link ph3 white-80">
-              Talks
             </a>
           </li>
           
@@ -387,80 +413,846 @@ section[mv-app].active {
 
 
 
+        
       
-<section class="relative min-vh-100 flex flex-column" >
+        
+         
+          
 
-  
-  <div class="relative tc-l pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " >
-    <div class="flex-auto w-100 black-60 tracked flex flex-column justify-center">
-      <div class="tc-l ph3">
-
-        <div class="" >
-          <h1 class="f2 f1-m f-5-l tracked fw4 mb0 lh-title  ">JavaScript Required</h1>
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">At Top and Left, Out of View Initially </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Finding Toolbars </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-grip-vertical"></i>
+            </div>
+            <h3 class="tc"> Global Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>At the left side of the screen.</li>
+<li>Manage global settings.</li>
+<li>Apply to the current page, or all pages.</li>
+<li>Hide all section tools.</li>
+<li>Hide itself.</li>
+</ul>
+</div>
+          </div>
         </div>
-        <div class="">
-          <h2 class="fw1 f3 black-80 mt3 mb4 " > The page builder relies on JavaScript to work. If you see this page after page loads, it means JavaScript is not enabled, or not working properly. </h2>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-grip-horizontal"></i>
+            </div>
+            <h3 class="tc"> Section Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>At the top of each section.</li>
+<li>Manage current section.</li>
+<li>Apply to current section.</li>
+<li>Turn app on and off.</li>
+<li>Toggle edit mode.</li>
+<li>Toggle global toolbar.</li>
+</ul>
+</div>
+          </div>
         </div>
-
-      </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-keyboard"></i>
+            </div>
+            <h3 class="tc"> Context Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>Available in some sections.</li>
+<li>Toggle button to switch toolbars.</li>
+<li>Toggle on to edit.</li>
+<li>Toggle off when done.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
 
     </div>
-
-    <div class="vh-25"></div>
-  </div>
+    <div class="tc pa2 pa3-ns mb4 f3" > Hover or tap to show the toolbars. </div>
+  </div> 
 
 </section>
 
 
+        
+      
+        
+         
+          
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center bg-white-70
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">  </p>
+    <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Where are Data and Images Saved </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+      
+      justify-center
+      "
+      >
     
       
+        <div class="w-50-l fl w-100 w-50-m pa3 flex grow flex-none">
+          <div class="w-100 pa2 bg-light-gray">
+            <div class="tc primary-color-light fa-6x">
+              <i data-fa-transform="shrink-8" data-fa-mask="fas fa-tablet" class="fas fa-database"></i> 
+            </div>
+            <h3 class="tc f3"> A Database in Your Browser </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>IndexedDB by name</li>
+<li>Storage space is large enough for texts</li>
+<li>Export to and import from plain text backup online.</li>
+<li>Not intended for images, especially on mobile devices</li>
+<li>Integrated media library with online file storage</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
         
-        
-          
       
         
-        
+         
           
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  dark-gray
+  "
+  >
+    <p  class="tc pa2">  </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Page and Site Data </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3 class="tc"> Page Data </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>data related to current page only</li>
+<li>page title and description</li>
+<li>body text</li>
+<li>local sections</li>
+<li>header background, primary colors etc</li>
+</ul>
+
+<p>There can be multiple pages in one site or project.</div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="tc"> Site Data </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>data related to the whole site or project</li>
+<li>site title and description</li>
+<li>menu items</li>
+<li>default primary colors</li>
+<li>global sections</li>
+</ul>
+
+<p>There can be multiple sites or projects. Each site has its own database.</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
-        
+         
           
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center bg-white-80
+  fadeIn
+  dark-gray
+  "
+  >
+    <p  class="tc pa2">Page Starts with a Placeholder </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">What Happens When You Open a Page </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="tc"> Site Database </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>one database for each site (project)</li>
+<li>site id is specified in the URL, for example <code>/?site=gt</code></li>
+<li>site id defaults to &ldquo;gt&rdquo;</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3 class="tc"> Page Doc in Database </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>each page is a unique document in the site database</li>
+<li>page id is specified in the URL, for example /?doc=my-presentation</li>
+<li>page id defaults to the current URL, followed by _index.md.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-file-code"></i>
+            </div>
+            <h3 class="tc"> Default Page Data </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>the page renders with the default data if custom data is not found in the site db.</li>
+<li>for example, this page renders a tutorial if no custom data is found.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-primary-color-light
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline gold">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-circle"></i>
+            <i 
+            data-fa-transform="shrink-6" class="alt-mini-icon fas fa-grip-vertical
+            white
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">Exercise </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Reset Page Data to the Default </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>this is an alternative way to reset the data of all pages to the default, by specifying a new site id and creating a new blank database. this way does not delete the previous data.</li>
+<li>make changes to a section on this page, with something you can easily recognize, and save the section.</li>
+<li>hover on the left edge of the screen to show the global toolbar</li>
+<li>click on the globe icon <i class="fas fa-globe"></i> to open the site setting  window.</li>
+<li>click on the grid icon <i class="fas fa-th-large"></i> at the top of the window to show the management options.</li>
+<li>at the tab labelled &ldquo;Open&rdquo;, enter a new site id. for easy reference, please use letters and digits and underscore only.</li>
+<li>click the &ldquo;open&rdquo; button at the bottom of the window. the page will refresh and restore to the default tutorial. The changes you have made should have disappeared.</li>
+<li>go to the site setting window again, and select or enter the site id &ldquo;gt&rdquo;. click the &ldquo;open&rdquo; button to reload the page.</li>
+<li>verify the changes you have made are still there.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
-        
+         
           
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center bg-white-80
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">The page loading process explained </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">What Happens When You Open a New Site </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="tc"> Site Database </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>a new site id is specified in the query string</li>
+<li>the page builder creates a new database as it does not exist</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3 class="tc"> Page Doc in Database </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>the page builder gets doc id from the query string, and loads custom data if found.</li>
+<li>as it is blank database, no data exists, default data will be used.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-file-code"></i>
+            </div>
+            <h3 class="tc"> Default Page Data </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>the page renders with the default data if custom data is not found in the site db.</li>
+<li>for example, this page renders a tutorial if no custom data is found.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >  </div>
+  </div> 
+
+</section>
+
+
+        
       
         
-        
+         
           
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center bg-white-80
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">The page loading process explained </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">What Happens When You Open an Existing Site </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="tc"> Site Database </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>the site id is specified in the query string, and defaults to &ldquo;gt&rdquo;</li>
+<li>the page builder loads data from this database if found.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-33-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3 class="tc"> Page Doc in Database </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>the page builder gets doc id from the query string, and defaults to the current path followed by _index.md.</li>
+<li>the page builder loads document with this doc id.</li>
+<li>your custom data is found and rendered.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-light-yellow
+  fadeIn
+  black-50
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline yellow">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-circle"></i>
+            <i 
+            data-fa-transform="shrink-6" class="alt-mini-icon fas fa-exclamation
+            black-50
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Deleting A Site </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>you can delete an existing database at &ldquo;Current&rdquo; tab of the site setting window.</li>
+<li>after confirmation, the database will be permanently deleted.</li>
+<li>if you have stored some real data in the database, double check before deleting a database. this process is not reversible.</li>
+<li>if you are not sure, it is better to switch to a new site id to start afresh, without deleting the old database.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-primary-color-light
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+
+      <div class="w-100 flex-auto pa2 fl">
         
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">What People Say About It </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Simply Amazing! </h2>
+          <i class="fas fa-quote-left fa-pull-left fa-3x"></i>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             I created stunning landing pages with Go and Talk, without writing any code. This is simply amazing!
+            
+          </div>
+          <i class="fas fa-quote-right fa-pull-right fa-3x"></i>
+
+          <div class="pv2" >
+            Tina
+          </div>
+          <div >
+            Web Designer
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
-        
-        
           
+         
+          
+
+
+
+
+
+
+
+
+<section 
+  class="min-vh-100 alternate gt-mv-on relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
+  bg-white-60
+  fadeIn
+  
+  "
+  >
+    
+
+    
+
+
+  
+
+
+    
+
+<figure class="ma0">
+	<picture>
+    
       
-        
-        
-          
+  		  
+  		  
+    		
+    		
+    		
       
-          
+    
+    
+      
+    
+  </picture>
+</figure>
+<span class="absolute absolute--fill
+    "
+    ></span><div class="cf w-100 relative  center flex flex-wrap mw8"
+    >
+      
+      <div 
+      class="image-column w-100 z-0 flex flex-wrap fl
+      h-100
+      absolute
+      even-order-1-ns
+      
+      w-100-ns
+      items-center">
+        <div class="tc overflow-hidden relative  w-100 flex flex-column justify-center items-center
+
+        h-100"
         
+        > 
+
+        
+
+        
+        </div>
+      </div>
+      
+      <div class="text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl
+      w-30-ns
+      justify-center
+      
+      "
+      >
+        
+        <div class="text-card w-100 pa3 relative
+        
+        
+        
+        
+        f4-ns
+        fw4-ns
+        
+        
+        
+        w-100-ns
+        "
+        
+        >
+          <span class="z--1 absolute absolute--fill bg-black-"
           
+          >
+          </span>
+
+          <p  class="ma0 pv2">Make a Difference with Innovation</p>
+
+          <h1 class="ma0 pa2
+          pv3-ns
+          ph0-ns
+          
+          
+          
+          
+          tc
+          f2-ns
+          fw7-ns
+          
+          
+          ttc
+          "
+          
+          >
+            <span  class="">Starting a New Site</span>
+          </h1>
+          <div class="pa2 "
+          
+          >
+            
+            <div class=" markdown lh-copy
+            
+            "  >
+              
+                <p>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.</p>
+
+<p>Go and Talk page builder stores data in IndexedDB, a feature offered by modern browsers. Each site  or project is a unique database. Each page is a document in the database with a unique ID.</p>
+
+<p>When a page loads, it checks for site id and page id from the URL query string. Site id defaults to &lsquo;gt&rsquo;, and page id defaults to the current path followed by _index.md. If custom page data is found, it renders the custom page data. Otherwise it renders the default page data, the tutorial.</p>
+
+<p>When you use the site and page setting user interface, the query string is automatically included in the page URL. You can manually change the site id or document id to load different data quickly, or create a new document.</p>
+
+<p>If you have completed all the exercises in this tutorial, you should have made the following achievements:</p>
+
+<ul>
+<li>know where to find section toolbar and global toolbar.</li>
+<li>understand how the page loads data.</li>
+<li>know how to reset the page to default data.</li>
+</ul>
+
+<p>Well done. You will acquire new skills and explore new features in other tutorials. Stay tuned.</p>
+
+              
+            </div>
+            
+          </div>
+          
+
+          <div class="pv4 flex flex-column" >
+            
+            <div class="fadeIn animate-edit-cta center tc ba w-100
+            bg-primary-color
+            
+            self-center
+            b--light-gray
+            br0
+            pv2
+            ph3
+            mv3
+            w-50-ns
+            "
+            
+            >
+              
+              
+
+              <a class="no-underline w-100 dib"
+              
+               href="/tutorial/" >
+                <div class="flex items-center justify-center white-80
+                  
+                  f4-ns
+                "
+                
+                >
+                  
+                  <span class="ph2 "
+                  
+                  >
+                    <i class="cta-icon fas fa-info"
+                    data-fa-mask="fas fa-circle"
+                    data-fa-transform="shrink-4"
+                    
+                    >
+                    </i>
+                  </span>
+                  
+                  <span  >
+                  Back to Tutorials
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </div> 
+    
+
+  </div> 
+  
+</section>
+
+
+
+        
       
            
-        
+         
           
+
+
+
+<section 
+  class="gt-mv-on relative flex flex-column justify-end" ><div class="flex-auto tc bg-black-10 gmws dn">
+    <div class="pt5 f-6-l f1-m f2 flex flex-column justify-center">
+      <span class="flex-auto"></span>
+      <i class="fas fa-comments white slide-trigger pointer"></i>
+      <span class="flex-auto"></span>
+    </div>
+  </div>
+  <div class="bg-black-80
+  white-80
+  "
+  >
+    
+<nav class="relative f6"  >
+  <div class="w-90 mw8 center ph2 pv3" >
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-gold " >
+      
+        
+          <li class="pv2 fl">
+            <a href="/#"  class="link ph3 dim ">
+              Home
+            </a>
+          </li>
+        
+          <li class="pv2 fl">
+            <a href="/about/"  class="link ph3 dim ">
+              About
+            </a>
+          </li>
+        
+
+      
+    </ul>
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-white-80" >
+    
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Terms of Service</a>
+        </li>
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Privacy</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+    <div class="tc ph4 pv2 f7" >
+      Copyright 2019. All rights reserved.
+    </div>
+    <div class="tc pa3 f7 bg-black-80 white-60 pb6 pb3-l">
+      Golden theme by
+      <a class="white-70 hover-white" href="">GoandMake.app</a>
+      <a class="white-70 hover-white" href=""></a>
+      Powered by <a class="white-70 hover-white" href="https://we.goandmake.app">goandmake.app</a>
+      
+        <a class="ph3 white-40 hover-white" rel="nofollow" href="index.goandmake.html">Edit</a>
+      
+    </div>
+  </div> 
+
+</section>
+        
       
     
 
@@ -489,12 +1281,6 @@ section[mv-app].active {
           <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
               <a href="/tutorial/" class="link  white-80 ">
                 Tutorials
-              </a>
-          </li>
-        
-          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
-              <a href="/presentation/" class="link  white-80 ">
-                Talks
               </a>
           </li>
         
@@ -543,15 +1329,7 @@ section[mv-app].active {
 </div>
 </div>
 </footer>
- 
-    
 
-    <script data-source="homepage-index">
-      
-      var gtpb = { maxapp: 10, default:  JSON.parse("{\"AllSections\":[{\"data\":{\"appearance\":{\"section_background\":\"bg-primary-color-dark\",\"trigger_class\":\"slide-trigger\"},\"card_font_size\":3,\"card_font_weight\":1,\"card_letter_spacing\":\"tracked\",\"card_text_align\":\"tc\",\"content\":\"with innovation.\",\"cta\":{\"background_color\":\"bg-black-20\",\"button_text_color\":\"white-90\",\"name\":\"Play Slides -\\u003e\",\"pv\":1,\"title\":\"view page as slides. \",\"url\":\"#\"},\"cta2\":{\"name\":\" Learn More \",\"url\":\"/tutorial\"},\"description\":\"from the same URL\",\"image\":{\"animation\":\"slowUp\",\"flow_end\":true,\"overlay_background\":\"bg-black-70\",\"responsive\":false,\"src\":\"https://source.unsplash.com/sK1hW5knKkw/1536x864\"},\"intro\":\"starting \",\"title\":\"New Site\",\"title_align\":\"tc\",\"title_class\":\"gold\",\"title_color\":\"gold\",\"title_font_family\":\"baskerville\",\"title_font_size\":-5,\"title_font_weight\":4,\"title_letter_spacing\":\"tracked\"},\"data_key\":null,\"id\":\"43714\",\"is_global\":null,\"partial\":\"goandtalk/cover/hero-dark-background-with-text-at-center\"},{\"data\":\"\",\"data_key\":\"finding_toolbar\",\"id\":\"b9412\",\"is_global\":true,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":\"\",\"data_key\":\"data_browser_database\",\"id\":\"sqp7j3hrq\",\"is_global\":true,\"partial\":\"goandtalk/slides/collection-big-icon-circle-mask\"},{\"data\":\"\",\"data_key\":\"site_and_page_data\",\"id\":\"snbvwe96k\",\"is_global\":true,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":{\"appearance\":{\"card_background\":\"hover-primary-color\",\"icon_color\":\"black-20\",\"section_background\":\"bg-white-80\",\"slide_animation\":\"fadeIn\"},\"column\":[{\"description\":\"* one database for each site (project)\\n* site id is specified in the URL, for example `/?site=gt`\\n* site id defaults to \\\"gt\\\"\",\"icon\":\"database\",\"title\":\"Site Database\"},{\"description\":\"* each page is a unique document in the site database\\n* page id is specified in the URL, for example /?doc=my-presentation\\n* page id defaults to the current URL, followed by _index.md. \",\"icon\":\"file-alt\",\"title\":\"Page Doc in Database\"},{\"description\":\"* the page renders with the default data if custom data is not found in the site db.\\n* for example, this page renders a tutorial if no custom data is found.\",\"icon\":\"file-code\",\"title\":\"Default Page Data\"}],\"column_class\":\"w-33-l\",\"content\":\"\",\"description\":\"  \",\"horizontal_position\":\"justify-center\",\"intro\":\"Page Starts with a Placeholder\",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"What Happens When You Open a Page\"},\"data_key\":null,\"id\":\"sh57nfer5\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":{\"appearance\":{\"icon_color\":\"gold\",\"section_background\":\"bg-primary-color-light\",\"slide_animation\":\"fadeIn\"},\"content\":\"* this is an alternative way to reset the data of all pages to the default, by specifying a new site id and creating a new blank database. this way does not delete the previous data.\\n* make changes to a section on this page, with something you can easily recognize, and save the section.\\n* hover on the left edge of the screen to show the global toolbar\\n* click on the globe icon \\u003ci class=\\\"fas fa-globe\\\"\\u003e\\u003c/i\\u003e to open the site setting  window.\\n* click on the grid icon \\u003ci class=\\\"fas fa-th-large\\\"\\u003e\\u003c/i\\u003e at the top of the window to show the management options.\\n* at the tab labelled \\\"Open\\\", enter a new site id. for easy reference, please use letters and digits and underscore only. \\n* click the \\\"open\\\" button at the bottom of the window. the page will refresh and restore to the default tutorial. The changes you have made should have disappeared.\\n* go to the site setting window again, and select or enter the site id \\\"gt\\\". click the \\\"open\\\" button to reload the page.\\n* verify the changes you have made are still there.\",\"icons\":{\"icon_transform\":\"shrink-6\",\"mini_icon\":\"grip-vertical\",\"mini_icon_color\":\"white\",\"outer_icon\":\"circle\",\"width\":20},\"intro\":\"Exercise\",\"is_global\":false,\"title\":\"Reset Page Data to the Default\"},\"data_key\":null,\"id\":\"sd5m6kco3\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"card_background\":\"hover-primary-color\",\"icon_color\":\"black-20\",\"section_background\":\"bg-white-80\",\"slide_animation\":\"fadeIn\",\"text_color\":\"primary-color-first-letter-h3\"},\"column\":[{\"description\":\"* a new site id is specified in the query string\\n* the page builder creates a new database as it does not exist\",\"icon\":\"database\",\"title\":\"Site Database\"},{\"description\":\"* the page builder gets doc id from the query string, and loads custom data if found.\\n* as it is blank database, no data exists, default data will be used.\",\"icon\":\"file-alt\",\"title\":\"Page Doc in Database\"},{\"description\":\"* the page renders with the default data if custom data is not found in the site db.\\n* for example, this page renders a tutorial if no custom data is found.\",\"icon\":\"file-code\",\"title\":\"Default Page Data\"}],\"column_class\":\"w-33-l\",\"content\":\"\",\"horizontal_position\":\"justify-center\",\"intro\":\"The page loading process explained\",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"What Happens When You Open a New Site\"},\"data_key\":null,\"id\":\"ssr0ccthv\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":{\"appearance\":{\"card_background\":\"hover-primary-color\",\"icon_color\":\"black-20\",\"section_background\":\"bg-white-80\",\"slide_animation\":\"fadeIn\",\"text_color\":\"primary-color-first-letter-h3\"},\"column\":[{\"description\":\"* the site id is specified in the query string, and defaults to \\\"gt\\\"\\n* the page builder loads data from this database if found.\",\"icon\":\"database\",\"title\":\"Site Database\"},{\"description\":\"* the page builder gets doc id from the query string, and defaults to the current path followed by _index.md.\\n* the page builder loads document with this doc id.\\n* your custom data is found and rendered.\",\"icon\":\"file-alt\",\"title\":\"Page Doc in Database\"}],\"column_class\":\"w-33-l\",\"content\":\"\",\"description\":\"  \",\"horizontal_position\":\"justify-center\",\"intro\":\"The page loading process explained\",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"What Happens When You Open an Existing Site\"},\"data_key\":null,\"id\":\"sxgwm2o3u\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":{\"appearance\":{\"icon_color\":\"yellow\",\"section_background\":\"bg-light-yellow\",\"slide_animation\":\"fadeIn\",\"text_color\":\"black-50\"},\"content\":\"* you can delete an existing database at \\\"Current\\\" tab of the site setting window.\\n* after confirmation, the database will be permanently deleted. \\n* if you have stored some real data in the database, double check before deleting a database. this process is not reversible. \\n* if you are not sure, it is better to switch to a new site id to start afresh, without deleting the old database.\",\"icons\":{\"icon_transform\":\"shrink-6\",\"mini_icon\":\"exclamation\",\"mini_icon_color\":\"black-50\",\"outer_icon\":\"circle\",\"width\":20},\"intro\":\" \",\"is_global\":false,\"title\":\"Deleting A Site\"},\"data_key\":null,\"id\":\"sxaab0xqs\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"animation\":\"fadeIn\",\"icon_color\":\"gold\",\"section_background\":\"bg-primary-color-light\",\"slide_animation\":\"fadeIn\"},\"content\":\"I created stunning landing pages with Go and Talk, without writing any code. This is simply amazing!\",\"description\":\"\",\"icons\":{\"mini_icon\":\"download\"},\"intro\":\"What People Say About It\",\"is_global\":false,\"reviewer\":\"Tina\",\"role\":\"Web Designer\",\"title\":\"Simply Amazing!\"},\"data_key\":null,\"id\":\"c9206\",\"is_global\":null,\"partial\":\"goandtalk/slides/big-bold-quote\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-60\",\"slide_animation\":\"fadeIn\"},\"card_font_size\":4,\"card_font_weight\":\"4\",\"card_overlay\":0,\"card_width\":100,\"cta\":{\"background_color\":\"bg-primary-color\",\"block_button_width\":50,\"border_color\":\"b--light-gray\",\"border_radius\":\"br0\",\"button_font_size\":\"4\",\"button_text_color\":\"white-80\",\"icon_mask\":\"circle\",\"inner_icon\":\"info\",\"inner_icon_transform\":\"shrink-4\",\"mv\":3,\"name\":\"Back to Tutorials\",\"ph\":3,\"pv\":2,\"url\":\"/tutorial/\"},\"height_reference\":\"h\",\"image\":{\"responsive\":false},\"image_br\":\"br0\",\"image_column_width\":100,\"image_height\":100,\"image_layer\":\"absolute\",\"image_opacity\":100,\"image_order\":\"even-order-1-ns\",\"image_under_text\":false,\"intro\":\"Make a Difference with Innovation\",\"object_fit_class\":\"of-scale-down\",\"quote_display\":\"dn\",\"title_align\":\"tc\",\"title_font_size\":\"2\",\"title_font_weight\":\"7\",\"title_ph\":\"0\",\"title_pv\":\"3\",\"title_transform\":\"ttc\"},\"data_key\":null,\"id\":\"7b698\",\"is_global\":null,\"partial\":\"goandtalk/content/text-block\"},{\"data\":\"\",\"data_key\":null,\"id\":\"gt_footer\",\"is_global\":true,\"partial\":\"goandtalk/footer/default_footer\"}],\"IsPage\":true,\"Params\":{\"accent_color\":\"hsl(350,35%,45%)\",\"accent_color_light\":\"hsl(350,35%,55%)\",\"date\":\"2019-01-09T00:00:00Z\",\"description\":\"Learn how to manage multiple sites or projects with Go and Talk page builder.\",\"draft\":false,\"gt_page_builder\":true,\"header_class\":\"bg-transparent\",\"inner_icon\":\"globe\",\"iscjklanguage\":false,\"lastmod\":\"2019-01-09T00:00:00Z\",\"lightness\":0,\"lightness_dark\":0,\"lightness_light\":0,\"lightness_lighter\":0,\"logo_url\":\"/images/logos/icon-on-dark.svg\",\"main_menu_align\":\"start\",\"primary_hue\":85,\"publishdate\":\"2019-01-09T00:00:00Z\",\"saturation\":40,\"skip_cover_nav\":false,\"skip_slide_animation\":false,\"title\":\"Starting a New Site\",\"type\":\"presentation\"},\"content\":\"Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.\\n\\nGo and Talk page builder stores data in IndexedDB, a feature offered by modern browsers. Each site  or project is a unique database. Each page is a document in the database with a unique ID.\\n\\nWhen a page loads, it checks for site id and page id from the URL query string. Site id defaults to 'gt', and page id defaults to the current path followed by _index.md. If custom page data is found, it renders the custom page data. Otherwise it renders the default page data, the tutorial.\\n\\nWhen you use the site and page setting user interface, the query string is automatically included in the page URL. You can manually change the site id or document id to load different data quickly, or create a new document.\\n\\nIf you have completed all the exercises in this tutorial, you should have made the following achievements:\\n\\n* know where to find section toolbar and global toolbar.\\n* understand how the page loads data.\\n* know how to reset the page to default data.\\n\\nWell done. You will acquire new skills and explore new features in other tutorials. Stay tuned.\\n\",\"filepath\":\"tutorial/starting-a-new-site-project.md\"}") };
-      
-    </script>
-    
     
 <script src="/js/webslides.min.js?v=0.0002"></script>
 
@@ -562,57 +1340,7 @@ section[mv-app].active {
 
 
 
-<script src="/js/lib/markdown-it.min.js" ></script>
-<script src="/js/lib/purify.min.js" ></script>
-<script src="/js/lib/prism.js" ></script>
 
-<script src="/js/lib/mavo/1.7beta-bind/mavo.js?v=0.0002"></script>
-<script src="/js/lib/mavo/1.7beta-bind/mavo-markdownit.js?v=0.0001"></script>
-<script src="/js/partial.js" ></script>
-
-
-<script src="/js/lib/awesomplete.js" ></script>
-<script src="/js/lib/doT.min.js" ></script>
-
-<script src="/js/lib/pouchdb.min.js" ></script>
-<script src="/js/lib/clipboard.min.js" ></script>
-<script src="/js/lib/toml-j0.4.min.js" ></script>
-<script src="/js/lib/js-yaml.min.js" ></script>
-<script src="/js/lib/dragula.min.js" ></script>
-<script src="/js/lib/meta-matter-custom.js" ></script>
-
-
-<script src="/js/builder/goandtalk.editor.js?v=0.0006"></script>
-
-<script>
-
-
-
-</script>
-
-
-
-
-    
-    <datalist id="width_of_container">
-      <option value="0">
-      <option value="10">
-      <option value="20">
-      <option value="30">
-      <option value="40">
-      <option value="50">
-      <option value="60">
-      <option value="70">
-      <option value="80">
-      <option value="90">
-      <option value="100">
-    </datalist>
-    <datalist id="height_of_container">
-      <option value="25">
-      <option value="50">
-      <option value="75">
-      <option value="100">
-    </datalist>
     
   </body>
 </html>

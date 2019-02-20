@@ -1,8 +1,7 @@
-<!DOCTYPE html><html class="gt-edit-mode"  lang="en-us">
+<!DOCTYPE html><html class=""  lang="en-us">
   <head>
-    <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Customizing Brand Colors and Logo | Go and talk theme</title>
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Customizing Brand Colors and Logo | Go and talk page builder</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -11,7 +10,7 @@
      <meta name="generator" content="Hugo 0.49" />
 
       
-        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
       
 
     
@@ -21,95 +20,160 @@
 <link href="/css/styles.css" rel="stylesheet" />
 
 
-<link rel="stylesheet" href="/css/prism.css">
-<link rel="stylesheet" href="/css/mavo-1.7beta.css">
-<link rel="stylesheet" href="/css/awesomplete.css">
 
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria&#43;Hallelujah"> 
+  
+  
+  <style>
+  .handwriting {
+ font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+@keyframes slowRightEntry {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0.3;
+  }
+50% {
+   opacity: .5;
+}
+
+  90% {
+   transform: translateX(0vw);
+   opacity: .8;  
+   }
+  100% {
+    transform: translateX(0vw);
+   opacity: 0.7;
+}
+}
+
+.slowRightEntry {
+  animation: slowRightEntry 10s linear 10;
+  height: 100%;
+  }
+
+
+@keyframes slowRightExit {
+  0% {
+    transform: translateX(0vw);
+   opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+ }
+  100% {
+   opacity: .0;
+    transform: translateX(50vw);
+  }
+}
+
+.slowRightExit {
+  animation: slowRightExit 20s linear 5;
+  height: 100%;
+}
+
+  </style>
 
 
     
 <style>
 
+.primary-color-dark {
+      color:  hsl(163, 35%, 20%);
+    }
+    .bg-primary-color-dark {
+      background-color: hsl(163, 35%, 20%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark {
+      border-color: hsl(163, 35%, 20%);
+    }
+    .bg-primary-color-dark-90 {
+      background-color: hsla(163, 35%, 20%, 90%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark-90 {
+      border-color: hsla(163, 35%, 20%, 90%);
+    }
 
-section[mv-app].active {
-  min-height: 100vh;
-}
- 
-.mv-pending-edit {
-  min-width: 4em;
-  min-height: 1em;
-}
+    .primary-color-first-letter-h3 h3:first-letter {
+      color: hsl(163, 35%, 45%);
+      font-size: 1.2em;
+    }
 
- 
-.animate-edit-cta {
-  transition: margin 1s ease-in-out, padding 1s ease-in-out;
-}
+    .primary-color {
+      color: hsl(163, 35%, 45%);
+    }
+    .b--primary-color {
+      border-color: hsl(163, 35%, 45%);
+    }
+    .hover-primary-color:hover, .hover-primary-color:focus {
+      color: hsl(163, 35%, 45%);
+    }
+    .hover-bg-primary-color:hover, .hover-bg-primary-color:focus {
+      background-color: hsl(163, 35%, 45%);
+      color: rgba(255,255,255,.8);
+    }
 
-.move-x-2 {
-  transform: translateX(2rem);
-}
-.move-y-2 {
-  transform: translateY(2rem);
-}
-.move-xy-2 {
-  transform: translate(2rem, 2rem);
-}
+    .bg-primary-color {
+      background-color: hsl(163, 35%, 45%);
+      color: rgba(255,255,255,.8);
+    }
 
-@media (min-width: 36em) {
-   
-  .inline-form-ns {
-    width: 52rem;
-    max-width: 96vw;
-  }
+    .primary-color-light {
+      color: hsl(163, 35%, 65%);
+    }
+    .bg-primary-color-light {
+      background-color: hsl(163, 35%, 65%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-light {
+      border-color: hsl(163, 35%, 65%);
+    }
+    .primary-color-lighter {
+      color: hsl(163, 35%, 80%);
+    }
+    .bg-primary-color-lighter {
+      background-color: hsl(163, 35%, 80%);
+      color: rgba(255,255,255,.9);
+    }
+    .b--primary-color-lighter {
+      border-color: hsl(163, 35%, 80%);
+    }
 
-   
-  .ff-ns {
-    min-width: 12rem;
-  }
 
-}
+    .accent-color {
+      color: hsl(350,35%,45%);
+    }
+    .bg-accent-color {
+      background-color: hsl(350,35%,45%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color {
+      border-color: hsl(350,35%,45%);
+    }
 
-   
-  [mv-app][mv-mode="edit"] {
-    min-height: 30em;
-  }
-  img.mv-empty[mv-mode="edit"] {
-    padding: 4rem;
-  }
-  img.mv-empty[mv-mode="edit"]:after {
-    content: " Enter Image URL";
-  }
-  [mv-app][mv-mode="edit"].min-vh-100, [mv-app][mv-mode="edit"].gmws-slide {
-    min-height: 100vh;
-  }
-
-  input:invalid {
-    outline: 2px solid red;
-  }
-
-  section:first-child .gt-move-up,
-  section:last-child .gt-move-down {
-    display: none;
-  }
-
-  button.mv-add.dn {
-    display: none;
-  }
-  [mv-mode="edit"]   button.mv-add.dn, [mv-mode="edit"] .show-in-edit.dn {
-    display: inline-block;
-  }
-
-  section[mv-mode="edit"] nav {
-    padding-top: 2rem;
-  }
+    .accent-color-light {
+      color: hsl(350,35%,55%);
+    }
+    .bg-accent-color-light {
+      background-color: hsl(350,35%,55%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color-light {
+      border-color: hsl(350,35%,55%);
+    }
 
 
 </style>
 <meta property="og:title" content="Customizing Brand Colors and Logo" />
 <meta property="og:description" content="Learn how to customize colors and logo" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://192.168.0.10:1314/tutorial/customizing-brand-colors-and-logo/" /><meta property="article:published_time" content="2019-01-09T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://builder.goandmake.app/tutorial/customizing-brand-colors-and-logo/" /><meta property="article:published_time" content="2019-01-09T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-01-09T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Customizing Brand Colors and Logo">
@@ -127,6 +191,8 @@ section[mv-app].active {
 <meta name="twitter:title" content="Customizing Brand Colors and Logo"/>
 <meta name="twitter:description" content="Learn how to customize colors and logo"/>
 
+      
+    
 
   </head>
   <body class="bg-light-gray sans-serif readable ">
@@ -140,7 +206,7 @@ section[mv-app].active {
   <div id="site-page-settings">
   
 <div onclick="" class="active off-canvas-dashboard gt-vbar z-1 bg-white fixed left-0 top-0 bottom-0 o-0 hover-o-90 mw2 flex flex-column justify-center"
- mv-storage="none" 
+
 >
   <div class="flex-auto"></div>
   <div> 
@@ -148,45 +214,6 @@ section[mv-app].active {
       <button aria-label="exit slides" type="button" class="pointer gt-label gt-exit-slides bg-orange w-100 pa1 v-mid mb2 dim br2 f5 fw9">&#x21c5;</button>
       <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Exit slides and browse as normal page.</div>
     </div>
-    
-    <div class="mv-bar dn"></div>
-    <input hidden property="current_base_app" mv-storage="none" />
-    <div class="relative">
-      <button
-      mv-action="invoke('toggleClass', base_app_list, '', 'active'),
-      invoke('addClass', base_app_list, 'html', 'gt-edit-mode', true)
-      "
-      aria-label="hide this vertical toolbar" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">&lt;</button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Hide this toolbar. </div>
-    </div>
-    <div class="relative">
-      <button
-      mv-action="invoke('toggleClass', base_app_list, 'html', 'gt-edit-mode', true)"
-      aria-label="hide section toolbars" type="button" class="pointer gt-label bg-light-gray w-100 pa1 v-mid mv2 dim br2 f5 fw9">
-        <i class="fas fa-th" data-fa-mask="fas fa-square" data-fa-transform="shrink-3 up-9"></i>
-      </button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Toggle section toolbars. </div>
-    </div>
-
-
-
-    
-
-    <div class="relative">
-      <button type="button"
-      mv-action="set(current_base_app,if(current_base_app = 'page_app','','page_app'))"
-      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-file-alt"></i></button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage page setting </div>
-    </div>
-    <div class="relative">
-      <button type="button"
-      mv-action="set(current_base_app,if(current_base_app = 'site_app','','site_app'))"
-      class="pointer gt-label pa1 v-mid mv2 dim br2"><i class="fas fa-fw fa-globe"></i></button>
-      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Manage site setting </div>
-    </div>
-
-
-
     
 
   </div>
@@ -196,7 +223,12 @@ section[mv-app].active {
   </div>
   <article id="webslides" class="disabled">
     
+
+    
       
+        
+         
+          
 
 <section 
   class="gt-mv-on relative min-vh-100 flex flex-column " ><div class="min-vh-100 flex-auto bg-primary-color-dark
@@ -253,7 +285,7 @@ section[mv-app].active {
       
       >
        <span 
-       >  Go and talk theme</span>
+       >  Go and talk page builder</span>
       </span>
     </span>
     <span class="flex-auto dn-l"></span>
@@ -270,12 +302,6 @@ section[mv-app].active {
           <li class="fl">
             <a href="/tutorial/"  class="link ph3 white-80">
               Tutorials
-            </a>
-          </li>
-          
-          <li class="fl">
-            <a href="/presentation/"  class="link ph3 white-80">
-              Talks
             </a>
           </li>
           
@@ -387,80 +413,907 @@ section[mv-app].active {
 
 
 
+        
       
-<section class="relative min-vh-100 flex flex-column" >
+        
+         
+          
 
-  
-  <div class="relative tc-l pa2 pa3-m pa4-l center flex-grow-1 w-90 mw9 flex flex-column " >
-    <div class="flex-auto w-100 black-60 tracked flex flex-column justify-center">
-      <div class="tc-l ph3">
-
-        <div class="" >
-          <h1 class="f2 f1-m f-5-l tracked fw4 mb0 lh-title  ">JavaScript Required</h1>
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">At Top and Left, Hidden Initially </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Toolbars </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-grip-vertical"></i>
+            </div>
+            <h3 class="tc"> Global Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>At the left side of the screen.</li>
+<li>Manage global settings.</li>
+<li>Apply to the current page, or all pages.</li>
+<li>Hide all section tools.</li>
+<li>Hide itself.</li>
+</ul>
+</div>
+          </div>
         </div>
-        <div class="">
-          <h2 class="fw1 f3 black-80 mt3 mb4 " > The page builder relies on JavaScript to work. If you see this page after page loads, it means JavaScript is not enabled, or not working properly. </h2>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-grip-horizontal"></i>
+            </div>
+            <h3 class="tc"> Section Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>At the top of each section.</li>
+<li>Manage current section.</li>
+<li>Apply to current section.</li>
+<li>Turn app on and off.</li>
+<li>Toggle edit mode.</li>
+<li>Toggle global toolbar.</li>
+</ul>
+</div>
+          </div>
         </div>
-
-      </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-box"></i>
+            </div>
+            <h3 class="tc"> Context Toolbar </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>Available in some sections.</li>
+<li>Toggle on to edit.</li>
+<li>Toggle off when done.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
 
     </div>
-
-    <div class="vh-25"></div>
-  </div>
+    <div class="tc pa2 pa3-ns mb4 f3" > Hover or tap to show the toolbars. </div>
+  </div> 
 
 </section>
 
 
+        
+      
+        
+         
+          
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center bg-white-70
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">Change Settings with Few Clicks </p>
+    <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Finding Buttons on Global Toolbar </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+      
+      justify-center
+      "
+      >
     
       
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 bg-light-gray">
+            <div class="tc primary-color-light fa-6x">
+              <i data-fa-transform="shrink-8" data-fa-mask="fas fa-circle" class="fas fa-globe"></i> 
+            </div>
+            <h3 class="tc f3"> Site Settings </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>Settings affecting all pages, for example brand colors.</li>
+<li>Data shared by all pages, for example menu items.</li>
+<li>Storage of global sections to use on pages.</li>
+<li>Exporting and importing site settings data.</li>
+<li>Switching to a different site with different settings.</li>
+<li>Site setting can be overwritten by pages.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 bg-light-gray">
+            <div class="tc primary-color-light fa-6x">
+              <i data-fa-transform="shrink-8" data-fa-mask="fas fa-circle" class="fas fa-file-alt"></i> 
+            </div>
+            <h3 class="tc f3"> Page Settings </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>Settings applying to all sections of this page only.</li>
+<li>Exporting and importing page data.</li>
+<li>Exporting to a separate web page without editor.</li>
+<li>Deleting page data and restoring to default.</li>
+<li>Loading a different set of data into the current page, with the same URL.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
         
-        
-          
       
         
-        
+         
           
+
+
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">Use in Blocks </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Defining a Primary Color with HSL Model </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Hue </span> </h3>
+            
+            <div class="pt1 lh-copy markdown"><ul>
+<li>A value between 0-360</li>
+<li>0 = red</li>
+<li>120 = green</li>
+<li>240 = blue</li>
+</ul>
+</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Saturation </span> </h3>
+            
+            <div class="pt1 lh-copy markdown"><ul>
+<li>A value between 0-100 (%)</li>
+<li>100 = most vivid</li>
+<li>0 = least vidid</li>
+<li>Low saturation recommended for web pages.</li>
+</ul>
+</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Light </span> </h3>
+            
+            <div class="pt1 lh-copy markdown"><ul>
+<li>A value between 0-100 (%)</li>
+<li>50 = normal</li>
+<li>100 = brightest</li>
+<li>0 = least light</li>
+</ul>
+</div>
+            </div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
-        
+         
           
+
+
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center bg-white-70
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">Same Hue and Saturation, Different Lightness </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Defining Shades of a Primary Color with HSL Model </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-20-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Lighter </span> </h3>
+            
+            <div class="pt1 lh-copy markdown">Subtle background</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="w-20-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Light </span> </h3>
+            
+            <div class="pt1 lh-copy markdown">Gentle background</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="w-20-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Primary Color </span> </h3>
+            
+            <div class="pt1 lh-copy markdown">Background and title</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="w-20-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Dark </span> </h3>
+            
+            <div class="pt1 lh-copy markdown">Background for images</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="w-20-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Dark 90 </span> </h3>
+            
+            <div class="pt1 lh-copy markdown">Semi-transparent Background</div>
+            </div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
-        
+         
           
+
+
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  dark-gray
+  "
+  >
+    <p  class="tc pa2">Good Difference </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Colors for Hightlight or Contrast </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 bg-white-80">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Accent Color </span> </h3>
+            
+            <div class="pt1 lh-copy markdown"><ul>
+<li>use in small doses, eg background of buttons</li>
+<li>use in background for contrast.</li>
+</ul>
+</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="w-25-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 bg-white-80">
+            <div class="mb2 tc ">
+              <img class="mw-100 br0   " alt="" src="/" >
+            </div>
+            <div class="ph1">
+            <h3 class="card-title tc"><span> Accent Color Light </span> </h3>
+            
+            <div class="pt1 lh-copy markdown"><ul>
+<li>use in small doses,</li>
+<li>same hue as accent, or different hue</li>
+<li>use in background for contrast</li>
+</ul>
+</div>
+            </div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" > Define with color name, RGB, hex, or hsl. </div>
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-primary-color-light
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline gold">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-circle"></i>
+            <i 
+            data-fa-transform="shrink-6" class="alt-mini-icon fas fa-palette
+            white
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">Exercise </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Apply Brand Colors </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>Find the global toolbar at the left side of the screen. You may need to tap on the left edge to show the toolbar on mobil devices.<br /></li>
+<li>Click on the file icon to open the page setting window. You should be on Appearance tab.</li>
+<li>Drag the sliders to change the hue, saturation, light, and watch how the changes affect the background and the page.</li>
+<li>Optionally save the changes you have made to the page. The Save button is located on the toolbar at the top edge of the screen. If you are on mobile, you may need to tap on the top edge to show the toolbar.</li>
+<li>Reset the sliders to 0 in order to use global color settings.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
-        
+         
           
+
+<section 
+  class="gt-mv-off relative flex flex-column mid-gray" ><div class="pv3 flex-auto flex flex-column justify-center 
+  fadeIn
+  primary-color-first-letter-h3
+  "
+  >
+    <p  class="tc pa2">  </p>
+    <h2  class="tc pa2 pa3-ns ma0 f3">Custom Logo </h2><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap
+    
+    justify-center
+    "
+     
+     >
+    
+      
+        <div class="w-50-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-images"></i>
+            </div>
+            <h3 class="tc"> Site Wide Logo </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>Menu location: site setting / appearance</li>
+<li>SVG, PNG or JPEG</li>
+<li>Ideally SVG or PNG with transparent background</li>
+<li>Link from a location on your server</li>
+<li>or import a local file from your computer</li>
+<li>maximum 500 KB in size if importing a local file.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+        <div class="w-50-l fl w-100 w-50-m pa3 flex grow flex-auto">
+          <div class="w-100 pa2 hover-primary-color">
+            <div class="tc black-20 fa-5x">
+              <i class="fas fa-image"></i>
+            </div>
+            <h3 class="tc"> Page Logo </h3>
+            <div class="pt4 lh-copy markdown"><ul>
+<li>Menu location: page setting / appearance</li>
+<li>Default to site wide logo</li>
+<li>Use a different logo when necessary, for example a logo with inverse colors.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      
+    
+
+    </div>
+    <div class="tc pa2 pa3-ns mb4 f3" >    </div>
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-primary-color
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-circle"></i>
+            <i 
+            data-fa-transform="shrink-6" class="alt-mini-icon fas fa-file-import
+            white
+            "></i>
+
+          </span>
+
+        </div>
         
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">Exercise </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Apply a Custom Logo </h2>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             <ul>
+<li>Hover to show the global toolbar at the left edge of the screen. You may need to tap on the left edge to show the toolbar on mobil devices.<br /></li>
+<li>If you have hidden the global toolbar, you can show it by clicking on the global toolbar icon <i class="fas fa-grip-vertical" data-fa-mask="fas fa-square" data-fa-transform="shrink-6 left-6"></i> on any section toolbar.</li>
+<li>Click on the globe icon <i class="fas fa-globe"></i> to open the global settings window.</li>
+<li>Hover on the top edge of the screen to show the app toolbar, and click on Edit button.</li>
+<li>On Appearance tab, click on the logo image to display a small popup window.</li>
+<li>Enter the URL to your logo if it is already on the internet.</li>
+<li>Click on &ldquo;Choose File&rdquo; button to import from a local file.</li>
+<li>If the operation is successful, you should see the new logo at the top of the dialog, and the page.</li>
+<li>Hover to show the global app toolbar, and click on the &ldquo;Editing&rdquo; button to exit editing mode.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
         
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-accent-color-light
+  fadeIn
+  gold
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+
+      <div class="w-100 flex-auto pa2 fl">
         
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">What People Say About It </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Simply Amazing! </h2>
+          <i class="fas fa-quote-left fa-pull-left fa-3x"></i>
+          <div class="pt3 f3 markdown lh-copy
           
+          "  >
+             I created stunning landing pages with Go and Talk, without writing any code. This is simply amazing!
+            
+          </div>
+          <i class="fas fa-quote-right fa-pull-right fa-3x"></i>
+
+          <div class="pv2" >
+            Tina
+          </div>
+          <div >
+            Web Designer
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
       
-        
-        
           
+         
+          
+
+
+
+
+
+
+
+
+<section 
+  class="min-vh-100 alternate gt-mv-on relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
+  bg-white-60
+  fadeIn
+  
+  "
+  >
+    
+
+    
+
+
+  
+
+
+    
+
+<figure class="ma0">
+	<picture>
+    
       
-        
-        
-          
+  		  
+  		  
+    		
+    		
+    		
       
-          
+    
+    
+      
+    
+  </picture>
+</figure>
+<span class="absolute absolute--fill
+    "
+    ></span><div class="cf w-100 relative  center flex flex-wrap mw8"
+    >
+      
+      <div 
+      class="image-column w-100 z-0 flex flex-wrap fl
+      h-100
+      absolute
+      even-order-1-ns
+      
+      w-100-ns
+      items-center">
+        <div class="tc overflow-hidden relative  w-100 flex flex-column justify-center items-center
+
+        h-100"
         
+        > 
+
+        
+
+        
+        </div>
+      </div>
+      
+      <div class="text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl
+      w-30-ns
+      justify-center
+      
+      "
+      >
+        
+        <div class="text-card w-100 pa3 relative
+        
+        
+        
+        
+        f5-ns
+        fw4-ns
+        
+        
+        
+        w-100-ns
+        "
+        
+        >
+          <span class="z--1 absolute absolute--fill bg-black-"
           
+          >
+          </span>
+
+          <p  class="ma0 pv2">Creating More With Less</p>
+
+          <h1 class="ma0 pa2
+          pv3-ns
+          ph0-ns
+          
+          
+          
+          
+          tc
+          f2-ns
+          fw7-ns
+          
+          
+          ttc
+          "
+          
+          >
+            <span  class="">Customizing Brand Colors and Logo</span>
+          </h1>
+          <div class="pa2 "
+          
+          >
+            
+            <div class=" markdown lh-copy
+            
+            "  >
+              
+                <p>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.</p>
+
+<p>This tutorial provides a step to step guide on how to apply custom brand colors, link to a custom logo, or import the logo from a local file.</p>
+
+<p>If you have completed all the exercises in this tutorial, you should have made the following achievements:</p>
+
+<ul>
+<li>know where to find section toolbar and global toolbar.</li>
+<li>understand how to define primary colors and accent colors.</li>
+<li>understand how to define shades.</li>
+<li>enter and exit editing mode of global app.</li>
+<li>link to a custom logo, or import logo from a local file.</li>
+</ul>
+
+<p>Well done. You will acquire new skills and explore new features in other tutorials. Stay tuned.</p>
+
+              
+            </div>
+            
+          </div>
+          
+
+          <div class="pv4 flex flex-column" >
+            
+            <div class="fadeIn animate-edit-cta center tc ba w-100
+            bg-primary-color
+            
+            self-center
+            b--light-gray
+            br0
+            pv2
+            ph3
+            mv3
+            w-50-ns
+            "
+            
+            >
+              
+              
+
+              <a class="no-underline w-100 dib"
+              
+               href="/tutorial/" >
+                <div class="flex items-center justify-center white-80
+                  
+                  f4-ns
+                "
+                
+                >
+                  
+                  <span class="ph2 "
+                  
+                  >
+                    <i class="cta-icon fas fa-info"
+                    data-fa-mask="fas fa-circle"
+                    data-fa-transform="shrink-4"
+                    
+                    >
+                    </i>
+                  </span>
+                  
+                  <span  >
+                  Back to Tutorials
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </div> 
+    
+
+  </div> 
+  
+</section>
+
+
+
+        
       
            
-        
+         
           
+
+
+
+<section 
+  class="gt-mv-on relative flex flex-column justify-end" ><div class="flex-auto tc bg-black-10 gmws dn">
+    <div class="pt5 f-6-l f1-m f2 flex flex-column justify-center">
+      <span class="flex-auto"></span>
+      <i class="fas fa-comments white slide-trigger pointer"></i>
+      <span class="flex-auto"></span>
+    </div>
+  </div>
+  <div class="bg-black-80
+  white-80
+  "
+  >
+    
+<nav class="relative f6"  >
+  <div class="w-90 mw8 center ph2 pv3" >
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-gold " >
+      
+        
+          <li class="pv2 fl">
+            <a href="/#"  class="link ph3 dim ">
+              Home
+            </a>
+          </li>
+        
+          <li class="pv2 fl">
+            <a href="/about/"  class="link ph3 dim ">
+              About
+            </a>
+          </li>
+        
+
+      
+    </ul>
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-white-80" >
+    
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Terms of Service</a>
+        </li>
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Privacy</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+    <div class="tc ph4 pv2 f7" >
+      Copyright 2019. All rights reserved.
+    </div>
+    <div class="tc pa3 f7 bg-black-80 white-60 pb6 pb3-l">
+      Golden theme by
+      <a class="white-70 hover-white" href="">GoandMake.app</a>
+      <a class="white-70 hover-white" href=""></a>
+      Powered by <a class="white-70 hover-white" href="https://we.goandmake.app">goandmake.app</a>
+      
+        <a class="ph3 white-40 hover-white" rel="nofollow" href="index.goandmake.html">Edit</a>
+      
+    </div>
+  </div> 
+
+</section>
+        
       
     
 
@@ -489,12 +1342,6 @@ section[mv-app].active {
           <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
               <a href="/tutorial/" class="link  white-80 ">
                 Tutorials
-              </a>
-          </li>
-        
-          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
-              <a href="/presentation/" class="link  white-80 ">
-                Talks
               </a>
           </li>
         
@@ -543,15 +1390,7 @@ section[mv-app].active {
 </div>
 </div>
 </footer>
- 
-    
 
-    <script data-source="homepage-index">
-      
-      var gtpb = { maxapp: 10, default:  JSON.parse("{\"AllSections\":[{\"data\":{\"appearance\":{\"section_background\":\"bg-primary-color-dark\",\"trigger_class\":\"slide-trigger\"},\"card_font_size\":3,\"card_font_weight\":1,\"card_letter_spacing\":\"tracked\",\"card_text_align\":\"tc\",\"content\":\"with innovation.\",\"cta\":{\"background_color\":\"bg-black-20\",\"button_text_color\":\"white-90\",\"name\":\"Play Slides -\\u003e\",\"pv\":1,\"title\":\"view page as slides. \",\"url\":\"#\"},\"cta2\":{\"name\":\" Learn More \",\"url\":\"/tutorial\"},\"description\":\"and custom logo\",\"image\":{\"animation\":\"slowUp\",\"flow_end\":true,\"overlay_background\":\"bg-black-70\",\"responsive\":false,\"src\":\"https://source.unsplash.com/sK1hW5knKkw/1536x864\"},\"intro\":\"impress audience with\",\"menu\":{\"global\":[{\"identifier\":\"tutorials\",\"menu\":\"global\",\"name\":\"Tutorials\",\"parent\":\"\",\"post\":\"\",\"pre\":\"\",\"url\":\"/tutorial/\",\"weight\":5},{\"identifier\":\"talks\",\"menu\":\"global\",\"name\":\"Talks\",\"parent\":\"\",\"post\":\"\",\"pre\":\"\",\"url\":\"/presentation/\",\"weight\":10},{\"identifier\":\"about\",\"menu\":\"global\",\"name\":\"About\",\"parent\":\"\",\"post\":\"\",\"pre\":\"\",\"url\":\"/about/\",\"weight\":15}],\"iconmenu\":[{\"identifier\":\"\",\"menu\":\"iconmenu\",\"name\":\"Go Account\",\"parent\":\"\",\"post\":\"\",\"pre\":\"Go\",\"url\":\"#\",\"weight\":0}]},\"title\":\"Brand Color\",\"title_align\":\"tc\",\"title_class\":\"gold\",\"title_color\":\"gold\",\"title_font_family\":\"baskerville\",\"title_font_size\":-5,\"title_font_weight\":4,\"title_letter_spacing\":\"tracked\"},\"data_key\":null,\"id\":\"43714\",\"is_global\":null,\"partial\":\"goandtalk/cover/hero-dark-background-with-text-at-center\"},{\"data\":{\"appearance\":{\"animation\":\"fadeIn\",\"card_background\":\"hover-primary-color\",\"icon_color\":\"black-20\",\"slide_animation\":\"fadeIn\",\"text_color\":\"primary-color-first-letter-h3\"},\"column\":[{\"description\":\"* At the left side of the screen.\\n* Manage global settings. \\n* Apply to the current page, or all pages.\\n* Hide all section tools.\\n* Hide itself.\",\"icon\":\"grip-vertical\",\"title\":\"Global Toolbar\"},{\"description\":\"* At the top of each section.\\n* Manage current section. \\n* Apply to current section.\\n* Turn app on and off.\\n* Toggle edit mode.\\n* Toggle global toolbar.\",\"icon\":\"grip-horizontal\",\"title\":\"Section Toolbar\"},{\"description\":\"* Available in some sections. \\n* Toggle on to edit.\\n* Toggle off when done.\",\"icon\":\"box\",\"title\":\"Context Toolbar\"}],\"column_class\":\"w-25-l\",\"description\":\"Hover or tap to show the toolbars.\",\"horizontal_position\":\"justify-center\",\"intro\":\"At Top and Left, Hidden Initially\",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"Toolbars\"},\"data_key\":null,\"id\":\"b9412\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":{\"appearance\":{\"card_background\":\"bg-light-gray\",\"section_background\":\"bg-white-70\",\"slide_animation\":\"fadeIn\",\"text_color\":\"primary-color-first-letter-h3\"},\"column\":[{\"description\":\"* Settings affecting all pages, for example brand colors.\\n* Data shared by all pages, for example menu items.\\n* Storage of global sections to use on pages.\\n* Exporting and importing site settings data.\\n* Switching to a different site with different settings.\\n* Site setting can be overwritten by pages.\",\"icon\":\"globe\",\"title\":\"Site Settings\"},{\"description\":\"* Settings applying to all sections of this page only.\\n* Exporting and importing page data.\\n* Exporting to a separate web page without editor.\\n* Deleting page data and restoring to default.\\n* Loading a different set of data into the current page, with the same URL.\",\"icon\":\"file-alt\",\"title\":\"Page Settings\"}],\"column_class\":\"w-25-l\",\"data_fa_mask\":\"circle\",\"data_fa_transform\":\"shrink-8\",\"description\":\"  \",\"horizontal_position\":\"justify-center\",\"intro\":\"Change Settings with Few Clicks\",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"Finding Buttons on Global Toolbar\"},\"data_key\":null,\"id\":\"s5rrjh170\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-big-icon-circle-mask\"},{\"data\":{\"appearance\":{\"card_background\":\"hover-primary-color\",\"slide_animation\":\"fadeIn\",\"text_color\":\"primary-color-first-letter-h3\"},\"column\":[{\"description\":\"* A value between 0-360\\n* 0 = red\\n* 120 = green\\n* 240 = blue\",\"title\":\"Hue\"},{\"description\":\"* A value between 0-100 (%)\\n* 100 = most vivid\\n* 0 = least vidid\\n* Low saturation recommended for web pages.\",\"title\":\"Saturation\"},{\"description\":\"* A value between 0-100 (%)\\n* 50 = normal\\n* 100 = brightest\\n* 0 = least light\",\"title\":\"Light\"}],\"column_class\":\"w-25-l\",\"content\":\"\",\"description\":\"  \",\"horizontal_position\":\"justify-center\",\"images_class\":\"br0\",\"intro\":\"Use in Blocks\",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"Defining a Primary Color with HSL Model\"},\"data_key\":null,\"id\":\"skmt7e8hr\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-card\"},{\"data\":{\"appearance\":{\"card_background\":\"hover-primary-color\",\"section_background\":\"bg-white-70\",\"slide_animation\":\"fadeIn\",\"text_color\":\"primary-color-first-letter-h3\"},\"column\":[{\"description\":\"Subtle background\",\"title\":\"Lighter\"},{\"description\":\"Gentle background\",\"title\":\"Light\"},{\"description\":\"Background and title\",\"title\":\"Primary Color\"},{\"description\":\"Background for images\",\"title\":\"Dark\"},{\"description\":\"Semi-transparent Background\",\"title\":\"Dark 90\"}],\"column_class\":\"w-20-l\",\"content\":\"\",\"description\":\"  \",\"horizontal_position\":\"justify-center\",\"images_class\":\"br0\",\"intro\":\"Same Hue and Saturation, Different Lightness\",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"Defining Shades of a Primary Color with HSL Model\"},\"data_key\":null,\"id\":\"skad9ovum\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-card\"},{\"data\":{\"appearance\":{\"card_background\":\"bg-white-80\",\"slide_animation\":\"fadeIn\"},\"column\":[{\"description\":\"* use in small doses, eg background of buttons\\n* use in background for contrast.\\n\",\"title\":\"Accent Color\"},{\"description\":\"* use in small doses, \\n* same hue as accent, or different hue\\n* use in background for contrast\",\"title\":\"Accent Color Light\"}],\"column_class\":\"w-25-l\",\"content\":\"\",\"description\":\"Define with color name, RGB, hex, or hsl.\",\"horizontal_position\":\"justify-center\",\"images_class\":\"br0\",\"intro\":\"Good Difference\",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"Colors for Hightlight or Contrast\"},\"data_key\":null,\"id\":\"sj2x6xnaw\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-card\"},{\"data\":{\"appearance\":{\"icon_color\":\"gold\",\"section_background\":\"bg-primary-color-light\",\"slide_animation\":\"fadeIn\"},\"content\":\"* Find the global toolbar at the left side of the screen. You may need to tap on the left edge to show the toolbar on mobil devices.  \\n* Click on the file icon to open the page setting window. You should be on Appearance tab.\\n* Drag the sliders to change the hue, saturation, light, and watch how the changes affect the background and the page.\\n* Optionally save the changes you have made to the page. The Save button is located on the toolbar at the top edge of the screen. If you are on mobile, you may need to tap on the top edge to show the toolbar.\\n* Reset the sliders to 0 in order to use global color settings.\",\"icons\":{\"icon_transform\":\"shrink-6\",\"mini_icon\":\"palette\",\"mini_icon_color\":\"white\",\"outer_icon\":\"circle\",\"width\":20},\"intro\":\"Exercise\",\"is_global\":false,\"title\":\"Apply Brand Colors\"},\"data_key\":null,\"id\":\"sd5m6kco3\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"card_background\":\"hover-primary-color\",\"icon_color\":\"black-20\",\"slide_animation\":\"fadeIn\",\"text_color\":\"primary-color-first-letter-h3\"},\"column\":[{\"description\":\"* Menu location: site setting / appearance\\n* SVG, PNG or JPEG\\n* Ideally SVG or PNG with transparent background\\n* Link from a location on your server\\n* or import a local file from your computer\\n* maximum 500 KB in size if importing a local file.\",\"icon\":\"images\",\"title\":\"Site Wide Logo\"},{\"description\":\"* Menu location: page setting / appearance\\n* Default to site wide logo\\n* Use a different logo when necessary, for example a logo with inverse colors. \",\"icon\":\"image\",\"title\":\"Page Logo\"}],\"column_class\":\"w-50-l\",\"content\":\"\",\"description\":\"  \",\"horizontal_position\":\"justify-center\",\"intro\":\" \",\"is_global\":false,\"resize_column\":\"flex-auto\",\"title\":\"Custom Logo\"},\"data_key\":null,\"id\":\"smnih28ln\",\"is_global\":null,\"partial\":\"goandtalk/slides/collection-big-icon-mono\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-primary-color\",\"slide_animation\":\"fadeIn\"},\"content\":\"* Hover to show the global toolbar at the left edge of the screen. You may need to tap on the left edge to show the toolbar on mobil devices.  \\n* If you have hidden the global toolbar, you can show it by clicking on the global toolbar icon \\u003ci class=\\\"fas fa-grip-vertical\\\" data-fa-mask=\\\"fas fa-square\\\" data-fa-transform=\\\"shrink-6 left-6\\\"\\u003e\\u003c/i\\u003e on any section toolbar. \\n* Click on the globe icon \\u003ci class=\\\"fas fa-globe\\\"\\u003e\\u003c/i\\u003e to open the global settings window.\\n* Hover on the top edge of the screen to show the app toolbar, and click on Edit button.\\n* On Appearance tab, click on the logo image to display a small popup window.\\n* Enter the URL to your logo if it is already on the internet.\\n* Click on \\\"Choose File\\\" button to import from a local file.\\n* If the operation is successful, you should see the new logo at the top of the dialog, and the page.\\n* Hover to show the global app toolbar, and click on the \\\"Editing\\\" button to exit editing mode. \",\"icons\":{\"icon_transform\":\"shrink-6\",\"mini_icon\":\"file-import\",\"mini_icon_color\":\"white\",\"outer_icon\":\"circle\",\"width\":20},\"intro\":\"Exercise\",\"is_global\":false,\"title\":\"Apply a Custom Logo\"},\"data_key\":null,\"id\":\"sfw71gc8w\",\"is_global\":null,\"partial\":\"goandtalk/slides/alternate-text-and-big-icon-layer\"},{\"data\":{\"appearance\":{\"animation\":\"fadeIn\",\"icon_color\":\"gold\",\"section_background\":\"bg-accent-color-light\",\"slide_animation\":\"fadeIn\",\"text_color\":\"gold\"},\"content\":\"I created stunning landing pages with Go and Talk, without writing any code. This is simply amazing!\",\"description\":\"\",\"icons\":{\"mini_icon\":\"download\"},\"intro\":\"What People Say About It\",\"is_global\":false,\"reviewer\":\"Tina\",\"role\":\"Web Designer\",\"title\":\"Simply Amazing!\"},\"data_key\":null,\"id\":\"c9206\",\"is_global\":null,\"partial\":\"goandtalk/slides/big-bold-quote\"},{\"data\":{\"appearance\":{\"section_background\":\"bg-white-60\",\"slide_animation\":\"fadeIn\"},\"card_font_size\":\"5\",\"card_font_weight\":\"4\",\"card_overlay\":0,\"card_width\":100,\"content\":\"Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.\\n\\nThis tutorial provides a step to step guide on how to apply custom brand colors, link to a custom logo, or import the logo from a local file.\\n\\nIf you have completed all the exercises in this tutorial, you should have made the following achievements:\\n\\n* know where to find section toolbar and global toolbar.\\n* understand how to define primary colors and accent colors.\\n* understand how to define shades.\\n* enter and exit editing mode of global app.\\n* link to a custom logo, or import logo from a local file.\\n\\nWell done. You will acquire new skills and explore new features in other tutorials. Stay tuned.\\n\",\"cta\":{\"background_color\":\"bg-primary-color\",\"block_button_width\":50,\"border_color\":\"b--light-gray\",\"border_radius\":\"br0\",\"button_font_size\":\"4\",\"button_text_color\":\"white-80\",\"icon_mask\":\"circle\",\"inner_icon\":\"info\",\"inner_icon_transform\":\"shrink-4\",\"mv\":3,\"name\":\"Back to Tutorials\",\"ph\":3,\"pv\":2,\"url\":\"/tutorial/\"},\"height_reference\":\"h\",\"image\":{\"responsive\":false},\"image_br\":\"br0\",\"image_column_width\":100,\"image_height\":100,\"image_layer\":\"absolute\",\"image_opacity\":100,\"image_order\":\"even-order-1-ns\",\"image_under_text\":false,\"intro\":\"Creating More With Less\",\"object_fit_class\":\"of-scale-down\",\"quote_display\":\"dn\",\"title\":\"Customizing Brand Colors and Logo\",\"title_align\":\"tc\",\"title_font_size\":\"2\",\"title_font_weight\":\"7\",\"title_ph\":\"0\",\"title_pv\":\"3\",\"title_transform\":\"ttc\"},\"data_key\":null,\"id\":\"7b698\",\"is_global\":null,\"partial\":\"goandtalk/content/text-block\"},{\"data\":\"\",\"data_key\":null,\"id\":\"gt_footer\",\"is_global\":true,\"partial\":\"goandtalk/footer/default_footer\"}],\"IsPage\":true,\"Params\":{\"accent_color\":\"hsl(350,35%,45%)\",\"accent_color_light\":\"hsl(350,35%,55%)\",\"date\":\"2019-01-09T00:00:00Z\",\"description\":\"Learn how to customize colors and logo\",\"draft\":false,\"gt_page_builder\":true,\"header_class\":\"bg-transparent\",\"inner_icon\":\"palette\",\"inner_icon_transform\":\"shrink-6\",\"iscjklanguage\":false,\"lastmod\":\"2019-01-09T00:00:00Z\",\"lightness\":0,\"lightness_dark\":0,\"lightness_light\":0,\"lightness_lighter\":0,\"logo_url\":\"/images/logos/icon-on-dark.svg\",\"main_menu_align\":\"start\",\"primary_hue\":163,\"publishdate\":\"2019-01-09T00:00:00Z\",\"saturation\":0,\"skip_cover_nav\":false,\"skip_slide_animation\":false,\"title\":\"Customizing Brand Colors and Logo\",\"type\":\"presentation\"},\"content\":\"Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.\\n\\nThis tutorial provides a step to step guide on how to apply custom brand colors, link to a custom logo, or import the logo from a local file.\\n\\nIf you have completed all the exercises in this tutorial, you should have made the following achievements:\\n\\n* know where to find section toolbar and global toolbar.\\n* understand how to define primary colors and accent colors.\\n* understand how to define shades.\\n* enter and exit editing mode of global app.\\n* link to a custom logo, or import logo from a local file.\\n\\nWell done. You will acquire new skills and explore new features in other tutorials. Stay tuned.\\n\",\"filepath\":\"tutorial/customizing-brand-colors-and-logo.md\"}") };
-      
-    </script>
-    
     
 <script src="/js/webslides.min.js?v=0.0002"></script>
 
@@ -562,57 +1401,7 @@ section[mv-app].active {
 
 
 
-<script src="/js/lib/markdown-it.min.js" ></script>
-<script src="/js/lib/purify.min.js" ></script>
-<script src="/js/lib/prism.js" ></script>
 
-<script src="/js/lib/mavo/1.7beta-bind/mavo.js?v=0.0002"></script>
-<script src="/js/lib/mavo/1.7beta-bind/mavo-markdownit.js?v=0.0001"></script>
-<script src="/js/partial.js" ></script>
-
-
-<script src="/js/lib/awesomplete.js" ></script>
-<script src="/js/lib/doT.min.js" ></script>
-
-<script src="/js/lib/pouchdb.min.js" ></script>
-<script src="/js/lib/clipboard.min.js" ></script>
-<script src="/js/lib/toml-j0.4.min.js" ></script>
-<script src="/js/lib/js-yaml.min.js" ></script>
-<script src="/js/lib/dragula.min.js" ></script>
-<script src="/js/lib/meta-matter-custom.js" ></script>
-
-
-<script src="/js/builder/goandtalk.editor.js?v=0.0006"></script>
-
-<script>
-
-
-
-</script>
-
-
-
-
-    
-    <datalist id="width_of_container">
-      <option value="0">
-      <option value="10">
-      <option value="20">
-      <option value="30">
-      <option value="40">
-      <option value="50">
-      <option value="60">
-      <option value="70">
-      <option value="80">
-      <option value="90">
-      <option value="100">
-    </datalist>
-    <datalist id="height_of_container">
-      <option value="25">
-      <option value="50">
-      <option value="75">
-      <option value="100">
-    </datalist>
     
   </body>
 </html>

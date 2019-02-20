@@ -1,72 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Make a Difference with Innovation on Go and talk theme</title>
-    <link>http://192.168.0.10:1314/</link>
-    <description>Recent content in Make a Difference with Innovation on Go and talk theme</description>
+    <title>Make a Difference with Innovation on Go and talk page builder</title>
+    <link>http://builder.goandmake.app/</link>
+    <description>Recent content in Make a Difference with Innovation on Go and talk page builder</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright 2018, GoAndMake.app.</copyright>
+    <copyright>Copyright 2019, GoAndMake.app.</copyright>
     <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://192.168.0.10:1314/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://builder.goandmake.app/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About Go and Talk</title>
-      <link>http://192.168.0.10:1314/about/</link>
+      <link>http://builder.goandmake.app/about/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/about/</guid>
+      <guid>http://builder.goandmake.app/about/</guid>
       <description>Go and Talk is a suite of templates and applications for web publishing. It consists of
  prebuilt template blocks, a page builder to customize the templates, and a premium Hugo theme for server side rendering.  Go and Talk Page Builder Go and Talk page builder is a lightweight web design app running in the browser. It empowers designers and marketers to create presentable web pages quickly without coding.</description>
     </item>
     
     <item>
       <title>An Overview of Go and Talk Page Builder</title>
-      <link>http://192.168.0.10:1314/presentation/an-overview-of-go-and-talk-and-ui/</link>
+      <link>http://builder.goandmake.app/tutorial/an-overview-of-go-and-talk-and-ui/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/an-overview-of-go-and-talk-and-ui/</guid>
-      <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, slim, and optimized for search engines.
-Go and Talk page builder starts to run when you browse a tutorial page. It looks for site id and document id from the navigation address, and uses the default ids if you are browsing a page for the first time.</description>
-    </item>
-    
-    <item>
-      <title>An Overview of Go and Talk Page Builder</title>
-      <link>http://192.168.0.10:1314/tutorial/an-overview-of-go-and-talk-and-ui/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/an-overview-of-go-and-talk-and-ui/</guid>
+      <guid>http://builder.goandmake.app/tutorial/an-overview-of-go-and-talk-and-ui/</guid>
       <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, slim, and optimized for search engines.
 Go and Talk page builder starts to run when you browse a tutorial page. It looks for site id and document id from the navigation address, and uses the default ids if you are browsing a page for the first time.</description>
     </item>
     
     <item>
       <title>Building a Website from A to Z</title>
-      <link>http://192.168.0.10:1314/presentation/building-a-marketing-website-from-a-to-z/</link>
+      <link>http://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/building-a-marketing-website-from-a-to-z/</guid>
-      <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
-Go and Talk page builder can load theme setting and data files from remote storage, and fetch image list from your website repository.</description>
-    </item>
-    
-    <item>
-      <title>Building a Website from A to Z</title>
-      <link>http://192.168.0.10:1314/tutorial/building-a-marketing-website-from-a-to-z/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/building-a-marketing-website-from-a-to-z/</guid>
+      <guid>http://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</guid>
       <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
 Go and Talk page builder can load theme setting and data files from remote storage, and fetch image list from your website repository.</description>
     </item>
     
     <item>
       <title>Copying and Mixing Readymade Blocks</title>
-      <link>http://192.168.0.10:1314/presentation/copying-and-mixing-readymade-blocks/</link>
+      <link>http://builder.goandmake.app/tutorial/copying-and-mixing-readymade-blocks/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/copying-and-mixing-readymade-blocks/</guid>
+      <guid>http://builder.goandmake.app/tutorial/copying-and-mixing-readymade-blocks/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 Mixing and copying existing blocks is a great way to get started quickly. You can make changes and explore options available.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
@@ -74,35 +54,11 @@ If you have completed all the exercises in this tutorial, you should have made t
     </item>
     
     <item>
-      <title>Copying and Mixing Readymade Blocks</title>
-      <link>http://192.168.0.10:1314/tutorial/copying-and-mixing-readymade-blocks/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/copying-and-mixing-readymade-blocks/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-Mixing and copying existing blocks is a great way to get start quickly. You can make changes and explore options available.
-If you have completed all the exercises in this tutorial, you should have made the following achievements:
- know where to find section toolbar and global toolbar.</description>
-    </item>
-    
-    <item>
       <title>Customizing Background Image</title>
-      <link>http://192.168.0.10:1314/presentation/customizing-background-image/</link>
+      <link>http://builder.goandmake.app/tutorial/customizing-background-image/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/customizing-background-image/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-This tutorial provides step to step guide on how to customize background image and highlight image.
-If you have completed all the exercises in this tutorial, you should have made the following achievements:
- know where to find section toolbar and global toolbar.</description>
-    </item>
-    
-    <item>
-      <title>Customizing Background Image</title>
-      <link>http://192.168.0.10:1314/tutorial/customizing-background-image/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/customizing-background-image/</guid>
+      <guid>http://builder.goandmake.app/tutorial/customizing-background-image/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 This tutorial provides step to step guide on how to customize background image and highlight image.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
@@ -111,21 +67,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Customizing Brand Colors and Logo</title>
-      <link>http://192.168.0.10:1314/presentation/customizing-brand-colors-and-logo/</link>
+      <link>http://builder.goandmake.app/tutorial/customizing-brand-colors-and-logo/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/customizing-brand-colors-and-logo/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-This tutorial provides a step to step guide on how to apply custom brand colors, link to a custom logo, or import the logo from a local file.
-If you have completed all the exercises in this tutorial, you should have made the following achievements:</description>
-    </item>
-    
-    <item>
-      <title>Customizing Brand Colors and Logo</title>
-      <link>http://192.168.0.10:1314/tutorial/customizing-brand-colors-and-logo/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/customizing-brand-colors-and-logo/</guid>
+      <guid>http://builder.goandmake.app/tutorial/customizing-brand-colors-and-logo/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 This tutorial provides a step to step guide on how to apply custom brand colors, link to a custom logo, or import the logo from a local file.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:</description>
@@ -133,22 +78,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Customizing Call to Action Button</title>
-      <link>http://192.168.0.10:1314/presentation/customizing-call-to-action-button/</link>
+      <link>http://builder.goandmake.app/tutorial/customizing-call-to-action-button/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/customizing-call-to-action-button/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-This tutorial provides step to step guide on how to customize call to action button.
-If you have completed all the exercises in this tutorial, you should have made the following achievements:
- know where to find section toolbar and global toolbar.</description>
-    </item>
-    
-    <item>
-      <title>Customizing Call to Action Button</title>
-      <link>http://192.168.0.10:1314/tutorial/customizing-call-to-action-button/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/customizing-call-to-action-button/</guid>
+      <guid>http://builder.goandmake.app/tutorial/customizing-call-to-action-button/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 This tutorial provides step to step guide on how to customize call to action button.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
@@ -157,22 +90,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Data Storage, Exporting and Importing Data</title>
-      <link>http://192.168.0.10:1314/presentation/exporting-and-importing-data/</link>
+      <link>http://builder.goandmake.app/tutorial/exporting-and-importing-data/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/exporting-and-importing-data/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-Mixing and copying existing blocks is a great way to get start quickly. You can make changes and explore options available.
-If you have completed all the exercises in this tutorial, you should have made the following achievements:
- know where to find section toolbar and global toolbar.</description>
-    </item>
-    
-    <item>
-      <title>Data Storage, Exporting and Importing Data</title>
-      <link>http://192.168.0.10:1314/tutorial/exporting-and-importing-data/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/exporting-and-importing-data/</guid>
+      <guid>http://builder.goandmake.app/tutorial/exporting-and-importing-data/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 Mixing and copying existing blocks is a great way to get start quickly. You can make changes and explore options available.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
@@ -181,41 +102,20 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Designing a Custom Theme</title>
-      <link>http://192.168.0.10:1314/presentation/designing-a-custom-theme/</link>
+      <link>http://builder.goandmake.app/tutorial/designing-a-custom-theme/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/designing-a-custom-theme/</guid>
-      <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
-Go and Talk page builder helps creative and entrepreneurial people to be more productive in delivering web design service, or providing a user friendly theme product.</description>
-    </item>
-    
-    <item>
-      <title>Designing a Custom Theme</title>
-      <link>http://192.168.0.10:1314/tutorial/designing-a-custom-theme/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/designing-a-custom-theme/</guid>
+      <guid>http://builder.goandmake.app/tutorial/designing-a-custom-theme/</guid>
       <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
 Go and Talk page builder helps creative and entrepreneurial people to be more productive in delivering web design service, or providing a user friendly theme product.</description>
     </item>
     
     <item>
       <title>Editing Text and Image Layers</title>
-      <link>http://192.168.0.10:1314/presentation/editing-text-and-image-layer/</link>
+      <link>http://builder.goandmake.app/tutorial/editing-text-and-image-layer/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/editing-text-and-image-layer/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-You can create sections with images floating to the left or right alternately. You can place text anywhere on the image, or place one image above another to create interesting effect.
-If you have completed all the exercises in this tutorial, you should have made the following achievements:</description>
-    </item>
-    
-    <item>
-      <title>Editing Text and Image Layers</title>
-      <link>http://192.168.0.10:1314/tutorial/editing-text-and-image-layer/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/editing-text-and-image-layer/</guid>
+      <guid>http://builder.goandmake.app/tutorial/editing-text-and-image-layer/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 You can create sections with images floating to the left or right alternately. You can place text anywhere on the image, or place one image above another to create interesting effect.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:</description>
@@ -223,22 +123,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Exporting Finished Page for Local Viewing</title>
-      <link>http://192.168.0.10:1314/presentation/exporting-finished-page-for-local-viewing/</link>
+      <link>http://builder.goandmake.app/tutorial/exporting-finished-page-for-local-viewing/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/exporting-finished-page-for-local-viewing/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-This tutorial provides step to step guide on how to export page for local browsing.
-If you have completed all the exercises in this tutorial, you should have made the following achievements:
- know where to find section toolbar and global toolbar.</description>
-    </item>
-    
-    <item>
-      <title>Exporting Finished Page for Local Viewing</title>
-      <link>http://192.168.0.10:1314/tutorial/exporting-finished-page-for-local-viewing/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/exporting-finished-page-for-local-viewing/</guid>
+      <guid>http://builder.goandmake.app/tutorial/exporting-finished-page-for-local-viewing/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 This tutorial provides step to step guide on how to export page for local browsing.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
@@ -247,41 +135,29 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Frequently Asked Questions</title>
-      <link>http://192.168.0.10:1314/faq/</link>
+      <link>http://builder.goandmake.app/faq/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/faq/</guid>
+      <guid>http://builder.goandmake.app/faq/</guid>
       <description>What is the advantage of Go and Talk page builder? Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.</description>
     </item>
     
     <item>
       <title>Go and Talk Page Builder</title>
-      <link>http://192.168.0.10:1314/edit/</link>
+      <link>http://builder.goandmake.app/edit/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/edit/</guid>
+      <guid>http://builder.goandmake.app/edit/</guid>
       <description>Hover on the left edge of the screen to manage sites and pages, or load remote data.
 Hover on the top edge of a section to manage the section.</description>
     </item>
     
     <item>
       <title>Inserting New Sections or Columns</title>
-      <link>http://192.168.0.10:1314/presentation/inserting-a-section-or-column/</link>
+      <link>http://builder.goandmake.app/tutorial/inserting-a-section-or-column/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/inserting-a-section-or-column/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-This tutorial provides step to step guide on how to insert new sections and columns.
-If you have completed all the exercises in this tutorial, you should have made the following achievements and know the following:
- where to find section toolbar and global toolbar.</description>
-    </item>
-    
-    <item>
-      <title>Inserting New Sections or Columns</title>
-      <link>http://192.168.0.10:1314/tutorial/inserting-a-section-or-column/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/inserting-a-section-or-column/</guid>
+      <guid>http://builder.goandmake.app/tutorial/inserting-a-section-or-column/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 This tutorial provides step to step guide on how to insert new sections and columns.
 If you have completed all the exercises in this tutorial, you should have made the following achievements and know the following:
@@ -290,21 +166,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Presenting From Marketing Page</title>
-      <link>http://192.168.0.10:1314/presentation/presenting-from-marketing-page/</link>
+      <link>http://builder.goandmake.app/tutorial/presenting-from-marketing-page/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/presenting-from-marketing-page/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-Presentable pages are more than good looking. They are functional too. You can click a button to turn the page into slides, and start a great conversation there.
-If you have completed all the exercises in this tutorial, you should have made the following achievements:</description>
-    </item>
-    
-    <item>
-      <title>Presenting From Marketing Page</title>
-      <link>http://192.168.0.10:1314/tutorial/presenting-from-marketing-page/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/presenting-from-marketing-page/</guid>
+      <guid>http://builder.goandmake.app/tutorial/presenting-from-marketing-page/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 Presentable pages are more than good looking. They are functional too. You can click a button to turn the page into slides, and start a great conversation there.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:</description>
@@ -312,21 +177,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Starting a New Page</title>
-      <link>http://192.168.0.10:1314/presentation/starting-a-new-page/</link>
+      <link>http://builder.goandmake.app/tutorial/starting-a-new-page/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/starting-a-new-page/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-Go and Talk page builder stores data in IndexedDB, a feature offered by modern browsers. Each site or project is a unique database. Each page is a document in the database with a unique ID.
-When a page loads, it checks for site id and page id from the URL query string.</description>
-    </item>
-    
-    <item>
-      <title>Starting a New Page</title>
-      <link>http://192.168.0.10:1314/tutorial/starting-a-new-page/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/starting-a-new-page/</guid>
+      <guid>http://builder.goandmake.app/tutorial/starting-a-new-page/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 Go and Talk page builder stores data in IndexedDB, a feature offered by modern browsers. Each site or project is a unique database. Each page is a document in the database with a unique ID.
 When a page loads, it checks for site id and page id from the URL query string.</description>
@@ -334,21 +188,10 @@ When a page loads, it checks for site id and page id from the URL query string.<
     
     <item>
       <title>Starting a New Site</title>
-      <link>http://192.168.0.10:1314/presentation/starting-a-new-site-project/</link>
+      <link>http://builder.goandmake.app/tutorial/starting-a-new-site-project/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/starting-a-new-site-project/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-Go and Talk page builder stores data in IndexedDB, a feature offered by modern browsers. Each site or project is a unique database. Each page is a document in the database with a unique ID.
-When a page loads, it checks for site id and page id from the URL query string.</description>
-    </item>
-    
-    <item>
-      <title>Starting a New Site</title>
-      <link>http://192.168.0.10:1314/tutorial/starting-a-new-site-project/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/starting-a-new-site-project/</guid>
+      <guid>http://builder.goandmake.app/tutorial/starting-a-new-site-project/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 Go and Talk page builder stores data in IndexedDB, a feature offered by modern browsers. Each site or project is a unique database. Each page is a document in the database with a unique ID.
 When a page loads, it checks for site id and page id from the URL query string.</description>
@@ -356,81 +199,40 @@ When a page loads, it checks for site id and page id from the URL query string.<
     
     <item>
       <title>Using Custom Block Template</title>
-      <link>http://192.168.0.10:1314/presentation/customizing-block-template/</link>
+      <link>http://builder.goandmake.app/tutorial/customizing-block-template/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/customizing-block-template/</guid>
-      <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
-In edit mode, Go and Talk page builder uses a template engine called doT to render blocks(sections) using data stored in browser.</description>
-    </item>
-    
-    <item>
-      <title>Using Custom Block Template</title>
-      <link>http://192.168.0.10:1314/tutorial/customizing-block-template/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/customizing-block-template/</guid>
+      <guid>http://builder.goandmake.app/tutorial/customizing-block-template/</guid>
       <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
 In edit mode, Go and Talk page builder uses a template engine called doT to render blocks(sections) using data stored in browser.</description>
     </item>
     
     <item>
       <title>Using Custom Export Template</title>
-      <link>http://192.168.0.10:1314/presentation/customizing-export-template/</link>
+      <link>http://builder.goandmake.app/tutorial/customizing-export-template/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/customizing-export-template/</guid>
-      <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
-Go and Talk page builder uses a template engine called doT to render sections upon page loading, and to export a webpage when done.</description>
-    </item>
-    
-    <item>
-      <title>Using Custom Export Template</title>
-      <link>http://192.168.0.10:1314/tutorial/customizing-export-template/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/customizing-export-template/</guid>
+      <guid>http://builder.goandmake.app/tutorial/customizing-export-template/</guid>
       <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
 Go and Talk page builder uses a template engine called doT to render sections upon page loading, and to export a webpage when done.</description>
     </item>
     
     <item>
       <title>Using Custom Styles and Fonts</title>
-      <link>http://192.168.0.10:1314/presentation/customizing-styles-and-fonts/</link>
+      <link>http://builder.goandmake.app/tutorial/customizing-styles-and-fonts/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/customizing-styles-and-fonts/</guid>
-      <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
-Go and Talk page builder uses Tachyons CSS to achieve flexible and modular designs. The utility classes take effect only when applied to an element.</description>
-    </item>
-    
-    <item>
-      <title>Using Custom Styles and Fonts</title>
-      <link>http://192.168.0.10:1314/tutorial/customizing-styles-and-fonts/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/customizing-styles-and-fonts/</guid>
+      <guid>http://builder.goandmake.app/tutorial/customizing-styles-and-fonts/</guid>
       <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, lightweight and optimized for search engines.
 Go and Talk page builder uses Tachyons CSS to achieve flexible and modular designs. The utility classes take effect only when applied to an element.</description>
     </item>
     
     <item>
       <title>Using Global Data and Global Section</title>
-      <link>http://192.168.0.10:1314/presentation/using-global-data-and-section/</link>
+      <link>http://builder.goandmake.app/tutorial/using-global-data-and-section/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://192.168.0.10:1314/presentation/using-global-data-and-section/</guid>
-      <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
-Global data is shared by pages of the same project. Each page can have its look and feel, with the same data, such as menu items.
-Global section is a section with complete data and settings, such as a site wide call to action section.</description>
-    </item>
-    
-    <item>
-      <title>Using Global Data and Global Section</title>
-      <link>http://192.168.0.10:1314/tutorial/using-global-data-and-section/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://192.168.0.10:1314/tutorial/using-global-data-and-section/</guid>
+      <guid>http://builder.goandmake.app/tutorial/using-global-data-and-section/</guid>
       <description>Go and Talk is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is optimized for mobile devices.
 Global data is shared by pages of the same project. Each page can have its look and feel, with the same data, such as menu items.
 Global section is a section with complete data and settings, such as a site wide call to action section.</description>

@@ -560,7 +560,11 @@
   }
   // display image from cached list for selection.
   function previewRepoImage (text, input, item_id) {
-    var html = '<div class="flex"><div class="w4 h4"><img class="of-scale-down" src="' + encodeURI(gtpb.site_app.baseurl + '/'  + text)  + '"> </div> <span class="ph3 flex-auto">' + encodeHTML(text) +'</span></div>';
+    var prefix = '';
+    if(gtpb.site_app.baseurl && gtpb.site_app.baseurl.replace(/\/$/,'') !== location.origin){
+      prefix = gtpb.site_app.baseurl;
+    }
+    var html = '<div class="flex"><div class="w4 h4"><img class="of-scale-down" src="' + encodeURI(prefix + '/'  + text)  + '"> </div> <span class="ph3 flex-auto">' + encodeHTML(text) +'</span></div>';
     return $.create("li", {
       innerHTML: html,
       "aria-selected": "false",
@@ -569,7 +573,11 @@
   }
   // replace the dropdown input value with a full image source url
   function replaceRepoImageLink(text) {
-	   this.input.value = encodeURI(gtpb.site_app.baseurl + '/' + text);
+    var prefix = '';
+    if(gtpb.site_app.baseurl && gtpb.site_app.baseurl.replace(/\/$/,'') !== location.origin){
+      prefix = gtpb.site_app.baseurl;
+    }
+	   this.input.value = encodeURI(prefix + '/' + text);
    }
   /* The dropdown icon must be the immediate next sibling of input element  */
   function initDropdownInput(elem) {
