@@ -22,7 +22,7 @@
     if(gtpb.current_doc) return gtpb.current_doc;
     var params = (new URL(window.location)).searchParams;
     //the filepath is the path relative to content folder.
-    gtpb.current_doc = params.get('doc') || localStorage.getItem(window.location.pathname + "#current_doc") || (window.location.pathname === "/"? "content/_index.md" : ("content" + window.location.pathname.replace(/\/$/,"") + ".md"));
+    gtpb.current_doc = params.get('doc') || localStorage.getItem(window.location.pathname + "#current_doc") || (window.location.pathname === "/"? "content/_index.md" : ("content" + window.location.pathname.replace(/\/$|\/index.goandmake.html$/,"") + ".md"));
     return gtpb.current_doc.replace(/^_/, 'content/_'); //PouchDB reserves leading _ for internal use, so we will use /_index.md as id
   }
   //variables available in functions.
@@ -2041,75 +2041,145 @@ Mavo.Formats.FrontMatter = Bliss.Class({
     });
   };
 
-  gtpb.actions.fetchGithubImageList = function(){
+  function fetchGitlabRepoTree(url, pageNbr, ptn, cacheKey) {
+    pageNbr = pageNbr || 1;
+    cacheKey = cacheKey || 'gh_repo_image';
+    return Bliss.fetch(url + '&page=' + pageNbr, {responseType: "json"})
+    .then(function(xhr){
+      if (Array.isArray(xhr.response) && xhr.response.length){
+        if (pageNbr === 1) {
+          gtpb.site_app.params[cacheKey] = [];
+        }
+        var arr = gtpb.site_app.params[cacheKey];
+        xhr.response.forEach(function(item){
+          if(ptn.test(item.path)) {
+            arr[arr.length] = item.path;
+          }
+        });
+        //gitlab returns a maximum of 100 items per page. if there are 100 results, check to see if there are more
+        // gitlab api ratelimit seems to be 600 requests per 60 seconds period.
+        if (xhr.response.length === 100 ) {
+          return fetchGitlabRepoTree(url, pageNbr + 1, ptn);
+        }
+      } else if (pageNbr === 1 && Array.isArray(xhr.response) ) {
+        flashFeedback({message: "File not found", bg: "bg-red"});
+      }
+    });
+  }
+
+  gtpb.actions.fetchRepoImageList = function(){
     var sp = gtpb.site_app.params;
     var elem = this.element;
+    var ptn = /jpg$|jpeg$|gif$|webp$|png$|svg$/i;
     if(sp.gh_repo_owner && sp.gh_repo_name) {
-      Bliss.fetch(encodeURI('https://api.github.com/repos/' + sp.gh_repo_owner + '/' + sp.gh_repo_name + '/contents/' + (sp.gh_image_dir || 'images') + (sp.gh_repo_branch?'?ref=' + sp.gh_repo_branch :'') ), {responseType: "json"} )
-      .then(function(xhr){
-        if (Array.isArray(xhr.response) && xhr.response.length){
-          var ptn = /jpg$|jpeg$|gif$|webp$|png$|svg$/i;
-          var arr = gtpb.site_app.params.gh_repo_image = [];
-           xhr.response.forEach(function(item){
-            if(ptn.test(item.path)) {
-              arr[arr.length] = item.path;
+      if(sp.gh_provider === 'github'){
+        Bliss.fetch(encodeURI('https://api.github.com/repos/' + sp.gh_repo_owner + '/' + sp.gh_repo_name + '/contents/' + (sp.gh_image_dir || 'images') + (sp.gh_repo_branch ? '?ref=' + sp.gh_repo_branch : '') ), {responseType: "json"} )
+        .then(function(xhr){
+          if (Array.isArray(xhr.response) && xhr.response.length){
+            var arr = gtpb.site_app.params.gh_repo_image = [];
+            xhr.response.forEach(function(item){
+              if(ptn.test(item.path)) {
+                arr[arr.length] = item.path;
+              }
+            });
+            var combo = Mavo.data(elem, "awesomplete");
+            if(!combo) {
+              combo = initDropdownInput(elem);
+              Mavo.data(elem,  "awesomplete", combo);
             }
-          });
+
+            combo.list = gtpb.site_app.params.gh_repo_image;
+
+            flashFeedback({message: "Image list loaded"});
+          } else {
+            flashFeedback({message: "File not found", bg: "bg-red"});
+          }
+        })
+        .catch(function(error){
+           console.error(error, "code: " + error.status);
+           flashFeedback({message: "Error fetching file list. Message: " + encodeHTML(error.message), bg: "bg-red"});
+         });
+      }
+      else if(sp.gh_provider === 'gitlab'){
+        fetchGitlabRepoTree('https://gitlab.com/api/v4/projects/' + encodeURIComponent(sp.gh_repo_owner + '/'+ sp.gh_repo_name) + '/repository/tree?recursive=true&path=' + ( sp.gh_image_dir ||  'images') + '&per_page=100', 1, ptn)
+        .then(function(){
           var combo = Mavo.data(elem, "awesomplete");
           if(!combo) {
             combo = initDropdownInput(elem);
             Mavo.data(elem,  "awesomplete", combo);
           }
+          var arr = gtpb.site_app.params.gh_repo_image;
+          combo.list = arr || [];
+          if(Array.isArray(arr) && arr.length){
+            flashFeedback({message: "Image list loaded"});
+          }
+        })
+        .catch(function(error){
+          console.error(error, "code: " + error.status);
+          flashFeedback({message: "Error fetching file list. Message: " + encodeHTML(error.message), bg: "bg-red"});
+        });
+      }
 
-          combo.list = gtpb.site_app.params.gh_repo_image;
 
-          flashFeedback({message: "Image list loaded"});
-        } else {
-          flashFeedback({message: "File not found", bg: "bg-red"});
-        }
-      })
-      .catch(function(error){
-	       console.error(error, "code: " + error.status);
-         flashFeedback({message: "Error fetching file list. Message: " + encodeHTML(error.message), bg: "bg-red"});
-       });
     } else {
       flashFeedback({message: "Please provide repo owner and repo name in site settings.", bg: "bg-red"});
     }
   };
 
 
-  gtpb.actions.fetchGithubArticleList = function(){
+  gtpb.actions.fetchRepoArticleList = function(){
     var articleDir = Mavo.all.page_app.root.children.ghdata_article_dir.value;
     var sp = gtpb.site_app;
     var elem = this.element;
+    var ptn = /\.md$/i;
     if(sp.ghdata_repo_owner && sp.ghdata_repo_name) {
-      Bliss.fetch(encodeURI('https://api.github.com/repos/' + sp.ghdata_repo_owner + '/' + sp.ghdata_repo_name + '/contents/' + (articleDir || 'content') + (sp.ghdata_repo_ref ? '?ref=' + sp.ghdata_repo_ref : '') ), {responseType: "json"} )
-      .then(function(xhr){
-        if (Array.isArray(xhr.response) && xhr.response.length){
-          var ptn = /\.md$/i;
-          var arr = gtpb.site_app.params.gh_repo_article = [];
-           xhr.response.forEach(function(item){
-            if(ptn.test(item.path)) {
-              arr[arr.length] = item.path;
+      if(sp.ghdata_provider === 'github'){
+        Bliss.fetch(encodeURI('https://api.github.com/repos/' + sp.ghdata_repo_owner + '/' + sp.ghdata_repo_name + '/contents/' + (articleDir || 'content') + (sp.ghdata_repo_ref ? '?ref=' + sp.ghdata_repo_ref : '') ), {responseType: "json"} )
+        .then(function(xhr){
+          if (Array.isArray(xhr.response) && xhr.response.length){
+            var arr = gtpb.site_app.params.gh_repo_article = [];
+             xhr.response.forEach(function(item){
+              if(ptn.test(item.path)) {
+                arr[arr.length] = item.path;
+              }
+            });
+            var combo = Mavo.data(elem, "awesomplete");
+            if(!combo) {
+              combo = initDropdownInput(elem);
+              Mavo.data(elem,  "awesomplete", combo);
             }
-          });
+
+            combo.list = gtpb.site_app.params.gh_repo_article;
+
+            flashFeedback({message: "Article list loaded"});
+          } else {
+            flashFeedback({message: "File not found", bg: "bg-red"});
+          }
+        })
+        .catch(function(error){
+           console.error(error, "code: " + error.status);
+           flashFeedback({message: "Error fetching file list. Message: " + encodeHTML(error.message), bg: "bg-red"});
+         });
+      } else if (sp.ghdata_provider === 'gitlab') {
+        fetchGitlabRepoTree('https://gitlab.com/api/v4/projects/' + encodeURIComponent(sp.ghdata_repo_owner + '/'+ sp.ghdata_repo_name) + '/repository/tree?recursive=true&path=' + ( articleDir ||  'content') + '&per_page=100', 1, ptn, 'gh_repo_article')
+        .then(function(){
           var combo = Mavo.data(elem, "awesomplete");
           if(!combo) {
             combo = initDropdownInput(elem);
             Mavo.data(elem,  "awesomplete", combo);
           }
+          var arr = gtpb.site_app.params.gh_repo_article;
+          combo.list = arr || [];
+          if(Array.isArray(arr) && arr.length){
+            flashFeedback({message: "Article list loaded"});
+          }
+        })
+        .catch(function(error){
+          console.error(error, "code: " + error.status);
+          flashFeedback({message: "Error fetching file list. Message: " + encodeHTML(error.message), bg: "bg-red"});
+        });
+      }
 
-          combo.list = gtpb.site_app.params.gh_repo_article;
-
-          flashFeedback({message: "Article list loaded"});
-        } else {
-          flashFeedback({message: "File not found", bg: "bg-red"});
-        }
-      })
-      .catch(function(error){
-	       console.error(error, "code: " + error.status);
-         flashFeedback({message: "Error fetching file list. Message: " + encodeHTML(error.message), bg: "bg-red"});
-       });
     } else {
       flashFeedback({message: "Please provide data repo owner and repo name in site settings.", bg: "bg-red"});
     }
@@ -2126,7 +2196,14 @@ Mavo.Formats.FrontMatter = Bliss.Class({
       });
       return;
     }
-    Bliss.fetch(encodeURI('https://raw.githubusercontent.com/' + owner + '/' + repo + '/' + (sp.ghdata_repo_ref || 'master') + '/config.toml'))
+    var url;
+    if (sp.ghdata_provider === 'github') {
+      url = 'https://raw.githubusercontent.com/' + encodeURIComponent(owner) + '/' + encodeURIComponent(repo) + '/' + encodeURIComponent(sp.ghdata_repo_ref || 'master') + '/config.toml';
+    } else if (sp.ghdata_provider === 'gitlab') {
+      url = 'https://gitlab.com/api/v4/projects/' + encodeURIComponent(owner + '/' + repo) + '/repository/files/config.toml/raw?ref=' + encodeURIComponent(sp.ghdata_repo_ref || 'master');;
+    }
+
+    Bliss.fetch(url)
     .then(function(xhr){
       var siteData = parseSiteData(xhr.response);
       if (siteData){
@@ -2141,6 +2218,7 @@ Mavo.Formats.FrontMatter = Bliss.Class({
       }
     })
     .catch(function(err){
+      console.log(err);
       flashFeedback({
         bg: 'bg-red',
         message: 'Unable to load remote data.'
@@ -2164,7 +2242,14 @@ Mavo.Formats.FrontMatter = Bliss.Class({
       });
       return;
     }
-    Bliss.fetch(encodeURI('https://raw.githubusercontent.com/' + owner + '/' + repo + '/' + (sp.ghdata_repo_ref || 'master') + '/' + article ))
+    var url;
+    if (sp.ghdata_provider === 'github') {
+      url = 'https://raw.githubusercontent.com/' + encodeURIComponent(owner) + '/' + encodeURIComponent(repo) + '/' + encodeURIComponent(sp.ghdata_repo_ref || 'master') + '/' + article;
+    } else if (sp.ghdata_provider === 'gitlab') {
+      url = 'https://gitlab.com/api/v4/projects/' + encodeURIComponent(owner + '/' + repo) + '/repository/files/' + encodeURIComponent(article) + '/raw?ref=' + encodeURIComponent(sp.ghdata_repo_ref || 'master');
+    }
+
+    Bliss.fetch(url)
     .then(function(xhr){
       var pageData = parseFrontMatter(xhr.response);
       if (pageData){
