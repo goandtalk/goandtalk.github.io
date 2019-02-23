@@ -2059,7 +2059,7 @@ Mavo.Formats.FrontMatter = Bliss.Class({
         //gitlab returns a maximum of 100 items per page. if there are 100 results, check to see if there are more
         // gitlab api ratelimit seems to be 600 requests per 60 seconds period.
         if (xhr.response.length === 100 ) {
-          return fetchGitlabRepoTree(url, pageNbr + 1, ptn);
+          return fetchGitlabRepoTree(url, pageNbr + 1, ptn, cacheKey);
         }
       } else if (pageNbr === 1 && Array.isArray(xhr.response) ) {
         flashFeedback({message: "File not found", bg: "bg-red"});
