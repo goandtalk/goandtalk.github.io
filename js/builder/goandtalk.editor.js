@@ -2089,7 +2089,8 @@ Mavo.Formats.FrontMatter = Bliss.Class({
             }
 
             combo.list = gtpb.site_app.params.gh_repo_image;
-
+            Mavo.all.site_app.unsavedChanges = true;
+            Mavo.all.site_app.save();
             flashFeedback({message: "Image list loaded"});
           } else {
             flashFeedback({message: "File not found", bg: "bg-red"});
@@ -2111,6 +2112,8 @@ Mavo.Formats.FrontMatter = Bliss.Class({
           var arr = gtpb.site_app.params.gh_repo_image;
           combo.list = arr || [];
           if(Array.isArray(arr) && arr.length){
+            Mavo.all.site_app.unsavedChanges = true;
+            Mavo.all.site_app.save();
             flashFeedback({message: "Image list loaded"});
           }
         })
@@ -2150,7 +2153,8 @@ Mavo.Formats.FrontMatter = Bliss.Class({
             }
 
             combo.list = gtpb.site_app.params.gh_repo_article;
-
+            Mavo.all.site_app.unsavedChanges = true;
+            Mavo.all.site_app.save();
             flashFeedback({message: "Article list loaded"});
           } else {
             flashFeedback({message: "File not found", bg: "bg-red"});
@@ -2171,6 +2175,8 @@ Mavo.Formats.FrontMatter = Bliss.Class({
           var arr = gtpb.site_app.params.gh_repo_article;
           combo.list = arr || [];
           if(Array.isArray(arr) && arr.length){
+            Mavo.all.site_app.unsavedChanges = true;
+            Mavo.all.site_app.save();
             flashFeedback({message: "Article list loaded"});
           }
         })
