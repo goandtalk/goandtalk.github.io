@@ -540,15 +540,18 @@ invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.elem
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="a06140added768f0cf374470017de77722d78fec 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -564,15 +567,18 @@ invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.elem
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="0d94644e958636fa1aa22b2a8e1bdf5228f0e5a2 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="a41325d3d724b613adde84fb3124bc6dd2d09ac7"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -2526,15 +2532,18 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="a06140added768f0cf374470017de77722d78fec 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -2550,15 +2559,18 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="0d94644e958636fa1aa22b2a8e1bdf5228f0e5a2 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="a41325d3d724b613adde84fb3124bc6dd2d09ac7"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -7126,15 +7138,18 @@ w-100  ph1 fl pt2 pb3
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="a06140added768f0cf374470017de77722d78fec 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -7150,15 +7165,18 @@ w-100  ph1 fl pt2 pb3
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="0d94644e958636fa1aa22b2a8e1bdf5228f0e5a2 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="a41325d3d724b613adde84fb3124bc6dd2d09ac7"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -11974,15 +11992,18 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="a06140added768f0cf374470017de77722d78fec 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -11998,15 +12019,18 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="0d94644e958636fa1aa22b2a8e1bdf5228f0e5a2 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="a41325d3d724b613adde84fb3124bc6dd2d09ac7"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -23210,15 +23234,18 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="a06140added768f0cf374470017de77722d78fec 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -23234,15 +23261,18 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     
 
+
+
+
 <figure class="ma0">
 	<picture>
     
       {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
 
-      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      <source media="(max-width: 480px)" srcset="0d94644e958636fa1aa22b2a8e1bdf5228f0e5a2 414w"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
-      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      <source media="(min-width: 481px)" srcset="a41325d3d724b613adde84fb3124bc6dd2d09ac7"
       675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
       >
       35fe3a9616151be1e9a9abc33ece88d44bd47528
@@ -35352,4 +35382,4 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
   
 
 
-gtpb.default.TemplateHash = {"0a91767dbe0c33eb36411f28dfbb52e7f40c0b93":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027base_image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027base_image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","28cc5fd7f9fa2dc66449de854b9df615c02c3c13":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.gt_license_url\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.gt_license_url\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","35fe3a9616151be1e9a9abc33ece88d44bd47528":"{tf{?}tf}\n","5aff7ad5769b66377c06f3d3195c1ba6c58d9165":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","624e2f799cf76d241798e9e40bc8c7efa846138a":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027/images/light-rays-by-richard-gatley-529626-unsplash.jpg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027/images/light-rays-by-richard-gatley-529626-unsplash.jpg\\u0027) }v}{tf{?}tf}","675275c791df5c494218febd9c0cde06eea2ae6b":"{tf{? o.edit_mode }tf}\n","6aa54d91498069cf3ec3c6d46443b0b765c6cec2":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","6f171f7af664405d6c48d439c7dcf034b904ccf1":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","9c5d1935546b2e94073e7f538301e63094876204":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.gt_author_url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.gt_author_url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","a41325d3d724b613adde84fb3124bc6dd2d09ac7":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","b1d98aff0d513d54c95f98187a86801cfeb2b837":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","be9210026fcf76504a9221b2aea4c4b61cf84e51":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","dd670833e00d695c78df75d31d05c27606aca294":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","f31242cd7b629eb52f03daf3392c0469f5e560bb":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","f871d6b8810c7bde0a1be4bdb14e56bf840fce44":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027) }v}{tf{?}tf}","f9646236a2807f0720fd2ecb05896803adf5bb4b":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027embed_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027embed_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}"};
+gtpb.default.TemplateHash = {"0a91767dbe0c33eb36411f28dfbb52e7f40c0b93":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027base_image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027base_image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","0d94644e958636fa1aa22b2a8e1bdf5228f0e5a2":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027mobile.src_414\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027mobile.src_414\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","28cc5fd7f9fa2dc66449de854b9df615c02c3c13":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.gt_license_url\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.gt_license_url\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","35fe3a9616151be1e9a9abc33ece88d44bd47528":"{tf{?}tf}\n","5aff7ad5769b66377c06f3d3195c1ba6c58d9165":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.slide_trigger_icon\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","624e2f799cf76d241798e9e40bc8c7efa846138a":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027/images/light-rays-by-richard-gatley-529626-unsplash.jpg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027/images/light-rays-by-richard-gatley-529626-unsplash.jpg\\u0027) }v}{tf{?}tf}","675275c791df5c494218febd9c0cde06eea2ae6b":"{tf{? o.edit_mode }tf}\n","6aa54d91498069cf3ec3c6d46443b0b765c6cec2":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","6f171f7af664405d6c48d439c7dcf034b904ccf1":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","9c5d1935546b2e94073e7f538301e63094876204":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.gt_author_url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.gt_author_url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","a06140added768f0cf374470017de77722d78fec":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027base_mobile.src_414\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027base_mobile.src_414\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","a41325d3d724b613adde84fb3124bc6dd2d09ac7":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image.src\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","b1d98aff0d513d54c95f98187a86801cfeb2b837":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027cta2.url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","be9210026fcf76504a9221b2aea4c4b61cf84e51":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027image_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}","dd670833e00d695c78df75d31d05c27606aca294":"{tf{? o.edit_mode }tf}{enc{! o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(item, \\u0027url\\u0027) || \\u0027#\\u0027) }v}{tf{?}tf}","f31242cd7b629eb52f03daf3392c0469f5e560bb":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027params.logo_url\\u0027) || \\u0027/images/logos/icon-on-dark.svg\\u0027) }v}{tf{?}tf}","f871d6b8810c7bde0a1be4bdb14e56bf840fce44":"{tf{? o.edit_mode }tf}{enc{! o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(o, \\u0027site.params.site_home_url\\u0027) || \\u0027/\\u0027) }v}{tf{?}tf}","f9646236a2807f0720fd2ecb05896803adf5bb4b":"{tf{? o.edit_mode }tf}{enc{! o.__get(it, \\u0027embed_source\\u0027) || \\u0027\\u0027 }enc}{tf{??}tf}{v{= o._relurl(o.__get(it, \\u0027embed_source\\u0027) || \\u0027\\u0027) }v}{tf{?}tf}"};
