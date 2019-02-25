@@ -540,18 +540,42 @@ invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.elem
 
     
 
-{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+<figure class="ma0">
+	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
-  {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+    {tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
-  35fe3a9616151be1e9a9abc33ece88d44bd47528
-
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+  </picture>
+</figure>
 
     
 
 <figure class="ma0">
 	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
+
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
     
     {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
 
@@ -816,9 +840,23 @@ invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.elem
 	</button>&nbsp;
 
   
+	<button data-toggle-tab="image_mobile" mv-action="set(current_tab,'image_mobile')" class="[if(current_tab='image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile-alt"></i><span class="dn di-ns"> Mobile Background </span>
+		
+	</button>&nbsp;
+
+  
 	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="base_image_mobile" mv-action="set(current_tab,'base_image_mobile')" class="[if(current_tab='base_image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile"></i><span class="dn di-ns"> Mobile Base </span>
 		
 	</button>&nbsp;
 
@@ -1345,7 +1383,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, bg_image_repo, image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -1516,6 +1554,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</div>
 
 	
+	<div data-pane="image_mobile" class="gt-tab-pane [if(current_tab='image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="mobile" >
+  <h3 class="mt2">Mobile Background</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the background image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', mobile_bg_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(mobile_bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, mobile_bg_image_repo, mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="mobile_bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',mobile_bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
 	<div data-pane="base_image" class="gt-tab-pane [if(current_tab='base_image', '', 'dn')] ">
 	 
 		
@@ -1641,7 +1796,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_image_repo, base_image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -1800,6 +1955,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             The size of image width and height in pixels, default to 1366x768.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="base_image_mobile" class="gt-tab-pane [if(current_tab='base_image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="base_mobile" >
+  <h3 class="mt2">Mobile Base</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the base image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', base_mobile_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_mobile_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_mobile_image_repo, base_mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_mobile_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_mobile_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -2254,18 +2526,42 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     
 
-{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+<figure class="ma0">
+	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
-  {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+    {tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
-  35fe3a9616151be1e9a9abc33ece88d44bd47528
-
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+  </picture>
+</figure>
 
     
 
 <figure class="ma0">
 	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
+
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
     
     {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
 
@@ -4474,9 +4770,23 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</button>&nbsp;
 
   
+	<button data-toggle-tab="image_mobile" mv-action="set(current_tab,'image_mobile')" class="[if(current_tab='image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile-alt"></i><span class="dn di-ns"> Mobile Background </span>
+		
+	</button>&nbsp;
+
+  
 	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="base_image_mobile" mv-action="set(current_tab,'base_image_mobile')" class="[if(current_tab='base_image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile"></i><span class="dn di-ns"> Mobile Base </span>
 		
 	</button>&nbsp;
 
@@ -5055,7 +5365,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(hl_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image_source, if(contains(hl_image_repo, &#39;http&#39;), hl_image_repo, image_source))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, hl_image_repo, image_source)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -5471,7 +5781,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, bg_image_repo, image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -5642,6 +5952,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</div>
 
 	
+	<div data-pane="image_mobile" class="gt-tab-pane [if(current_tab='image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="mobile" >
+  <h3 class="mt2">Mobile Background</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the background image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', mobile_bg_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(mobile_bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, mobile_bg_image_repo, mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="mobile_bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',mobile_bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
 	<div data-pane="base_image" class="gt-tab-pane [if(current_tab='base_image', '', 'dn')] ">
 	 
 		
@@ -5767,7 +6194,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_image_repo, base_image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -5926,6 +6353,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             The size of image width and height in pixels, default to 1366x768.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="base_image_mobile" class="gt-tab-pane [if(current_tab='base_image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="base_mobile" >
+  <h3 class="mt2">Mobile Base</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the base image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', base_mobile_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_mobile_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_mobile_image_repo, base_mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_mobile_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_mobile_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -6582,18 +7126,42 @@ w-100  ph1 fl pt2 pb3
 
     
 
-{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+<figure class="ma0">
+	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
-  {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+    {tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
-  35fe3a9616151be1e9a9abc33ece88d44bd47528
-
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+  </picture>
+</figure>
 
     
 
 <figure class="ma0">
 	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
+
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
     
     {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
 
@@ -8728,9 +9296,23 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</button>&nbsp;
 
   
+	<button data-toggle-tab="image_mobile" mv-action="set(current_tab,'image_mobile')" class="[if(current_tab='image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile-alt"></i><span class="dn di-ns"> Mobile Background </span>
+		
+	</button>&nbsp;
+
+  
 	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="base_image_mobile" mv-action="set(current_tab,'base_image_mobile')" class="[if(current_tab='base_image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile"></i><span class="dn di-ns"> Mobile Base </span>
 		
 	</button>&nbsp;
 
@@ -9293,7 +9875,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(hl_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image_source, if(contains(hl_image_repo, &#39;http&#39;), hl_image_repo, image_source))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, hl_image_repo, image_source)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -9709,7 +10291,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, bg_image_repo, image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -9880,6 +10462,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</div>
 
 	
+	<div data-pane="image_mobile" class="gt-tab-pane [if(current_tab='image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="mobile" >
+  <h3 class="mt2">Mobile Background</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the background image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', mobile_bg_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(mobile_bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, mobile_bg_image_repo, mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="mobile_bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',mobile_bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
 	<div data-pane="base_image" class="gt-tab-pane [if(current_tab='base_image', '', 'dn')] ">
 	 
 		
@@ -10005,7 +10704,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_image_repo, base_image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -10164,6 +10863,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             The size of image width and height in pixels, default to 1366x768.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="base_image_mobile" class="gt-tab-pane [if(current_tab='base_image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="base_mobile" >
+  <h3 class="mt2">Mobile Base</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the base image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', base_mobile_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_mobile_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_mobile_image_repo, base_mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_mobile_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_mobile_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -11158,18 +11974,42 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     
 
-{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+<figure class="ma0">
+	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
-  {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+    {tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
-  35fe3a9616151be1e9a9abc33ece88d44bd47528
-
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+  </picture>
+</figure>
 
     
 
 <figure class="ma0">
 	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
+
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
     
     {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
 
@@ -13262,9 +14102,23 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</button>&nbsp;
 
   
+	<button data-toggle-tab="image_mobile" mv-action="set(current_tab,'image_mobile')" class="[if(current_tab='image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile-alt"></i><span class="dn di-ns"> Mobile Background </span>
+		
+	</button>&nbsp;
+
+  
 	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="base_image_mobile" mv-action="set(current_tab,'base_image_mobile')" class="[if(current_tab='base_image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile"></i><span class="dn di-ns"> Mobile Base </span>
 		
 	</button>&nbsp;
 
@@ -13820,7 +14674,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(hl_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image_source, if(contains(hl_image_repo, &#39;http&#39;), hl_image_repo, image_source))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, hl_image_repo, image_source)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -14236,7 +15090,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, bg_image_repo, image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -14407,6 +15261,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</div>
 
 	
+	<div data-pane="image_mobile" class="gt-tab-pane [if(current_tab='image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="mobile" >
+  <h3 class="mt2">Mobile Background</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the background image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', mobile_bg_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(mobile_bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, mobile_bg_image_repo, mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="mobile_bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',mobile_bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
 	<div data-pane="base_image" class="gt-tab-pane [if(current_tab='base_image', '', 'dn')] ">
 	 
 		
@@ -14532,7 +15503,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_image_repo, base_image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -14691,6 +15662,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             The size of image width and height in pixels, default to 1366x768.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="base_image_mobile" class="gt-tab-pane [if(current_tab='base_image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="base_mobile" >
+  <h3 class="mt2">Mobile Base</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the base image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', base_mobile_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_mobile_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_mobile_image_repo, base_mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_mobile_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_mobile_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -15871,7 +16959,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       <div class="tc-l ph3">
 
         <div class="" >
-          <h1 class="f2 f1-m f-5-l tracked fw4 mb0 lh-title  ">JavaScript Required</h1>
+          <h1 class="f2 f1-m f-5-l tracked fw4 mb0 lh-title  ">Loading Editor</h1>
         </div>
         <div class="">
           <h2 class="fw1 f3 black-80 mt3 mb4 " > The page builder relies on JavaScript to work. If you see this page after page loads, it means JavaScript is not enabled, or not working properly. </h2>
@@ -15935,6 +17023,20 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	<button data-toggle-tab="page_time" mv-action="set(current_tab,'page_time')" class="[if(current_tab='page_time', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-clock"></i><span class="dn di-ns"> Time Meta </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="page_thumbnail" mv-action="set(current_tab,'page_thumbnail')" class="[if(current_tab='page_thumbnail', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-images"></i><span class="dn di-ns"> Page Thumbnail </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="index_thumbnail" mv-action="set(current_tab,'index_thumbnail')" class="[if(current_tab='index_thumbnail', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-shapes"></i><span class="dn di-ns"> Thumbnail Aspect Ratio </span>
 		
 	</button>&nbsp;
 
@@ -16936,6 +18038,189 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is used to generate keywords meta tag.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="page_thumbnail" class="gt-tab-pane [if(current_tab='page_thumbnail', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Page Thumbnail</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Thumbnail URL 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(thumbnail_url, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="thumbnail_url" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the full URL of the thumbnail image on index page. There could be many images on the index page and thus the size of thumbnails should be small.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Repo Image <span class=" pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', ui_image_repo)"
+      ><i class="pa1 f7 bg-light-blue fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(ui_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, ui_image_repo, thumbnail_url )" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="ui_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',ui_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="index_thumbnail" class="gt-tab-pane [if(current_tab='index_thumbnail', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Thumbnail Aspect Ratio</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Thumbnail Aspect Ratio 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(thumbnail_ar, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="thumbnail_ar" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="1x1,16x9,9x16,4x3,3x4,6x4,4x6,8x5,5x8,7x5,5x7" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',thumbnail_ar)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the dimension of the thumbnail images (width x height). This option is valid when generating index pages automatically.
           </div>
         
       </div>
@@ -18308,6 +19593,13 @@ w-100  ph1 fl pt2 pb3
 	<button data-toggle-tab="site_github" mv-action="set(current_tab,'site_github')" class="[if(current_tab='site_github', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-server"></i><span class="dn di-ns"> Website Repo </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="index_thumbnail" mv-action="set(current_tab,'index_thumbnail')" class="[if(current_tab='index_thumbnail', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-shapes"></i><span class="dn di-ns"> Thumbnail Aspect Ratio </span>
 		
 	</button>&nbsp;
 
@@ -20171,6 +21463,73 @@ w-100  ph1 fl pt2 pb3
 	
 	</div>
 
+	
+	<div data-pane="index_thumbnail" class="gt-tab-pane [if(current_tab='index_thumbnail', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Thumbnail Aspect Ratio</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Thumbnail Aspect Ratio 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(thumbnail_ar, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="thumbnail_ar" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+           data-list="1x1,16x9,9x16,4x3,3x4,6x4,4x6,8x5,5x8,7x5,5x7" 
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',thumbnail_ar)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the dimension of the thumbnail images (width x height). This option is valid when generating index pages automatically.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
 
 </div>
 
@@ -21851,18 +23210,42 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     
 
-{tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+<figure class="ma0">
+	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027base_mobile.src_414\u0027) }tf}
 
-  <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image
-  {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+    {tf{? o.edit_mode || o.__get(it, \u0027base_image.src\u0027) }tf}
+
+      <img alt="" 675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="src" mv-value="base_image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528 class="absolute abs-image {tf{? o.edit_mode }tf}[base_image.animation]{tf{??}tf}{enc{! o.__get(it, \u0027base_image.animation\u0027) || \u0027\u0027 }enc}{tf{?}tf}
 " src="0a91767dbe0c33eb36411f28dfbb52e7f40c0b93" >
-  35fe3a9616151be1e9a9abc33ece88d44bd47528
-
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
+    
+  </picture>
+</figure>
 
     
 
 <figure class="ma0">
 	<picture>
+    
+      {tf{? o.edit_mode || o.__get(it, \u0027mobile.src_414\u0027) }tf}
+
+      <source media="(max-width: 480px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ 414w"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="mobile.src_414 & ' 414w'" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      <source media="(min-width: 481px)" srcset="#ZgotmplZ,#ZgotmplZ,#ZgotmplZ"
+      675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="srcset" mv-value="image.src" 35fe3a9616151be1e9a9abc33ece88d44bd47528
+      >
+      35fe3a9616151be1e9a9abc33ece88d44bd47528
     
     {tf{? o.edit_mode || o.__get(it, \u0027image.src\u0027) }tf}
 
@@ -23959,9 +25342,23 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</button>&nbsp;
 
   
+	<button data-toggle-tab="image_mobile" mv-action="set(current_tab,'image_mobile')" class="[if(current_tab='image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile-alt"></i><span class="dn di-ns"> Mobile Background </span>
+		
+	</button>&nbsp;
+
+  
 	<button data-toggle-tab="base_image" mv-action="set(current_tab,'base_image')" class="[if(current_tab='base_image', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-images"></i><span class="dn di-ns"> Base Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="base_image_mobile" mv-action="set(current_tab,'base_image_mobile')" class="[if(current_tab='base_image_mobile', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-mobile"></i><span class="dn di-ns"> Mobile Base </span>
 		
 	</button>&nbsp;
 
@@ -24524,7 +25921,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(hl_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image_source, if(contains(hl_image_repo, &#39;http&#39;), hl_image_repo, image_source))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, hl_image_repo, image_source)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -24940,7 +26337,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(bg_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image.src, if(contains(bg_image_repo, &#39;http&#39;), bg_image_repo, image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, bg_image_repo, image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -25111,6 +26508,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 	</div>
 
 	
+	<div data-pane="image_mobile" class="gt-tab-pane [if(current_tab='image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="mobile" >
+  <h3 class="mt2">Mobile Background</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the background image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', mobile_bg_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(mobile_bg_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, mobile_bg_image_repo, mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="mobile_bg_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',mobile_bg_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
 	<div data-pane="base_image" class="gt-tab-pane [if(current_tab='base_image', '', 'dn')] ">
 	 
 		
@@ -25236,7 +26750,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(base_image.src, if(contains(base_image_repo, &#39;http&#39;), base_image_repo, base_image.src))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_image_repo, base_image.src)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -25395,6 +26909,123 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             The size of image width and height in pixels, default to 1366x768.
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
+	<div data-pane="base_image_mobile" class="gt-tab-pane [if(current_tab='base_image_mobile', '', 'dn')] ">
+	 
+		
+		
+
+<div  property="base_mobile" >
+  <h3 class="mt2">Mobile Base</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Source 414w 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(src_414, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="src_414" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the base image on mobile phone (portrait mode).
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Search Image <span class="pointer dib pv1 ph2 mh2"
+      mv-action="invoke('fetchRepoImageList', base_mobile_image_repo),
+      "
+      ><i class="bg-light-blue pa1 f7 fas fa-sync mh1"></i> Fetch List</span>
+
+
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(base_mobile_image_repo, '')">X</span>
+        
+        </div>
+        <div  mv-action="invoke(&#39;setIfImage&#39;, base_mobile_image_repo, base_mobile.src_414)" 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input  mv-storage="none" 
+           property="base_mobile_image_repo" 
+          type="text" 
+          class="flex-auto  dropdown-input  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path="gh_repo_image"
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+<button type="button" mv-action="invoke('toggleDDInput',base_mobile_image_repo)"
+  class="dropdown-btn w2 h2 v-mid tc br1 bg-black-10 black-90 ba1 b--black-05 z-0 fl"
+  title="click to open dropdown list">
+  <span class="f6 bg-white-80 ph1 ">v</span>
+</button>
+
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            Click the dropdown icon and type to search images.
           </div>
         
       </div>
@@ -29295,7 +30926,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image_source, if(contains(card_image_repo, &#39;http&#39;), card_image_repo, image_source))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, card_image_repo, image_source)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -29342,13 +30973,14 @@ w-100  ph1 fl pt2 pb3
           >
           {tf{? o.edit_mode || o.__get(item, \u0027image_source\u0027) }tf}
 
-            <img class="mw-100
-            {enc{! o.__get(it, \u0027images_class\u0027) || \u0027\u0027 }enc}
-            {enc{! o.__get(it, \u0027images_border\u0027) || \u0027\u0027 }enc}
-            {enc{! o.__get(it, \u0027images_border_color\u0027) || \u0027\u0027 }enc}
-            {enc{! o.__get(it, \u0027images_padding\u0027) || \u0027\u0027 }enc}
-            " 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
-
+            <div class="aspect-ratio {enc{! o.__get(it, \u0027images_ar\u0027) || \u0027aspect-ratio--1x1\u0027 }enc}">
+              <img class="mw-100 absolute abs-image
+              {enc{! o.__get(it, \u0027images_class\u0027) || \u0027\u0027 }enc}
+              {enc{! o.__get(it, \u0027images_border\u0027) || \u0027\u0027 }enc}
+              {enc{! o.__get(it, \u0027images_border_color\u0027) || \u0027\u0027 }enc}
+              {enc{! o.__get(it, \u0027images_padding\u0027) || \u0027\u0027 }enc}
+              " 675275c791df5c494218febd9c0cde06eea2ae6b property="image_source" 35fe3a9616151be1e9a9abc33ece88d44bd47528 src="6f5ad8f3480a1be0ec38d366a49c5176d83e9e5e" >
+            </div>
             35fe3a9616151be1e9a9abc33ece88d44bd47528
           </div>
           <div class="{enc{! o.__get(it, \u0027card_body\u0027) || \u0027\u0027 }enc}"
@@ -29405,7 +31037,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image_source, if(contains(card_image_repo, &#39;http&#39;), card_image_repo, image_source))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, card_image_repo, image_source)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -29446,7 +31078,9 @@ w-100  ph1 fl pt2 pb3
           <div class="w-100 pa2 [card_background]">
 
             <div class="mb2 tc [card_header]">
-              <img class="mw-100 mv-empty [images_class] [images_border] [images_border_color] [images_padding] "  alt="" property="image_source"  src="" >
+              <div class="aspect-ratio [if(images_ar,images_ar, 'aspect-ratio--1x1')]">
+                <img class="mw-100 absolute abs-image mv-empty [images_class] [images_border] [images_border_color] [images_padding] "  alt="" property="image_source"  src="" >
+              </div>
             </div>
             <div class="[if(card_body, card_body, 'ph1')]">
               <h3 class="card-title [if(card_title, card_title, 'tc')]">
@@ -29500,6 +31134,13 @@ w-100  ph1 fl pt2 pb3
 	<button data-toggle-tab="layout_images" mv-action="set(current_tab,'layout_images')" class="[if(current_tab='layout_images', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
 		
 			<i class="fas fa-images"></i><span class="dn di-ns"> Card and Image </span>
+		
+	</button>&nbsp;
+
+  
+	<button data-toggle-tab="layout_image_ar" mv-action="set(current_tab,'layout_image_ar')" class="[if(current_tab='layout_image_ar', 'bg-white-90 bb-0')] gt-tab-button br1  pointer ba f6 dib lh-solid ph2 pv2 mb2 ">
+		
+			<i class="fas fa-shapes"></i><span class="dn di-ns"> Image Aspect Ratio </span>
 		
 	</button>&nbsp;
 
@@ -30562,6 +32203,207 @@ w-100  ph1 fl pt2 pb3
 	</div>
 
 	
+	<div data-pane="layout_image_ar" class="gt-tab-pane [if(current_tab='layout_image_ar', '', 'dn')] ">
+	 
+		
+		
+
+<div >
+  <h3 class="mt2">Image Aspect Ratio</h3>
+  <div class="cf flex flex-wrap ba b--black-05" >
+    
+      
+      <div class="relative 
+w-100  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Images Aspect Ratio 
+        
+        
+        </div>
+        <div  mv-action="invoke(&#39;replaceItemsClass&#39;, images_ar,&#39;root.children.column&#39;, &#39;.aspect-ratio&#39;)" 
+        class=" bg-white 
+         flex  flex-wrap   pt1 cf items-center ">
+        
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+             property="images_ar"
+            
+            
+            id="radio-47-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--1x1"   checked 
+            />
+            <label class="flex-auto ph2" for="radio-47-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            1x1 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--16x9"  
+            />
+            <label class="flex-auto ph2" for="radio-47-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            16x9 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--9x16"  
+            />
+            <label class="flex-auto ph2" for="radio-47-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            9x16 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--4x3"  
+            />
+            <label class="flex-auto ph2" for="radio-47-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            4x3 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--3x4"  
+            />
+            <label class="flex-auto ph2" for="radio-47-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            3x4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--6x4"  
+            />
+            <label class="flex-auto ph2" for="radio-47-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            6x4 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--4x6"  
+            />
+            <label class="flex-auto ph2" for="radio-47-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            4x6 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--8x5"  
+            />
+            <label class="flex-auto ph2" for="radio-47-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            8x5 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--5x8"  
+            />
+            <label class="flex-auto ph2" for="radio-47-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            5x8 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--7x5"  
+            />
+            <label class="flex-auto ph2" for="radio-47-9-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            7x5 
+            </label>
+          </div>
+          
+          <div class=" flex-auto pv1  ph1 flex items-center">
+            <input type="radio"
+            
+            
+            
+            id="radio-47-10-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            value="aspect-ratio--5x7"  
+            />
+            <label class="flex-auto ph2" for="radio-47-10-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            5x7 
+            </label>
+          </div>
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            This is the dimension of the containeer of grid images (width x height).
+          </div>
+        
+      </div>
+       
+    
+  </div>
+</div> 
+
+	
+	</div>
+
+	
 	<div data-pane="global_section" class="gt-tab-pane [if(current_tab='global_section', '', 'dn')] ">
 	 
 		
@@ -31171,11 +33013,11 @@ w-100  ph1 fl pt2 pb3
              property="layout_class"
             
             
-            id="radio-47-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-48-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="line-start"   checked 
             />
-            <label class="flex-auto ph2" for="radio-47-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-48-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             line start 
             </label>
           </div>
@@ -31185,11 +33027,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-47-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-48-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="even-order-1-l"  
             />
-            <label class="flex-auto ph2" for="radio-47-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-48-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             outside 
             </label>
           </div>
@@ -31199,11 +33041,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-47-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-47-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-48-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="odd-order-1-l"   checked 
             />
-            <label class="flex-auto ph2" for="radio-47-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-48-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             inside 
             </label>
           </div>
@@ -31430,7 +33272,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image_source, if(contains(card_image_repo, &#39;http&#39;), card_image_repo, image_source))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, card_image_repo, image_source)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -31532,7 +33374,7 @@ w-100  ph1 fl pt2 pb3
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(card_image_repo, '')">X</span>
         
         </div>
-        <div  mv-action="set(image_source, if(contains(card_image_repo, &#39;http&#39;), card_image_repo, image_source))" 
+        <div  mv-action="invoke(&#39;setIfImage&#39;, card_image_repo, image_source)" 
         class="
          flex  flex-nowrap   pt1 cf items-center ">
         
@@ -31985,11 +33827,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="column_class"
             
             
-            id="radio-48-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-49-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="w-50-l"   checked 
             />
-            <label class="flex-auto ph2" for="radio-48-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-49-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             2 
             </label>
           </div>
@@ -31999,11 +33841,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-48-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-49-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="w-33-l"  
             />
-            <label class="flex-auto ph2" for="radio-48-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-49-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             3 
             </label>
           </div>
@@ -32013,11 +33855,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-48-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-49-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="w-25-l"   checked 
             />
-            <label class="flex-auto ph2" for="radio-48-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-49-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             4 
             </label>
           </div>
@@ -32027,11 +33869,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-48-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-49-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="w-20-l"  
             />
-            <label class="flex-auto ph2" for="radio-48-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-49-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             5 
             </label>
           </div>
@@ -32041,11 +33883,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-48-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-48-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-49-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="w-10-l"  
             />
-            <label class="flex-auto ph2" for="radio-48-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-49-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             10 
             </label>
           </div>
@@ -32086,11 +33928,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="resize_column"
             
             
-            id="radio-49-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-50-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="flex-auto"   checked 
             />
-            <label class="flex-auto ph2" for="radio-49-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-50-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             auto 
             </label>
           </div>
@@ -32100,11 +33942,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-49-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-49-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-50-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="flex-none"  
             />
-            <label class="flex-auto ph2" for="radio-49-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-50-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             none 
             </label>
           </div>
@@ -32258,11 +34100,11 @@ w-100  ph1 fl pt2 pb3
              property="images_class"
             
             
-            id="radio-50-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-51-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-50-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-51-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             disable 
             </label>
           </div>
@@ -32272,11 +34114,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-50-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-51-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br2"  
             />
-            <label class="flex-auto ph2" for="radio-50-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-51-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br2 
             </label>
           </div>
@@ -32286,11 +34128,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-50-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-51-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br3"  
             />
-            <label class="flex-auto ph2" for="radio-50-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-51-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br3 
             </label>
           </div>
@@ -32300,11 +34142,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-50-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-51-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br4"  
             />
-            <label class="flex-auto ph2" for="radio-50-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-51-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             br4 
             </label>
           </div>
@@ -32314,11 +34156,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-50-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-50-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-51-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="br-100"  
             />
-            <label class="flex-auto ph2" for="radio-50-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-51-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             circle or oval 
             </label>
           </div>
@@ -32454,11 +34296,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="images_border"
             
             
-            id="radio-51-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-52-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="bn"   checked 
             />
-            <label class="flex-auto ph2" for="radio-51-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-52-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             disable 
             </label>
           </div>
@@ -32468,11 +34310,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-51-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-51-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-52-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="ba"  
             />
-            <label class="flex-auto ph2" for="radio-51-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-52-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             ba 
             </label>
           </div>
@@ -32503,11 +34345,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="images_padding"
             
             
-            id="radio-52-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-53-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="pa0"   checked 
             />
-            <label class="flex-auto ph2" for="radio-52-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-53-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             disable 
             </label>
           </div>
@@ -32517,11 +34359,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-52-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-52-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-53-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="pa1"  
             />
-            <label class="flex-auto ph2" for="radio-52-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-53-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             pa1 
             </label>
           </div>
@@ -32552,11 +34394,11 @@ w-100  ph1 fl pt2 pb3
              property="images_border_color"
             
             
-            id="radio-53-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="b--inherit"   checked 
             />
-            <label class="flex-auto ph2" for="radio-53-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             inherit 
             </label>
           </div>
@@ -32566,11 +34408,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-53-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="b--black-10"  
             />
-            <label class="flex-auto ph2" for="radio-53-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             black 10 
             </label>
           </div>
@@ -32580,11 +34422,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-53-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="b--black-20"  
             />
-            <label class="flex-auto ph2" for="radio-53-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-2-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             black 20 
             </label>
           </div>
@@ -32594,11 +34436,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-53-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="b--white"  
             />
-            <label class="flex-auto ph2" for="radio-53-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-3-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             white 
             </label>
           </div>
@@ -32608,11 +34450,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-53-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="b--white-90"  
             />
-            <label class="flex-auto ph2" for="radio-53-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-4-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             white 90 
             </label>
           </div>
@@ -32622,11 +34464,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-53-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="b--white-80"  
             />
-            <label class="flex-auto ph2" for="radio-53-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-5-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             white 80 
             </label>
           </div>
@@ -32636,11 +34478,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-53-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="b--primary-color"  
             />
-            <label class="flex-auto ph2" for="radio-53-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-6-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             primary 
             </label>
           </div>
@@ -32650,11 +34492,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-53-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="b--primary-color-light"  
             />
-            <label class="flex-auto ph2" for="radio-53-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-7-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             primary light 
             </label>
           </div>
@@ -32664,11 +34506,11 @@ w-100  ph1 fl pt2 pb3
             
             
             
-            id="radio-53-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-53-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-54-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="b--primary-color-lighter"  
             />
-            <label class="flex-auto ph2" for="radio-53-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-54-8-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             primary lighter 
             </label>
           </div>
@@ -33287,11 +35129,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
              property="section_height"
             
             
-            id="radio-54-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-55-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="vh-50"   checked 
             />
-            <label class="flex-auto ph2" for="radio-54-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-55-0-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             vh-50 
             </label>
           </div>
@@ -33301,11 +35143,11 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             
             
             
-            id="radio-54-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-            name="radio-54-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            id="radio-55-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+            name="radio-55-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
             value="vh-75"  
             />
-            <label class="flex-auto ph2" for="radio-54-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            <label class="flex-auto ph2" for="radio-55-1-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
             vh-75 
             </label>
           </div>

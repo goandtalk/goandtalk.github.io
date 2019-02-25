@@ -178,6 +178,11 @@
       // data loaded from remote source may not have _id
       data._id = gtpb[_this.mavo.id]._id;
       data._rev = gtpb[_this.mavo.id]._rev;
+      if('page_app' == this.mavo.id) {
+        var timemeta = new Date().toISOString();
+        //lastmod to update sitemap.xml, for search engine to index again
+        data.lastmod = timemeta;
+      }
       gtpb[_this.mavo.id] = data;
       //skip serializing. PouchDB.put accepts object
       return Promise.resolve().then(function() {
@@ -2274,6 +2279,14 @@ Mavo.Formats.FrontMatter = Bliss.Class({
       });
     });
 
+  };
+
+  gtpb.actions.setIfImage = function(){
+    var imagePtn = /\.jpe?g$|\.png$|\.gif$|\.webp$|\.svg$/i;
+    var _node = Mavo.Actions.getNode(arguments[2]);
+    if (_node && imagePtn.test(this.value)) {
+      _node.setValue(this.value);
+    }
   };
 
   function toggleBaseToolbar() {
