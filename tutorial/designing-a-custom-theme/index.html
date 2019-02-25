@@ -182,7 +182,7 @@
 
 <meta itemprop="datePublished" content="2019-01-09T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-09T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="275">
+<meta itemprop="wordCount" content="303">
 
 
 
@@ -596,9 +596,11 @@
 <li>a demo site featuring the theme
 
 <ul>
-<li>for example a demo site hosting with Github Pages</li>
-<li>an organization on Github to collaborate with others, using the theme name</li>
-<li>a repository named with pattern [theme-name].github.io.  Github Pages automatically enables hosting for a repository named this way. please replace [theme-name] with the actual theme name.</li>
+<li>for example a demo site hosting with Github Pages, or Gitlab Pages</li>
+<li>an organization on Github to collaborate with others, using the theme name, or a public Gitlab Group.</li>
+<li>a repository named with pattern [theme-name].github.io, or [theme-name].gitlab.io</li>
+<li>Github Pages automatically enables hosting for a repository named this way. please replace [theme-name] with the actual theme name.</li>
+<li>Gitlab Pages are enabled after running the first default pipeline. If the term pipeline sounds strange to you, you can publish to Gitlab Pages by clicking three buttons. See this tutorial <a href="/tutorial/building-a-business-website-with-gitlab-pages-from-a-to-z/">Building a Business Website with Gitlab Pages from A to Z</a> for details</li>
 <li>placeholder images</li>
 </ul></li>
 <li>a separate repository for theme data
@@ -658,12 +660,13 @@
           
           "  >
              <ul>
-<li>think of a theme name, and create an organization on Github.com with this name</li>
-<li>create a repository for theme demo site under this organization, and name it [theme-name].github.io</li>
+<li>think of a theme name, and create an organization on Github.com (or a group on Gitlab.com) with this name</li>
+<li>create a repository for theme demo site under this organization, and name it [theme-name].github.io, (or [theme-name].gitlab.io)</li>
 <li><a href="/edit/">create a new site</a> with Go and Talk page builder</li>
+<li>alternatively, if you plan to bundle your theme with the page builder, fork/import this repository, <a href="https://gitlab.com/toffee-and-coffee/toffee-and-coffee.gitlab.io">toffee and coffee demo site</a>. It has an editable page index.goandmake.html under every folder to load sample data and the page builder. It is easier to navigate sample pages while you edit them.</li>
 <li>assign a unique theme id as site id. this is especially useful if you will create more than one theme.</li>
 <li>create sample pages as usual, use neutral images and language for placeholder</li>
-<li>create another repository on Github.com for theme data
+<li>create another repository on github.com or gitlab.com for theme data
 
 <ul>
 <li>export site setting data and save as config.toml file</li>
@@ -724,13 +727,14 @@
 <li>the theme name is also the organization name
 
 <ul>
-<li>organization name on Github.com must be unique. If it is not available, you may try names with more words separated with a dash, for example toffee-and-coffee.</li>
+<li>organization name on Github.com must be unique.  The same is true for group name on gitlab.com.</li>
+<li>If it is not available, you may try names with more words separated with a dash, for example toffee-and-coffee.</li>
 </ul></li>
 <li>create a repository for demo site, under this organization
 
 <ul>
-<li>fork from this repository <a href="https://github.com/goandtalk/golden">Golden</a>. It has all the folder structure and static files</li>
-<li>rename the repository to [theme-name].github.io</li>
+<li>fork from this repository <a href="https://github.com/goandtalk/golden">Golden</a>, or <a href="https://gitlab.com/toffee-and-coffee/toffee-and-coffee.gitlab.io">toffee and coffee demo site</a> for a bundled theme. It has all the folder structure and static files</li>
+<li>rename the repository to [theme-name].github.io, or [theme-name].gitlab.io</li>
 <li>select a license for your work</li>
 </ul></li>
 <li>give meaningful names to images so you may search and select in the media library when you edit pages</li>
@@ -892,6 +896,58 @@
             <i 
             class="fas fa-coffee"></i>
             <i 
+            data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-search-plus
+            white
+            "></i>
+
+          </span>
+
+        </div>
+        
+      </div>
+      <div class="w-100 w-50-ns flex-auto pa2 fl">
+        
+        <div 
+        class="w-100 pa3 ">
+          <p  class="f4 pa2">  </p>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Navigating Sample Pages for Another Domain Name </h2>
+          <div class="pt3 f3 markdown lh-copy
+          
+          "  >
+             <ul>
+<li>when editing a page with the page builder for another domain name, always navigate to the page by opening the file in file setting window.</li>
+<li>custom navigation links on your sample page will only work on your demo site when published.</li>
+</ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+
+        
+      
+        
+         
+          <section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center bg-white-60
+  fadeIn
+  dark-gray
+  "
+  ><div class="cf w-100 relative pa2 pa3-m pa4-l center mw8 flex flex-wrap" >
+      <div 
+      class="w-20-ns w-100 odd-order-1-ns flex flex-wrap fl">
+        <div 
+          class="tc self-center w-100 f-headline primary-color-light">
+          <span class="fa-layers fa-fw">
+            <i 
+            class="fas fa-coffee"></i>
+            <i 
             data-fa-transform="shrink-10 up-2 left-1" class="alt-mini-icon fas fa-bars
             white
             "></i>
@@ -906,13 +962,21 @@
         <div 
         class="w-100 pa3 ">
           <p  class="f4 pa2">  </p>
-          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Navigating Sample Pages </h2>
+          <h2  class="tc pa2 pa3-m pa4-l ma0 f2">Navigating Sample Pages on a Theme Bundled with Page Builder </h2>
           <div class="pt3 f3 markdown lh-copy
           
           "  >
              <ul>
-<li>when editing a page with the page builder, always navigate to the page by opening the file in file setting window.</li>
-<li>custom navigation links on your sample page will only work on your demo site when published.</li>
+<li>a bundled theme has two files under each folder
+
+<ul>
+<li>index.html for the public</li>
+<li>index.goandmake.html for the page builder and sample data</li>
+</ul></li>
+<li>when editing a page of a theme bundled with Go and Talk page builder, you may add the page to the menu and click to open the sample page.</li>
+<li>look for the edit link at the bottom of the page. It is below the copyright statement.</li>
+<li>click on the edit link to open the editable page.</li>
+<li>you may create new sample pages by creating a new folder in the repository for demo site, and upload index.html and index.goandmake.html files from a similar page.</li>
 </ul>
 
             
@@ -974,7 +1038,7 @@
 <li>sample credit link at the bottom of the web page
 
 <ul>
-<li>theme-name by theme-author, powered by goandmake.app</li>
+<li>theme-name by theme-author, CC-BY-NC-4.0 license, powered by goandmake.app</li>
 </ul></li>
 </ul>
 
@@ -1315,9 +1379,11 @@
 
 <p>The external CSS URLs can load custom CSS files, external CSS library, or custom fonts such as Google fonts.</p>
 
-<p>Go and Talk makes it much easier and faster to design a custom theme. Each theme may have a demo site to show sample pages, and a repository for source data. This tutorial shows the steps to create a repository for hosting demo site with Github Pages.</p>
+<p>Go and Talk makes it much easier and faster to design a custom theme. Each theme may have a demo site to show sample pages, and a repository for source data. This tutorial shows the steps to create a repository for hosting demo site with Github Pages, or Gitlab Pages.</p>
 
 <p>If you are new to Github Pages , you may create an organization there, fork a repository from <a href="https://github.com/toffee-and-coffee/toffee-and-coffee.github.io">Toffee and Coffee theme</a>, rename the repository and get familiar with the hosting process.</p>
+
+<p>Alternatively you can get familiar with Gitlab dashboard by creating a public group, forking <a href="https://gitlab.com/toffee-and-coffee/toffee-and-coffee.gitlab.io">Toffee and Coffee theme on Gitlab</a> and publishing a sample website.</p>
 
 <h2 id="about-go-and-talk-page-builders">About Go and Talk Page Builders</h2>
 
