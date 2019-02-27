@@ -1,0 +1,1142 @@
+<!DOCTYPE html><html class=""  lang="en-us">
+  <head>
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Demo | Go and talk page builder</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+     <meta name="generator" content="Hugo 0.49" />
+
+      
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+      
+
+    <link rel="alternate" type="application/rss&#43;xml" href="https://builder.goandmake.app/demo/index.xml">
+    
+      
+<link href="/css/webslides.css?v=0.0002" rel="stylesheet" />
+<link href="/css/tachyons.min.css?v=0.0001" rel="stylesheet" />
+<link href="/css/styles.css" rel="stylesheet" />
+
+
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria&#43;Hallelujah"> 
+  
+  
+  <style>
+  .handwriting {
+ font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+@keyframes slowRightEntry {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0.3;
+  }
+50% {
+   opacity: .5;
+}
+
+  90% {
+   transform: translateX(0vw);
+   opacity: .8;  
+   }
+  100% {
+    transform: translateX(0vw);
+   opacity: 0.7;
+}
+}
+
+.slowRightEntry {
+  animation: slowRightEntry 10s linear 10;
+  height: 100%;
+  }
+
+
+@keyframes slowRightExit {
+  0% {
+    transform: translateX(0vw);
+   opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+ }
+  100% {
+   opacity: .0;
+    transform: translateX(50vw);
+  }
+}
+
+.slowRightExit {
+  animation: slowRightExit 20s linear 5;
+  height: 100%;
+}
+
+  </style>
+
+
+    
+<style>
+
+.primary-color-dark {
+      color:  hsl(345, 35%, 20%);
+    }
+    .bg-primary-color-dark {
+      background-color: hsl(345, 35%, 20%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark {
+      border-color: hsl(345, 35%, 20%);
+    }
+    .bg-primary-color-dark-90 {
+      background-color: hsla(345, 35%, 20%, 90%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark-90 {
+      border-color: hsla(345, 35%, 20%, 90%);
+    }
+
+    .primary-color-first-letter-h3 h3:first-letter {
+      color: hsl(345, 35%, 45%);
+      font-size: 1.2em;
+    }
+
+    .primary-color {
+      color: hsl(345, 35%, 45%);
+    }
+    .b--primary-color {
+      border-color: hsl(345, 35%, 45%);
+    }
+    .hover-primary-color:hover, .hover-primary-color:focus {
+      color: hsl(345, 35%, 45%);
+    }
+    .hover-bg-primary-color:hover, .hover-bg-primary-color:focus {
+      background-color: hsl(345, 35%, 45%);
+      color: rgba(255,255,255,.8);
+    }
+
+    .bg-primary-color {
+      background-color: hsl(345, 35%, 45%);
+      color: rgba(255,255,255,.8);
+    }
+
+    .primary-color-light {
+      color: hsl(345, 35%, 65%);
+    }
+    .bg-primary-color-light {
+      background-color: hsl(345, 35%, 65%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-light {
+      border-color: hsl(345, 35%, 65%);
+    }
+    .primary-color-lighter {
+      color: hsl(345, 35%, 80%);
+    }
+    .bg-primary-color-lighter {
+      background-color: hsl(345, 35%, 80%);
+      color: rgba(255,255,255,.9);
+    }
+    .b--primary-color-lighter {
+      border-color: hsl(345, 35%, 80%);
+    }
+
+
+    .accent-color {
+      color: hsl(165,35%,45%);
+    }
+    .bg-accent-color {
+      background-color: hsl(165,35%,45%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color {
+      border-color: hsl(165,35%,45%);
+    }
+
+    .accent-color-light {
+      color: hsl(165,35%,65%);
+    }
+    .bg-accent-color-light {
+      background-color: hsl(165,35%,65%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color-light {
+      border-color: hsl(165,35%,65%);
+    }
+
+
+</style>
+<meta property="og:title" content="Demo" />
+<meta property="og:description" content="A list of demo pages with Go and Talk page builder loaded, organized by topic." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://builder.goandmake.app/demo/" />
+<meta property="og:updated_time" content="2019-02-25T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Demo">
+<meta itemprop="description" content="A list of demo pages with Go and Talk page builder loaded, organized by topic.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Demo"/>
+<meta name="twitter:description" content="A list of demo pages with Go and Talk page builder loaded, organized by topic."/>
+
+      
+    
+
+  </head>
+  <body class="bg-light-gray sans-serif readable ">
+    
+
+
+    
+    <main role="main" class="relative h-100" >
+      
+      
+
+
+  
+  
+  <section 
+  class="gt-mv-on relative flex flex-column " ><div class="bg-black-70
+  "
+  >
+    
+
+
+
+
+
+<nav class="relative o-90 bg-primary-color" >
+  <div class="w-90 mw9 center ph2 pv4 cf flex flex-wrap justify-between tracked" >
+
+    <span class="fl dib self-center site-logo
+    
+    "
+    
+    >
+      <a href="/" class="v-mid dib" title="Home"
+      
+      >
+        <img data-role="logo" class="h2 v-mid dim" src="/images/logos/icon-on-dark.svg" />
+      </a>
+      <span class="dn"
+      
+      >
+       <span 
+       >  Go and talk page builder</span>
+      </span>
+    </span>
+    <span class="flex-auto dn-l"></span>
+
+    
+    <ul class="list dn fl cf ma0 di-l flex-l pv1 ph4-l justify-start flex-grow-1
+    
+    " >
+      
+      
+      
+        
+          
+          <li class="fl">
+            <a href="/demo/"  class="link ph3 white-80">
+              Demo
+            </a>
+          </li>
+          
+          <li class="fl">
+            <a href="/tutorial/"  class="link ph3 white-80">
+              Tutorials
+            </a>
+          </li>
+          
+          <li class="fl">
+            <a href="/faq/"  class="link ph3 white-80">
+              FAQ
+            </a>
+          </li>
+          
+          <li class="fl">
+            <a href="/about/"  class="link ph3 white-80">
+              About
+            </a>
+          </li>
+          
+        
+      
+    </ul>
+    
+    <ul class="list fr cf ma0 ph3 ph4-l pv1 justify-end
+    flex
+    
+    "
+    
+    >
+    
+      
+        <li class="fl" >
+          <a class="link ph3 dim white-80" title="Go Account" href="#">Go</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+
+  </div> 
+
+</section>
+  
+  
+  
+  <div class="w-100 ph4 pb5 pb6-ns pt1 mt4 pt3-ns">
+
+    <div class="w-100 ph0 ph4-l center mw8 ">
+      <article class="w-100 nested-copy-line-height nested-links nested-img">
+        <h1 class="primary-color-dark f2">
+          Demo
+        </h1>
+        <div class=" mid-gray f5 f4-l">
+          <p>Go and Talk page builder is loaded on demo pages. Each demo focuses on one or more related tasks, and contains short explanations and instructions.</p>
+
+<p>Demo pages are meant for you to practice and get familiar with the page builder features while you follow a tutorial of the same topic.  The tutorials contain more information in details on the topic, if you prefer to read before trying things out.</p>
+
+        </div>
+      </article>
+
+      <div class="flex flex-wrap">
+        
+        <section class="flex-ns flex-wrap justify-between w-100">
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-paint-roller"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/an-overview-of-go-and-talk-and-ui/" class="link primary-color dim">An Overview of Go and Talk Page Builder</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          An introduction to Go and Talk web publishing solution, and a beginner&rsquo;s guide on using the page builder for the first time.
+        
+
+        <a href="/demo/an-overview-of-go-and-talk-and-ui/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-th"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/building-a-business-website-with-gitlab-pages-from-a-to-z/" class="link primary-color dim">Building a Business Website with Gitlab Pages from A to Z</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          A step to step guide on building a business website quickly to host with Gitlab Pages.
+        
+
+        <a href="/demo/building-a-business-website-with-gitlab-pages-from-a-to-z/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-th-large"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/building-a-marketing-website-from-a-to-z/" class="link primary-color dim">Building a Website with Github Pages from A to Z</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          A step to step guide on building a marketing website quickly to host with Github Pages.
+        
+
+        <a href="/demo/building-a-marketing-website-from-a-to-z/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-images"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/choosing-an-image-from-media-library/" class="link primary-color dim">Choosing An Image From Media Library</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Uploading images and choosing images from media library.
+        
+
+        <a href="/demo/choosing-an-image-from-media-library/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-clone"
+      
+      
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/copying-and-mixing-readymade-blocks/" class="link primary-color dim">Copying and Mixing Readymade Blocks</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Start writing in seconds. Build a marketing page quickly.
+        
+
+        <a href="/demo/copying-and-mixing-readymade-blocks/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-globe-asia"
+      data-fa-mask="fas fa-tshirt" 
+       data-fa-transform="shrink-8" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/customizing-background-image/" class="link primary-color dim">Customizing Background Image</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to link to images and import files
+        
+
+        <a href="/demo/customizing-background-image/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-palette"
+      
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/customizing-brand-colors-and-logo/" class="link primary-color dim">Customizing Brand Colors and Logo</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to customize colors and logo
+        
+
+        <a href="/demo/customizing-brand-colors-and-logo/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-handshake"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/customizing-call-to-action-button/" class="link primary-color dim">Customizing Call to Action Button</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to custom the style of call to action button
+        
+
+        <a href="/demo/customizing-call-to-action-button/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-exchange-alt"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/exporting-and-importing-data/" class="link primary-color dim">Data Storage, Exporting and Importing Data</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to export and import data
+        
+
+        <a href="/demo/exporting-and-importing-data/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-shapes"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/designing-a-custom-theme/" class="link primary-color dim">Designing a Custom Theme</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to create a custom theme and explore the options available.
+        
+
+        <a href="/demo/designing-a-custom-theme/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-address-card"
+      
+      
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/editing-text-and-image-layer/" class="link primary-color dim">Editing Text and Image Layers</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to customize section layout..
+        
+
+        <a href="/demo/editing-text-and-image-layer/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-ban"
+      data-fa-mask="fas fa-network-wired" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/exporting-finished-page-for-local-viewing/" class="link primary-color dim">Exporting Finished Page for Local Viewing</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to export page for viewing on your computer
+        
+
+        <a href="/demo/exporting-finished-page-for-local-viewing/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-plus"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/inserting-a-section-or-column/" class="link primary-color dim">Inserting New Sections or Columns</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to add new sections and columns
+        
+
+        <a href="/demo/inserting-a-section-or-column/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-comment-alt"
+      
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/presenting-from-marketing-page/" class="link primary-color dim">Presenting From Marketing Page</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to start and exit presentation and fullscreen mode.
+        
+
+        <a href="/demo/presenting-from-marketing-page/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-file-alt"
+      
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/starting-a-new-page/" class="link primary-color dim">Starting a New Page</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to manage multiple pages with the same URL.
+        
+
+        <a href="/demo/starting-a-new-page/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-globe"
+      
+      
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/starting-a-new-site-project/" class="link primary-color dim">Starting a New Site</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to manage multiple sites or projects with Go and Talk page builder.
+        
+
+        <a href="/demo/starting-a-new-site-project/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-map"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/customizing-block-template/" class="link primary-color dim">Using Custom Block Template</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Use custom block template to render sections.
+        
+
+        <a href="/demo/customizing-block-template/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-file-export"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/customizing-export-template/" class="link primary-color dim">Using Custom Export Template</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Use custom template to export finished web page.
+        
+
+        <a href="/demo/customizing-export-template/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-font"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/customizing-styles-and-fonts/" class="link primary-color dim">Using Custom Styles and Fonts</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Use custom style sheet, define custom css classes and fonts.
+        
+
+        <a href="/demo/customizing-styles-and-fonts/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="flex relative pa2 pa3-l w-100 w-50-m w-33-l  weight-0">
+
+  <div class="w-100 bg-white-90 mb2 pa2 pa3-l gray">
+    
+    
+    <div class="fa-5x tc primary-color-lighter">
+      <i class="fas fa-globe-asia"
+      data-fa-mask="fas fa-square" 
+       data-fa-transform="shrink-6" 
+      ></i>
+    </div>
+    
+
+    <h1 class="near-black f3">
+      <a href="/demo/using-global-data-and-section/" class="link primary-color dim">Using Global Data and Global Section</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Learn how to update global data such as menu items, and use global section
+        
+
+        <a href="/demo/using-global-data-and-section/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+        </section>
+      </div>
+
+    </div>
+
+</div>
+
+  
+
+
+
+<section 
+  class="gt-mv-on relative flex flex-column justify-end" ><div class="flex-auto tc bg-black-10 gmws dn">
+    <div class="pt5 f-6-l f1-m f2 flex flex-column justify-center">
+      <span class="flex-auto"></span>
+      <i class="fas fa-comments white slide-trigger pointer"></i>
+      <span class="flex-auto"></span>
+    </div>
+  </div>
+  <div class="bg-black-80
+  white-80
+  "
+  >
+    
+<nav class="relative f6"  >
+  <div class="w-90 mw8 center ph2 pv3" >
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-gold " >
+      
+        
+          <li class="pv2 fl">
+            <a href="/#"  class="link ph3 dim ">
+              Home
+            </a>
+          </li>
+        
+          <li class="pv2 fl">
+            <a href="/#"  class="link ph3 dim ">
+              About
+            </a>
+          </li>
+        
+
+      
+    </ul>
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-white-80" >
+    
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Terms of Service</a>
+        </li>
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Privacy</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+    <div class="tc ph4 pv2 f7" >
+      Copyright 2019. All rights reserved.
+    </div>
+    <div class="tc pa3 f7 bg-black-80 white-60 pb6 pb3-l">
+      Golden theme by
+      <a class="white-70 hover-white" href="">GoandMake.app</a>
+      <a class="white-70 hover-white" href=""></a>
+      Powered by <a class="white-70 hover-white" href="https://we.goandmake.app">goandmake.app</a>
+      
+        <a class="dib pa3 white-40 hover-white" rel="nofollow" href="index.goandmake.html">Edit</a>
+      
+    </div>
+  </div> 
+
+</section>
+  
+  
+
+    </main>
+    <footer >
+    <div >
+
+
+
+  
+  
+  <div  class="z-1 handheld-menu-0 handheld-menu overflow-scroll fixed top-0 left-0 right-0 bottom-0 pb5 dn bg-primary-color-dark" >
+    <div class="h-100 pv3">
+      <ul class="h-100 pl0 flex flex-column justify-end">
+        
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/demo/" class="link  white-80 ">
+                Demo
+              </a>
+          </li>
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/tutorial/" class="link  white-80 ">
+                Tutorials
+              </a>
+          </li>
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/faq/" class="link  white-80 ">
+                FAQ
+              </a>
+          </li>
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/about/" class="link  white-80 ">
+                About
+              </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div  class="z-1 handheld-menu-1 handheld-menu overflow-scroll fixed top-0 left-0 right-0 bottom-0 pb5 dn bg-primary-color-dark" >
+    <div class="h-100 pv3">
+      <ul class="h-100 pl0 flex flex-column justify-end">
+        
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="#" class="link  white-80 ">
+                Go Account
+              </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+
+<div class="dn-l fixed left-0 right-0 bottom-0 z-2 flex" >
+  
+    
+    
+      <button class="gt-menu-toggle handheld-toggler dn-l flex-grow-1 bg-white-70 pv3 b--near-white " data-target=".handheld-menu-0">Menu</button>
+    
+      <button class="gt-menu-toggle handheld-toggler dn-l flex-grow-1 bg-white-70 pv3 b--near-white " data-target=".handheld-menu-1">Account</button>
+    
+  
+</div>
+</div>
+</footer>
+
+    
+      
+<script src="/js/webslides.min.js?v=0.0002"></script>
+
+
+<script src="/js/lib/fa/solid.min.js" data-auto-replace-svg="nest"></script>
+<script src="/js/lib/fa/fontawesome.min.js" data-auto-replace-svg="nest"></script>
+
+
+
+
+    
+
+    
+  </body>
+</html>

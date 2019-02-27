@@ -2,62 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorials on Go and talk page builder</title>
-    <link>http://builder.goandmake.app/tutorial/</link>
+    <link>https://builder.goandmake.app/tutorial/</link>
     <description>Recent content in Tutorials on Go and talk page builder</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright 2019, GoAndMake.app.</copyright>
-    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://builder.goandmake.app/tutorial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://builder.goandmake.app/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>An Overview of Go and Talk Page Builder</title>
-      <link>http://builder.goandmake.app/tutorial/an-overview-of-go-and-talk-and-ui/</link>
+      <link>https://builder.goandmake.app/tutorial/an-overview-of-go-and-talk-and-ui/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/an-overview-of-go-and-talk-and-ui/</guid>
-      <description>Go and Talk page builder is a lightweight web design tool running in the browser. It empowers designers and marketers to create presentable pages quickly without coding. It is tailored for running on mobile devices such as tablets. The generated web pages are responsive, slim, and optimized for search engines.
-Go and Talk page builder starts to run when you browse a tutorial page. It looks for site id and document id from the navigation address, and uses the default ids if you are browsing a page for the first time.</description>
+      <guid>https://builder.goandmake.app/tutorial/an-overview-of-go-and-talk-and-ui/</guid>
+      <description>Go and Talk page builder is a part of a simple and easy web publishing solution for small organizations. This article will briefly introduce this simple and easy web publishing process, and the key features of Go and Talk page builder. Other tutorials give step-by-step guide on how to build and customize your website. Each tutorial has a companion demo page for practice.
+Target Audience - Small Organizations Small organizations refer to organizations and sole traders who do not have an in-house developer team.</description>
     </item>
     
     <item>
       <title>Building a Business Website with Gitlab Pages from A to Z</title>
-      <link>http://builder.goandmake.app/tutorial/building-a-business-website-with-gitlab-pages-from-a-to-z/</link>
+      <link>https://builder.goandmake.app/tutorial/building-a-business-website-with-gitlab-pages-from-a-to-z/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/building-a-business-website-with-gitlab-pages-from-a-to-z/</guid>
-      <description>Go and Talk page builder integrates with Github and Gitlab to for hosting, data storage and media library. When Go and Talk page builder is bundled with a theme, users can navigate to editable pages using the menu of their website. This is more intuitive and easier to follow.
-The processes described in this tutorial can also be used to design and publish a theme.
-When your website has grown in size, Go and Talk premium theme for Hugo ( a site generator) can batch process your data files and turn these files into web pages.</description>
+      <guid>https://builder.goandmake.app/tutorial/building-a-business-website-with-gitlab-pages-from-a-to-z/</guid>
+      <description>Overview In this tutorial, we will build a website for an imaginary Toffee and Coffee shop, using Gitlab Pages, a free hosting service from Gitlab. By the end of the tutorial, you will have a general idea of the whole web publishing process, and how Go and Talk page builder fits in this process.
+Important note about website hosting: at the time of writing this tutorial (26 Feb 2019), Gitlab allows certain type of business websites to be hosted with Gitlab Pages.</description>
     </item>
     
     <item>
       <title>Building a Website with Github Pages from A to Z</title>
-      <link>http://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</link>
+      <link>https://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</guid>
+      <guid>https://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</guid>
       <description>This tutorial gives a step to step guide to build and host your first website. You can add unique marketing pages one by one. You can save the homepage as a new page, add and remove sections as required, and create a new page quickly.
 Go and Talk page builder can load theme setting and data files from remote storage, and fetch image list from your website repository. You can back up work in progress data to a data repository, continue editing from another computer, export and publish to the website repository when done.</description>
     </item>
     
     <item>
       <title>Choosing An Image From Media Library</title>
-      <link>http://builder.goandmake.app/tutorial/choosing-an-image-from-media-library/</link>
+      <link>https://builder.goandmake.app/tutorial/choosing-an-image-from-media-library/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/choosing-an-image-from-media-library/</guid>
+      <guid>https://builder.goandmake.app/tutorial/choosing-an-image-from-media-library/</guid>
       <description>Go and Talk page builder integrates with Github and Gitlab for website hosting, data storage and media library. More integrations are being developed and will be added to the tutorials once available.
 The media library integration demonstrates how JavaScript and API can work together to achieve functionalities of a traditional content management system. As the data is stored locally in a database in the browser, content creators can write without a database server, even on mobile devices.</description>
     </item>
     
     <item>
       <title>Copying and Mixing Readymade Blocks</title>
-      <link>http://builder.goandmake.app/tutorial/copying-and-mixing-readymade-blocks/</link>
+      <link>https://builder.goandmake.app/tutorial/copying-and-mixing-readymade-blocks/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/copying-and-mixing-readymade-blocks/</guid>
+      <guid>https://builder.goandmake.app/tutorial/copying-and-mixing-readymade-blocks/</guid>
       <description>Mixing and copying existing blocks is a great way to get started quickly. You can make changes and explore options available.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
  know where to find section toolbar and global toolbar. clone sections and move sections around. toggle section applications on and off. make changes to the section. export page data for backup.</description>
@@ -65,10 +64,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Customizing Background Image</title>
-      <link>http://builder.goandmake.app/tutorial/customizing-background-image/</link>
+      <link>https://builder.goandmake.app/tutorial/customizing-background-image/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/customizing-background-image/</guid>
+      <guid>https://builder.goandmake.app/tutorial/customizing-background-image/</guid>
       <description>This tutorial provides step to step guide on how to customize background image and highlight image.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
  know where to find section toolbar and global toolbar. know how to change a background image. know how to import a local image and use it as highlight image.  Well done. You will acquire new skills and explore new features in other tutorials.</description>
@@ -76,10 +75,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Customizing Brand Colors and Logo</title>
-      <link>http://builder.goandmake.app/tutorial/customizing-brand-colors-and-logo/</link>
+      <link>https://builder.goandmake.app/tutorial/customizing-brand-colors-and-logo/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/customizing-brand-colors-and-logo/</guid>
+      <guid>https://builder.goandmake.app/tutorial/customizing-brand-colors-and-logo/</guid>
       <description>This tutorial provides a step to step guide on how to apply custom brand colors, link to a custom logo, or import the logo from a local file.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
  know where to find section toolbar and global toolbar. understand how to define primary colors and accent colors. understand how to define shades. enter and exit editing mode of global app.</description>
@@ -87,10 +86,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Customizing Call to Action Button</title>
-      <link>http://builder.goandmake.app/tutorial/customizing-call-to-action-button/</link>
+      <link>https://builder.goandmake.app/tutorial/customizing-call-to-action-button/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/customizing-call-to-action-button/</guid>
+      <guid>https://builder.goandmake.app/tutorial/customizing-call-to-action-button/</guid>
       <description>This tutorial provides step to step guide on how to customize call to action button.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
  know where to find section toolbar and global toolbar. know how to enable and disable cta button for a section. know how to change the look of the button.  Well done. You will acquire new skills and explore new features in other tutorials.</description>
@@ -98,30 +97,30 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Data Storage, Exporting and Importing Data</title>
-      <link>http://builder.goandmake.app/tutorial/exporting-and-importing-data/</link>
+      <link>https://builder.goandmake.app/tutorial/exporting-and-importing-data/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/exporting-and-importing-data/</guid>
+      <guid>https://builder.goandmake.app/tutorial/exporting-and-importing-data/</guid>
       <description>This tutorial provides a step-to-step guide to export data for backup, and import it back.
 Go and Talk page builder stores data in a database in your browser and works without a server connection. The database is managed by your browser, and can be deleted by clearing browser data. It is a good practice to always back up your data to disk or remote storage, and avoid accidentally deleting data.</description>
     </item>
     
     <item>
       <title>Designing a Custom Theme</title>
-      <link>http://builder.goandmake.app/tutorial/designing-a-custom-theme/</link>
+      <link>https://builder.goandmake.app/tutorial/designing-a-custom-theme/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/designing-a-custom-theme/</guid>
+      <guid>https://builder.goandmake.app/tutorial/designing-a-custom-theme/</guid>
       <description>Go and Talk page builder helps creative and entrepreneurial people to be more productive in delivering web design service, or providing a user friendly theme product. When the data files grow in volume, Go and Talk premium theme for Hugo can turn texts into beautiful web pages in batch.
 Go and Talk page builder supports inline style declaration and external CSS files. The inline styles written in the site settings window take effect immediately, and are saved automatically.</description>
     </item>
     
     <item>
       <title>Editing Text and Image Layers</title>
-      <link>http://builder.goandmake.app/tutorial/editing-text-and-image-layer/</link>
+      <link>https://builder.goandmake.app/tutorial/editing-text-and-image-layer/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/editing-text-and-image-layer/</guid>
+      <guid>https://builder.goandmake.app/tutorial/editing-text-and-image-layer/</guid>
       <description>With Go and Talk page builder, you can create sections with images floating to the left or right alternately. You can place text anywhere on the image, or place one image above another to create interesting effect.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
  know where to find section toolbar and global toolbar. know how to toggle global toolbar.</description>
@@ -129,10 +128,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Exporting Finished Page for Local Viewing</title>
-      <link>http://builder.goandmake.app/tutorial/exporting-finished-page-for-local-viewing/</link>
+      <link>https://builder.goandmake.app/tutorial/exporting-finished-page-for-local-viewing/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/exporting-finished-page-for-local-viewing/</guid>
+      <guid>https://builder.goandmake.app/tutorial/exporting-finished-page-for-local-viewing/</guid>
       <description>This tutorial provides step to step guide on how to export page for local browsing.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
  know where to find section toolbar and global toolbar. understand the folder structure of a web page for local presentation know how to export webpage  Well done. You will acquire new skills and explore new features in other tutorials.</description>
@@ -140,10 +139,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Inserting New Sections or Columns</title>
-      <link>http://builder.goandmake.app/tutorial/inserting-a-section-or-column/</link>
+      <link>https://builder.goandmake.app/tutorial/inserting-a-section-or-column/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/inserting-a-section-or-column/</guid>
+      <guid>https://builder.goandmake.app/tutorial/inserting-a-section-or-column/</guid>
       <description>This tutorial provides step to step guide on how to insert new sections and columns.
 If you have completed all the exercises in this tutorial, you should have made the following achievements and know the following:
  where to find section toolbar and global toolbar. how to turn on a section app how to switch editing mode on an off how to insert new sections from a template how to add, reorder, delete columns in a collection.</description>
@@ -151,10 +150,10 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Presenting From Marketing Page</title>
-      <link>http://builder.goandmake.app/tutorial/presenting-from-marketing-page/</link>
+      <link>https://builder.goandmake.app/tutorial/presenting-from-marketing-page/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/presenting-from-marketing-page/</guid>
+      <guid>https://builder.goandmake.app/tutorial/presenting-from-marketing-page/</guid>
       <description>Presentable pages generated by Go and Talk page builder are more than good looking. They are functional too. You can click a button to turn the page into slides, and start a great conversation there.
 If you have completed all the exercises in this tutorial, you should have made the following achievements:
  know where to find section toolbar and global toolbar. know how to start a presentation. know how to enter and exit fullscreen mode.</description>
@@ -162,60 +161,60 @@ If you have completed all the exercises in this tutorial, you should have made t
     
     <item>
       <title>Starting a New Page</title>
-      <link>http://builder.goandmake.app/tutorial/starting-a-new-page/</link>
+      <link>https://builder.goandmake.app/tutorial/starting-a-new-page/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/starting-a-new-page/</guid>
+      <guid>https://builder.goandmake.app/tutorial/starting-a-new-page/</guid>
       <description>Go and Talk page builder stores data in IndexedDB, a feature offered by modern browsers. Each site or project is a unique database. Each page is a document in the database with a unique ID.
 When a page loads, it checks for site id and page id from the URL query string. Site id defaults to &amp;lsquo;gt&amp;rsquo;, and page id defaults to the current path followed by _index.md. If custom page data is found, it renders the custom page data.</description>
     </item>
     
     <item>
       <title>Starting a New Site</title>
-      <link>http://builder.goandmake.app/tutorial/starting-a-new-site-project/</link>
+      <link>https://builder.goandmake.app/tutorial/starting-a-new-site-project/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/starting-a-new-site-project/</guid>
+      <guid>https://builder.goandmake.app/tutorial/starting-a-new-site-project/</guid>
       <description>Go and Talk page builder stores data in IndexedDB, a feature offered by modern browsers. Each site or project is a unique database. Each page is a document in the database with a unique ID.
 When a page loads, it checks for site id and page id from the URL query string. Site id defaults to &amp;lsquo;gt&amp;rsquo;, and page id defaults to the current path followed by _index.md. If custom page data is found, it renders the custom page data.</description>
     </item>
     
     <item>
       <title>Using Custom Block Template</title>
-      <link>http://builder.goandmake.app/tutorial/customizing-block-template/</link>
+      <link>https://builder.goandmake.app/tutorial/customizing-block-template/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/customizing-block-template/</guid>
+      <guid>https://builder.goandmake.app/tutorial/customizing-block-template/</guid>
       <description>In edit mode, Go and Talk page builder uses a template engine called doT to render blocks(sections) using data stored in browser. Each block is a Mavo app rendering user input dynamically. When the page is done, the same templates are used to render the sections without editor. The exported page is slim and loads faster.
 Go and Talk page builder supports custom block template. You can define custom block template in site setting, insert new blocks and manage blocks in the same way.</description>
     </item>
     
     <item>
       <title>Using Custom Export Template</title>
-      <link>http://builder.goandmake.app/tutorial/customizing-export-template/</link>
+      <link>https://builder.goandmake.app/tutorial/customizing-export-template/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/customizing-export-template/</guid>
+      <guid>https://builder.goandmake.app/tutorial/customizing-export-template/</guid>
       <description>Go and Talk page builder uses a template engine called doT to render sections upon page loading, and to export a webpage when done. Custom delimiters and variables are used for doT to generate a slim web page without the burden of editor.
 Go and Talk page builder supports custom export template for designers and developers to load libraries selectively, or to customize meta tags and scripts on the exported webpage.</description>
     </item>
     
     <item>
       <title>Using Custom Styles and Fonts</title>
-      <link>http://builder.goandmake.app/tutorial/customizing-styles-and-fonts/</link>
+      <link>https://builder.goandmake.app/tutorial/customizing-styles-and-fonts/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/customizing-styles-and-fonts/</guid>
+      <guid>https://builder.goandmake.app/tutorial/customizing-styles-and-fonts/</guid>
       <description>Go and Talk page builder uses Tachyons CSS to achieve flexible and modular designs. The utility classes take effect only when applied to an element. The element styles are reset to default when the classes are removed. This approach helps to keep the CSS slim even for complicated projects. Designers can style an element freely without worrying about breaking something else.
 Go and Talk page builder supports inline style declaration and external CSS files.</description>
     </item>
     
     <item>
       <title>Using Global Data and Global Section</title>
-      <link>http://builder.goandmake.app/tutorial/using-global-data-and-section/</link>
+      <link>https://builder.goandmake.app/tutorial/using-global-data-and-section/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://builder.goandmake.app/tutorial/using-global-data-and-section/</guid>
+      <guid>https://builder.goandmake.app/tutorial/using-global-data-and-section/</guid>
       <description>Global data is shared by pages of the same project. Each page can have its look and feel, with the same data, such as menu items.
 Global section is a section with complete data and settings, such as a site wide call to action section. It can be inserted anywhere on a page, and rendered with the same data. This feature can be used to keep a bunch of commonly used blocks as global, and inserted on demand when you create new pages.</description>
     </item>
