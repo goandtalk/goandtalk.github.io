@@ -32,16 +32,6 @@ Important note about website hosting: at the time of writing this tutorial (26 F
     </item>
     
     <item>
-      <title>Building a Website with Github Pages from A to Z</title>
-      <link>https://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</guid>
-      <description>This tutorial gives a step to step guide to build and host your first website. You can add unique marketing pages one by one. You can save the homepage as a new page, add and remove sections as required, and create a new page quickly.
-Go and Talk page builder can load theme setting and data files from remote storage, and fetch image list from your website repository. You can back up work in progress data to a data repository, continue editing from another computer, export and publish to the website repository when done.</description>
-    </item>
-    
-    <item>
       <title>Choosing An Image From Media Library</title>
       <link>https://builder.goandmake.app/tutorial/choosing-an-image-from-media-library/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
@@ -177,6 +167,16 @@ When a page loads, it checks for site id and page id from the URL query string. 
       <guid>https://builder.goandmake.app/tutorial/starting-a-new-site-project/</guid>
       <description>Go and Talk page builder stores data in IndexedDB, a feature offered by modern browsers. Each site or project is a unique database. Each page is a document in the database with a unique ID.
 When a page loads, it checks for site id and page id from the URL query string. Site id defaults to &amp;lsquo;gt&amp;rsquo;, and page id defaults to the current path followed by _index.md. If custom page data is found, it renders the custom page data.</description>
+    </item>
+    
+    <item>
+      <title>Summary</title>
+      <link>https://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://builder.goandmake.app/tutorial/building-a-marketing-website-from-a-to-z/</guid>
+      <description>This tutorial gives a step to step guide to build and host your first website with Github Pages. You can add unique marketing pages one by one. You can save the homepage as a new page, add and remove sections as required, and create a new page quickly.
+Go and Talk page builder can load theme setting and data files from remote storage, and fetch image list from your website repository.</description>
     </item>
     
     <item>
