@@ -1,0 +1,927 @@
+<!DOCTYPE html><html class=""  lang="en-us">
+  <head>
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Golden Static Files | Go and talk page builder</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+     <meta name="generator" content="Hugo 0.49" />
+
+      
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+      
+
+    <link rel="alternate" type="application/rss&#43;xml" href="https://builder.goandmake.app/theme/golden-local/index.xml">
+    
+      
+<link href="/css/webslides.css?v=0.0002" rel="stylesheet" />
+<link href="/css/tachyons.min.css?v=0.0001" rel="stylesheet" />
+<link href="/css/styles.css" rel="stylesheet" />
+
+
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria&#43;Hallelujah"> 
+  
+  
+  <style>
+  .handwriting {
+ font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+@keyframes slowRightEntry {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0.3;
+  }
+50% {
+   opacity: .5;
+}
+
+  90% {
+   transform: translateX(0vw);
+   opacity: .8;  
+   }
+  100% {
+    transform: translateX(0vw);
+   opacity: 0.7;
+}
+}
+
+.slowRightEntry {
+  animation: slowRightEntry 10s linear 10;
+  height: 100%;
+  }
+
+
+@keyframes slowRightExit {
+  0% {
+    transform: translateX(0vw);
+   opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+ }
+  100% {
+   opacity: .0;
+    transform: translateX(50vw);
+  }
+}
+
+.slowRightExit {
+  animation: slowRightExit 20s linear 5;
+  height: 100%;
+}
+
+  </style>
+
+
+    
+<style>
+
+.primary-color-dark {
+      color:  hsl(345, 35%, 20%);
+    }
+    .bg-primary-color-dark {
+      background-color: hsl(345, 35%, 20%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark {
+      border-color: hsl(345, 35%, 20%);
+    }
+    .bg-primary-color-dark-90 {
+      background-color: hsla(345, 35%, 20%, 90%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-dark-90 {
+      border-color: hsla(345, 35%, 20%, 90%);
+    }
+
+    .primary-color-first-letter-h3 h3:first-letter {
+      color: hsl(345, 35%, 45%);
+      font-size: 1.2em;
+    }
+
+    .primary-color {
+      color: hsl(345, 35%, 45%);
+    }
+    .b--primary-color {
+      border-color: hsl(345, 35%, 45%);
+    }
+    .hover-primary-color:hover, .hover-primary-color:focus {
+      color: hsl(345, 35%, 45%);
+    }
+    .hover-bg-primary-color:hover, .hover-bg-primary-color:focus {
+      background-color: hsl(345, 35%, 45%);
+      color: rgba(255,255,255,.8);
+    }
+
+    .bg-primary-color {
+      background-color: hsl(345, 35%, 45%);
+      color: rgba(255,255,255,.8);
+    }
+
+    .primary-color-light {
+      color: hsl(345, 35%, 65%);
+    }
+    .bg-primary-color-light {
+      background-color: hsl(345, 35%, 65%);
+      color: rgba(255,255,255,.8);
+    }
+    .bg-primary-color-light-50 {
+      background-color: hsl(345, 35%, 65%,.5);
+      color: rgba(255,255,255,.8);
+    }
+    .b--primary-color-light {
+      border-color: hsl(345, 35%, 65%);
+    }
+    .primary-color-lighter {
+      color: hsl(345, 35%, 80%);
+    }
+    .bg-primary-color-lighter {
+      background-color: hsl(345, 35%, 80%);
+      color: rgba(255,255,255,.9);
+    }
+    .b--primary-color-lighter {
+      border-color: hsl(345, 35%, 80%);
+    }
+
+
+    .accent-color {
+      color: hsl(165,35%,45%);
+    }
+    .bg-accent-color {
+      background-color: hsl(165,35%,45%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color {
+      border-color: hsl(165,35%,45%);
+    }
+
+    .accent-color-light {
+      color: hsl(165,35%,65%);
+    }
+    .bg-accent-color-light {
+      background-color: hsl(165,35%,65%);
+      color: rgba(255,255,255,.8);
+    }
+    .b--accent-color-light {
+      border-color: hsl(165,35%,65%);
+    }
+
+
+</style>
+<meta property="og:title" content="Golden Static Files" />
+<meta property="og:description" content="The static files required for presenting local web pages saved on your computer." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://builder.goandmake.app/theme/golden-local/" />
+<meta property="og:updated_time" content="2019-03-02T02:47:54&#43;00:00"/>
+
+<meta itemprop="name" content="Golden Static Files">
+<meta itemprop="description" content="The static files required for presenting local web pages saved on your computer.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Golden Static Files"/>
+<meta name="twitter:description" content="The static files required for presenting local web pages saved on your computer."/>
+
+      
+    
+
+  </head>
+  <body class="bg-light-gray sans-serif readable ">
+    
+
+
+    
+    <main role="main" class="relative h-100" >
+      
+      
+
+<div id="site-page-settings">
+
+<div onclick="" class="active off-canvas-dashboard gt-vbar z-1 bg-white fixed left-0 top-0 bottom-0 o-0 hover-o-90 mw2 flex flex-column justify-center"
+
+>
+  <div class="flex-auto"></div>
+  <div> 
+    <div class="relative">
+      <button aria-label="exit slides" type="button" class="pointer gt-label gt-exit-slides bg-orange w-100 pa1 v-mid mb2 dim br2 f5 fw9">&#x21c5;</button>
+      <div class="w5 dn gt-tooltip bg-black-80 white-90 pa1 absolute top-2 left-2 ">Exit slides and browse as normal page.</div>
+    </div>
+    
+
+  </div>
+  <div class="flex-auto"></div>
+</div>
+
+</div>
+<article id="webslides" class="disabled">
+
+    
+      
+      <section 
+  class="gt-mv-on relative flex flex-column " ><div class="bg-primary-color-dark
+  "
+  >
+    
+
+
+
+
+
+<nav class="relative o-90 bg-primary-color" >
+  <div class="w-90 mw9 center ph2 pv4 cf flex flex-wrap justify-between tracked" >
+
+    <span class="fl dib self-center site-logo
+    
+    "
+    
+    >
+      <a href="/" class="v-mid dib" title="Home"
+      
+      >
+        <img data-role="logo" class="h2 v-mid dim" src="/images/logos/icon-on-dark.svg" />
+      </a>
+      <span class="dn"
+      
+      >
+       <span 
+       >  Go and talk page builder</span>
+      </span>
+    </span>
+    <span class="flex-auto dn-l"></span>
+
+    
+    <ul class="list dn fl cf ma0 di-l flex-l pv1 ph4-l justify-start flex-grow-1
+    
+    " >
+      
+      
+      
+        
+          
+          <li class="fl">
+            <a href="/demo/"  class="link ph3 white-80">
+              Demo
+            </a>
+          </li>
+          
+          <li class="fl">
+            <a href="/theme/"  class="link ph3 white-80">
+              Themes
+            </a>
+          </li>
+          
+          <li class="fl">
+            <a href="/tutorial/"  class="link ph3 white-80">
+              Tutorials
+            </a>
+          </li>
+          
+          <li class="fl">
+            <a href="/faq/"  class="link ph3 white-80">
+              FAQ
+            </a>
+          </li>
+          
+          <li class="fl">
+            <a href="/about/"  class="link ph3 white-80">
+              About
+            </a>
+          </li>
+          
+        
+      
+    </ul>
+    
+    <ul class="list fr cf ma0 ph3 ph4-l pv1 justify-end
+    flex
+    
+    "
+    
+    >
+    
+      
+        <li class="fl" >
+          <a class="link ph3 dim white-80" title="Go Account" href="#">Go</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+
+  </div> 
+
+</section>
+    
+      
+      
+
+
+
+
+
+
+
+
+
+
+<section 
+  class="alternate gt-mv-off relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
+  bg-white-90
+  fadeIn
+  black-40
+  "
+  >
+
+    
+<div class="tc absolute absolute--fill fa-10x flex flex-column justify-center">
+  <div class="white-10
+   
+   dn
+   
+   "
+   >
+     <i class="fallback-icon fas fa-font"
+     
+     data-fa-transform="shrink-6"
+     data-fa-mask="fas fa-square"
+     ></i>
+   </div>
+</div>
+
+
+    
+
+
+
+
+<figure class="ma0">
+	<picture>
+    
+      
+  		  
+  		  
+    		
+    		
+    		
+      
+    
+    
+      
+    
+  </picture>
+</figure>
+
+    
+
+
+
+
+<figure class="ma0">
+	<picture>
+    
+      
+  		  
+  		  
+    		
+    		
+    		
+      
+    
+    
+      
+    
+  </picture>
+</figure>
+<span class="absolute absolute--fill
+    bg-transparent"
+    ></span><div class="cf w-100 relative  center flex flex-wrap mw8"
+    >
+      
+      <div 
+      class="image-column w-100 z-0 flex flex-wrap fl
+      
+      static
+      odd-order-1-ns
+      left--20-ns
+      w-60-ns
+      items-center">
+        <div class="tc overflow-hidden relative  w-100 flex flex-column justify-center items-center
+
+        h-100"
+        
+        > 
+
+        
+
+        
+        
+          <img class="mw-100 maxh-100
+          o-100
+          of-scale-down
+          br0"
+          
+          src="/theme/golden-local/laptop.jpg"
+          alt=""
+          >
+          
+        
+        </div>
+      </div>
+      
+      <div class="text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl
+      w-40-ns
+      justify-center
+      
+      "
+      >
+        
+        <div class="text-card w-100 pa3 relative
+        
+        
+        
+        
+        f4-ns
+        fw4-ns
+        
+        
+        
+        w-100-ns
+        "
+        
+        >
+          <span class="z--1 absolute absolute--fill bg-black-"
+          
+          >
+          </span>
+
+          <p  class="ma0 pv2"></p>
+
+          <h2 class="ma0 pa2
+          pv3-ns
+          ph0-ns
+          dn
+          
+          
+          
+          tc
+          f2-ns
+          fw7-ns
+          
+          
+          ttc
+          "
+          
+          >
+          <span  class=""></span>
+          </h2>
+          <div class="pa2 "
+          
+          >
+            
+
+            <div class=" markdown lh-copy
+            
+            
+            "  >
+              
+                <p><strong>Author</strong>: goandmake.app</p>
+
+<p><strong>Theme License</strong>: <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International</a></p>
+
+              
+            </div>
+            
+
+          </div>
+          
+
+          <div class="pv4 flex flex-column" >
+            
+            <div class="fadeIn animate-edit-cta tc ba w-100
+            bg-primary-color-light
+            
+            self-center-ns
+            b--light-gray
+            br0
+            pv2
+            ph3
+            mv3
+            w-100-ns
+            "
+            
+            >
+              
+              
+
+              <a class="no-underline w-100 dib" target="_blank"
+              
+               href="https://pb.goandmake.app/golden/" >
+                <div class="flex items-center justify-center white-80
+                  
+                  f4-ns
+                "
+                
+                >
+                  
+                  <span class="ph2 "
+                  
+                  >
+                    <i class="cta-icon fas fa-external-link-square-alt"
+                    data-fa-mask="fas fa-square"
+                    data-fa-transform="shrink-4"
+                    
+                    >
+                    </i>
+                  </span>
+                  
+                  <span  >
+                  Demo Site
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </div> 
+    
+
+  </div> 
+
+</section>
+
+
+    
+        
+      
+
+
+
+
+
+
+
+
+<section 
+  class="min-vh-100 alternate gt-mv-on relative flex flex-column mid-gray" ><div class="flex-auto flex flex-column justify-center
+  bg-white-70
+  fadeIn
+  
+  "
+  >
+    
+<div class="tc absolute absolute--fill fa-10x flex flex-column justify-center">
+  <div class="white-10
+   
+   dn
+   
+   "
+   >
+     <i class="fallback-icon fas fa-font"
+     
+     data-fa-transform="shrink-6"
+     data-fa-mask="fas fa-square"
+     ></i>
+   </div>
+</div>
+
+
+    
+
+
+
+
+<figure class="ma0">
+	<picture>
+    
+      
+  		  
+  		  
+    		
+    		
+    		
+      
+    
+    
+      
+    
+  </picture>
+</figure>
+
+    
+
+
+
+
+<figure class="ma0">
+	<picture>
+    
+      
+  		  
+  		  
+    		
+    		
+    		
+      
+    
+    
+      
+    
+  </picture>
+</figure>
+<span class="absolute absolute--fill
+    bg-transparent"
+    ></span><div class="cf w-100 relative  center flex flex-wrap mw8"
+    ><div class="text-column z-0 center w-100 mw7 flex flex-auto pa2 pa3-m pa4-l fl
+      w-100-ns
+      justify-center
+      
+      "
+      >
+        
+        <div class="text-card w-100 pa3 relative
+        
+        
+        
+        
+        f4-ns
+        fw4-ns
+        
+        
+        
+        w-100-ns
+        "
+        
+        >
+          <span class="z--1 absolute absolute--fill bg-black-"
+          
+          >
+          </span>
+
+          <p  class="ma0 pv2"></p>
+
+          <h1 class="ma0 pa2
+          pv3-ns
+          ph0-ns
+          
+          
+          
+          
+          tc
+          f2-ns
+          fw7-ns
+          
+          
+          ttc
+          "
+          
+          >
+            <span  class="">Golden Static Files</span>
+          </h1>
+          <div class="pa2 "
+          
+          >
+            
+            <div class=" markdown lh-copy
+            
+            "  >
+              
+                
+
+<p>These are the static files of Golden theme required to browse local web pages saved on your computer. Two sample pages are included for you to test local browsing.</p>
+
+<p>You can view pages using Go and Talk page builder without exporting. The exported pages are free from editors, lighter in weight, and faster in rendering. The exported files can also link to local image files properly.</p>
+
+<h2 id="how-to-use-the-static-files-for-local-presentation">How to Use The Static Files for Local Presentation</h2>
+
+<ul>
+<li><a href="https://github.com/goandtalk/golden/archive/master.zip">download the zip file</a>, and unzip to your hard disk.</li>
+<li>the unzipped folder is the root folder of your project, and it should have the following subfolders</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">project/
+  |-- js
+  |-- css
+  |-- images</code></pre></div>
+<ul>
+<li>you can create more subfolders to organize contents.</li>
+<li>save the images you want to use for presentation under the folder <code>images</code></li>
+<li>when you prepare slides, select images from <code>images</code> folder for preview. The images are displayed for that browsing session only. They are not saved in browser database since you already have them on your local disk.</li>
+<li>when the slides are done, you can select local mode and export the finished page to this folder.</li>
+<li>web pages exported in local mode will include links in a format understood by filesystem.</li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>The MIT license applies to the static files in css/js/images folders.</p>
+
+<p>Go and Talk page builder and the Golden theme are released under separate licenses.</p>
+
+<p>Some components of Font Awesome are included in the js folder, with its own license statement in that folder.</p>
+
+              
+            </div>
+            
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </div> 
+    
+
+  </div> 
+  
+</section>
+
+
+
+    
+         
+      
+
+
+
+<section 
+  class="gt-mv-on relative flex flex-column justify-end" ><div class="flex-auto tc bg-black-10 gmws dn">
+    <div class="pt5 f-6-l f1-m f2 flex flex-column justify-center">
+      <span class="flex-auto"></span>
+      <i class="fas fa-comments white slide-trigger pointer"></i>
+      <span class="flex-auto"></span>
+    </div>
+  </div>
+  <div class="bg-black-80
+  white-80
+  "
+  >
+    
+<nav class="relative f6"  >
+  <div class="w-90 mw8 center ph2 pv3" >
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-gold " >
+      
+        
+          <li class="pv2 fl">
+            <a href="/#"  class="link ph3 dim ">
+              Home
+            </a>
+          </li>
+        
+          <li class="pv2 fl">
+            <a href="/about/"  class="link ph3 dim ">
+              About
+            </a>
+          </li>
+        
+
+      
+    </ul>
+
+    <ul class="list cf ma0 ph3 ph4-l pv1 flex justify-center flex-wrap link-white-80" >
+    
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Terms of Service</a>
+        </li>
+      
+        <li class="pv2 fl" >
+          <a class="link ph3 dim " href="/#">Privacy</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+    <div class="tc ph4 pv2 f7" >
+      Copyright 2019. All rights reserved.
+    </div>
+    <div class="tc pa3 f7 bg-black-80 white-60 pb6 pb3-l">
+      Golden theme by
+      <a class="white-70 hover-white" href="">GoandMake.app</a>
+      <a class="white-70 hover-white" href=""></a>
+      Powered by <a class="white-70 hover-white" href="https://we.goandmake.app">goandmake.app</a>
+      
+        <a class="dib pa3 white-40 hover-white" rel="nofollow" href="index.goandmake.html">Edit</a>
+      
+    </div>
+  </div> 
+
+</section>
+    
+
+  
+   
+
+</article>
+
+
+    </main>
+    <footer >
+    <div >
+
+
+
+  
+  
+  <div  class="z-1 handheld-menu-0 handheld-menu overflow-scroll fixed top-0 left-0 right-0 bottom-0 pb5 dn bg-primary-color-dark" >
+    <div class="h-100 pv3">
+      <ul class="h-100 pl0 flex flex-column justify-end">
+        
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/demo/" class="link  white-80 ">
+                Demo
+              </a>
+          </li>
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/theme/" class="link  white-80 ">
+                Themes
+              </a>
+          </li>
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/tutorial/" class="link  white-80 ">
+                Tutorials
+              </a>
+          </li>
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/faq/" class="link  white-80 ">
+                FAQ
+              </a>
+          </li>
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="/about/" class="link  white-80 ">
+                About
+              </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div  class="z-1 handheld-menu-1 handheld-menu overflow-scroll fixed top-0 left-0 right-0 bottom-0 pb5 dn bg-primary-color-dark" >
+    <div class="h-100 pv3">
+      <ul class="h-100 pl0 flex flex-column justify-end">
+        
+        
+          <li  class="hover-bg-white-50 pv3 ph4 bg-animate">
+              <a href="#" class="link  white-80 ">
+                Go Account
+              </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+
+<div class="dn-l fixed left-0 right-0 bottom-0 z-2 flex" >
+  
+    
+    
+      <button class="gt-menu-toggle handheld-toggler dn-l flex-grow-1 bg-primary-color-light-50 pv3 b--near-white " data-target=".handheld-menu-0">Menu</button>
+    
+      <button class="gt-menu-toggle handheld-toggler dn-l flex-grow-1 bg-primary-color-light-50 pv3 b--near-white " data-target=".handheld-menu-1">Account</button>
+    
+  
+</div>
+</div>
+</footer>
+
+    
+      
+<script src="/js/webslides.min.js?v=0.0002"></script>
+
+
+<script src="/js/lib/fa/solid.min.js" data-auto-replace-svg="nest"></script>
+<script src="/js/lib/fa/fontawesome.min.js" data-auto-replace-svg="nest"></script>
+
+
+
+
+    
+
+    
+  </body>
+</html>

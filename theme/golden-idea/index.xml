@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golden Idea on Go and talk page builder</title>
+    <link>https://builder.goandmake.app/theme/golden-idea/</link>
+    <description>Recent content in Golden Idea on Go and talk page builder</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright 2019, GoAndMake.app.</copyright>
+    <lastBuildDate>Sat, 02 Mar 2019 01:10:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://builder.goandmake.app/theme/golden-idea/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

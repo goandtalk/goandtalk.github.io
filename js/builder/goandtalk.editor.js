@@ -1241,6 +1241,20 @@
     var out = '';
     delete rawData._id;
     delete rawData._rev;
+    //assign weight for hugo to output menu items in the same order.
+    var globalMenu = __get(rawData, "menu.global");
+    if(Array.isArray(globalMenu) && globalMenu.length) {
+      for (var i = 0; i < globalMenu.length; i++) {
+        globalMenu[i].weight = (i * 10) || 1;
+      }
+    }
+    var iconMenu = __get(rawData, "menu.iconmenu");
+    if(Array.isArray(iconMenu) && iconMenu.length) {
+      for (var i = 0; i < iconMenu.length; i++) {
+        iconMenu[i].weight = (i * 10) || 1;
+      }
+    }
+
     switch (format) {
       case 'yaml':
         out = jsyaml.safeDump(rawData);

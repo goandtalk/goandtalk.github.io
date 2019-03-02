@@ -2849,7 +2849,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               
               
 
-              <a class="no-underline w-100 dib"
+              <a class="no-underline w-100 dib" target="{enc{! o.__get(it, \u0027cta.target_window\u0027) || \u0027\u0027 }enc}"
               675275c791df5c494218febd9c0cde06eea2ae6b  property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528
                href="6aa54d91498069cf3ec3c6d46443b0b765c6cec2" >
                 <div class="flex items-center justify-center {enc{! o.__get(it, \u0027cta.button_text_color\u0027) || \u0027\u0027 }enc}
@@ -2950,7 +2950,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-start-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 left-3" ></i>
@@ -2962,7 +2962,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-center-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8" ></i>
@@ -2974,7 +2974,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-end-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 right-3" ></i>
@@ -2982,6 +2982,20 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
     </span>
     <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
         Align the button at line end on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(target_window = '_blank', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(target_window, if(target_window='_blank','_self','_blank')),
+      invoke('setItemsAttr', target_window, 'root.children.cta.children.url', 'target', 'a')
+      "
+      >
+          <i class="fas fa-fw fa-external-link-alt" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Open link in new tab.
     </span>
   </span>
 </div>
@@ -3565,6 +3579,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
        
         <input class="absolute" hidden property="align" value="center" />
+       
+    
+       
+        <input class="absolute" hidden property="target_window" value="" />
        
     
   </div>
@@ -7340,7 +7358,7 @@ w-100  ph1 fl pt2 pb3
               
               
 
-              <a class="no-underline w-100 dib"
+              <a class="no-underline w-100 dib" target="{enc{! o.__get(it, \u0027cta.target_window\u0027) || \u0027\u0027 }enc}"
               675275c791df5c494218febd9c0cde06eea2ae6b  property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528
                href="6aa54d91498069cf3ec3c6d46443b0b765c6cec2" >
                 <div class="flex items-center justify-center {enc{! o.__get(it, \u0027cta.button_text_color\u0027) || \u0027mid-gray\u0027 }enc}
@@ -7441,7 +7459,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-start-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 left-3" ></i>
@@ -7453,7 +7471,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-center-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8" ></i>
@@ -7465,7 +7483,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-end-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 right-3" ></i>
@@ -7473,6 +7491,20 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
     </span>
     <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
         Align the button at line end on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(target_window = '_blank', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(target_window, if(target_window='_blank','_self','_blank')),
+      invoke('setItemsAttr', target_window, 'root.children.cta.children.url', 'target', 'a')
+      "
+      >
+          <i class="fas fa-fw fa-external-link-alt" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Open link in new tab.
     </span>
   </span>
 </div>
@@ -8055,6 +8087,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
        
         <input class="absolute" hidden property="align" value="center" />
+       
+    
+       
+        <input class="absolute" hidden property="target_window" value="" />
        
     
   </div>
@@ -12194,7 +12230,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               
               
 
-              <a class="no-underline w-100 dib"
+              <a class="no-underline w-100 dib" target="{enc{! o.__get(it, \u0027cta.target_window\u0027) || \u0027\u0027 }enc}"
               675275c791df5c494218febd9c0cde06eea2ae6b  property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528
                href="6aa54d91498069cf3ec3c6d46443b0b765c6cec2" >
                 <div class="flex items-center justify-center {enc{! o.__get(it, \u0027cta.button_text_color\u0027) || \u0027mid-gray\u0027 }enc}
@@ -12295,7 +12331,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-start-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 left-3" ></i>
@@ -12307,7 +12343,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-center-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8" ></i>
@@ -12319,7 +12355,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-end-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 right-3" ></i>
@@ -12327,6 +12363,20 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
     </span>
     <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
         Align the button at line end on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(target_window = '_blank', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(target_window, if(target_window='_blank','_self','_blank')),
+      invoke('setItemsAttr', target_window, 'root.children.cta.children.url', 'target', 'a')
+      "
+      >
+          <i class="fas fa-fw fa-external-link-alt" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Open link in new tab.
     </span>
   </span>
 </div>
@@ -12909,6 +12959,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
        
         <input class="absolute" hidden property="align" value="center" />
+       
+    
+       
+        <input class="absolute" hidden property="target_window" value="" />
        
     
   </div>
@@ -16756,45 +16810,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -16830,6 +16845,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
@@ -18250,6 +18304,51 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Thumbnail Style 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(thumbnail_style, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="thumbnail_style" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The classes to apply to thumbnails on index page. This option is valid when generating index pages automatically.
+          </div>
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -19480,6 +19579,11 @@ w-100  ph1 fl pt2 pb3
       background-color: hsl([primary_hue or site_app.params.primary_hue],[saturation or site_app.params.saturation]%,[lightness_light or site_app.params.lightness_light]%);
       color: rgba(255,255,255,.8);
     }
+    .bg-primary-color-light-50 {
+      background-color: hsla([primary_hue or site_app.params.primary_hue],[saturation or site_app.params.saturation]%,[lightness_light or site_app.params.lightness_light]%, 0.5);
+      color: rgba(255,255,255,.8);
+    }
+
     .b--primary-color-light {
       border-color: hsl([primary_hue or site_app.params.primary_hue],[saturation or site_app.params.saturation]%,[lightness_light or site_app.params.lightness_light]%);
     }
@@ -21548,6 +21652,51 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
       </div>
        
     
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Thumbnail Style 
+        
+        
+          <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(thumbnail_style, '')">X</span>
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input 
+           property="thumbnail_style" 
+          type="text" 
+          class="flex-auto  
+ h2 w-100  bg-white  br0 b--black-10 fl
+"
+          data-path=""
+          
+           value=""
+          data-minchars="0" 
+          />
+          
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            The classes to apply to thumbnails on index page. This option is valid when generating index pages automatically.
+          </div>
+        
+      </div>
+       
+    
   </div>
 </div> 
 
@@ -23071,45 +23220,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -23145,6 +23255,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
@@ -23439,7 +23588,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
               
               
 
-              <a class="no-underline w-100 dib"
+              <a class="no-underline w-100 dib" target="{enc{! o.__get(it, \u0027cta.target_window\u0027) || \u0027\u0027 }enc}"
               675275c791df5c494218febd9c0cde06eea2ae6b  property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528
                href="6aa54d91498069cf3ec3c6d46443b0b765c6cec2" >
                 <div class="flex items-center justify-center {enc{! o.__get(it, \u0027cta.button_text_color\u0027) || \u0027mid-gray\u0027 }enc}
@@ -23540,7 +23689,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(align = 'self-start-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-start-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 left-3" ></i>
@@ -23552,7 +23701,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6  br2 [if(align = 'self-center-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-center-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8" ></i>
@@ -23564,7 +23713,7 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
   </span>
   <span class="dib relative ph1 mh1 pv2">
     <span class="gt-label">
-      <button type="button" class="grow pointer mh1 pa1 f6 bg-black-20  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
+      <button type="button" class="grow pointer mh1 pa1 f6  br2 [if(align = 'self-end-ns', 'bg-black-40', 'bg-black-20')]"
       mv-action="set(align, 'self-end-ns')"
       >
           <i class="fas fa-fw fa-tablet" data-fa-mask="fas fa-square" data-fa-transform="shrink-8 right-3" ></i>
@@ -23572,6 +23721,20 @@ mv-action="set(is_cta_form_active,!is_cta_form_active),invoke('promoteSection', 
     </span>
     <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
         Align the button at line end on medium and large screens.
+    </span>
+  </span>
+  <span class="dib relative ph1 mh1 pv2">
+    <span class="gt-label">
+      <button type="button" class="grow pointer mh1 pa1 f6 br2 [if(target_window = '_blank', 'bg-black-40', 'bg-black-20')]"
+      mv-action="set(target_window, if(target_window='_blank','_self','_blank')),
+      invoke('setItemsAttr', target_window, 'root.children.cta.children.url', 'target', 'a')
+      "
+      >
+          <i class="fas fa-fw fa-external-link-alt" ></i>
+      </button>
+    </span>
+    <span class="dn pa1 gt-tooltip absolute z-1 bg-black white-80 overflow-y-visible w4 top-4">
+        Open link in new tab.
     </span>
   </span>
 </div>
@@ -24155,6 +24318,10 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
     
        
         <input class="absolute" hidden property="align" value="center" />
+       
+    
+       
+        <input class="absolute" hidden property="target_window" value="" />
        
     
   </div>
@@ -27655,45 +27822,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -27729,6 +27857,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
@@ -28183,45 +28350,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -28257,6 +28385,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
@@ -29922,45 +30089,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -29996,6 +30124,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
@@ -30773,45 +30940,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -30847,6 +30975,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
@@ -32454,45 +32621,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -32528,6 +32656,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
@@ -33119,45 +33286,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -33193,6 +33321,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
@@ -34579,45 +34746,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -34653,6 +34781,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
@@ -35255,45 +35422,6 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
  
         
 
-        <div>Global Section 
-        
-        
-        </div>
-        <div 
-        class="
-         flex  flex-nowrap   pt1 cf items-center ">
-        
-          <input property="is_global" type="checkbox" 
-          class=""
-          
-          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
-          />
-          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
-            Enable
-          </label>
-        
-        </div> 
-        
-        
-          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
-">
-            When checked, the section will be available in other pages. 
-          </div>
-        
-      </div>
-       
-    
-      
-      <div class="relative 
-w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
- [if(!is_global,&#39;dn&#39;,&#39;&#39;)]">
-        
-          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
-  <span class="bg-black-40 white f7 ph1 br-100">?</span>
-</span>
- 
-        
-
         <div>Data Storage Key 
         
         
@@ -35329,6 +35457,45 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
             This is the key to store the global section. Alphanumeric and underscore only. Choose an existing key will replace previous data.
+          </div>
+        
+      </div>
+       
+    
+      
+      <div class="relative 
+w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
+ ">
+        
+          <span class="gt-label mh1 black-60 fr w2 v-mid tc">
+  <span class="bg-black-40 white f7 ph1 br-100">?</span>
+</span>
+ 
+        
+
+        <div>Global Section 
+        
+        
+        </div>
+        <div 
+        class="
+         flex  flex-nowrap   pt1 cf items-center ">
+        
+          <input property="is_global" type="checkbox" 
+          class=""
+          
+          id="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}"
+          />
+          <label class="flex-auto ph2" for="chk--is_global-{enc{! o.__get(o, \u0027id\u0027) || \u0027\u0027 }enc}">
+            Enable
+          </label>
+        
+        </div> 
+        
+        
+          <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
+">
+            When checked, the section will be saved in site setting and available in other pages. 
           </div>
         
       </div>
