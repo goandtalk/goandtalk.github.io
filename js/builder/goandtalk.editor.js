@@ -15,15 +15,15 @@
   function getSiteID(){
     if(gtpb.current_site) return gtpb.current_site;
     var params = (new URL(window.location)).searchParams;
-    gtpb.current_site = params.get('site') || localStorage.getItem("current_site") || gtpb.default.site_id;
+    gtpb.current_site = params.get('site') || gtpb.default.site_id;
     return gtpb.current_site;
   }
   function getDocID(){
     if(gtpb.current_doc) return gtpb.current_doc;
     var params = (new URL(window.location)).searchParams;
     //the filepath is the path relative to content folder.
-    gtpb.current_doc = params.get('doc') || localStorage.getItem(window.location.pathname + "#current_doc") || (window.location.pathname === "/"? "content/_index.md" : ("content" + window.location.pathname.replace(/\/$|\/index.goandmake.html$/,"") + ".md"));
-    return gtpb.current_doc.replace(/^_/, 'content/_'); //PouchDB reserves leading _ for internal use, so we will use /_index.md as id
+    gtpb.current_doc = params.get('doc') || ((window.location.pathname === "/" || window.location.pathname === "/index.goandmake.html")? "content/_index.md" : ("content" + window.location.pathname.replace(/\/$|\/index\.goandmake\.html$/,"") + ".md"));
+    return gtpb.current_doc.replace(/^_/, 'content/_'); //PouchDB reserves leading _ for internal use, so we will use content/_index.md as id
   }
   //variables available in functions.
   var site_id = getSiteID();
@@ -2300,6 +2300,7 @@ Mavo.Formats.FrontMatter = Bliss.Class({
     var _node = Mavo.Actions.getNode(arguments[2]);
     if (_node && imagePtn.test(this.value)) {
       _node.setValue(this.value);
+      _node.element.classList.remove('mv-empty');
     }
   };
 
