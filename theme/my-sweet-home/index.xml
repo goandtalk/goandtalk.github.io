@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Sweet Home on Go and talk page builder</title>
-    <link>https://pb.goandmake.app/theme/my-sweet-home/</link>
-    <description>Recent content in My Sweet Home on Go and talk page builder</description>
+    <title>My Sweet Home on Goandmake</title>
+    <link>https://builder.goandmake.app/theme/my-sweet-home/</link>
+    <description>Recent content in My Sweet Home on Goandmake</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright 2019, GoAndMake.app.</copyright>
     <lastBuildDate>Sat, 02 Mar 2019 01:10:53 +0000</lastBuildDate>
     
-	<atom:link href="https://pb.goandmake.app/theme/my-sweet-home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://builder.goandmake.app/theme/my-sweet-home/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

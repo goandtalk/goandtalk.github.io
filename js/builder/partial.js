@@ -86,7 +86,7 @@ gtpb.partials = gtpb.partials || {};
 
 
       <li class="fl" 675275c791df5c494218febd9c0cde06eea2ae6b property="iconmenu" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528>
-        <a href="dd670833e00d695c78df75d31d05c27606aca294" 675275c791df5c494218febd9c0cde06eea2ae6b property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="link ph3 dim white-80">
+        <a target="_blank" href="dd670833e00d695c78df75d31d05c27606aca294" 675275c791df5c494218febd9c0cde06eea2ae6b property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="link ph3 dim white-80">
           <span 675275c791df5c494218febd9c0cde06eea2ae6b title="abbreviation" property="pre" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(item, \u0027pre\u0027) || \u0027\u0027 }enc}</span>
           675275c791df5c494218febd9c0cde06eea2ae6b <span class="dn" title="label in mobile menu" property="name"> {enc{! o.__get(item, \u0027name\u0027) || \u0027\u0027 }enc}  </span> 35fe3a9616151be1e9a9abc33ece88d44bd47528
         </a>
@@ -671,7 +671,7 @@ invoke(&#39;replaceNodeClass&#39;,link_color,&#39;mavo.root.children.column.elem
 
 
       <li class="fl" 675275c791df5c494218febd9c0cde06eea2ae6b property="iconmenu" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528>
-        <a href="dd670833e00d695c78df75d31d05c27606aca294" 675275c791df5c494218febd9c0cde06eea2ae6b property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="link ph3 dim white-80">
+        <a target="_blank" href="dd670833e00d695c78df75d31d05c27606aca294" 675275c791df5c494218febd9c0cde06eea2ae6b property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="link ph3 dim white-80">
           <span 675275c791df5c494218febd9c0cde06eea2ae6b title="abbreviation" property="pre" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(item, \u0027pre\u0027) || \u0027\u0027 }enc}</span>
           675275c791df5c494218febd9c0cde06eea2ae6b <span class="dn" title="label in mobile menu" property="name"> {enc{! o.__get(item, \u0027name\u0027) || \u0027\u0027 }enc}  </span> 35fe3a9616151be1e9a9abc33ece88d44bd47528
         </a>
@@ -2665,7 +2665,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
 
       <li class="fl" 675275c791df5c494218febd9c0cde06eea2ae6b property="iconmenu" mv-multiple 35fe3a9616151be1e9a9abc33ece88d44bd47528>
-        <a href="dd670833e00d695c78df75d31d05c27606aca294" 675275c791df5c494218febd9c0cde06eea2ae6b property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="link ph3 dim white-80">
+        <a target="_blank" href="dd670833e00d695c78df75d31d05c27606aca294" 675275c791df5c494218febd9c0cde06eea2ae6b property="url" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="link ph3 dim white-80">
           <span 675275c791df5c494218febd9c0cde06eea2ae6b title="abbreviation" property="pre" 35fe3a9616151be1e9a9abc33ece88d44bd47528> {enc{! o.__get(item, \u0027pre\u0027) || \u0027\u0027 }enc}</span>
           675275c791df5c494218febd9c0cde06eea2ae6b <span class="dn" title="label in mobile menu" property="name"> {enc{! o.__get(item, \u0027name\u0027) || \u0027\u0027 }enc}  </span> 35fe3a9616151be1e9a9abc33ece88d44bd47528
         </a>
@@ -2778,7 +2778,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
             </a>
           </p>
 
-          <h2 class="ma0 pa2
+          <h1 class="ma0 pa2
           pv{enc{! o.__get(it, \u0027title_pv\u0027) || \u00273\u0027 }enc}-ns
           ph{enc{! o.__get(it, \u0027title_ph\u0027) || \u0027\u0027 }enc}-ns
           {enc{! o.__get(it, \u0027title_display\u0027) || \u0027\u0027 }enc}
@@ -2798,7 +2798,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           35fe3a9616151be1e9a9abc33ece88d44bd47528 
           >
           <span  675275c791df5c494218febd9c0cde06eea2ae6b property="title" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="">{enc{! o.__get(it, \u0027title\u0027) || \u0027\u0027 }enc}</span>
-          </h2>
+          </h1>
           <div class="pa2 {enc{! o.__get(it, \u0027body_background\u0027) || \u0027\u0027 }enc}"
           675275c791df5c494218febd9c0cde06eea2ae6b mv-attribute="class" mv-value="'pa2 ' & body_background " 35fe3a9616151be1e9a9abc33ece88d44bd47528 
           >
@@ -7290,6 +7290,7 @@ w-100  ph1 fl pt2 pb3
 
           <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="ma0 pv2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc}</p>
 
+          
           <h1 class="ma0 pa2
           pv{enc{! o.__get(it, \u0027title_pv\u0027) || \u00273\u0027 }enc}-ns
           ph{enc{! o.__get(it, \u0027title_ph\u0027) || \u0027\u0027 }enc}-ns
@@ -12161,7 +12162,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
           </span>
 
           <p  675275c791df5c494218febd9c0cde06eea2ae6b property="intro" 35fe3a9616151be1e9a9abc33ece88d44bd47528  class="ma0 pv2">{enc{! o.__get(it, \u0027intro\u0027) || \u0027\u0027 }enc}</p>
-
+          
           <h1 class="ma0 pa2
           pv{enc{! o.__get(it, \u0027title_pv\u0027) || \u00273\u0027 }enc}-ns
           ph{enc{! o.__get(it, \u0027title_ph\u0027) || \u0027\u0027 }enc}-ns
@@ -16564,14 +16565,16 @@ w-100  ph1 fl pt2 pb3
       {enc{! o.__get(it, \u0027copyright\u0027) || \u0027Copyright 2019. All rights reserved.\u0027 }enc}
     </div>
     <div class="tc pa3 f7 bg-black-80 white-60 pb6 pb3-l">
+    
       {enc{! o.__get(o, \u0027site.params.gt_theme_name\u0027) || \u0027Golden\u0027 }enc} theme by
-      <a class="white-70 hover-white" href="9c5d1935546b2e94073e7f538301e63094876204">{enc{! o.__get(o, \u0027site.params.gt_author_name\u0027) || \u0027GoandMake.app\u0027 }enc}</a>
-      <a class="white-70 hover-white" href="28cc5fd7f9fa2dc66449de854b9df615c02c3c13">{enc{! o.__get(o, \u0027site.params.gt_license_name\u0027) || \u0027\u0027 }enc}</a>
-      Powered by <a class="white-70 hover-white" href="https://we.goandmake.app">goandmake.app</a>
+      <a class="white-70 hover-white" rel="nofollow" href="9c5d1935546b2e94073e7f538301e63094876204">{enc{! o.__get(o, \u0027site.params.gt_author_name\u0027) || \u0027GoandMake.app\u0027 }enc}</a>
+      <a class="white-70 hover-white" rel="nofollow" href="28cc5fd7f9fa2dc66449de854b9df615c02c3c13">{enc{! o.__get(o, \u0027site.params.gt_license_name\u0027) || \u0027\u0027 }enc}</a>
+      Powered by <a class="white-70 hover-white" rel="nofollow" href="https://we.goandmake.app">we.goandmake.app</a>
       
         675275c791df5c494218febd9c0cde06eea2ae6b {tf{??}tf}
 <a class="dib pa3 white-40 hover-white" rel="nofollow" href="index.goandmake.html">Edit</a> 35fe3a9616151be1e9a9abc33ece88d44bd47528
       
+    
     </div>
   </div> {tf{? o.edit_mode }tf}
 
@@ -18485,7 +18488,7 @@ w-100  ph1 fl pt2 pb3
  
         
 
-        <div>Title 
+        <div>Page Title ([len(title) &#43; 3 &#43; len(site_app.title)] chars including site title) 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(title, '')">X</span>
@@ -18513,7 +18516,7 @@ w-100  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            The meta data title is often included in browser tab and search results.
+            Heading of search results. The page title and site title are recommended to be no more than 60 chars.
           </div>
         
       </div>
@@ -18530,7 +18533,7 @@ w-100  ph1 fl pt2 pb3
  
         
 
-        <div>Description 
+        <div>Description ([len(description)] chars) 
         
         
           <span title="clear value" class="mh2 bg-light-red white f7 ph1 br-100" mv-action="set(description, '')">X</span>
@@ -18549,7 +18552,7 @@ w-100  ph1 fl pt2 pb3
         
           <div class="gt-tooltip bg-black-80 white-90 ph1 pv2 absolute top-2 left-0 right-0 dn f6 z-1 overflow-y-visible
 ">
-            The meta data description is often included in search results.
+            The meta data description is often included in search results. Max 160 chars.
           </div>
         
       </div>
@@ -19553,7 +19556,7 @@ w-100  ph1 fl pt2 pb3
       font-size: 1.2em;
     }
 
-    .primary-color {
+    .primary-color, .link-primary-color a {
       color: hsl([primary_hue or site_app.params.primary_hue],[saturation or site_app.params.saturation]%,[lightness or site_app.params.lightness]%);
     }
     .b--primary-color {
@@ -25492,6 +25495,7 @@ w-100  flex-auto w-25-ns ff-ns  ph1 fl pt2 pb3
 
     35fe3a9616151be1e9a9abc33ece88d44bd47528
 
+    
   </div>  {tf{? o.edit_mode }tf}
 
 
