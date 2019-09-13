@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Build a Website Ready to Present on Goandmake</title>
+    <title>Build a Website Ready to Present on Goandmake website builder</title>
     <link>https://builder.goandmake.app/</link>
-    <description>Recent content in Build a Website Ready to Present on Goandmake</description>
+    <description>Recent content in Build a Website Ready to Present on Goandmake website builder</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright 2019, GoAndMake.app.</copyright>
     <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://builder.goandmake.app/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Terms and Conditions Summary</title>
+      <link>https://builder.goandmake.app/terms-and-conditions/</link>
+      <pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://builder.goandmake.app/terms-and-conditions/</guid>
+      <description>Welcome to Goandmake SEO Marketing. Here is a list of the terms and conditions of using our website, products or services, and our privacy policy.
+Browsing Website for Information Read online: https://we.goandmake.app/website-terms-of-use/
+Printable version: https://we.goandmake.app/legal/website-terms-of-use.pdf
+Privacy Policy and Cookie Policy Read online: https://we.goandmake.app/privacy-policy/
+Printable version: https://we.goandmake.app/legal/privacy-policy.pdf
+Using Goandmake Website Builder Software as a Service (SAAS) Read online: https://we.goandmake.app/website-builder-saas-terms-of-use/
+Printable version: https://we.goandmake.app/legal/website-builder-saas-terms-of-use.pdf</description>
+    </item>
     
     <item>
       <title>About Go and Talk</title>

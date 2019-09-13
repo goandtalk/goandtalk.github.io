@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Demo on Goandmake</title>
+    <title>Demo on Goandmake website builder</title>
     <link>https://builder.goandmake.app/demo/</link>
-    <description>Recent content in Demo on Goandmake</description>
+    <description>Recent content in Demo on Goandmake website builder</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright 2019, GoAndMake.app.</copyright>
     <lastBuildDate>Mon, 25 Feb 2019 00:00:00 +0000</lastBuildDate>
